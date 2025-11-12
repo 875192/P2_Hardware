@@ -28,14 +28,14 @@ static void boton_confirmado(uint8_t boton_id)
         {
                 case EVENTO_BOTON_IZQUIERDO:
                         int_count++;
-                        cola_depuracion(timer2_count(), EVENTO_BOTON_CONFIRMADO_IZQ, int_count);
+                        cola_depuracion(timer2_count(), EVENTO_BOTON_IZQUIERDO, int_count);
                         break;
                 case EVENTO_BOTON_DERECHO:
                         int_count--;
-                        cola_depuracion(timer2_count(), EVENTO_BOTON_CONFIRMADO_DER, int_count);
+                        cola_depuracion(timer2_count(), EVENTO_BOTON_DERECHO, int_count);
                         break;
                 default:
-                        cola_depuracion(timer2_count(), EVENTO_PULSADOR_DESCARTADO, boton_id);
+                        // No guardar eventos descartados
                         break;
         }
 
@@ -64,14 +64,10 @@ void Eint4567_ISR(void)
 
         if (boton_id != 0U)
         {
-                /* Registrar la pulsación detectada */
-                cola_depuracion(timer2_count(), boton_id, int_count);
+                /* No registrar la pulsación inicial, solo las confirmadas */
 
-                /* Iniciar la máquina de antirrebotes. Si está ocupada, registrar el evento */
-                if (!timer3_start_antirrebote(boton_id))
-                {
-                        cola_depuracion(timer2_count(), EVENTO_PULSADOR_DESCARTADO, boton_id);
-                }
+                /* Iniciar la máquina de antirrebotes. Si está ocupada, no hacer nada */
+                timer3_start_antirrebote(boton_id);
         }
 
         /* Finalizar ISR */

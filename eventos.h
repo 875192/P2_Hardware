@@ -13,14 +13,7 @@ typedef enum {
         EVENTO_BOTON_IZQUIERDO = 4,
         EVENTO_BOTON_DERECHO   = 8,
 
-        EVENTO_TIMER3_INICIO       = 20,
-        EVENTO_TIMER3_MONITORIZA   = 21,
-        EVENTO_TIMER3_DEPRESION    = 22,
-        EVENTO_TIMER3_FIN          = 23,
 
-        EVENTO_BOTON_CONFIRMADO_IZQ = 30,
-        EVENTO_BOTON_CONFIRMADO_DER = 31,
-        EVENTO_PULSADOR_DESCARTADO  = 40
 } ID_Evento;
 
 

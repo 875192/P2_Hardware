@@ -7,8 +7,6 @@
 
 /*--- Ficheros de cabecera ---*/
 #include "timer3.h"
-#include "timer2.h"
-#include "cola.h"
 #include "eventos.h"
 #include "44b.h"
 #include "44blib.h"
@@ -62,9 +60,6 @@ static void timer3_preparar_tick(void)
 
 static void finalizar_antirrebote(void)
 {
-        /* Registrar el fin del proceso en la cola */
-        cola_depuracion(timer2_count(), EVENTO_TIMER3_FIN, boton_en_proceso);
-
         /* Detener el temporizador */
         timer3_detener();
 
@@ -141,9 +136,6 @@ int timer3_start_antirrebote(uint8_t boton_id)
         contador_ms = TIMER3_TRP_MS;
         monitor_ms = TIMER3_MONITOR_MS;
 
-        /* Registrar el inicio del proceso */
-        cola_depuracion(timer2_count(), EVENTO_TIMER3_INICIO, boton_en_proceso);
-
         /* Deshabilitar las interrupciones de los botones */
         rINTMSK |= BIT_EINT4567;
 
@@ -175,7 +167,6 @@ void timer3_ISR(void)
                         {
                                 estado_actual = MONITORIZANDO;
                                 monitor_ms = TIMER3_MONITOR_MS;
-                                cola_depuracion(timer2_count(), EVENTO_TIMER3_MONITORIZA, boton_en_proceso);
                         }
                         break;
 
@@ -194,7 +185,6 @@ void timer3_ISR(void)
                                 {
                                         estado_actual = REBOTE_DEPRESION;
                                         contador_ms = TIMER3_TRD_MS;
-                                        cola_depuracion(timer2_count(), EVENTO_TIMER3_DEPRESION, boton_en_proceso);
                                 }
                         }
                         break;
