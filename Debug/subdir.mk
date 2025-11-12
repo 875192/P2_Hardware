@@ -10,7 +10,8 @@ C_SRCS += \
 ../led.c \
 ../main.c \
 ../timer.c \
-../timer2.c 
+../timer2.c \
+../timer3.c
 
 OBJS += \
 ./8led.o \
@@ -19,7 +20,8 @@ OBJS += \
 ./led.o \
 ./main.o \
 ./timer.o \
-./timer2.o 
+./timer2.o \
+./timer3.o
 
 C_DEPS += \
 ./8led.d \
@@ -28,7 +30,8 @@ C_DEPS += \
 ./led.d \
 ./main.d \
 ./timer.d \
-./timer2.d 
+./timer2.d \
+./timer3.d
 
 
 # Each subdirectory must supply rules for building sources it contributes
