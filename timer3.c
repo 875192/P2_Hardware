@@ -20,8 +20,8 @@
 #define TIMER3_TRD_MS              30U           /* Retardo tras soltar el botón */
 #define TIMER3_MONITOR_MS          100U          /* Periodo de monitorización */
 
-#define BOTON_MASK_EINT4           (1U << 4)
-#define BOTON_MASK_EINT5           (1U << 5)
+#define BOTON_MASK_EINT6           (1U << 6)    /* EINT6 usa el pin PG6 */
+#define BOTON_MASK_EINT7           (1U << 7)    /* EINT7 usa el pin PG7 */
 
 /*--- Variables internas ---*/
 static volatile EstadoPulsador estado_actual = ESPERANDO_PULSACION;
@@ -127,10 +127,10 @@ int timer3_start_antirrebote(uint8_t boton_id)
         switch (boton_id)
         {
                 case EVENTO_BOTON_IZQUIERDO:
-                        mascara_boton = BOTON_MASK_EINT4;
+                        mascara_boton = BOTON_MASK_EINT6;
                         break;
                 case EVENTO_BOTON_DERECHO:
-                        mascara_boton = BOTON_MASK_EINT5;
+                        mascara_boton = BOTON_MASK_EINT7;
                         break;
                 default:
                         return 0;
