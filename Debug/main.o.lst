@@ -1,0 +1,153 @@
+   1              		.cpu arm7tdmi
+   2              		.fpu softvfp
+   3              		.eabi_attribute 20, 1
+   4              		.eabi_attribute 21, 1
+   5              		.eabi_attribute 23, 3
+   6              		.eabi_attribute 24, 1
+   7              		.eabi_attribute 25, 1
+   8              		.eabi_attribute 26, 1
+   9              		.eabi_attribute 30, 6
+  10              		.eabi_attribute 18, 4
+  11              		.file	"main.c"
+  21              	.Ltext0:
+  22              		.file 1 "../main.c"
+ 2170              		.align	2
+ 2171              		.global	Main
+ 2173              	Main:
+ 2174              	.LFB0:
+   1:../main.c     **** /*********************************************************************************************
+   2:../main.c     **** * Fichero:	main.c
+   3:../main.c     **** * Autor:    
+   4:../main.c     **** * Descrip:	punto de entrada de C
+   5:../main.c     **** * Version:      <P4-ARM.timer-leds>
+   6:../main.c     **** *********************************************************************************************/
+   7:../main.c     **** 
+   8:../main.c     **** /*--- ficheros de cabecera ---*/
+   9:../main.c     **** #include "8led.h"
+  10:../main.c     **** #include "button.h"
+  11:../main.c     **** #include "led.h"
+  12:../main.c     **** #include "timer.h"
+  13:../main.c     **** #include "timer2.h"
+  14:../main.c     **** #include "cola.h"
+  15:../main.c     **** #include "44blib.h"
+  16:../main.c     **** #include "44b.h"
+  17:../main.c     **** 
+  18:../main.c     **** /*--- variables globales ---*/
+  19:../main.c     **** 
+  20:../main.c     **** 
+  21:../main.c     **** /*--- codigo de funciones ---*/
+  22:../main.c     **** void Main(void)
+  23:../main.c     **** {
+ 2175              		.loc 1 23 0
+ 2176              		.cfi_startproc
+ 2177              		@ Function supports interworking.
+ 2178              		@ args = 0, pretend = 0, frame = 8
+ 2179              		@ frame_needed = 1, uses_anonymous_args = 0
+ 2180 0000 0DC0A0E1 		mov	ip, sp
+ 2181              	.LCFI0:
+ 2182              		.cfi_def_cfa_register 12
+ 2183 0004 00D82DE9 		stmfd	sp!, {fp, ip, lr, pc}
+ 2184 0008 04B04CE2 		sub	fp, ip, #4
+ 2185              		.cfi_offset 14, -8
+ 2186              		.cfi_offset 13, -12
+ 2187              		.cfi_offset 11, -16
+ 2188              	.LCFI1:
+ 2189              		.cfi_def_cfa 11, 4
+ 2190 000c 08D04DE2 		sub	sp, sp, #8
+  24:../main.c     **** 	
+  25:../main.c     **** 	/* Variables para observar la cola durante la depuración */
+  26:../main.c     **** 	ColaDebug* p_cola;              // Puntero a la estructura completa de la cola
+  27:../main.c     **** 	
+  28:../main.c     **** 	/* Inicializa controladores */
+  29:../main.c     **** 	sys_init();         // Inicializacion de la placa, interrupciones y puertos
+ 2191              		.loc 1 29 0
+ 2192 0010 FEFFFFEB 		bl	sys_init
+  30:../main.c     **** 	timer2_init();      // Inicializacion del timer2 para medicion de tiempo
+ 2193              		.loc 1 30 0
+ 2194 0014 FEFFFFEB 		bl	timer2_init
+  31:../main.c     **** 	cola_init();        // Inicializacion de la cola de depuracion (Paso 4)
+ 2195              		.loc 1 31 0
+ 2196 0018 FEFFFFEB 		bl	cola_init
+  32:../main.c     **** 	timer_init();	    // Inicializacion del temporizador
+ 2197              		.loc 1 32 0
+ 2198 001c FEFFFFEB 		bl	timer_init
+  33:../main.c     **** 	Eint4567_init();	// inicializamos los pulsadores. Cada vez que se pulse se ver� reflejado en el 
+ 2199              		.loc 1 33 0
+ 2200 0020 FEFFFFEB 		bl	Eint4567_init
+  34:../main.c     **** 	D8Led_init();       // inicializamos el 8led
+ 2201              		.loc 1 34 0
+ 2202 0024 FEFFFFEB 		bl	D8Led_init
+  35:../main.c     **** 
+  36:../main.c     **** 	/* Valor inicial de los leds */
+  37:../main.c     **** 	leds_off();
+ 2203              		.loc 1 37 0
+ 2204 0028 FEFFFFEB 		bl	leds_off
+  38:../main.c     **** 	led1_on();
+ 2205              		.loc 1 38 0
+ 2206 002c FEFFFFEB 		bl	led1_on
+  39:../main.c     **** 	
+  40:../main.c     **** 	/* Apuntar a la cola para poder observarla en el depurador */
+  41:../main.c     **** 	p_cola = cola_global;
+ 2207              		.loc 1 41 0
+ 2208 0030 30309FE5 		ldr	r3, .L5
+ 2209 0034 003093E5 		ldr	r3, [r3, #0]
+ 2210 0038 10300BE5 		str	r3, [fp, #-16]
+ 2211 003c 000000EA 		b	.L3
+ 2212              	.L4:
+  42:../main.c     **** 	
+  43:../main.c     **** 	/* Bucle principal */
+  44:../main.c     **** 	while (1)
+  45:../main.c     **** 	{
+  46:../main.c     **** 		/* Cambia los leds con cada interrupcion del temporizador */
+  47:../main.c     **** 		if (switch_leds == 1)
+  48:../main.c     **** 		{
+  49:../main.c     **** 			leds_switch();
+  50:../main.c     **** 			switch_leds = 0;
+  51:../main.c     **** 		}
+  52:../main.c     **** 	}
+ 2213              		.loc 1 52 0
+ 2214 0040 0000A0E1 		mov	r0, r0	@ nop
+ 2215              	.L3:
+  47:../main.c     **** 		if (switch_leds == 1)
+ 2216              		.loc 1 47 0
+ 2217 0044 20309FE5 		ldr	r3, .L5+4
+ 2218 0048 003093E5 		ldr	r3, [r3, #0]
+ 2219 004c 010053E3 		cmp	r3, #1
+ 2220 0050 FAFFFF1A 		bne	.L4
+  49:../main.c     **** 			leds_switch();
+ 2221              		.loc 1 49 0
+ 2222 0054 FEFFFFEB 		bl	leds_switch
+  50:../main.c     **** 			switch_leds = 0;
+ 2223              		.loc 1 50 0
+ 2224 0058 0C309FE5 		ldr	r3, .L5+4
+ 2225 005c 0020A0E3 		mov	r2, #0
+ 2226 0060 002083E5 		str	r2, [r3, #0]
+ 2227              		.loc 1 52 0
+ 2228 0064 F6FFFFEA 		b	.L3
+ 2229              	.L6:
+ 2230              		.align	2
+ 2231              	.L5:
+ 2232 0068 00000000 		.word	cola_global
+ 2233 006c 00000000 		.word	switch_leds
+ 2234              		.cfi_endproc
+ 2235              	.LFE0:
+ 2237              	.Letext0:
+DEFINED SYMBOLS
+                            *ABS*:00000000 main.c
+                            *COM*:00000004 switch_leds
+C:\Users\jaime\AppData\Local\Temp\ccpjKtbm.s:2170   .text:00000000 $a
+C:\Users\jaime\AppData\Local\Temp\ccpjKtbm.s:2173   .text:00000000 Main
+C:\Users\jaime\AppData\Local\Temp\ccpjKtbm.s:2232   .text:00000068 $d
+                     .debug_frame:00000010 $d
+
+UNDEFINED SYMBOLS
+sys_init
+timer2_init
+cola_init
+timer_init
+Eint4567_init
+D8Led_init
+leds_off
+led1_on
+leds_switch
+cola_global
