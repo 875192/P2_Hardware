@@ -41,13 +41,16 @@ void Main(void)
 	p_cola = cola_global;
 	
 	/* Bucle principal */
-	while (1)
-	{
-		/* Cambia los leds con cada interrupcion del temporizador */
-		if (switch_leds == 1)
-		{
-			leds_switch();
-			switch_leds = 0;
-		}
-	}
+        while (1)
+        {
+                /* Actualiza la máquina de estados de los pulsadores */
+                button_task();
+
+                /* Cambia los leds con cada interrupcion del temporizador */
+                if (switch_leds == 1)
+                {
+                        leds_switch();
+                        switch_leds = 0;
+                }
+        }
 }
