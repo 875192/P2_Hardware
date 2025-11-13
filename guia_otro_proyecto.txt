@@ -7,6 +7,167 @@
 ####################################################################################################################
 
 
+/* MAIN.C */
+
+/*********************************************************************************************
+* Fichero:		main.c
+* Autor:    	David Colás y Álvaro Pérez
+* Descrip:		Punto de entrada de C
+* Version:  	<P4-ARM.timer-leds>
+*********************************************************************************************/
+
+/*--- ficheros de cabecera ---*/
+#include "8led.h"
+#include "button.h"
+#include "led.h"
+#include "timer.h"
+#include "44blib.h"
+#include "44b.h"
+#include "cola.h"
+#include "eventos.h"
+#include "sudoku_2024.h"
+
+/*--- Variables globales ---*/
+extern CELDA cuadricula[NUM_FILAS][NUM_COLUMNAS];
+
+int celdas_vacias = 0;
+extern volatile int fila;
+extern volatile int columna;
+extern volatile int valor;
+
+extern volatile EstadoSudoku estado_sudoku;
+
+/*--- Código de funciones ---*/
+
+/* 		Programa principal que implementa la lógica de un juego de Sudoku en un sistema 
+*		embebido. Se inicializan los controladores necesarios (temporizadores, LEDs, 
+*       pulsadores, pila de depuración) y se gestiona el flujo del juego mediante una 
+*       máquina de estados. Las funcionalidades incluyen la inicialización de celdas, 
+*       la introducción y eliminación de valores, y la propagación de candidatos para 
+*       resolver el Sudoku. Se proporciona retroalimentación visual utilizando un 
+*       display de 8 segmentos y se implementa un sistema de depuración mediante una pila.
+*/
+void Main(void)
+{
+	/* Inicializa controladores */
+	sys_init();         // Inicializacion de la placa, interrupciones y puertos
+	timer0_init();	    // Inicializacion del temporizador 0
+	timer1_2_inicializar(); // Inicializacion de los temporizadores 1 y 2
+	Eint4567_inicializar();	// Inicializamos los pulsadores. Cada vez que se pulse se vera reflejado en el 8led
+	D8Led_init();       // Inicializamos el 8led
+	D8Led_symbol(0);	// Mostramos un 0 en el 8led
+
+	/* Valor inicial de los leds */
+	leds_off();
+
+	/* Inicialización de la pila de depuración en la dirección especificada */
+	PilaInt *P = (PilaInt*)DEBUG_STACK_ADDRESS;
+	inicializar_pila(P);
+	pila_global = P;
+
+	timer1_empezar();
+
+	while (1)
+	{
+		switch (estado_sudoku)
+		{
+		case INICIO:
+			//sudoku_candidatos_init_c(cuadricula, sudoku_candidatos_propagar_c);
+			//sudoku_candidatos_init_c(cuadricula, sudoku_candidatos_propagar_arm);
+			//sudoku_candidatos_init_c(cuadricula, sudoku_candidatos_propagar_thumb+1);
+			//sudoku_candidatos_init_arm(cuadricula, sudoku_candidatos_propagar_c);
+			//sudoku_candidatos_init_arm(cuadricula, sudoku_candidatos_propagar_arm);
+			celdas_vacias = sudoku_candidatos_init_arm(cuadricula, sudoku_candidatos_propagar_thumb+1);
+
+			estado_sudoku = INTRODUCIR_FILA;
+			break;
+
+		case BORRAR_VALOR:
+			//Si es pista no se puede borrar
+			if(((cuadricula[fila-1][columna-1] & 0x8000) >> 15) == 1)
+		 		{
+		 			estado_sudoku = INTRODUCIR_FILA;
+					D8Led_symbol(14);
+		 			break;
+		 		}
+			celda_poner_valor(&cuadricula[fila-1][columna-1], 0);
+
+			sudoku_candidatos_init_c(cuadricula, sudoku_candidatos_propagar_c);
+			//sudoku_candidatos_init_c(cuadricula, sudoku_candidatos_propagar_arm);
+			//sudoku_candidatos_init_c(cuadricula, sudoku_candidatos_propagar_thumb+1);
+			//sudoku_candidatos_init_arm(cuadricula, sudoku_candidatos_propagar_c);
+			//sudoku_candidatos_init_arm(cuadricula, sudoku_candidatos_propagar_arm);
+			//sudoku_candidatos_init_arm(cuadricula, sudoku_candidatos_propagar_thumb+1);
+
+			estado_sudoku = INTRODUCIR_FILA;
+			D8Led_symbol(15);
+			break;
+
+		case INTRODUCIR_VALOR:
+			//Si es pista no se puede modificar
+			if(((cuadricula[fila-1][columna-1] & 0x8000) >> 15) == 1)
+			{
+				estado_sudoku = INTRODUCIR_FILA;
+				D8Led_symbol(14);
+				break;
+			}
+
+			//Si metes un valor a una celda que ya tiene y no es pista
+			if((((cuadricula[fila-1][columna-1] & 0x8000) >> 15) != 1) && (celda_leer_valor(cuadricula[fila-1][columna-1]) != 0))
+			{
+				celda_poner_valor(&cuadricula[fila-1][columna-1], valor);
+				//Si no esta en los candidatos se activa el bit de error si no se desactiva si estuviera activado
+				if((cuadricula[fila-1][columna-1] & (1 << (valor + 3))) == 0)
+				{
+					cuadricula[fila-1][columna-1] |= (1 << 14);
+				} else 
+				{
+					cuadricula[fila-1][columna-1] &= ~(1 << 14);
+				}
+
+				sudoku_candidatos_init_c(cuadricula, sudoku_candidatos_propagar_c);
+				//sudoku_candidatos_init_c(cuadricula, sudoku_candidatos_propagar_arm);
+				//sudoku_candidatos_init_c(cuadricula, sudoku_candidatos_propagar_thumb+1);
+				//sudoku_candidatos_init_arm(cuadricula, sudoku_candidatos_propagar_c);
+				//sudoku_candidatos_init_arm(cuadricula, sudoku_candidatos_propagar_arm);
+				//sudoku_candidatos_init_arm(cuadricula, sudoku_candidatos_propagar_thumb+1);
+
+				estado_sudoku = INTRODUCIR_FILA;
+				D8Led_symbol(15);
+
+			  //Si metes un valor a una celda que no tiene y no es pista
+			} else if((((cuadricula[fila-1][columna-1] & 0x8000) >> 15) != 1) && (celda_leer_valor(cuadricula[fila-1][columna-1]) == 0)) 
+			{
+				celda_poner_valor(&cuadricula[fila-1][columna-1], valor);
+				//Si no esta en los candidatos se activa el bit de error si no se desactiva si estuviera activado
+				if((cuadricula[fila-1][columna-1] & (1 << (valor + 3))) == 0)
+				{
+					cuadricula[fila-1][columna-1] |= (1 << 14);
+				} else 
+				{
+					cuadricula[fila-1][columna-1] &= ~(1 << 14);
+				}
+				
+				sudoku_candidatos_propagar_c(cuadricula, fila-1, columna-1);
+				//sudoku_candidatos_propagar_arm(cuadricula, fila-1, columna-1);
+				//((void (*)(CELDA[NUM_FILAS][NUM_COLUMNAS], int, int))((unsigned int)sudoku_candidatos_propagar_thumb + 1))(cuadricula, fila-1, columna-1);
+
+				estado_sudoku = INTRODUCIR_FILA;
+				D8Led_symbol(15);
+			}
+			break;
+
+		default:
+			break;
+		}		
+	}
+}
+
+
+####################################################################################################################
+####################################################################################################################
+
+
 /* COLA.C */
 /*********************************************************************************************
 * Fichero:		cola.c
