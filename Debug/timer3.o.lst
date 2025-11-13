@@ -253,670 +253,673 @@
   66:../timer3.c   ****         /* Rehabilitar las interrupciones de los botones */
   67:../timer3.c   ****         rEXTINTPND = 0xf;
  2333              		.loc 1 67 0
- 2334 0118 A4309FE5 		ldr	r3, .L12
+ 2334 0118 74309FE5 		ldr	r3, .L11
  2335 011c 0F20A0E3 		mov	r2, #15
  2336 0120 002083E5 		str	r2, [r3, #0]
   68:../timer3.c   ****         rINTMSK &= ~(BIT_EINT4567);
  2337              		.loc 1 68 0
- 2338 0124 9C309FE5 		ldr	r3, .L12+4
- 2339 0128 98209FE5 		ldr	r2, .L12+4
+ 2338 0124 6C309FE5 		ldr	r3, .L11+4
+ 2339 0128 68209FE5 		ldr	r2, .L11+4
  2340 012c 002092E5 		ldr	r2, [r2, #0]
  2341 0130 0226C2E3 		bic	r2, r2, #2097152
  2342 0134 002083E5 		str	r2, [r3, #0]
   69:../timer3.c   ****         rI_ISPC |= BIT_EINT4567;
  2343              		.loc 1 69 0
- 2344 0138 8C309FE5 		ldr	r3, .L12+8
- 2345 013c 88209FE5 		ldr	r2, .L12+8
+ 2344 0138 5C309FE5 		ldr	r3, .L11+8
+ 2345 013c 58209FE5 		ldr	r2, .L11+8
  2346 0140 002092E5 		ldr	r2, [r2, #0]
  2347 0144 022682E3 		orr	r2, r2, #2097152
  2348 0148 002083E5 		str	r2, [r3, #0]
   70:../timer3.c   **** 
-  71:../timer3.c   ****         /* Notificar la pulsación validada */
-  72:../timer3.c   ****         if (callback_validacion)
- 2349              		.loc 1 72 0
- 2350 014c 7C309FE5 		ldr	r3, .L12+12
- 2351 0150 003093E5 		ldr	r3, [r3, #0]
- 2352 0154 000053E3 		cmp	r3, #0
- 2353 0158 0700000A 		beq	.L11
-  73:../timer3.c   ****         {
-  74:../timer3.c   ****                 callback_validacion(boton_en_proceso);
- 2354              		.loc 1 74 0
- 2355 015c 6C309FE5 		ldr	r3, .L12+12
- 2356 0160 003093E5 		ldr	r3, [r3, #0]
- 2357 0164 68209FE5 		ldr	r2, .L12+16
- 2358 0168 0020D2E5 		ldrb	r2, [r2, #0]
- 2359 016c FF2002E2 		and	r2, r2, #255
- 2360 0170 0200A0E1 		mov	r0, r2
- 2361 0174 0FE0A0E1 		mov	lr, pc
- 2362 0178 13FF2FE1 		bx	r3
- 2363              	.L11:
-  75:../timer3.c   ****         }
-  76:../timer3.c   **** 
-  77:../timer3.c   ****         /* Resetear el estado interno */
-  78:../timer3.c   ****         estado_actual = ESPERANDO_PULSACION;
- 2364              		.loc 1 78 0
- 2365 017c 54309FE5 		ldr	r3, .L12+20
- 2366 0180 0020A0E3 		mov	r2, #0
- 2367 0184 0020C3E5 		strb	r2, [r3, #0]
-  79:../timer3.c   ****         contador_ms = 0;
- 2368              		.loc 1 79 0
- 2369 0188 4C309FE5 		ldr	r3, .L12+24
- 2370 018c 0020A0E3 		mov	r2, #0
- 2371 0190 002083E5 		str	r2, [r3, #0]
-  80:../timer3.c   ****         monitor_ms = 0;
- 2372              		.loc 1 80 0
- 2373 0194 44309FE5 		ldr	r3, .L12+28
- 2374 0198 0020A0E3 		mov	r2, #0
- 2375 019c 002083E5 		str	r2, [r3, #0]
-  81:../timer3.c   ****         boton_en_proceso = 0;
- 2376              		.loc 1 81 0
- 2377 01a0 2C309FE5 		ldr	r3, .L12+16
- 2378 01a4 0020A0E3 		mov	r2, #0
- 2379 01a8 0020C3E5 		strb	r2, [r3, #0]
-  82:../timer3.c   ****         mascara_boton = 0;
- 2380              		.loc 1 82 0
- 2381 01ac 30309FE5 		ldr	r3, .L12+32
- 2382 01b0 0020A0E3 		mov	r2, #0
- 2383 01b4 002083E5 		str	r2, [r3, #0]
-  83:../timer3.c   **** }
- 2384              		.loc 1 83 0
- 2385 01b8 0CD04BE2 		sub	sp, fp, #12
- 2386 01bc 00689DE8 		ldmfd	sp, {fp, sp, lr}
- 2387 01c0 1EFF2FE1 		bx	lr
- 2388              	.L13:
- 2389              		.align	2
- 2390              	.L12:
- 2391 01c4 5400D201 		.word	30539860
- 2392 01c8 0C00E001 		.word	31457292
- 2393 01cc 2400E001 		.word	31457316
- 2394 01d0 14000000 		.word	callback_validacion
- 2395 01d4 0C000000 		.word	boton_en_proceso
- 2396 01d8 00000000 		.word	estado_actual
- 2397 01dc 04000000 		.word	contador_ms
- 2398 01e0 08000000 		.word	monitor_ms
- 2399 01e4 10000000 		.word	mascara_boton
- 2400              		.cfi_endproc
- 2401              	.LFE3:
- 2403              		.align	2
- 2404              		.global	timer3_init
- 2406              	timer3_init:
- 2407              	.LFB4:
-  84:../timer3.c   **** 
-  85:../timer3.c   **** /*--- Código de las funciones públicas ---*/
-  86:../timer3.c   **** void timer3_init(timer3_callback_t callback)
-  87:../timer3.c   **** {
- 2408              		.loc 1 87 0
- 2409              		.cfi_startproc
- 2410              		@ Function supports interworking.
- 2411              		@ args = 0, pretend = 0, frame = 8
- 2412              		@ frame_needed = 1, uses_anonymous_args = 0
- 2413 01e8 0DC0A0E1 		mov	ip, sp
- 2414              	.LCFI8:
- 2415              		.cfi_def_cfa_register 12
- 2416 01ec 00D82DE9 		stmfd	sp!, {fp, ip, lr, pc}
- 2417 01f0 04B04CE2 		sub	fp, ip, #4
- 2418              		.cfi_offset 14, -8
- 2419              		.cfi_offset 13, -12
- 2420              		.cfi_offset 11, -16
- 2421              	.LCFI9:
- 2422              		.cfi_def_cfa 11, 4
- 2423 01f4 08D04DE2 		sub	sp, sp, #8
- 2424 01f8 10000BE5 		str	r0, [fp, #-16]
-  88:../timer3.c   ****         callback_validacion = callback;
+  71:../timer3.c   ****         /* Ya no notificamos aquí, se hizo en REBOTE_PRESION */
+  72:../timer3.c   **** 
+  73:../timer3.c   ****         /* Resetear el estado interno */
+  74:../timer3.c   ****         estado_actual = ESPERANDO_PULSACION;
+ 2349              		.loc 1 74 0
+ 2350 014c 4C309FE5 		ldr	r3, .L11+12
+ 2351 0150 0020A0E3 		mov	r2, #0
+ 2352 0154 0020C3E5 		strb	r2, [r3, #0]
+  75:../timer3.c   ****         contador_ms = 0;
+ 2353              		.loc 1 75 0
+ 2354 0158 44309FE5 		ldr	r3, .L11+16
+ 2355 015c 0020A0E3 		mov	r2, #0
+ 2356 0160 002083E5 		str	r2, [r3, #0]
+  76:../timer3.c   ****         monitor_ms = 0;
+ 2357              		.loc 1 76 0
+ 2358 0164 3C309FE5 		ldr	r3, .L11+20
+ 2359 0168 0020A0E3 		mov	r2, #0
+ 2360 016c 002083E5 		str	r2, [r3, #0]
+  77:../timer3.c   ****         boton_en_proceso = 0;
+ 2361              		.loc 1 77 0
+ 2362 0170 34309FE5 		ldr	r3, .L11+24
+ 2363 0174 0020A0E3 		mov	r2, #0
+ 2364 0178 0020C3E5 		strb	r2, [r3, #0]
+  78:../timer3.c   ****         mascara_boton = 0;
+ 2365              		.loc 1 78 0
+ 2366 017c 2C309FE5 		ldr	r3, .L11+28
+ 2367 0180 0020A0E3 		mov	r2, #0
+ 2368 0184 002083E5 		str	r2, [r3, #0]
+  79:../timer3.c   **** }
+ 2369              		.loc 1 79 0
+ 2370 0188 0CD04BE2 		sub	sp, fp, #12
+ 2371 018c 00689DE8 		ldmfd	sp, {fp, sp, lr}
+ 2372 0190 1EFF2FE1 		bx	lr
+ 2373              	.L12:
+ 2374              		.align	2
+ 2375              	.L11:
+ 2376 0194 5400D201 		.word	30539860
+ 2377 0198 0C00E001 		.word	31457292
+ 2378 019c 2400E001 		.word	31457316
+ 2379 01a0 00000000 		.word	estado_actual
+ 2380 01a4 04000000 		.word	contador_ms
+ 2381 01a8 08000000 		.word	monitor_ms
+ 2382 01ac 0C000000 		.word	boton_en_proceso
+ 2383 01b0 10000000 		.word	mascara_boton
+ 2384              		.cfi_endproc
+ 2385              	.LFE3:
+ 2387              		.align	2
+ 2388              		.global	timer3_init
+ 2390              	timer3_init:
+ 2391              	.LFB4:
+  80:../timer3.c   **** 
+  81:../timer3.c   **** /*--- Código de las funciones públicas ---*/
+  82:../timer3.c   **** void timer3_init(timer3_callback_t callback)
+  83:../timer3.c   **** {
+ 2392              		.loc 1 83 0
+ 2393              		.cfi_startproc
+ 2394              		@ Function supports interworking.
+ 2395              		@ args = 0, pretend = 0, frame = 8
+ 2396              		@ frame_needed = 1, uses_anonymous_args = 0
+ 2397 01b4 0DC0A0E1 		mov	ip, sp
+ 2398              	.LCFI8:
+ 2399              		.cfi_def_cfa_register 12
+ 2400 01b8 00D82DE9 		stmfd	sp!, {fp, ip, lr, pc}
+ 2401 01bc 04B04CE2 		sub	fp, ip, #4
+ 2402              		.cfi_offset 14, -8
+ 2403              		.cfi_offset 13, -12
+ 2404              		.cfi_offset 11, -16
+ 2405              	.LCFI9:
+ 2406              		.cfi_def_cfa 11, 4
+ 2407 01c0 08D04DE2 		sub	sp, sp, #8
+ 2408 01c4 10000BE5 		str	r0, [fp, #-16]
+  84:../timer3.c   ****         callback_validacion = callback;
+ 2409              		.loc 1 84 0
+ 2410 01c8 D8309FE5 		ldr	r3, .L14
+ 2411 01cc 10201BE5 		ldr	r2, [fp, #-16]
+ 2412 01d0 002083E5 		str	r2, [r3, #0]
+  85:../timer3.c   ****         estado_actual = ESPERANDO_PULSACION;
+ 2413              		.loc 1 85 0
+ 2414 01d4 D0309FE5 		ldr	r3, .L14+4
+ 2415 01d8 0020A0E3 		mov	r2, #0
+ 2416 01dc 0020C3E5 		strb	r2, [r3, #0]
+  86:../timer3.c   ****         contador_ms = 0;
+ 2417              		.loc 1 86 0
+ 2418 01e0 C8309FE5 		ldr	r3, .L14+8
+ 2419 01e4 0020A0E3 		mov	r2, #0
+ 2420 01e8 002083E5 		str	r2, [r3, #0]
+  87:../timer3.c   ****         monitor_ms = 0;
+ 2421              		.loc 1 87 0
+ 2422 01ec C0309FE5 		ldr	r3, .L14+12
+ 2423 01f0 0020A0E3 		mov	r2, #0
+ 2424 01f4 002083E5 		str	r2, [r3, #0]
+  88:../timer3.c   ****         boton_en_proceso = 0;
  2425              		.loc 1 88 0
- 2426 01fc D8309FE5 		ldr	r3, .L15
- 2427 0200 10201BE5 		ldr	r2, [fp, #-16]
- 2428 0204 002083E5 		str	r2, [r3, #0]
-  89:../timer3.c   ****         estado_actual = ESPERANDO_PULSACION;
+ 2426 01f8 B8309FE5 		ldr	r3, .L14+16
+ 2427 01fc 0020A0E3 		mov	r2, #0
+ 2428 0200 0020C3E5 		strb	r2, [r3, #0]
+  89:../timer3.c   ****         mascara_boton = 0;
  2429              		.loc 1 89 0
- 2430 0208 D0309FE5 		ldr	r3, .L15+4
- 2431 020c 0020A0E3 		mov	r2, #0
- 2432 0210 0020C3E5 		strb	r2, [r3, #0]
-  90:../timer3.c   ****         contador_ms = 0;
- 2433              		.loc 1 90 0
- 2434 0214 C8309FE5 		ldr	r3, .L15+8
- 2435 0218 0020A0E3 		mov	r2, #0
- 2436 021c 002083E5 		str	r2, [r3, #0]
-  91:../timer3.c   ****         monitor_ms = 0;
- 2437              		.loc 1 91 0
- 2438 0220 C0309FE5 		ldr	r3, .L15+12
- 2439 0224 0020A0E3 		mov	r2, #0
- 2440 0228 002083E5 		str	r2, [r3, #0]
-  92:../timer3.c   ****         boton_en_proceso = 0;
- 2441              		.loc 1 92 0
- 2442 022c B8309FE5 		ldr	r3, .L15+16
- 2443 0230 0020A0E3 		mov	r2, #0
- 2444 0234 0020C3E5 		strb	r2, [r3, #0]
-  93:../timer3.c   ****         mascara_boton = 0;
- 2445              		.loc 1 93 0
- 2446 0238 B0309FE5 		ldr	r3, .L15+20
- 2447 023c 0020A0E3 		mov	r2, #0
+ 2430 0204 B0309FE5 		ldr	r3, .L14+20
+ 2431 0208 0020A0E3 		mov	r2, #0
+ 2432 020c 002083E5 		str	r2, [r3, #0]
+  90:../timer3.c   **** 
+  91:../timer3.c   ****         /* Enmascarar la interrupción del timer3 inicialmente */
+  92:../timer3.c   ****         rINTMSK |= BIT_TIMER3;
+ 2433              		.loc 1 92 0
+ 2434 0210 A8309FE5 		ldr	r3, .L14+24
+ 2435 0214 A4209FE5 		ldr	r2, .L14+24
+ 2436 0218 002092E5 		ldr	r2, [r2, #0]
+ 2437 021c 012B82E3 		orr	r2, r2, #1024
+ 2438 0220 002083E5 		str	r2, [r3, #0]
+  93:../timer3.c   **** 
+  94:../timer3.c   ****         /* Configurar el vector de interrupción */
+  95:../timer3.c   ****         pISR_TIMER3 = (unsigned) timer3_ISR;
+ 2439              		.loc 1 95 0
+ 2440 0224 98309FE5 		ldr	r3, .L14+28
+ 2441 0228 98209FE5 		ldr	r2, .L14+32
+ 2442 022c 002083E5 		str	r2, [r3, #0]
+  96:../timer3.c   **** 
+  97:../timer3.c   ****         /* Configurar divisor (1/2) compartido con el timer2 */
+  98:../timer3.c   ****         rTCFG1 = (rTCFG1 & ~(0xF << 12)) | (0x0 << 12);
+ 2443              		.loc 1 98 0
+ 2444 0230 94309FE5 		ldr	r3, .L14+36
+ 2445 0234 90209FE5 		ldr	r2, .L14+36
+ 2446 0238 002092E5 		ldr	r2, [r2, #0]
+ 2447 023c 0F2AC2E3 		bic	r2, r2, #61440
  2448 0240 002083E5 		str	r2, [r3, #0]
-  94:../timer3.c   **** 
-  95:../timer3.c   ****         /* Enmascarar la interrupción del timer3 inicialmente */
-  96:../timer3.c   ****         rINTMSK |= BIT_TIMER3;
- 2449              		.loc 1 96 0
- 2450 0244 A8309FE5 		ldr	r3, .L15+24
- 2451 0248 A4209FE5 		ldr	r2, .L15+24
- 2452 024c 002092E5 		ldr	r2, [r2, #0]
- 2453 0250 012B82E3 		orr	r2, r2, #1024
- 2454 0254 002083E5 		str	r2, [r3, #0]
-  97:../timer3.c   **** 
-  98:../timer3.c   ****         /* Configurar el vector de interrupción */
-  99:../timer3.c   ****         pISR_TIMER3 = (unsigned) timer3_ISR;
- 2455              		.loc 1 99 0
- 2456 0258 98309FE5 		ldr	r3, .L15+28
- 2457 025c 98209FE5 		ldr	r2, .L15+32
- 2458 0260 002083E5 		str	r2, [r3, #0]
- 100:../timer3.c   **** 
- 101:../timer3.c   ****         /* Configurar divisor (1/2) compartido con el timer2 */
- 102:../timer3.c   ****         rTCFG1 = (rTCFG1 & ~(0xF << 12)) | (0x0 << 12);
- 2459              		.loc 1 102 0
- 2460 0264 94309FE5 		ldr	r3, .L15+36
- 2461 0268 90209FE5 		ldr	r2, .L15+36
- 2462 026c 002092E5 		ldr	r2, [r2, #0]
- 2463 0270 0F2AC2E3 		bic	r2, r2, #61440
- 2464 0274 002083E5 		str	r2, [r3, #0]
- 103:../timer3.c   **** 
- 104:../timer3.c   ****         /* Cargar el valor inicial y dejar el timer parado */
- 105:../timer3.c   ****         rTCNTB3 = TIMER3_1MS_COUNT;
- 2465              		.loc 1 105 0
- 2466 0278 84309FE5 		ldr	r3, .L15+40
- 2467 027c 7D2CA0E3 		mov	r2, #32000
- 2468 0280 002083E5 		str	r2, [r3, #0]
- 106:../timer3.c   ****         rTCMPB3 = 0;
- 2469              		.loc 1 106 0
- 2470 0284 7C309FE5 		ldr	r3, .L15+44
- 2471 0288 0020A0E3 		mov	r2, #0
- 2472 028c 002083E5 		str	r2, [r3, #0]
- 107:../timer3.c   ****         rTCON = (rTCON & ~(0xF << 16)) | (1 << 17);
- 2473              		.loc 1 107 0
- 2474 0290 74309FE5 		ldr	r3, .L15+48
- 2475 0294 70209FE5 		ldr	r2, .L15+48
- 2476 0298 002092E5 		ldr	r2, [r2, #0]
- 2477 029c 0F28C2E3 		bic	r2, r2, #983040
- 2478 02a0 022882E3 		orr	r2, r2, #131072
- 2479 02a4 002083E5 		str	r2, [r3, #0]
- 108:../timer3.c   ****         rTCON &= ~(0xF << 16);
- 2480              		.loc 1 108 0
- 2481 02a8 5C309FE5 		ldr	r3, .L15+48
- 2482 02ac 58209FE5 		ldr	r2, .L15+48
- 2483 02b0 002092E5 		ldr	r2, [r2, #0]
- 2484 02b4 0F28C2E3 		bic	r2, r2, #983040
- 2485 02b8 002083E5 		str	r2, [r3, #0]
+  99:../timer3.c   **** 
+ 100:../timer3.c   ****         /* Cargar el valor inicial y dejar el timer parado */
+ 101:../timer3.c   ****         rTCNTB3 = TIMER3_1MS_COUNT;
+ 2449              		.loc 1 101 0
+ 2450 0244 84309FE5 		ldr	r3, .L14+40
+ 2451 0248 7D2CA0E3 		mov	r2, #32000
+ 2452 024c 002083E5 		str	r2, [r3, #0]
+ 102:../timer3.c   ****         rTCMPB3 = 0;
+ 2453              		.loc 1 102 0
+ 2454 0250 7C309FE5 		ldr	r3, .L14+44
+ 2455 0254 0020A0E3 		mov	r2, #0
+ 2456 0258 002083E5 		str	r2, [r3, #0]
+ 103:../timer3.c   ****         rTCON = (rTCON & ~(0xF << 16)) | (1 << 17);
+ 2457              		.loc 1 103 0
+ 2458 025c 74309FE5 		ldr	r3, .L14+48
+ 2459 0260 70209FE5 		ldr	r2, .L14+48
+ 2460 0264 002092E5 		ldr	r2, [r2, #0]
+ 2461 0268 0F28C2E3 		bic	r2, r2, #983040
+ 2462 026c 022882E3 		orr	r2, r2, #131072
+ 2463 0270 002083E5 		str	r2, [r3, #0]
+ 104:../timer3.c   ****         rTCON &= ~(0xF << 16);
+ 2464              		.loc 1 104 0
+ 2465 0274 5C309FE5 		ldr	r3, .L14+48
+ 2466 0278 58209FE5 		ldr	r2, .L14+48
+ 2467 027c 002092E5 		ldr	r2, [r2, #0]
+ 2468 0280 0F28C2E3 		bic	r2, r2, #983040
+ 2469 0284 002083E5 		str	r2, [r3, #0]
+ 105:../timer3.c   **** 
+ 106:../timer3.c   ****         /* Limpiar posibles peticiones pendientes */
+ 107:../timer3.c   ****         rI_ISPC |= BIT_TIMER3;
+ 2470              		.loc 1 107 0
+ 2471 0288 4C309FE5 		ldr	r3, .L14+52
+ 2472 028c 48209FE5 		ldr	r2, .L14+52
+ 2473 0290 002092E5 		ldr	r2, [r2, #0]
+ 2474 0294 012B82E3 		orr	r2, r2, #1024
+ 2475 0298 002083E5 		str	r2, [r3, #0]
+ 108:../timer3.c   **** }
+ 2476              		.loc 1 108 0
+ 2477 029c 0CD04BE2 		sub	sp, fp, #12
+ 2478 02a0 00689DE8 		ldmfd	sp, {fp, sp, lr}
+ 2479 02a4 1EFF2FE1 		bx	lr
+ 2480              	.L15:
+ 2481              		.align	2
+ 2482              	.L14:
+ 2483 02a8 14000000 		.word	callback_validacion
+ 2484 02ac 00000000 		.word	estado_actual
+ 2485 02b0 04000000 		.word	contador_ms
+ 2486 02b4 08000000 		.word	monitor_ms
+ 2487 02b8 0C000000 		.word	boton_en_proceso
+ 2488 02bc 10000000 		.word	mascara_boton
+ 2489 02c0 0C00E001 		.word	31457292
+ 2490 02c4 48FF7F0C 		.word	209715016
+ 2491 02c8 00000000 		.word	timer3_ISR
+ 2492 02cc 0400D501 		.word	30736388
+ 2493 02d0 3000D501 		.word	30736432
+ 2494 02d4 3400D501 		.word	30736436
+ 2495 02d8 0800D501 		.word	30736392
+ 2496 02dc 2400E001 		.word	31457316
+ 2497              		.cfi_endproc
+ 2498              	.LFE4:
+ 2500              		.align	2
+ 2501              		.global	timer3_start_antirrebote
+ 2503              	timer3_start_antirrebote:
+ 2504              	.LFB5:
  109:../timer3.c   **** 
- 110:../timer3.c   ****         /* Limpiar posibles peticiones pendientes */
- 111:../timer3.c   ****         rI_ISPC |= BIT_TIMER3;
- 2486              		.loc 1 111 0
- 2487 02bc 4C309FE5 		ldr	r3, .L15+52
- 2488 02c0 48209FE5 		ldr	r2, .L15+52
- 2489 02c4 002092E5 		ldr	r2, [r2, #0]
- 2490 02c8 012B82E3 		orr	r2, r2, #1024
- 2491 02cc 002083E5 		str	r2, [r3, #0]
- 112:../timer3.c   **** }
- 2492              		.loc 1 112 0
- 2493 02d0 0CD04BE2 		sub	sp, fp, #12
- 2494 02d4 00689DE8 		ldmfd	sp, {fp, sp, lr}
- 2495 02d8 1EFF2FE1 		bx	lr
- 2496              	.L16:
- 2497              		.align	2
- 2498              	.L15:
- 2499 02dc 14000000 		.word	callback_validacion
- 2500 02e0 00000000 		.word	estado_actual
- 2501 02e4 04000000 		.word	contador_ms
- 2502 02e8 08000000 		.word	monitor_ms
- 2503 02ec 0C000000 		.word	boton_en_proceso
- 2504 02f0 10000000 		.word	mascara_boton
- 2505 02f4 0C00E001 		.word	31457292
- 2506 02f8 48FF7F0C 		.word	209715016
- 2507 02fc 00000000 		.word	timer3_ISR
- 2508 0300 0400D501 		.word	30736388
- 2509 0304 3000D501 		.word	30736432
- 2510 0308 3400D501 		.word	30736436
- 2511 030c 0800D501 		.word	30736392
- 2512 0310 2400E001 		.word	31457316
- 2513              		.cfi_endproc
- 2514              	.LFE4:
- 2516              		.align	2
- 2517              		.global	timer3_start_antirrebote
- 2519              	timer3_start_antirrebote:
- 2520              	.LFB5:
- 113:../timer3.c   **** 
- 114:../timer3.c   **** int timer3_start_antirrebote(uint8_t boton_id)
- 115:../timer3.c   **** {
- 2521              		.loc 1 115 0
- 2522              		.cfi_startproc
- 2523              		@ Function supports interworking.
- 2524              		@ args = 0, pretend = 0, frame = 8
- 2525              		@ frame_needed = 1, uses_anonymous_args = 0
- 2526 0314 0DC0A0E1 		mov	ip, sp
- 2527              	.LCFI10:
- 2528              		.cfi_def_cfa_register 12
- 2529 0318 00D82DE9 		stmfd	sp!, {fp, ip, lr, pc}
- 2530 031c 04B04CE2 		sub	fp, ip, #4
- 2531              		.cfi_offset 14, -8
- 2532              		.cfi_offset 13, -12
- 2533              		.cfi_offset 11, -16
- 2534              	.LCFI11:
- 2535              		.cfi_def_cfa 11, 4
- 2536 0320 08D04DE2 		sub	sp, sp, #8
- 2537 0324 0030A0E1 		mov	r3, r0
- 2538 0328 0D304BE5 		strb	r3, [fp, #-13]
- 116:../timer3.c   ****         if (estado_actual != ESPERANDO_PULSACION)
- 2539              		.loc 1 116 0
- 2540 032c C4309FE5 		ldr	r3, .L25
- 2541 0330 0030D3E5 		ldrb	r3, [r3, #0]
- 2542 0334 FF3003E2 		and	r3, r3, #255
- 2543 0338 000053E3 		cmp	r3, #0
- 2544 033c 0100000A 		beq	.L18
- 117:../timer3.c   ****         {
- 118:../timer3.c   ****                 return 0;
- 2545              		.loc 1 118 0
- 2546 0340 0030A0E3 		mov	r3, #0
- 2547 0344 270000EA 		b	.L19
- 2548              	.L18:
- 119:../timer3.c   ****         }
- 120:../timer3.c   **** 
- 121:../timer3.c   ****         /* Seleccionar la máscara del puerto correspondiente */
- 122:../timer3.c   ****         switch (boton_id)
- 2549              		.loc 1 122 0
- 2550 0348 0D305BE5 		ldrb	r3, [fp, #-13]	@ zero_extendqisi2
- 2551 034c 040053E3 		cmp	r3, #4
- 2552 0350 0200000A 		beq	.L21
- 2553 0354 080053E3 		cmp	r3, #8
- 2554 0358 0400000A 		beq	.L22
- 2555 035c 070000EA 		b	.L24
- 2556              	.L21:
- 123:../timer3.c   ****         {
- 124:../timer3.c   ****                 case EVENTO_BOTON_IZQUIERDO:
- 125:../timer3.c   ****                         mascara_boton = BOTON_MASK_EINT6;
- 2557              		.loc 1 125 0
- 2558 0360 94309FE5 		ldr	r3, .L25+4
- 2559 0364 4020A0E3 		mov	r2, #64
- 2560 0368 002083E5 		str	r2, [r3, #0]
- 126:../timer3.c   ****                         break;
- 2561              		.loc 1 126 0
- 2562 036c 050000EA 		b	.L23
- 2563              	.L22:
- 127:../timer3.c   ****                 case EVENTO_BOTON_DERECHO:
- 128:../timer3.c   ****                         mascara_boton = BOTON_MASK_EINT7;
- 2564              		.loc 1 128 0
- 2565 0370 84309FE5 		ldr	r3, .L25+4
- 2566 0374 8020A0E3 		mov	r2, #128
- 2567 0378 002083E5 		str	r2, [r3, #0]
- 129:../timer3.c   ****                         break;
- 2568              		.loc 1 129 0
- 2569 037c 010000EA 		b	.L23
- 2570              	.L24:
- 130:../timer3.c   ****                 default:
- 131:../timer3.c   ****                         return 0;
- 2571              		.loc 1 131 0
- 2572 0380 0030A0E3 		mov	r3, #0
- 2573 0384 170000EA 		b	.L19
- 2574              	.L23:
- 132:../timer3.c   ****         }
- 133:../timer3.c   **** 
- 134:../timer3.c   ****         boton_en_proceso = boton_id;
- 2575              		.loc 1 134 0
- 2576 0388 70309FE5 		ldr	r3, .L25+8
- 2577 038c 0D205BE5 		ldrb	r2, [fp, #-13]
- 2578 0390 0020C3E5 		strb	r2, [r3, #0]
- 135:../timer3.c   ****         estado_actual = REBOTE_PRESION;
- 2579              		.loc 1 135 0
- 2580 0394 5C309FE5 		ldr	r3, .L25
- 2581 0398 0120A0E3 		mov	r2, #1
- 2582 039c 0020C3E5 		strb	r2, [r3, #0]
- 136:../timer3.c   ****         contador_ms = TIMER3_TRP_MS;
- 2583              		.loc 1 136 0
- 2584 03a0 5C309FE5 		ldr	r3, .L25+12
- 2585 03a4 1E20A0E3 		mov	r2, #30
- 2586 03a8 002083E5 		str	r2, [r3, #0]
- 137:../timer3.c   ****         monitor_ms = TIMER3_MONITOR_MS;
- 2587              		.loc 1 137 0
- 2588 03ac 54309FE5 		ldr	r3, .L25+16
- 2589 03b0 6420A0E3 		mov	r2, #100
- 2590 03b4 002083E5 		str	r2, [r3, #0]
- 138:../timer3.c   **** 
- 139:../timer3.c   ****         /* Deshabilitar las interrupciones de los botones */
- 140:../timer3.c   ****         rINTMSK |= BIT_EINT4567;
- 2591              		.loc 1 140 0
- 2592 03b8 4C309FE5 		ldr	r3, .L25+20
- 2593 03bc 48209FE5 		ldr	r2, .L25+20
- 2594 03c0 002092E5 		ldr	r2, [r2, #0]
- 2595 03c4 022682E3 		orr	r2, r2, #2097152
- 2596 03c8 002083E5 		str	r2, [r3, #0]
- 141:../timer3.c   **** 
- 142:../timer3.c   ****         /* Preparar y arrancar el temporizador */
- 143:../timer3.c   ****         timer3_preparar_tick();
- 2597              		.loc 1 143 0
- 2598 03cc 32FFFFEB 		bl	timer3_preparar_tick
- 144:../timer3.c   **** 
- 145:../timer3.c   ****         /* Habilitar la interrupción del timer3 */
- 146:../timer3.c   ****         rINTMSK &= ~(BIT_TIMER3);
- 2599              		.loc 1 146 0
- 2600 03d0 34309FE5 		ldr	r3, .L25+20
- 2601 03d4 30209FE5 		ldr	r2, .L25+20
- 2602 03d8 002092E5 		ldr	r2, [r2, #0]
- 2603 03dc 012BC2E3 		bic	r2, r2, #1024
- 2604 03e0 002083E5 		str	r2, [r3, #0]
- 147:../timer3.c   **** 
- 148:../timer3.c   ****         return 1;
- 2605              		.loc 1 148 0
- 2606 03e4 0130A0E3 		mov	r3, #1
- 2607              	.L19:
- 149:../timer3.c   **** }
- 2608              		.loc 1 149 0
- 2609 03e8 0300A0E1 		mov	r0, r3
- 2610 03ec 0CD04BE2 		sub	sp, fp, #12
- 2611 03f0 00689DE8 		ldmfd	sp, {fp, sp, lr}
- 2612 03f4 1EFF2FE1 		bx	lr
- 2613              	.L26:
- 2614              		.align	2
- 2615              	.L25:
- 2616 03f8 00000000 		.word	estado_actual
- 2617 03fc 10000000 		.word	mascara_boton
- 2618 0400 0C000000 		.word	boton_en_proceso
- 2619 0404 04000000 		.word	contador_ms
- 2620 0408 08000000 		.word	monitor_ms
- 2621 040c 0C00E001 		.word	31457292
- 2622              		.cfi_endproc
- 2623              	.LFE5:
- 2625              		.align	2
- 2626              		.global	timer3_esta_ocupado
- 2628              	timer3_esta_ocupado:
- 2629              	.LFB6:
- 150:../timer3.c   **** 
- 151:../timer3.c   **** int timer3_esta_ocupado(void)
- 152:../timer3.c   **** {
- 2630              		.loc 1 152 0
- 2631              		.cfi_startproc
- 2632              		@ Function supports interworking.
- 2633              		@ args = 0, pretend = 0, frame = 0
- 2634              		@ frame_needed = 1, uses_anonymous_args = 0
- 2635 0410 0DC0A0E1 		mov	ip, sp
- 2636              	.LCFI12:
- 2637              		.cfi_def_cfa_register 12
- 2638 0414 00D82DE9 		stmfd	sp!, {fp, ip, lr, pc}
- 2639 0418 04B04CE2 		sub	fp, ip, #4
- 2640              		.cfi_offset 14, -8
- 2641              		.cfi_offset 13, -12
- 2642              		.cfi_offset 11, -16
- 2643              	.LCFI13:
- 2644              		.cfi_def_cfa 11, 4
- 153:../timer3.c   ****         return (estado_actual != ESPERANDO_PULSACION);
- 2645              		.loc 1 153 0
- 2646 041c 20309FE5 		ldr	r3, .L28
- 2647 0420 0030D3E5 		ldrb	r3, [r3, #0]
- 2648 0424 FF3003E2 		and	r3, r3, #255
- 2649 0428 000053E3 		cmp	r3, #0
- 2650 042c 0030A003 		moveq	r3, #0
- 2651 0430 0130A013 		movne	r3, #1
- 154:../timer3.c   **** }
- 2652              		.loc 1 154 0
- 2653 0434 0300A0E1 		mov	r0, r3
- 2654 0438 0CD04BE2 		sub	sp, fp, #12
- 2655 043c 00689DE8 		ldmfd	sp, {fp, sp, lr}
- 2656 0440 1EFF2FE1 		bx	lr
- 2657              	.L29:
- 2658              		.align	2
- 2659              	.L28:
- 2660 0444 00000000 		.word	estado_actual
- 2661              		.cfi_endproc
- 2662              	.LFE6:
- 2664              		.align	2
- 2665              		.global	timer3_ISR
- 2667              	timer3_ISR:
- 2668              	.LFB7:
- 155:../timer3.c   **** 
- 156:../timer3.c   **** /*--- Código de la ISR ---*/
- 157:../timer3.c   **** void timer3_ISR(void)
- 158:../timer3.c   **** {
- 2669              		.loc 1 158 0
- 2670              		.cfi_startproc
- 2671              		@ Interrupt Service Routine.
- 2672              		@ args = 0, pretend = 0, frame = 0
- 2673              		@ frame_needed = 1, uses_anonymous_args = 0
- 2674 0448 04C02DE5 		str	ip, [sp, #-4]!
- 2675 044c 0DC0A0E1 		mov	ip, sp
- 2676              	.LCFI14:
- 2677              		.cfi_def_cfa_register 12
- 2678 0450 0FD82DE9 		stmfd	sp!, {r0, r1, r2, r3, fp, ip, lr, pc}
- 2679 0454 04B04CE2 		sub	fp, ip, #4
- 2680              		.cfi_offset 14, -8
- 2681              		.cfi_offset 13, -12
- 2682              		.cfi_offset 11, -16
- 2683              		.cfi_offset 3, -20
- 2684              		.cfi_offset 2, -24
- 2685              		.cfi_offset 1, -28
- 2686              		.cfi_offset 0, -32
- 2687              	.LCFI15:
- 2688              		.cfi_def_cfa 11, 4
- 159:../timer3.c   ****         switch (estado_actual)
- 2689              		.loc 1 159 0
- 2690 0458 58319FE5 		ldr	r3, .L47
- 2691 045c 0030D3E5 		ldrb	r3, [r3, #0]
- 2692 0460 FF3003E2 		and	r3, r3, #255
- 2693 0464 020053E3 		cmp	r3, #2
- 2694 0468 1700000A 		beq	.L33
- 2695 046c 030053E3 		cmp	r3, #3
- 2696 0470 3100000A 		beq	.L34
- 2697 0474 010053E3 		cmp	r3, #1
- 2698 0478 3E00001A 		bne	.L43
- 2699              	.L32:
- 160:../timer3.c   ****         {
- 161:../timer3.c   ****                 case REBOTE_PRESION:
- 162:../timer3.c   ****                         if (contador_ms > 0)
- 2700              		.loc 1 162 0
- 2701 047c 38319FE5 		ldr	r3, .L47+4
- 2702 0480 003093E5 		ldr	r3, [r3, #0]
- 2703 0484 000053E3 		cmp	r3, #0
- 2704 0488 0400000A 		beq	.L35
+ 110:../timer3.c   **** int timer3_start_antirrebote(uint8_t boton_id)
+ 111:../timer3.c   **** {
+ 2505              		.loc 1 111 0
+ 2506              		.cfi_startproc
+ 2507              		@ Function supports interworking.
+ 2508              		@ args = 0, pretend = 0, frame = 8
+ 2509              		@ frame_needed = 1, uses_anonymous_args = 0
+ 2510 02e0 0DC0A0E1 		mov	ip, sp
+ 2511              	.LCFI10:
+ 2512              		.cfi_def_cfa_register 12
+ 2513 02e4 00D82DE9 		stmfd	sp!, {fp, ip, lr, pc}
+ 2514 02e8 04B04CE2 		sub	fp, ip, #4
+ 2515              		.cfi_offset 14, -8
+ 2516              		.cfi_offset 13, -12
+ 2517              		.cfi_offset 11, -16
+ 2518              	.LCFI11:
+ 2519              		.cfi_def_cfa 11, 4
+ 2520 02ec 08D04DE2 		sub	sp, sp, #8
+ 2521 02f0 0030A0E1 		mov	r3, r0
+ 2522 02f4 0D304BE5 		strb	r3, [fp, #-13]
+ 112:../timer3.c   ****         if (estado_actual != ESPERANDO_PULSACION)
+ 2523              		.loc 1 112 0
+ 2524 02f8 C4309FE5 		ldr	r3, .L24
+ 2525 02fc 0030D3E5 		ldrb	r3, [r3, #0]
+ 2526 0300 FF3003E2 		and	r3, r3, #255
+ 2527 0304 000053E3 		cmp	r3, #0
+ 2528 0308 0100000A 		beq	.L17
+ 113:../timer3.c   ****         {
+ 114:../timer3.c   ****                 return 0;
+ 2529              		.loc 1 114 0
+ 2530 030c 0030A0E3 		mov	r3, #0
+ 2531 0310 270000EA 		b	.L18
+ 2532              	.L17:
+ 115:../timer3.c   ****         }
+ 116:../timer3.c   **** 
+ 117:../timer3.c   ****         /* Seleccionar la máscara del puerto correspondiente */
+ 118:../timer3.c   ****         switch (boton_id)
+ 2533              		.loc 1 118 0
+ 2534 0314 0D305BE5 		ldrb	r3, [fp, #-13]	@ zero_extendqisi2
+ 2535 0318 040053E3 		cmp	r3, #4
+ 2536 031c 0200000A 		beq	.L20
+ 2537 0320 080053E3 		cmp	r3, #8
+ 2538 0324 0400000A 		beq	.L21
+ 2539 0328 070000EA 		b	.L23
+ 2540              	.L20:
+ 119:../timer3.c   ****         {
+ 120:../timer3.c   ****                 case EVENTO_BOTON_IZQUIERDO:
+ 121:../timer3.c   ****                         mascara_boton = BOTON_MASK_EINT6;
+ 2541              		.loc 1 121 0
+ 2542 032c 94309FE5 		ldr	r3, .L24+4
+ 2543 0330 4020A0E3 		mov	r2, #64
+ 2544 0334 002083E5 		str	r2, [r3, #0]
+ 122:../timer3.c   ****                         break;
+ 2545              		.loc 1 122 0
+ 2546 0338 050000EA 		b	.L22
+ 2547              	.L21:
+ 123:../timer3.c   ****                 case EVENTO_BOTON_DERECHO:
+ 124:../timer3.c   ****                         mascara_boton = BOTON_MASK_EINT7;
+ 2548              		.loc 1 124 0
+ 2549 033c 84309FE5 		ldr	r3, .L24+4
+ 2550 0340 8020A0E3 		mov	r2, #128
+ 2551 0344 002083E5 		str	r2, [r3, #0]
+ 125:../timer3.c   ****                         break;
+ 2552              		.loc 1 125 0
+ 2553 0348 010000EA 		b	.L22
+ 2554              	.L23:
+ 126:../timer3.c   ****                 default:
+ 127:../timer3.c   ****                         return 0;
+ 2555              		.loc 1 127 0
+ 2556 034c 0030A0E3 		mov	r3, #0
+ 2557 0350 170000EA 		b	.L18
+ 2558              	.L22:
+ 128:../timer3.c   ****         }
+ 129:../timer3.c   **** 
+ 130:../timer3.c   ****         boton_en_proceso = boton_id;
+ 2559              		.loc 1 130 0
+ 2560 0354 70309FE5 		ldr	r3, .L24+8
+ 2561 0358 0D205BE5 		ldrb	r2, [fp, #-13]
+ 2562 035c 0020C3E5 		strb	r2, [r3, #0]
+ 131:../timer3.c   ****         estado_actual = REBOTE_PRESION;
+ 2563              		.loc 1 131 0
+ 2564 0360 5C309FE5 		ldr	r3, .L24
+ 2565 0364 0120A0E3 		mov	r2, #1
+ 2566 0368 0020C3E5 		strb	r2, [r3, #0]
+ 132:../timer3.c   ****         contador_ms = TIMER3_TRP_MS;
+ 2567              		.loc 1 132 0
+ 2568 036c 5C309FE5 		ldr	r3, .L24+12
+ 2569 0370 1E20A0E3 		mov	r2, #30
+ 2570 0374 002083E5 		str	r2, [r3, #0]
+ 133:../timer3.c   ****         monitor_ms = TIMER3_MONITOR_MS;
+ 2571              		.loc 1 133 0
+ 2572 0378 54309FE5 		ldr	r3, .L24+16
+ 2573 037c 6420A0E3 		mov	r2, #100
+ 2574 0380 002083E5 		str	r2, [r3, #0]
+ 134:../timer3.c   **** 
+ 135:../timer3.c   ****         /* Deshabilitar las interrupciones de los botones */
+ 136:../timer3.c   ****         rINTMSK |= BIT_EINT4567;
+ 2575              		.loc 1 136 0
+ 2576 0384 4C309FE5 		ldr	r3, .L24+20
+ 2577 0388 48209FE5 		ldr	r2, .L24+20
+ 2578 038c 002092E5 		ldr	r2, [r2, #0]
+ 2579 0390 022682E3 		orr	r2, r2, #2097152
+ 2580 0394 002083E5 		str	r2, [r3, #0]
+ 137:../timer3.c   **** 
+ 138:../timer3.c   ****         /* Preparar y arrancar el temporizador */
+ 139:../timer3.c   ****         timer3_preparar_tick();
+ 2581              		.loc 1 139 0
+ 2582 0398 3FFFFFEB 		bl	timer3_preparar_tick
+ 140:../timer3.c   **** 
+ 141:../timer3.c   ****         /* Habilitar la interrupción del timer3 */
+ 142:../timer3.c   ****         rINTMSK &= ~(BIT_TIMER3);
+ 2583              		.loc 1 142 0
+ 2584 039c 34309FE5 		ldr	r3, .L24+20
+ 2585 03a0 30209FE5 		ldr	r2, .L24+20
+ 2586 03a4 002092E5 		ldr	r2, [r2, #0]
+ 2587 03a8 012BC2E3 		bic	r2, r2, #1024
+ 2588 03ac 002083E5 		str	r2, [r3, #0]
+ 143:../timer3.c   **** 
+ 144:../timer3.c   ****         return 1;
+ 2589              		.loc 1 144 0
+ 2590 03b0 0130A0E3 		mov	r3, #1
+ 2591              	.L18:
+ 145:../timer3.c   **** }
+ 2592              		.loc 1 145 0
+ 2593 03b4 0300A0E1 		mov	r0, r3
+ 2594 03b8 0CD04BE2 		sub	sp, fp, #12
+ 2595 03bc 00689DE8 		ldmfd	sp, {fp, sp, lr}
+ 2596 03c0 1EFF2FE1 		bx	lr
+ 2597              	.L25:
+ 2598              		.align	2
+ 2599              	.L24:
+ 2600 03c4 00000000 		.word	estado_actual
+ 2601 03c8 10000000 		.word	mascara_boton
+ 2602 03cc 0C000000 		.word	boton_en_proceso
+ 2603 03d0 04000000 		.word	contador_ms
+ 2604 03d4 08000000 		.word	monitor_ms
+ 2605 03d8 0C00E001 		.word	31457292
+ 2606              		.cfi_endproc
+ 2607              	.LFE5:
+ 2609              		.align	2
+ 2610              		.global	timer3_esta_ocupado
+ 2612              	timer3_esta_ocupado:
+ 2613              	.LFB6:
+ 146:../timer3.c   **** 
+ 147:../timer3.c   **** int timer3_esta_ocupado(void)
+ 148:../timer3.c   **** {
+ 2614              		.loc 1 148 0
+ 2615              		.cfi_startproc
+ 2616              		@ Function supports interworking.
+ 2617              		@ args = 0, pretend = 0, frame = 0
+ 2618              		@ frame_needed = 1, uses_anonymous_args = 0
+ 2619 03dc 0DC0A0E1 		mov	ip, sp
+ 2620              	.LCFI12:
+ 2621              		.cfi_def_cfa_register 12
+ 2622 03e0 00D82DE9 		stmfd	sp!, {fp, ip, lr, pc}
+ 2623 03e4 04B04CE2 		sub	fp, ip, #4
+ 2624              		.cfi_offset 14, -8
+ 2625              		.cfi_offset 13, -12
+ 2626              		.cfi_offset 11, -16
+ 2627              	.LCFI13:
+ 2628              		.cfi_def_cfa 11, 4
+ 149:../timer3.c   ****         return (estado_actual != ESPERANDO_PULSACION);
+ 2629              		.loc 1 149 0
+ 2630 03e8 20309FE5 		ldr	r3, .L27
+ 2631 03ec 0030D3E5 		ldrb	r3, [r3, #0]
+ 2632 03f0 FF3003E2 		and	r3, r3, #255
+ 2633 03f4 000053E3 		cmp	r3, #0
+ 2634 03f8 0030A003 		moveq	r3, #0
+ 2635 03fc 0130A013 		movne	r3, #1
+ 150:../timer3.c   **** }
+ 2636              		.loc 1 150 0
+ 2637 0400 0300A0E1 		mov	r0, r3
+ 2638 0404 0CD04BE2 		sub	sp, fp, #12
+ 2639 0408 00689DE8 		ldmfd	sp, {fp, sp, lr}
+ 2640 040c 1EFF2FE1 		bx	lr
+ 2641              	.L28:
+ 2642              		.align	2
+ 2643              	.L27:
+ 2644 0410 00000000 		.word	estado_actual
+ 2645              		.cfi_endproc
+ 2646              	.LFE6:
+ 2648              		.align	2
+ 2649              		.global	timer3_ISR
+ 2651              	timer3_ISR:
+ 2652              	.LFB7:
+ 151:../timer3.c   **** 
+ 152:../timer3.c   **** /*--- Código de la ISR ---*/
+ 153:../timer3.c   **** void timer3_ISR(void)
+ 154:../timer3.c   **** {
+ 2653              		.loc 1 154 0
+ 2654              		.cfi_startproc
+ 2655              		@ Interrupt Service Routine.
+ 2656              		@ args = 0, pretend = 0, frame = 0
+ 2657              		@ frame_needed = 1, uses_anonymous_args = 0
+ 2658 0414 04C02DE5 		str	ip, [sp, #-4]!
+ 2659 0418 0DC0A0E1 		mov	ip, sp
+ 2660              	.LCFI14:
+ 2661              		.cfi_def_cfa_register 12
+ 2662 041c 0FD82DE9 		stmfd	sp!, {r0, r1, r2, r3, fp, ip, lr, pc}
+ 2663 0420 04B04CE2 		sub	fp, ip, #4
+ 2664              		.cfi_offset 14, -8
+ 2665              		.cfi_offset 13, -12
+ 2666              		.cfi_offset 11, -16
+ 2667              		.cfi_offset 3, -20
+ 2668              		.cfi_offset 2, -24
+ 2669              		.cfi_offset 1, -28
+ 2670              		.cfi_offset 0, -32
+ 2671              	.LCFI15:
+ 2672              		.cfi_def_cfa 11, 4
+ 155:../timer3.c   ****         switch (estado_actual)
+ 2673              		.loc 1 155 0
+ 2674 0424 88319FE5 		ldr	r3, .L47
+ 2675 0428 0030D3E5 		ldrb	r3, [r3, #0]
+ 2676 042c FF3003E2 		and	r3, r3, #255
+ 2677 0430 020053E3 		cmp	r3, #2
+ 2678 0434 2300000A 		beq	.L32
+ 2679 0438 030053E3 		cmp	r3, #3
+ 2680 043c 3D00000A 		beq	.L33
+ 2681 0440 010053E3 		cmp	r3, #1
+ 2682 0444 4A00001A 		bne	.L43
+ 2683              	.L31:
+ 156:../timer3.c   ****         {
+ 157:../timer3.c   ****                 case REBOTE_PRESION:
+ 158:../timer3.c   ****                         if (contador_ms > 0)
+ 2684              		.loc 1 158 0
+ 2685 0448 68319FE5 		ldr	r3, .L47+4
+ 2686 044c 003093E5 		ldr	r3, [r3, #0]
+ 2687 0450 000053E3 		cmp	r3, #0
+ 2688 0454 0400000A 		beq	.L34
+ 159:../timer3.c   ****                         {
+ 160:../timer3.c   ****                                 contador_ms -= TIMER3_TICK_MS;
+ 2689              		.loc 1 160 0
+ 2690 0458 58319FE5 		ldr	r3, .L47+4
+ 2691 045c 003093E5 		ldr	r3, [r3, #0]
+ 2692 0460 012043E2 		sub	r2, r3, #1
+ 2693 0464 4C319FE5 		ldr	r3, .L47+4
+ 2694 0468 002083E5 		str	r2, [r3, #0]
+ 2695              	.L34:
+ 161:../timer3.c   ****                         }
+ 162:../timer3.c   ****                         if (contador_ms == 0)
+ 2696              		.loc 1 162 0
+ 2697 046c 44319FE5 		ldr	r3, .L47+4
+ 2698 0470 003093E5 		ldr	r3, [r3, #0]
+ 2699 0474 000053E3 		cmp	r3, #0
+ 2700 0478 3F00001A 		bne	.L44
  163:../timer3.c   ****                         {
- 164:../timer3.c   ****                                 contador_ms -= TIMER3_TICK_MS;
- 2705              		.loc 1 164 0
- 2706 048c 28319FE5 		ldr	r3, .L47+4
- 2707 0490 003093E5 		ldr	r3, [r3, #0]
- 2708 0494 012043E2 		sub	r2, r3, #1
- 2709 0498 1C319FE5 		ldr	r3, .L47+4
- 2710 049c 002083E5 		str	r2, [r3, #0]
- 2711              	.L35:
- 165:../timer3.c   ****                         }
- 166:../timer3.c   ****                         if (contador_ms == 0)
- 2712              		.loc 1 166 0
- 2713 04a0 14319FE5 		ldr	r3, .L47+4
- 2714 04a4 003093E5 		ldr	r3, [r3, #0]
- 2715 04a8 000053E3 		cmp	r3, #0
- 2716 04ac 3300001A 		bne	.L44
- 167:../timer3.c   ****                         {
- 168:../timer3.c   ****                                 estado_actual = MONITORIZANDO;
- 2717              		.loc 1 168 0
- 2718 04b0 00319FE5 		ldr	r3, .L47
- 2719 04b4 0220A0E3 		mov	r2, #2
- 2720 04b8 0020C3E5 		strb	r2, [r3, #0]
- 169:../timer3.c   ****                                 monitor_ms = TIMER3_MONITOR_MS;
- 2721              		.loc 1 169 0
- 2722 04bc FC309FE5 		ldr	r3, .L47+8
- 2723 04c0 6420A0E3 		mov	r2, #100
- 2724 04c4 002083E5 		str	r2, [r3, #0]
- 170:../timer3.c   ****                         }
- 171:../timer3.c   ****                         break;
- 2725              		.loc 1 171 0
- 2726 04c8 310000EA 		b	.L37
- 2727              	.L33:
- 172:../timer3.c   **** 
- 173:../timer3.c   ****                 case MONITORIZANDO:
- 174:../timer3.c   ****                         if (monitor_ms > 0)
- 2728              		.loc 1 174 0
- 2729 04cc EC309FE5 		ldr	r3, .L47+8
- 2730 04d0 003093E5 		ldr	r3, [r3, #0]
- 2731 04d4 000053E3 		cmp	r3, #0
- 2732 04d8 0400000A 		beq	.L38
- 175:../timer3.c   ****                         {
- 176:../timer3.c   ****                                 monitor_ms -= TIMER3_TICK_MS;
- 2733              		.loc 1 176 0
- 2734 04dc DC309FE5 		ldr	r3, .L47+8
- 2735 04e0 003093E5 		ldr	r3, [r3, #0]
- 2736 04e4 012043E2 		sub	r2, r3, #1
- 2737 04e8 D0309FE5 		ldr	r3, .L47+8
- 2738 04ec 002083E5 		str	r2, [r3, #0]
- 2739              	.L38:
- 177:../timer3.c   ****                         }
- 178:../timer3.c   ****                         if (monitor_ms == 0)
- 2740              		.loc 1 178 0
- 2741 04f0 C8309FE5 		ldr	r3, .L47+8
- 2742 04f4 003093E5 		ldr	r3, [r3, #0]
- 2743 04f8 000053E3 		cmp	r3, #0
- 2744 04fc 2100001A 		bne	.L45
- 179:../timer3.c   ****                         {
- 180:../timer3.c   ****                                 if (boton_sigue_pulsado())
- 2745              		.loc 1 180 0
- 2746 0500 BEFEFFEB 		bl	boton_sigue_pulsado
- 2747 0504 0030A0E1 		mov	r3, r0
- 2748 0508 000053E3 		cmp	r3, #0
- 2749 050c 0300000A 		beq	.L40
- 181:../timer3.c   ****                                 {
- 182:../timer3.c   ****                                         monitor_ms = TIMER3_MONITOR_MS;
- 2750              		.loc 1 182 0
- 2751 0510 A8309FE5 		ldr	r3, .L47+8
- 2752 0514 6420A0E3 		mov	r2, #100
- 2753 0518 002083E5 		str	r2, [r3, #0]
- 183:../timer3.c   ****                                 }
- 184:../timer3.c   ****                                 else
- 185:../timer3.c   ****                                 {
- 186:../timer3.c   ****                                         estado_actual = REBOTE_DEPRESION;
- 187:../timer3.c   ****                                         contador_ms = TIMER3_TRD_MS;
- 188:../timer3.c   ****                                 }
- 189:../timer3.c   ****                         }
- 190:../timer3.c   ****                         break;
- 2754              		.loc 1 190 0
- 2755 051c 1C0000EA 		b	.L37
- 2756              	.L40:
- 186:../timer3.c   ****                                         estado_actual = REBOTE_DEPRESION;
- 2757              		.loc 1 186 0
- 2758 0520 90309FE5 		ldr	r3, .L47
- 2759 0524 0320A0E3 		mov	r2, #3
- 2760 0528 0020C3E5 		strb	r2, [r3, #0]
- 187:../timer3.c   ****                                         contador_ms = TIMER3_TRD_MS;
- 2761              		.loc 1 187 0
- 2762 052c 88309FE5 		ldr	r3, .L47+4
- 2763 0530 1E20A0E3 		mov	r2, #30
- 2764 0534 002083E5 		str	r2, [r3, #0]
- 2765              		.loc 1 190 0
- 2766 0538 150000EA 		b	.L37
- 2767              	.L34:
- 191:../timer3.c   **** 
- 192:../timer3.c   ****                 case REBOTE_DEPRESION:
- 193:../timer3.c   ****                         if (contador_ms > 0)
- 2768              		.loc 1 193 0
- 2769 053c 78309FE5 		ldr	r3, .L47+4
- 2770 0540 003093E5 		ldr	r3, [r3, #0]
- 2771 0544 000053E3 		cmp	r3, #0
- 2772 0548 0400000A 		beq	.L41
- 194:../timer3.c   ****                         {
- 195:../timer3.c   ****                                 contador_ms -= TIMER3_TICK_MS;
- 2773              		.loc 1 195 0
- 2774 054c 68309FE5 		ldr	r3, .L47+4
- 2775 0550 003093E5 		ldr	r3, [r3, #0]
- 2776 0554 012043E2 		sub	r2, r3, #1
- 2777 0558 5C309FE5 		ldr	r3, .L47+4
- 2778 055c 002083E5 		str	r2, [r3, #0]
- 2779              	.L41:
- 196:../timer3.c   ****                         }
- 197:../timer3.c   ****                         if (contador_ms == 0)
- 2780              		.loc 1 197 0
- 2781 0560 54309FE5 		ldr	r3, .L47+4
- 2782 0564 003093E5 		ldr	r3, [r3, #0]
- 2783 0568 000053E3 		cmp	r3, #0
- 2784 056c 0700001A 		bne	.L46
- 198:../timer3.c   ****                         {
- 199:../timer3.c   ****                                 finalizar_antirrebote();
- 2785              		.loc 1 199 0
- 2786 0570 E4FEFFEB 		bl	finalizar_antirrebote
- 200:../timer3.c   ****                         }
- 201:../timer3.c   ****                         break;
- 2787              		.loc 1 201 0
- 2788 0574 060000EA 		b	.L37
- 2789              	.L43:
- 202:../timer3.c   **** 
- 203:../timer3.c   ****                 default:
- 204:../timer3.c   ****                         break;
- 2790              		.loc 1 204 0
- 2791 0578 0000A0E1 		mov	r0, r0	@ nop
- 2792 057c 040000EA 		b	.L37
- 2793              	.L44:
- 171:../timer3.c   ****                         break;
- 2794              		.loc 1 171 0
- 2795 0580 0000A0E1 		mov	r0, r0	@ nop
- 2796 0584 020000EA 		b	.L37
- 2797              	.L45:
- 190:../timer3.c   ****                         break;
- 2798              		.loc 1 190 0
- 2799 0588 0000A0E1 		mov	r0, r0	@ nop
- 2800 058c 000000EA 		b	.L37
- 2801              	.L46:
- 201:../timer3.c   ****                         break;
- 2802              		.loc 1 201 0
- 2803 0590 0000A0E1 		mov	r0, r0	@ nop
- 2804              	.L37:
- 205:../timer3.c   ****         }
- 206:../timer3.c   **** 
- 207:../timer3.c   ****         /* Limpiar la petición de interrupción */
- 208:../timer3.c   ****         rI_ISPC |= BIT_TIMER3;
- 2805              		.loc 1 208 0
- 2806 0594 28309FE5 		ldr	r3, .L47+12
- 2807 0598 24209FE5 		ldr	r2, .L47+12
- 2808 059c 002092E5 		ldr	r2, [r2, #0]
- 2809 05a0 012B82E3 		orr	r2, r2, #1024
- 2810 05a4 002083E5 		str	r2, [r3, #0]
- 209:../timer3.c   **** }
- 2811              		.loc 1 209 0
- 2812 05a8 1CD04BE2 		sub	sp, fp, #28
- 2813 05ac 0F689DE8 		ldmfd	sp, {r0, r1, r2, r3, fp, sp, lr}
- 2814 05b0 04C09DE4 		ldmfd	sp!, {ip}
- 2815 05b4 04F05EE2 		subs	pc, lr, #4
- 2816              	.L48:
- 2817              		.align	2
- 2818              	.L47:
- 2819 05b8 00000000 		.word	estado_actual
- 2820 05bc 04000000 		.word	contador_ms
- 2821 05c0 08000000 		.word	monitor_ms
- 2822 05c4 2400E001 		.word	31457316
- 2823              		.cfi_endproc
- 2824              	.LFE7:
- 2826              	.Letext0:
+ 164:../timer3.c   ****                                 /* Notificar la pulsación validada (cuando se confirma que está p
+ 165:../timer3.c   ****                                 if (callback_validacion)
+ 2701              		.loc 1 165 0
+ 2702 047c 38319FE5 		ldr	r3, .L47+8
+ 2703 0480 003093E5 		ldr	r3, [r3, #0]
+ 2704 0484 000053E3 		cmp	r3, #0
+ 2705 0488 0700000A 		beq	.L36
+ 166:../timer3.c   ****                                 {
+ 167:../timer3.c   ****                                         callback_validacion(boton_en_proceso);
+ 2706              		.loc 1 167 0
+ 2707 048c 28319FE5 		ldr	r3, .L47+8
+ 2708 0490 003093E5 		ldr	r3, [r3, #0]
+ 2709 0494 24219FE5 		ldr	r2, .L47+12
+ 2710 0498 0020D2E5 		ldrb	r2, [r2, #0]
+ 2711 049c FF2002E2 		and	r2, r2, #255
+ 2712 04a0 0200A0E1 		mov	r0, r2
+ 2713 04a4 0FE0A0E1 		mov	lr, pc
+ 2714 04a8 13FF2FE1 		bx	r3
+ 2715              	.L36:
+ 168:../timer3.c   ****                                 }
+ 169:../timer3.c   ****                                 
+ 170:../timer3.c   ****                                 estado_actual = MONITORIZANDO;
+ 2716              		.loc 1 170 0
+ 2717 04ac 00319FE5 		ldr	r3, .L47
+ 2718 04b0 0220A0E3 		mov	r2, #2
+ 2719 04b4 0020C3E5 		strb	r2, [r3, #0]
+ 171:../timer3.c   ****                                 monitor_ms = TIMER3_MONITOR_MS;
+ 2720              		.loc 1 171 0
+ 2721 04b8 04319FE5 		ldr	r3, .L47+16
+ 2722 04bc 6420A0E3 		mov	r2, #100
+ 2723 04c0 002083E5 		str	r2, [r3, #0]
+ 172:../timer3.c   ****                         }
+ 173:../timer3.c   ****                         break;
+ 2724              		.loc 1 173 0
+ 2725 04c4 310000EA 		b	.L37
+ 2726              	.L32:
+ 174:../timer3.c   **** 
+ 175:../timer3.c   ****                 case MONITORIZANDO:
+ 176:../timer3.c   ****                         if (monitor_ms > 0)
+ 2727              		.loc 1 176 0
+ 2728 04c8 F4309FE5 		ldr	r3, .L47+16
+ 2729 04cc 003093E5 		ldr	r3, [r3, #0]
+ 2730 04d0 000053E3 		cmp	r3, #0
+ 2731 04d4 0400000A 		beq	.L38
+ 177:../timer3.c   ****                         {
+ 178:../timer3.c   ****                                 monitor_ms -= TIMER3_TICK_MS;
+ 2732              		.loc 1 178 0
+ 2733 04d8 E4309FE5 		ldr	r3, .L47+16
+ 2734 04dc 003093E5 		ldr	r3, [r3, #0]
+ 2735 04e0 012043E2 		sub	r2, r3, #1
+ 2736 04e4 D8309FE5 		ldr	r3, .L47+16
+ 2737 04e8 002083E5 		str	r2, [r3, #0]
+ 2738              	.L38:
+ 179:../timer3.c   ****                         }
+ 180:../timer3.c   ****                         if (monitor_ms == 0)
+ 2739              		.loc 1 180 0
+ 2740 04ec D0309FE5 		ldr	r3, .L47+16
+ 2741 04f0 003093E5 		ldr	r3, [r3, #0]
+ 2742 04f4 000053E3 		cmp	r3, #0
+ 2743 04f8 2100001A 		bne	.L45
+ 181:../timer3.c   ****                         {
+ 182:../timer3.c   ****                                 if (boton_sigue_pulsado())
+ 2744              		.loc 1 182 0
+ 2745 04fc BFFEFFEB 		bl	boton_sigue_pulsado
+ 2746 0500 0030A0E1 		mov	r3, r0
+ 2747 0504 000053E3 		cmp	r3, #0
+ 2748 0508 0300000A 		beq	.L40
+ 183:../timer3.c   ****                                 {
+ 184:../timer3.c   ****                                         monitor_ms = TIMER3_MONITOR_MS;
+ 2749              		.loc 1 184 0
+ 2750 050c B0309FE5 		ldr	r3, .L47+16
+ 2751 0510 6420A0E3 		mov	r2, #100
+ 2752 0514 002083E5 		str	r2, [r3, #0]
+ 185:../timer3.c   ****                                 }
+ 186:../timer3.c   ****                                 else
+ 187:../timer3.c   ****                                 {
+ 188:../timer3.c   ****                                         estado_actual = REBOTE_DEPRESION;
+ 189:../timer3.c   ****                                         contador_ms = TIMER3_TRD_MS;
+ 190:../timer3.c   ****                                 }
+ 191:../timer3.c   ****                         }
+ 192:../timer3.c   ****                         break;
+ 2753              		.loc 1 192 0
+ 2754 0518 1C0000EA 		b	.L37
+ 2755              	.L40:
+ 188:../timer3.c   ****                                         estado_actual = REBOTE_DEPRESION;
+ 2756              		.loc 1 188 0
+ 2757 051c 90309FE5 		ldr	r3, .L47
+ 2758 0520 0320A0E3 		mov	r2, #3
+ 2759 0524 0020C3E5 		strb	r2, [r3, #0]
+ 189:../timer3.c   ****                                         contador_ms = TIMER3_TRD_MS;
+ 2760              		.loc 1 189 0
+ 2761 0528 88309FE5 		ldr	r3, .L47+4
+ 2762 052c 1E20A0E3 		mov	r2, #30
+ 2763 0530 002083E5 		str	r2, [r3, #0]
+ 2764              		.loc 1 192 0
+ 2765 0534 150000EA 		b	.L37
+ 2766              	.L33:
+ 193:../timer3.c   **** 
+ 194:../timer3.c   ****                 case REBOTE_DEPRESION:
+ 195:../timer3.c   ****                         if (contador_ms > 0)
+ 2767              		.loc 1 195 0
+ 2768 0538 78309FE5 		ldr	r3, .L47+4
+ 2769 053c 003093E5 		ldr	r3, [r3, #0]
+ 2770 0540 000053E3 		cmp	r3, #0
+ 2771 0544 0400000A 		beq	.L41
+ 196:../timer3.c   ****                         {
+ 197:../timer3.c   ****                                 contador_ms -= TIMER3_TICK_MS;
+ 2772              		.loc 1 197 0
+ 2773 0548 68309FE5 		ldr	r3, .L47+4
+ 2774 054c 003093E5 		ldr	r3, [r3, #0]
+ 2775 0550 012043E2 		sub	r2, r3, #1
+ 2776 0554 5C309FE5 		ldr	r3, .L47+4
+ 2777 0558 002083E5 		str	r2, [r3, #0]
+ 2778              	.L41:
+ 198:../timer3.c   ****                         }
+ 199:../timer3.c   ****                         if (contador_ms == 0)
+ 2779              		.loc 1 199 0
+ 2780 055c 54309FE5 		ldr	r3, .L47+4
+ 2781 0560 003093E5 		ldr	r3, [r3, #0]
+ 2782 0564 000053E3 		cmp	r3, #0
+ 2783 0568 0700001A 		bne	.L46
+ 200:../timer3.c   ****                         {
+ 201:../timer3.c   ****                                 finalizar_antirrebote();
+ 2784              		.loc 1 201 0
+ 2785 056c E5FEFFEB 		bl	finalizar_antirrebote
+ 202:../timer3.c   ****                         }
+ 203:../timer3.c   ****                         break;
+ 2786              		.loc 1 203 0
+ 2787 0570 060000EA 		b	.L37
+ 2788              	.L43:
+ 204:../timer3.c   **** 
+ 205:../timer3.c   ****                 default:
+ 206:../timer3.c   ****                         break;
+ 2789              		.loc 1 206 0
+ 2790 0574 0000A0E1 		mov	r0, r0	@ nop
+ 2791 0578 040000EA 		b	.L37
+ 2792              	.L44:
+ 173:../timer3.c   ****                         break;
+ 2793              		.loc 1 173 0
+ 2794 057c 0000A0E1 		mov	r0, r0	@ nop
+ 2795 0580 020000EA 		b	.L37
+ 2796              	.L45:
+ 192:../timer3.c   ****                         break;
+ 2797              		.loc 1 192 0
+ 2798 0584 0000A0E1 		mov	r0, r0	@ nop
+ 2799 0588 000000EA 		b	.L37
+ 2800              	.L46:
+ 203:../timer3.c   ****                         break;
+ 2801              		.loc 1 203 0
+ 2802 058c 0000A0E1 		mov	r0, r0	@ nop
+ 2803              	.L37:
+ 207:../timer3.c   ****         }
+ 208:../timer3.c   **** 
+ 209:../timer3.c   ****         /* Limpiar la petición de interrupción */
+ 210:../timer3.c   ****         rI_ISPC |= BIT_TIMER3;
+ 2804              		.loc 1 210 0
+ 2805 0590 30309FE5 		ldr	r3, .L47+20
+ 2806 0594 2C209FE5 		ldr	r2, .L47+20
+ 2807 0598 002092E5 		ldr	r2, [r2, #0]
+ 2808 059c 012B82E3 		orr	r2, r2, #1024
+ 2809 05a0 002083E5 		str	r2, [r3, #0]
+ 211:../timer3.c   **** }
+ 2810              		.loc 1 211 0
+ 2811 05a4 1CD04BE2 		sub	sp, fp, #28
+ 2812 05a8 0F689DE8 		ldmfd	sp, {r0, r1, r2, r3, fp, sp, lr}
+ 2813 05ac 04C09DE4 		ldmfd	sp!, {ip}
+ 2814 05b0 04F05EE2 		subs	pc, lr, #4
+ 2815              	.L48:
+ 2816              		.align	2
+ 2817              	.L47:
+ 2818 05b4 00000000 		.word	estado_actual
+ 2819 05b8 04000000 		.word	contador_ms
+ 2820 05bc 14000000 		.word	callback_validacion
+ 2821 05c0 0C000000 		.word	boton_en_proceso
+ 2822 05c4 08000000 		.word	monitor_ms
+ 2823 05c8 2400E001 		.word	31457316
+ 2824              		.cfi_endproc
+ 2825              	.LFE7:
+ 2827              	.Letext0:
 DEFINED SYMBOLS
                             *ABS*:00000000 timer3.c
-C:\Users\jaime\AppData\Local\Temp\ccfjIzxo.s:2152   .bss:00000000 estado_actual
-C:\Users\jaime\AppData\Local\Temp\ccfjIzxo.s:2153   .bss:00000000 $d
-C:\Users\jaime\AppData\Local\Temp\ccfjIzxo.s:2155   .bss:00000004 contador_ms
-C:\Users\jaime\AppData\Local\Temp\ccfjIzxo.s:2158   .bss:00000008 monitor_ms
-C:\Users\jaime\AppData\Local\Temp\ccfjIzxo.s:2160   .bss:0000000c boton_en_proceso
-C:\Users\jaime\AppData\Local\Temp\ccfjIzxo.s:2163   .bss:00000010 mascara_boton
-C:\Users\jaime\AppData\Local\Temp\ccfjIzxo.s:2166   .bss:00000014 callback_validacion
-C:\Users\jaime\AppData\Local\Temp\ccfjIzxo.s:2169   .text:00000000 $a
-C:\Users\jaime\AppData\Local\Temp\ccfjIzxo.s:2171   .text:00000000 boton_sigue_pulsado
-C:\Users\jaime\AppData\Local\Temp\ccfjIzxo.s:2210   .text:0000004c $d
-C:\Users\jaime\AppData\Local\Temp\ccfjIzxo.s:2215   .text:00000054 $a
-C:\Users\jaime\AppData\Local\Temp\ccfjIzxo.s:2217   .text:00000054 timer3_detener
-C:\Users\jaime\AppData\Local\Temp\ccfjIzxo.s:2253   .text:00000094 $d
-C:\Users\jaime\AppData\Local\Temp\ccfjIzxo.s:2258   .text:0000009c $a
-C:\Users\jaime\AppData\Local\Temp\ccfjIzxo.s:2260   .text:0000009c timer3_preparar_tick
-C:\Users\jaime\AppData\Local\Temp\ccfjIzxo.s:2306   .text:000000fc $d
-C:\Users\jaime\AppData\Local\Temp\ccfjIzxo.s:2312   .text:00000108 $a
-C:\Users\jaime\AppData\Local\Temp\ccfjIzxo.s:2314   .text:00000108 finalizar_antirrebote
-C:\Users\jaime\AppData\Local\Temp\ccfjIzxo.s:2391   .text:000001c4 $d
-C:\Users\jaime\AppData\Local\Temp\ccfjIzxo.s:2403   .text:000001e8 $a
-C:\Users\jaime\AppData\Local\Temp\ccfjIzxo.s:2406   .text:000001e8 timer3_init
-C:\Users\jaime\AppData\Local\Temp\ccfjIzxo.s:2499   .text:000002dc $d
-C:\Users\jaime\AppData\Local\Temp\ccfjIzxo.s:2667   .text:00000448 timer3_ISR
-C:\Users\jaime\AppData\Local\Temp\ccfjIzxo.s:2516   .text:00000314 $a
-C:\Users\jaime\AppData\Local\Temp\ccfjIzxo.s:2519   .text:00000314 timer3_start_antirrebote
-C:\Users\jaime\AppData\Local\Temp\ccfjIzxo.s:2616   .text:000003f8 $d
-C:\Users\jaime\AppData\Local\Temp\ccfjIzxo.s:2625   .text:00000410 $a
-C:\Users\jaime\AppData\Local\Temp\ccfjIzxo.s:2628   .text:00000410 timer3_esta_ocupado
-C:\Users\jaime\AppData\Local\Temp\ccfjIzxo.s:2660   .text:00000444 $d
-C:\Users\jaime\AppData\Local\Temp\ccfjIzxo.s:2664   .text:00000448 $a
-C:\Users\jaime\AppData\Local\Temp\ccfjIzxo.s:2819   .text:000005b8 $d
+C:\Users\jaime\AppData\Local\Temp\cc0ZEekH.s:2152   .bss:00000000 estado_actual
+C:\Users\jaime\AppData\Local\Temp\cc0ZEekH.s:2153   .bss:00000000 $d
+C:\Users\jaime\AppData\Local\Temp\cc0ZEekH.s:2155   .bss:00000004 contador_ms
+C:\Users\jaime\AppData\Local\Temp\cc0ZEekH.s:2158   .bss:00000008 monitor_ms
+C:\Users\jaime\AppData\Local\Temp\cc0ZEekH.s:2160   .bss:0000000c boton_en_proceso
+C:\Users\jaime\AppData\Local\Temp\cc0ZEekH.s:2163   .bss:00000010 mascara_boton
+C:\Users\jaime\AppData\Local\Temp\cc0ZEekH.s:2166   .bss:00000014 callback_validacion
+C:\Users\jaime\AppData\Local\Temp\cc0ZEekH.s:2169   .text:00000000 $a
+C:\Users\jaime\AppData\Local\Temp\cc0ZEekH.s:2171   .text:00000000 boton_sigue_pulsado
+C:\Users\jaime\AppData\Local\Temp\cc0ZEekH.s:2210   .text:0000004c $d
+C:\Users\jaime\AppData\Local\Temp\cc0ZEekH.s:2215   .text:00000054 $a
+C:\Users\jaime\AppData\Local\Temp\cc0ZEekH.s:2217   .text:00000054 timer3_detener
+C:\Users\jaime\AppData\Local\Temp\cc0ZEekH.s:2253   .text:00000094 $d
+C:\Users\jaime\AppData\Local\Temp\cc0ZEekH.s:2258   .text:0000009c $a
+C:\Users\jaime\AppData\Local\Temp\cc0ZEekH.s:2260   .text:0000009c timer3_preparar_tick
+C:\Users\jaime\AppData\Local\Temp\cc0ZEekH.s:2306   .text:000000fc $d
+C:\Users\jaime\AppData\Local\Temp\cc0ZEekH.s:2312   .text:00000108 $a
+C:\Users\jaime\AppData\Local\Temp\cc0ZEekH.s:2314   .text:00000108 finalizar_antirrebote
+C:\Users\jaime\AppData\Local\Temp\cc0ZEekH.s:2376   .text:00000194 $d
+C:\Users\jaime\AppData\Local\Temp\cc0ZEekH.s:2387   .text:000001b4 $a
+C:\Users\jaime\AppData\Local\Temp\cc0ZEekH.s:2390   .text:000001b4 timer3_init
+C:\Users\jaime\AppData\Local\Temp\cc0ZEekH.s:2483   .text:000002a8 $d
+C:\Users\jaime\AppData\Local\Temp\cc0ZEekH.s:2651   .text:00000414 timer3_ISR
+C:\Users\jaime\AppData\Local\Temp\cc0ZEekH.s:2500   .text:000002e0 $a
+C:\Users\jaime\AppData\Local\Temp\cc0ZEekH.s:2503   .text:000002e0 timer3_start_antirrebote
+C:\Users\jaime\AppData\Local\Temp\cc0ZEekH.s:2600   .text:000003c4 $d
+C:\Users\jaime\AppData\Local\Temp\cc0ZEekH.s:2609   .text:000003dc $a
+C:\Users\jaime\AppData\Local\Temp\cc0ZEekH.s:2612   .text:000003dc timer3_esta_ocupado
+C:\Users\jaime\AppData\Local\Temp\cc0ZEekH.s:2644   .text:00000410 $d
+C:\Users\jaime\AppData\Local\Temp\cc0ZEekH.s:2648   .text:00000414 $a
+C:\Users\jaime\AppData\Local\Temp\cc0ZEekH.s:2818   .text:000005b4 $d
                      .debug_frame:00000010 $d
 
 NO UNDEFINED SYMBOLS

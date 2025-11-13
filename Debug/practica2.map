@@ -35,7 +35,7 @@ END GROUP
                 0x0c000000                . = 0xc000000
                 0x0c000000                Image_RO_Base = .
 
-.text           0x0c000000     0x1e08
+.text           0x0c000000     0x1e0c
  *(.text)
  .text          0x0c000000      0x70c ./common/44binit.o
  .text          0x0c00070c      0x46c ./common/44blib.o
@@ -75,88 +75,88 @@ END GROUP
                 0x0c0014c8                timer2_init
                 0x0c0015f0                timer2_start
                 0x0c001680                timer2_count
- .text          0x0c0016f4      0x5c8 ./timer3.o
-                0x0c0018dc                timer3_init
-                0x0c001a08                timer3_start_antirrebote
-                0x0c001b04                timer3_esta_ocupado
-                0x0c001b3c                timer3_ISR
- .text          0x0c001cbc      0x148 c:/program files/eclipsearm/sourcery-g++-lite-arm-2011.03/bin/../lib/gcc/arm-none-eabi/4.5.2\libgcc.a(_divsi3.o)
-                0x0c001cbc                __divsi3
-                0x0c001cbc                __aeabi_idiv
-                0x0c001de4                __aeabi_idivmod
- .text          0x0c001e04        0x4 c:/program files/eclipsearm/sourcery-g++-lite-arm-2011.03/bin/../lib/gcc/arm-none-eabi/4.5.2\libgcc.a(_dvmd_tls.o)
-                0x0c001e04                __aeabi_idiv0
-                0x0c001e04                __aeabi_ldiv0
+ .text          0x0c0016f4      0x5cc ./timer3.o
+                0x0c0018a8                timer3_init
+                0x0c0019d4                timer3_start_antirrebote
+                0x0c001ad0                timer3_esta_ocupado
+                0x0c001b08                timer3_ISR
+ .text          0x0c001cc0      0x148 c:/program files/eclipsearm/sourcery-g++-lite-arm-2011.03/bin/../lib/gcc/arm-none-eabi/4.5.2\libgcc.a(_divsi3.o)
+                0x0c001cc0                __divsi3
+                0x0c001cc0                __aeabi_idiv
+                0x0c001de8                __aeabi_idivmod
+ .text          0x0c001e08        0x4 c:/program files/eclipsearm/sourcery-g++-lite-arm-2011.03/bin/../lib/gcc/arm-none-eabi/4.5.2\libgcc.a(_dvmd_tls.o)
+                0x0c001e08                __aeabi_idiv0
+                0x0c001e08                __aeabi_ldiv0
 
-.glue_7         0x0c001e08        0x0
+.glue_7         0x0c001e0c        0x0
  .glue_7        0x00000000        0x0 linker stubs
 
-.glue_7t        0x0c001e08        0x0
+.glue_7t        0x0c001e0c        0x0
  .glue_7t       0x00000000        0x0 linker stubs
 
-.vfp11_veneer   0x0c001e08        0x0
+.vfp11_veneer   0x0c001e0c        0x0
  .vfp11_veneer  0x00000000        0x0 linker stubs
 
-.v4_bx          0x0c001e08        0x0
+.v4_bx          0x0c001e0c        0x0
  .v4_bx         0x00000000        0x0 linker stubs
-                0x0c001e08                . = ALIGN (0x4)
-                0x0c001e08                Image_RO_Limit = .
-                0x0c001e08                Image_RW_Base = .
+                0x0c001e0c                . = ALIGN (0x4)
+                0x0c001e0c                Image_RO_Limit = .
+                0x0c001e0c                Image_RW_Base = .
 
-.data           0x0c001e08       0x5c
+.data           0x0c001e0c       0x5c
  *(.data)
- .data          0x0c001e08        0x6 ./common/44binit.o
-                0x0c001e08                BDRAMTYPE
- *fill*         0x0c001e0e        0x2 00
- .data          0x0c001e10        0xc ./common/44blib.o
-                0x0c001e10                mallocPt
-                0x0c001e14                run
- .data          0x0c001e1c       0x44 ./8led.o
- .data          0x0c001e60        0x0 ./button.o
- .data          0x0c001e60        0x4 ./cola.o
-                0x0c001e60                cola_global
- .data          0x0c001e64        0x0 ./led.o
- .data          0x0c001e64        0x0 ./main.o
- .data          0x0c001e64        0x0 ./timer.o
- .data          0x0c001e64        0x0 ./timer2.o
- .data          0x0c001e64        0x0 ./timer3.o
- .data          0x0c001e64        0x0 c:/program files/eclipsearm/sourcery-g++-lite-arm-2011.03/bin/../lib/gcc/arm-none-eabi/4.5.2\libgcc.a(_divsi3.o)
- .data          0x0c001e64        0x0 c:/program files/eclipsearm/sourcery-g++-lite-arm-2011.03/bin/../lib/gcc/arm-none-eabi/4.5.2\libgcc.a(_dvmd_tls.o)
+ .data          0x0c001e0c        0x6 ./common/44binit.o
+                0x0c001e0c                BDRAMTYPE
+ *fill*         0x0c001e12        0x2 00
+ .data          0x0c001e14        0xc ./common/44blib.o
+                0x0c001e14                mallocPt
+                0x0c001e18                run
+ .data          0x0c001e20       0x44 ./8led.o
+ .data          0x0c001e64        0x0 ./button.o
+ .data          0x0c001e64        0x4 ./cola.o
+                0x0c001e64                cola_global
+ .data          0x0c001e68        0x0 ./led.o
+ .data          0x0c001e68        0x0 ./main.o
+ .data          0x0c001e68        0x0 ./timer.o
+ .data          0x0c001e68        0x0 ./timer2.o
+ .data          0x0c001e68        0x0 ./timer3.o
+ .data          0x0c001e68        0x0 c:/program files/eclipsearm/sourcery-g++-lite-arm-2011.03/bin/../lib/gcc/arm-none-eabi/4.5.2\libgcc.a(_divsi3.o)
+ .data          0x0c001e68        0x0 c:/program files/eclipsearm/sourcery-g++-lite-arm-2011.03/bin/../lib/gcc/arm-none-eabi/4.5.2\libgcc.a(_dvmd_tls.o)
 
 .rodata
  *(.rodata)
-                0x0c001e64                Image_RW_Limit = .
-                0x0c001e64                . = ALIGN (0x4)
-                0x0c001e64                Image_ZI_Base = .
+                0x0c001e68                Image_RW_Limit = .
+                0x0c001e68                . = ALIGN (0x4)
+                0x0c001e68                Image_ZI_Base = .
 
-.bss            0x0c001e64       0x34
+.bss            0x0c001e68       0x34
  *(.bss)
- .bss           0x0c001e64        0x0 ./common/44binit.o
- .bss           0x0c001e64        0x4 ./common/44blib.o
-                0x0c001e64                restart
- .bss           0x0c001e68        0x0 ./8led.o
- .bss           0x0c001e68        0x4 ./button.o
- .bss           0x0c001e6c        0x0 ./cola.o
- .bss           0x0c001e6c        0x4 ./led.o
- .bss           0x0c001e70        0x0 ./main.o
- .bss           0x0c001e70        0x4 ./timer.o
-                0x0c001e70                switch_leds
- .bss           0x0c001e74        0x4 ./timer2.o
- .bss           0x0c001e78       0x18 ./timer3.o
- .bss           0x0c001e90        0x0 c:/program files/eclipsearm/sourcery-g++-lite-arm-2011.03/bin/../lib/gcc/arm-none-eabi/4.5.2\libgcc.a(_divsi3.o)
- .bss           0x0c001e90        0x0 c:/program files/eclipsearm/sourcery-g++-lite-arm-2011.03/bin/../lib/gcc/arm-none-eabi/4.5.2\libgcc.a(_dvmd_tls.o)
- COMMON         0x0c001e90        0x8 ./common/44blib.o
-                0x0c001e90                fileSize
-                0x0c001e94                downPt
- COMMON         0x0c001e98        0x0 ./main.o
-                0x0c001e98                Image_ZI_Limit = .
-                0x0c001e98                __bss_start__ = .
-                0x0c001e98                __bss_end__ = .
-                0x0c001e98                __EH_FRAME_BEGIN__ = .
-                0x0c001e98                __EH_FRAME_END__ = .
-                0x0c001e98                PROVIDE (__stack, .)
-                0x0c001e98                end = .
-                0x0c001e98                _end = .
+ .bss           0x0c001e68        0x0 ./common/44binit.o
+ .bss           0x0c001e68        0x4 ./common/44blib.o
+                0x0c001e68                restart
+ .bss           0x0c001e6c        0x0 ./8led.o
+ .bss           0x0c001e6c        0x4 ./button.o
+ .bss           0x0c001e70        0x0 ./cola.o
+ .bss           0x0c001e70        0x4 ./led.o
+ .bss           0x0c001e74        0x0 ./main.o
+ .bss           0x0c001e74        0x4 ./timer.o
+                0x0c001e74                switch_leds
+ .bss           0x0c001e78        0x4 ./timer2.o
+ .bss           0x0c001e7c       0x18 ./timer3.o
+ .bss           0x0c001e94        0x0 c:/program files/eclipsearm/sourcery-g++-lite-arm-2011.03/bin/../lib/gcc/arm-none-eabi/4.5.2\libgcc.a(_divsi3.o)
+ .bss           0x0c001e94        0x0 c:/program files/eclipsearm/sourcery-g++-lite-arm-2011.03/bin/../lib/gcc/arm-none-eabi/4.5.2\libgcc.a(_dvmd_tls.o)
+ COMMON         0x0c001e94        0x8 ./common/44blib.o
+                0x0c001e94                fileSize
+                0x0c001e98                downPt
+ COMMON         0x0c001e9c        0x0 ./main.o
+                0x0c001e9c                Image_ZI_Limit = .
+                0x0c001e9c                __bss_start__ = .
+                0x0c001e9c                __bss_end__ = .
+                0x0c001e9c                __EH_FRAME_BEGIN__ = .
+                0x0c001e9c                __EH_FRAME_END__ = .
+                0x0c001e9c                PROVIDE (__stack, .)
+                0x0c001e9c                end = .
+                0x0c001e9c                _end = .
 
 .ARM.attributes
                 0x00000000       0x2e

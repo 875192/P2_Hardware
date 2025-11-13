@@ -135,9 +135,9 @@
 DEFINED SYMBOLS
                             *ABS*:00000000 main.c
                             *COM*:00000004 switch_leds
-C:\Users\jaime\AppData\Local\Temp\ccduy8Ed.s:2170   .text:00000000 $a
-C:\Users\jaime\AppData\Local\Temp\ccduy8Ed.s:2173   .text:00000000 Main
-C:\Users\jaime\AppData\Local\Temp\ccduy8Ed.s:2232   .text:00000068 $d
+C:\Users\jaime\AppData\Local\Temp\ccymBcyT.s:2170   .text:00000000 $a
+C:\Users\jaime\AppData\Local\Temp\ccymBcyT.s:2173   .text:00000000 Main
+C:\Users\jaime\AppData\Local\Temp\ccymBcyT.s:2232   .text:00000068 $d
                      .debug_frame:00000010 $d
 
 UNDEFINED SYMBOLS

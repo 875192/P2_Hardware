@@ -68,12 +68,6 @@ static void finalizar_antirrebote(void)
         rINTMSK &= ~(BIT_EINT4567);
         rI_ISPC |= BIT_EINT4567;
 
-        /* Notificar la pulsación validada */
-        if (callback_validacion)
-        {
-                callback_validacion(boton_en_proceso);
-        }
-
         /* Resetear el estado interno */
         estado_actual = ESPERANDO_PULSACION;
         contador_ms = 0;
@@ -165,6 +159,12 @@ void timer3_ISR(void)
                         }
                         if (contador_ms == 0)
                         {
+                                /* Notificar la pulsación validada (cuando se confirma que está pulsado) */
+                                if (callback_validacion)
+                                {
+                                        callback_validacion(boton_en_proceso);
+                                }
+                                
                                 estado_actual = MONITORIZANDO;
                                 monitor_ms = TIMER3_MONITOR_MS;
                         }

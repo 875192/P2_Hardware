@@ -12,8 +12,6 @@
 typedef enum {
         EVENTO_BOTON_IZQUIERDO = 4,
         EVENTO_BOTON_DERECHO   = 8,
-
-
 } ID_Evento;
 
 
