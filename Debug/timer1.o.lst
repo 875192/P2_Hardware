@@ -1,0 +1,335 @@
+   1              		.cpu arm7tdmi
+   2              		.fpu softvfp
+   3              		.eabi_attribute 20, 1
+   4              		.eabi_attribute 21, 1
+   5              		.eabi_attribute 23, 3
+   6              		.eabi_attribute 24, 1
+   7              		.eabi_attribute 25, 1
+   8              		.eabi_attribute 26, 1
+   9              		.eabi_attribute 30, 6
+  10              		.eabi_attribute 18, 4
+  11              		.file	"timer1.c"
+  21              	.Ltext0:
+  22              		.file 1 "../timer1.c"
+ 1896              		.align	2
+ 1897              	timer1_contador:
+ 1898 0000 00000000 		.space	4
+ 1899              		.align	2
+ 1900              	led2_encendido:
+ 1901 0004 00000000 		.space	4
+ 1902              		.text
+ 1903              		.align	2
+ 1904              		.global	timer1_ISR
+ 1906              	timer1_ISR:
+ 1907              	.LFB0:
+   1:../timer1.c   **** /*********************************************************************************************
+   2:../timer1.c   **** * Fichero:		timer1.c
+   3:../timer1.c   **** * Autor:
+   4:../timer1.c   **** * Descrip:		Control del timer1 para latido (heartbeat) con LED
+   5:../timer1.c   **** * Version:		1.0
+   6:../timer1.c   **** *********************************************************************************************/
+   7:../timer1.c   **** 
+   8:../timer1.c   **** /*--- Ficheros de cabecera ---*/
+   9:../timer1.c   **** #include "timer1.h"
+  10:../timer1.c   **** #include "led.h"
+  11:../timer1.c   **** #include "44b.h"
+  12:../timer1.c   **** #include "44blib.h"
+  13:../timer1.c   **** 
+  14:../timer1.c   **** /*--- Constantes ---*/
+  15:../timer1.c   **** /* Timer1 debe generar 60 eventos por segundo
+  16:../timer1.c   ****  * Reloj: 64 MHz
+  17:../timer1.c   ****  * Prescaler: 255 (divisor: 255+1 = 256)
+  18:../timer1.c   ****  * Divisor MUX: 1/16
+  19:../timer1.c   ****  * Frecuencia del timer: 64MHz / 256 / 16 = 15625 Hz
+  20:../timer1.c   ****  * Para 60 eventos/segundo: 15625 / 60 = 260.4 ≈ 260 ticks
+  21:../timer1.c   ****  * 
+  22:../timer1.c   ****  * IMPORTANTE: El enunciado dice "reducir el número de interrupciones a una por evento"
+  23:../timer1.c   ****  * Por tanto, configuramos el timer para generar exactamente 60 interrupciones/segundo
+  24:../timer1.c   ****  */
+  25:../timer1.c   **** #define TIMER1_PRESCALER        255
+  26:../timer1.c   **** #define TIMER1_MUX_DIV          0x3     // 1/16
+  27:../timer1.c   **** #define TIMER1_COUNT            260     // Para 60 interrupciones por segundo
+  28:../timer1.c   **** 
+  29:../timer1.c   **** /*--- Variables internas ---*/
+  30:../timer1.c   **** static volatile unsigned int timer1_contador = 0;
+  31:../timer1.c   **** static volatile unsigned int led2_encendido = 0;  // Estado del LED2
+  32:../timer1.c   **** 
+  33:../timer1.c   **** /* Declaración de función que es rutina de servicio de interrupción */
+  34:../timer1.c   **** void timer1_ISR(void) __attribute__((interrupt("IRQ")));
+  35:../timer1.c   **** 
+  36:../timer1.c   **** /*--- Código de las funciones de interrupción ---*/
+  37:../timer1.c   **** 
+  38:../timer1.c   **** /**
+  39:../timer1.c   ****  * Rutina de servicio de interrupción del Timer1.
+  40:../timer1.c   ****  * Se ejecuta 60 veces por segundo (1 interrupción por evento).
+  41:../timer1.c   ****  * El LED parpadea a 6 Hz: enciende/apaga 3 veces por segundo.
+  42:../timer1.c   ****  * 
+  43:../timer1.c   ****  * Frecuencia de parpadeo: 6 Hz
+  44:../timer1.c   ****  * Interrupciones por segundo: 60
+  45:../timer1.c   ****  * Interrupciones por ciclo de parpadeo: 60 / 6 = 10
+  46:../timer1.c   ****  * Por tanto, alternamos el LED cada 10 interrupciones.
+  47:../timer1.c   ****  */
+  48:../timer1.c   **** void timer1_ISR(void)
+  49:../timer1.c   **** {
+ 1908              		.loc 1 49 0
+ 1909              		.cfi_startproc
+ 1910              		@ Interrupt Service Routine.
+ 1911              		@ args = 0, pretend = 0, frame = 0
+ 1912              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1913 0000 04C02DE5 		str	ip, [sp, #-4]!
+ 1914 0004 0DC0A0E1 		mov	ip, sp
+ 1915              	.LCFI0:
+ 1916              		.cfi_def_cfa_register 12
+ 1917 0008 0FD82DE9 		stmfd	sp!, {r0, r1, r2, r3, fp, ip, lr, pc}
+ 1918 000c 04B04CE2 		sub	fp, ip, #4
+ 1919              		.cfi_offset 14, -8
+ 1920              		.cfi_offset 13, -12
+ 1921              		.cfi_offset 11, -16
+ 1922              		.cfi_offset 3, -20
+ 1923              		.cfi_offset 2, -24
+ 1924              		.cfi_offset 1, -28
+ 1925              		.cfi_offset 0, -32
+ 1926              	.LCFI1:
+ 1927              		.cfi_def_cfa 11, 4
+  50:../timer1.c   **** 	timer1_contador++;
+ 1928              		.loc 1 50 0
+ 1929 0010 80309FE5 		ldr	r3, .L5
+ 1930 0014 003093E5 		ldr	r3, [r3, #0]
+ 1931 0018 012083E2 		add	r2, r3, #1
+ 1932 001c 74309FE5 		ldr	r3, .L5
+ 1933 0020 002083E5 		str	r2, [r3, #0]
+  51:../timer1.c   **** 	
+  52:../timer1.c   **** 	/* Cambiar estado del LED cada 10 interrupciones */
+  53:../timer1.c   **** 	/* 60 interrupciones/seg ÷ 6 Hz = 10 interrupciones por ciclo completo */
+  54:../timer1.c   **** 	if (timer1_contador >= 10)
+ 1934              		.loc 1 54 0
+ 1935 0024 6C309FE5 		ldr	r3, .L5
+ 1936 0028 003093E5 		ldr	r3, [r3, #0]
+ 1937 002c 090053E3 		cmp	r3, #9
+ 1938 0030 0F00009A 		bls	.L2
+  55:../timer1.c   **** 	{
+  56:../timer1.c   **** 		if (led2_encendido)
+ 1939              		.loc 1 56 0
+ 1940 0034 60309FE5 		ldr	r3, .L5+4
+ 1941 0038 003093E5 		ldr	r3, [r3, #0]
+ 1942 003c 000053E3 		cmp	r3, #0
+ 1943 0040 0400000A 		beq	.L3
+  57:../timer1.c   **** 		{
+  58:../timer1.c   **** 			led2_off();  // Apaga el LED de la derecha
+ 1944              		.loc 1 58 0
+ 1945 0044 FEFFFFEB 		bl	led2_off
+  59:../timer1.c   **** 			led2_encendido = 0;
+ 1946              		.loc 1 59 0
+ 1947 0048 4C309FE5 		ldr	r3, .L5+4
+ 1948 004c 0020A0E3 		mov	r2, #0
+ 1949 0050 002083E5 		str	r2, [r3, #0]
+ 1950 0054 030000EA 		b	.L4
+ 1951              	.L3:
+  60:../timer1.c   **** 		}
+  61:../timer1.c   **** 		else
+  62:../timer1.c   **** 		{
+  63:../timer1.c   **** 			led2_on();   // Enciende el LED de la derecha
+ 1952              		.loc 1 63 0
+ 1953 0058 FEFFFFEB 		bl	led2_on
+  64:../timer1.c   **** 			led2_encendido = 1;
+ 1954              		.loc 1 64 0
+ 1955 005c 38309FE5 		ldr	r3, .L5+4
+ 1956 0060 0120A0E3 		mov	r2, #1
+ 1957 0064 002083E5 		str	r2, [r3, #0]
+ 1958              	.L4:
+  65:../timer1.c   **** 		}
+  66:../timer1.c   **** 		timer1_contador = 0;
+ 1959              		.loc 1 66 0
+ 1960 0068 28309FE5 		ldr	r3, .L5
+ 1961 006c 0020A0E3 		mov	r2, #0
+ 1962 0070 002083E5 		str	r2, [r3, #0]
+ 1963              	.L2:
+  67:../timer1.c   **** 	}
+  68:../timer1.c   **** 	
+  69:../timer1.c   **** 	/* Borrar bit en I_ISPC para desactivar la solicitud de interrupción */
+  70:../timer1.c   **** 	rI_ISPC |= BIT_TIMER1;
+ 1964              		.loc 1 70 0
+ 1965 0074 24309FE5 		ldr	r3, .L5+8
+ 1966 0078 20209FE5 		ldr	r2, .L5+8
+ 1967 007c 002092E5 		ldr	r2, [r2, #0]
+ 1968 0080 012A82E3 		orr	r2, r2, #4096
+ 1969 0084 002083E5 		str	r2, [r3, #0]
+  71:../timer1.c   **** }
+ 1970              		.loc 1 71 0
+ 1971 0088 1CD04BE2 		sub	sp, fp, #28
+ 1972 008c 0F689DE8 		ldmfd	sp, {r0, r1, r2, r3, fp, sp, lr}
+ 1973 0090 04C09DE4 		ldmfd	sp!, {ip}
+ 1974 0094 04F05EE2 		subs	pc, lr, #4
+ 1975              	.L6:
+ 1976              		.align	2
+ 1977              	.L5:
+ 1978 0098 00000000 		.word	timer1_contador
+ 1979 009c 04000000 		.word	led2_encendido
+ 1980 00a0 2400E001 		.word	31457316
+ 1981              		.cfi_endproc
+ 1982              	.LFE0:
+ 1984              		.align	2
+ 1985              		.global	timer1_init
+ 1987              	timer1_init:
+ 1988              	.LFB1:
+  72:../timer1.c   **** 
+  73:../timer1.c   **** /*--- Código de las funciones públicas ---*/
+  74:../timer1.c   **** 
+  75:../timer1.c   **** /**
+  76:../timer1.c   ****  * Inicializa el Timer1 para generar 60 eventos por segundo.
+  77:../timer1.c   ****  * Configuración:
+  78:../timer1.c   ****  * - Prescaler: 255 (divisor 256)
+  79:../timer1.c   ****  * - MUX divisor: 1/16
+  80:../timer1.c   ****  * - Frecuencia resultante: 64MHz / 256 / 16 = 15625 Hz
+  81:../timer1.c   ****  * - Cuenta: 260 ticks para obtener 60 interrupciones/segundo
+  82:../timer1.c   ****  * - Resolución: 1/15625 Hz = 64 µs por tick
+  83:../timer1.c   ****  * - Rango: 260 ticks × 64 µs ≈ 16.64 ms por interrupción
+  84:../timer1.c   ****  */
+  85:../timer1.c   **** void timer1_init(void)
+  86:../timer1.c   **** {
+ 1989              		.loc 1 86 0
+ 1990              		.cfi_startproc
+ 1991              		@ Function supports interworking.
+ 1992              		@ args = 0, pretend = 0, frame = 0
+ 1993              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1994 00a4 0DC0A0E1 		mov	ip, sp
+ 1995              	.LCFI2:
+ 1996              		.cfi_def_cfa_register 12
+ 1997 00a8 00D82DE9 		stmfd	sp!, {fp, ip, lr, pc}
+ 1998 00ac 04B04CE2 		sub	fp, ip, #4
+ 1999              		.cfi_offset 14, -8
+ 2000              		.cfi_offset 13, -12
+ 2001              		.cfi_offset 11, -16
+ 2002              	.LCFI3:
+ 2003              		.cfi_def_cfa 11, 4
+  87:../timer1.c   **** 	/* Configuración del controlador de interrupciones */
+  88:../timer1.c   **** 	rINTMOD = 0x0;				// Configura las líneas como de tipo IRQ
+ 2004              		.loc 1 88 0
+ 2005 00b0 C8309FE5 		ldr	r3, .L8
+ 2006 00b4 0020A0E3 		mov	r2, #0
+ 2007 00b8 002083E5 		str	r2, [r3, #0]
+  89:../timer1.c   **** 	rINTCON = 0x1;				// Habilita int. vectorizadas y la línea IRQ
+ 2008              		.loc 1 89 0
+ 2009 00bc 1E36A0E3 		mov	r3, #31457280
+ 2010 00c0 0120A0E3 		mov	r2, #1
+ 2011 00c4 002083E5 		str	r2, [r3, #0]
+  90:../timer1.c   **** 	rINTMSK &= ~(BIT_TIMER1);	// Habilita interrupción del Timer1
+ 2012              		.loc 1 90 0
+ 2013 00c8 B4309FE5 		ldr	r3, .L8+4
+ 2014 00cc B0209FE5 		ldr	r2, .L8+4
+ 2015 00d0 002092E5 		ldr	r2, [r2, #0]
+ 2016 00d4 012AC2E3 		bic	r2, r2, #4096
+ 2017 00d8 002083E5 		str	r2, [r3, #0]
+  91:../timer1.c   **** 	
+  92:../timer1.c   **** 	/* Establece la rutina de servicio para TIMER1 */
+  93:../timer1.c   **** 	pISR_TIMER1 = (unsigned) timer1_ISR;
+ 2018              		.loc 1 93 0
+ 2019 00dc A4309FE5 		ldr	r3, .L8+8
+ 2020 00e0 A4209FE5 		ldr	r2, .L8+12
+ 2021 00e4 002083E5 		str	r2, [r3, #0]
+  94:../timer1.c   **** 	
+  95:../timer1.c   **** 	/* Configura el Timer1 */
+  96:../timer1.c   **** 	/* TCFG0[7:0] controla el prescaler del timer1 (compartido con timer0) */
+  97:../timer1.c   **** 	rTCFG0 = (rTCFG0 & ~(0xFF << 0)) | (TIMER1_PRESCALER << 0);
+ 2022              		.loc 1 97 0
+ 2023 00e8 A0309FE5 		ldr	r3, .L8+16
+ 2024 00ec 9C209FE5 		ldr	r2, .L8+16
+ 2025 00f0 002092E5 		ldr	r2, [r2, #0]
+ 2026 00f4 FF2082E3 		orr	r2, r2, #255
+ 2027 00f8 002083E5 		str	r2, [r3, #0]
+  98:../timer1.c   **** 	
+  99:../timer1.c   **** 	/* TCFG1[7:4] controla el divisor MUX del timer1 */
+ 100:../timer1.c   **** 	rTCFG1 = (rTCFG1 & ~(0xF << 4)) | (TIMER1_MUX_DIV << 4);
+ 2028              		.loc 1 100 0
+ 2029 00fc 90309FE5 		ldr	r3, .L8+20
+ 2030 0100 8C209FE5 		ldr	r2, .L8+20
+ 2031 0104 002092E5 		ldr	r2, [r2, #0]
+ 2032 0108 F020C2E3 		bic	r2, r2, #240
+ 2033 010c 302082E3 		orr	r2, r2, #48
+ 2034 0110 002083E5 		str	r2, [r3, #0]
+ 101:../timer1.c   **** 	
+ 102:../timer1.c   **** 	/* Configura el valor de cuenta inicial */
+ 103:../timer1.c   **** 	rTCNTB1 = TIMER1_COUNT;
+ 2035              		.loc 1 103 0
+ 2036 0114 7C309FE5 		ldr	r3, .L8+24
+ 2037 0118 412FA0E3 		mov	r2, #260
+ 2038 011c 002083E5 		str	r2, [r3, #0]
+ 104:../timer1.c   **** 	
+ 105:../timer1.c   **** 	/* Valor de comparación (no se usa para generar señal, solo interrupción) */
+ 106:../timer1.c   **** 	rTCMPB1 = 0;
+ 2039              		.loc 1 106 0
+ 2040 0120 74309FE5 		ldr	r3, .L8+28
+ 2041 0124 0020A0E3 		mov	r2, #0
+ 2042 0128 002083E5 		str	r2, [r3, #0]
+ 107:../timer1.c   **** 	
+ 108:../timer1.c   **** 	/* Manual update (bit 9) para cargar TCNTB1 en TCNT1 */
+ 109:../timer1.c   **** 	rTCON |= (1 << 9);
+ 2043              		.loc 1 109 0
+ 2044 012c 6C309FE5 		ldr	r3, .L8+32
+ 2045 0130 68209FE5 		ldr	r2, .L8+32
+ 2046 0134 002092E5 		ldr	r2, [r2, #0]
+ 2047 0138 022C82E3 		orr	r2, r2, #512
+ 2048 013c 002083E5 		str	r2, [r3, #0]
+ 110:../timer1.c   **** 	
+ 111:../timer1.c   **** 	/* Iniciar timer1 (bit 8) con auto-reload (bit 11), quitar manual update (bit 9) */
+ 112:../timer1.c   **** 	rTCON = (rTCON & ~(0xF << 8)) | (1 << 11) | (1 << 8);
+ 2049              		.loc 1 112 0
+ 2050 0140 58309FE5 		ldr	r3, .L8+32
+ 2051 0144 54209FE5 		ldr	r2, .L8+32
+ 2052 0148 002092E5 		ldr	r2, [r2, #0]
+ 2053 014c 0F2CC2E3 		bic	r2, r2, #3840
+ 2054 0150 092C82E3 		orr	r2, r2, #2304
+ 2055 0154 002083E5 		str	r2, [r3, #0]
+ 113:../timer1.c   **** 	
+ 114:../timer1.c   **** 	/* Inicializar contadores y estado del LED */
+ 115:../timer1.c   **** 	timer1_contador = 0;
+ 2056              		.loc 1 115 0
+ 2057 0158 44309FE5 		ldr	r3, .L8+36
+ 2058 015c 0020A0E3 		mov	r2, #0
+ 2059 0160 002083E5 		str	r2, [r3, #0]
+ 116:../timer1.c   **** 	led2_encendido = 0;
+ 2060              		.loc 1 116 0
+ 2061 0164 3C309FE5 		ldr	r3, .L8+40
+ 2062 0168 0020A0E3 		mov	r2, #0
+ 2063 016c 002083E5 		str	r2, [r3, #0]
+ 117:../timer1.c   **** 	led2_off();  // Asegurar que el LED empieza apagado
+ 2064              		.loc 1 117 0
+ 2065 0170 FEFFFFEB 		bl	led2_off
+ 118:../timer1.c   **** }
+ 2066              		.loc 1 118 0
+ 2067 0174 0CD04BE2 		sub	sp, fp, #12
+ 2068 0178 00689DE8 		ldmfd	sp, {fp, sp, lr}
+ 2069 017c 1EFF2FE1 		bx	lr
+ 2070              	.L9:
+ 2071              		.align	2
+ 2072              	.L8:
+ 2073 0180 0800E001 		.word	31457288
+ 2074 0184 0C00E001 		.word	31457292
+ 2075 0188 50FF7F0C 		.word	209715024
+ 2076 018c 00000000 		.word	timer1_ISR
+ 2077 0190 0000D501 		.word	30736384
+ 2078 0194 0400D501 		.word	30736388
+ 2079 0198 1800D501 		.word	30736408
+ 2080 019c 1C00D501 		.word	30736412
+ 2081 01a0 0800D501 		.word	30736392
+ 2082 01a4 00000000 		.word	timer1_contador
+ 2083 01a8 04000000 		.word	led2_encendido
+ 2084              		.cfi_endproc
+ 2085              	.LFE1:
+ 2087              	.Letext0:
+DEFINED SYMBOLS
+                            *ABS*:00000000 timer1.c
+C:\Users\jaime\AppData\Local\Temp\ccS8K1ZY.s:1896   .bss:00000000 $d
+C:\Users\jaime\AppData\Local\Temp\ccS8K1ZY.s:1897   .bss:00000000 timer1_contador
+C:\Users\jaime\AppData\Local\Temp\ccS8K1ZY.s:1900   .bss:00000004 led2_encendido
+C:\Users\jaime\AppData\Local\Temp\ccS8K1ZY.s:1903   .text:00000000 $a
+C:\Users\jaime\AppData\Local\Temp\ccS8K1ZY.s:1906   .text:00000000 timer1_ISR
+C:\Users\jaime\AppData\Local\Temp\ccS8K1ZY.s:1978   .text:00000098 $d
+C:\Users\jaime\AppData\Local\Temp\ccS8K1ZY.s:1984   .text:000000a4 $a
+C:\Users\jaime\AppData\Local\Temp\ccS8K1ZY.s:1987   .text:000000a4 timer1_init
+C:\Users\jaime\AppData\Local\Temp\ccS8K1ZY.s:2073   .text:00000180 $d
+                     .debug_frame:00000010 $d
+
+UNDEFINED SYMBOLS
+led2_off
+led2_on

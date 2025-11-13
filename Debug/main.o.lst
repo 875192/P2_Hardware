@@ -11,10 +11,10 @@
   11              		.file	"main.c"
   21              	.Ltext0:
   22              		.file 1 "../main.c"
- 2170              		.align	2
- 2171              		.global	Main
- 2173              	Main:
- 2174              	.LFB0:
+ 2169              		.align	2
+ 2170              		.global	Main
+ 2172              	Main:
+ 2173              	.LFB0:
    1:../main.c     **** /*********************************************************************************************
    2:../main.c     **** * Fichero:	main.c
    3:../main.c     **** * Autor:    
@@ -26,128 +26,96 @@
    9:../main.c     **** #include "8led.h"
   10:../main.c     **** #include "button.h"
   11:../main.c     **** #include "led.h"
-  12:../main.c     **** #include "timer.h"
+  12:../main.c     **** #include "timer1.h"
   13:../main.c     **** #include "timer2.h"
   14:../main.c     **** #include "cola.h"
   15:../main.c     **** #include "44blib.h"
   16:../main.c     **** #include "44b.h"
   17:../main.c     **** 
-  18:../main.c     **** /*--- variables globales ---*/
-  19:../main.c     **** 
-  20:../main.c     **** 
-  21:../main.c     **** /*--- codigo de funciones ---*/
-  22:../main.c     **** void Main(void)
-  23:../main.c     **** {
- 2175              		.loc 1 23 0
- 2176              		.cfi_startproc
- 2177              		@ Function supports interworking.
- 2178              		@ args = 0, pretend = 0, frame = 8
- 2179              		@ frame_needed = 1, uses_anonymous_args = 0
- 2180 0000 0DC0A0E1 		mov	ip, sp
- 2181              	.LCFI0:
- 2182              		.cfi_def_cfa_register 12
- 2183 0004 00D82DE9 		stmfd	sp!, {fp, ip, lr, pc}
- 2184 0008 04B04CE2 		sub	fp, ip, #4
- 2185              		.cfi_offset 14, -8
- 2186              		.cfi_offset 13, -12
- 2187              		.cfi_offset 11, -16
- 2188              	.LCFI1:
- 2189              		.cfi_def_cfa 11, 4
- 2190 000c 08D04DE2 		sub	sp, sp, #8
+  18:../main.c     **** /*--- codigo de funciones ---*/
+  19:../main.c     **** void Main(void)
+  20:../main.c     **** {
+ 2174              		.loc 1 20 0
+ 2175              		.cfi_startproc
+ 2176              		@ Function supports interworking.
+ 2177              		@ args = 0, pretend = 0, frame = 8
+ 2178              		@ frame_needed = 1, uses_anonymous_args = 0
+ 2179 0000 0DC0A0E1 		mov	ip, sp
+ 2180              	.LCFI0:
+ 2181              		.cfi_def_cfa_register 12
+ 2182 0004 00D82DE9 		stmfd	sp!, {fp, ip, lr, pc}
+ 2183 0008 04B04CE2 		sub	fp, ip, #4
+ 2184              		.cfi_offset 14, -8
+ 2185              		.cfi_offset 13, -12
+ 2186              		.cfi_offset 11, -16
+ 2187              	.LCFI1:
+ 2188              		.cfi_def_cfa 11, 4
+ 2189 000c 08D04DE2 		sub	sp, sp, #8
+  21:../main.c     **** 	
+  22:../main.c     **** 	/* Variables para observar la cola durante la depuración */
+  23:../main.c     **** 	ColaDebug* p_cola;              // Puntero a la estructura completa de la cola
   24:../main.c     **** 	
-  25:../main.c     **** 	/* Variables para observar la cola durante la depuración */
-  26:../main.c     **** 	ColaDebug* p_cola;              // Puntero a la estructura completa de la cola
-  27:../main.c     **** 	
-  28:../main.c     **** 	/* Inicializa controladores */
-  29:../main.c     **** 	sys_init();         // Inicializacion de la placa, interrupciones y puertos
- 2191              		.loc 1 29 0
- 2192 0010 FEFFFFEB 		bl	sys_init
-  30:../main.c     **** 	timer2_init();      // Inicializacion del timer2 para medicion de tiempo
- 2193              		.loc 1 30 0
- 2194 0014 FEFFFFEB 		bl	timer2_init
-  31:../main.c     **** 	cola_init();        // Inicializacion de la cola de depuracion (Paso 4)
- 2195              		.loc 1 31 0
- 2196 0018 FEFFFFEB 		bl	cola_init
-  32:../main.c     **** 	timer_init();	    // Inicializacion del temporizador
- 2197              		.loc 1 32 0
- 2198 001c FEFFFFEB 		bl	timer_init
-  33:../main.c     **** 	Eint4567_init();	// inicializamos los pulsadores. Cada vez que se pulse se ver� reflejado en el 
- 2199              		.loc 1 33 0
- 2200 0020 FEFFFFEB 		bl	Eint4567_init
-  34:../main.c     **** 	D8Led_init();       // inicializamos el 8led
- 2201              		.loc 1 34 0
- 2202 0024 FEFFFFEB 		bl	D8Led_init
-  35:../main.c     **** 
-  36:../main.c     **** 	/* Valor inicial de los leds */
-  37:../main.c     **** 	leds_off();
- 2203              		.loc 1 37 0
- 2204 0028 FEFFFFEB 		bl	leds_off
-  38:../main.c     **** 	led1_on();
- 2205              		.loc 1 38 0
- 2206 002c FEFFFFEB 		bl	led1_on
-  39:../main.c     **** 	
-  40:../main.c     **** 	/* Apuntar a la cola para poder observarla en el depurador */
-  41:../main.c     **** 	p_cola = cola_global;
- 2207              		.loc 1 41 0
- 2208 0030 30309FE5 		ldr	r3, .L5
- 2209 0034 003093E5 		ldr	r3, [r3, #0]
- 2210 0038 10300BE5 		str	r3, [fp, #-16]
- 2211 003c 000000EA 		b	.L3
- 2212              	.L4:
-  42:../main.c     **** 	
-  43:../main.c     **** 	/* Bucle principal */
-  44:../main.c     **** 	while (1)
-  45:../main.c     **** 	{
-  46:../main.c     **** 		/* Cambia los leds con cada interrupcion del temporizador */
-  47:../main.c     **** 		if (switch_leds == 1)
-  48:../main.c     **** 		{
-  49:../main.c     **** 			leds_switch();
-  50:../main.c     **** 			switch_leds = 0;
-  51:../main.c     **** 		}
-  52:../main.c     **** 	}
- 2213              		.loc 1 52 0
- 2214 0040 0000A0E1 		mov	r0, r0	@ nop
- 2215              	.L3:
-  47:../main.c     **** 		if (switch_leds == 1)
- 2216              		.loc 1 47 0
- 2217 0044 20309FE5 		ldr	r3, .L5+4
- 2218 0048 003093E5 		ldr	r3, [r3, #0]
- 2219 004c 010053E3 		cmp	r3, #1
- 2220 0050 FAFFFF1A 		bne	.L4
-  49:../main.c     **** 			leds_switch();
- 2221              		.loc 1 49 0
- 2222 0054 FEFFFFEB 		bl	leds_switch
-  50:../main.c     **** 			switch_leds = 0;
- 2223              		.loc 1 50 0
- 2224 0058 0C309FE5 		ldr	r3, .L5+4
- 2225 005c 0020A0E3 		mov	r2, #0
- 2226 0060 002083E5 		str	r2, [r3, #0]
- 2227              		.loc 1 52 0
- 2228 0064 F6FFFFEA 		b	.L3
- 2229              	.L6:
- 2230              		.align	2
- 2231              	.L5:
- 2232 0068 00000000 		.word	cola_global
- 2233 006c 00000000 		.word	switch_leds
- 2234              		.cfi_endproc
- 2235              	.LFE0:
- 2237              	.Letext0:
+  25:../main.c     **** 	/* Inicializa controladores */
+  26:../main.c     **** 	sys_init();         // Inicializacion de la placa, interrupciones y puertos
+ 2190              		.loc 1 26 0
+ 2191 0010 FEFFFFEB 		bl	sys_init
+  27:../main.c     **** 	timer2_init();      // Inicializacion del timer2 para medicion de tiempo
+ 2192              		.loc 1 27 0
+ 2193 0014 FEFFFFEB 		bl	timer2_init
+  28:../main.c     **** 	timer1_init();      // Inicializacion del timer1 para latido (heartbeat) - Paso 6
+ 2194              		.loc 1 28 0
+ 2195 0018 FEFFFFEB 		bl	timer1_init
+  29:../main.c     **** 	cola_init();        // Inicializacion de la cola de depuracion (Paso 4)
+ 2196              		.loc 1 29 0
+ 2197 001c FEFFFFEB 		bl	cola_init
+  30:../main.c     **** 	Eint4567_init();	// inicializamos los pulsadores. Cada vez que se pulse se ver� reflejado en el 
+ 2198              		.loc 1 30 0
+ 2199 0020 FEFFFFEB 		bl	Eint4567_init
+  31:../main.c     **** 	D8Led_init();       // inicializamos el 8led
+ 2200              		.loc 1 31 0
+ 2201 0024 FEFFFFEB 		bl	D8Led_init
+  32:../main.c     **** 
+  33:../main.c     **** 	/* Valor inicial de los leds */
+  34:../main.c     **** 	leds_off();
+ 2202              		.loc 1 34 0
+ 2203 0028 FEFFFFEB 		bl	leds_off
+  35:../main.c     **** 	
+  36:../main.c     **** 	/* Apuntar a la cola para poder observarla en el depurador */
+  37:../main.c     **** 	p_cola = cola_global;
+ 2204              		.loc 1 37 0
+ 2205 002c 08309FE5 		ldr	r3, .L3
+ 2206 0030 003093E5 		ldr	r3, [r3, #0]
+ 2207 0034 10300BE5 		str	r3, [fp, #-16]
+ 2208              	.L2:
+  38:../main.c     **** 	
+  39:../main.c     **** 	/* Bucle principal */
+  40:../main.c     **** 	while (1)
+  41:../main.c     **** 	{
+  42:../main.c     **** 		/* El latido (LED2 parpadeando) se gestiona automáticamente por timer1 */
+  43:../main.c     **** 		/* El programa está vivo mientras el LED2 parpadee a 6 Hz */
+  44:../main.c     **** 	}
+ 2209              		.loc 1 44 0 discriminator 1
+ 2210 0038 FEFFFFEA 		b	.L2
+ 2211              	.L4:
+ 2212              		.align	2
+ 2213              	.L3:
+ 2214 003c 00000000 		.word	cola_global
+ 2215              		.cfi_endproc
+ 2216              	.LFE0:
+ 2218              	.Letext0:
 DEFINED SYMBOLS
                             *ABS*:00000000 main.c
-                            *COM*:00000004 switch_leds
-C:\Users\jaime\AppData\Local\Temp\ccymBcyT.s:2170   .text:00000000 $a
-C:\Users\jaime\AppData\Local\Temp\ccymBcyT.s:2173   .text:00000000 Main
-C:\Users\jaime\AppData\Local\Temp\ccymBcyT.s:2232   .text:00000068 $d
+C:\Users\jaime\AppData\Local\Temp\ccbPuLGM.s:2169   .text:00000000 $a
+C:\Users\jaime\AppData\Local\Temp\ccbPuLGM.s:2172   .text:00000000 Main
+C:\Users\jaime\AppData\Local\Temp\ccbPuLGM.s:2214   .text:0000003c $d
                      .debug_frame:00000010 $d
 
 UNDEFINED SYMBOLS
 sys_init
 timer2_init
+timer1_init
 cola_init
-timer_init
 Eint4567_init
 D8Led_init
 leds_off
-led1_on
-leds_switch
 cola_global

@@ -3,35 +3,35 @@ practica2.elf:     file format elf32-littlearm
 
 Sections:
 Idx Name          Size      VMA       LMA       File off  Algn
-  0 .text         00001e0c  0c000000  0c000000  00008000  2**2
+  0 .text         00001f88  0c000000  0c000000  00008000  2**2
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
-  1 .data         0000005c  0c001e0c  0c001e0c  00009e0c  2**2
+  1 .data         0000005c  0c001f88  0c001f88  00009f88  2**2
                   CONTENTS, ALLOC, LOAD, DATA
-  2 .bss          00000034  0c001e68  0c001e68  00009e68  2**2
+  2 .bss          0000003c  0c001fe4  0c001fe4  00009fe4  2**2
                   ALLOC
-  3 .ARM.attributes 0000002e  00000000  00000000  00009e68  2**0
+  3 .ARM.attributes 0000002e  00000000  00000000  00009fe4  2**0
                   CONTENTS, READONLY
-  4 .comment      0000002a  00000000  00000000  00009e96  2**0
+  4 .comment      0000002a  00000000  00000000  0000a012  2**0
                   CONTENTS, READONLY
-  5 .debug_info   00000ca4  00000000  00000000  00009ec0  2**0
+  5 .debug_info   00000d07  00000000  00000000  0000a03c  2**0
                   CONTENTS, READONLY, DEBUGGING
-  6 .debug_line   00000f0e  00000000  00000000  0000ab64  2**0
+  6 .debug_line   00000fd8  00000000  00000000  0000ad43  2**0
                   CONTENTS, READONLY, DEBUGGING
-  7 .debug_abbrev 00000671  00000000  00000000  0000ba72  2**0
+  7 .debug_abbrev 000006ac  00000000  00000000  0000bd1b  2**0
                   CONTENTS, READONLY, DEBUGGING
-  8 .debug_frame  00000598  00000000  00000000  0000c0e4  2**2
+  8 .debug_frame  000005f4  00000000  00000000  0000c3c8  2**2
                   CONTENTS, READONLY, DEBUGGING
-  9 .debug_aranges 00000140  00000000  00000000  0000c680  2**3
+  9 .debug_aranges 00000160  00000000  00000000  0000c9c0  2**3
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_macinfo 0002ffc6  00000000  00000000  0000c7c0  2**0
+ 10 .debug_macinfo 000350d6  00000000  00000000  0000cb20  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_loc    00000688  00000000  00000000  0003c786  2**0
+ 11 .debug_loc    000006e0  00000000  00000000  00041bf6  2**0
                   CONTENTS, READONLY, DEBUGGING
- 12 .debug_pubnames 00000308  00000000  00000000  0003ce0e  2**0
+ 12 .debug_pubnames 00000329  00000000  00000000  000422d6  2**0
                   CONTENTS, READONLY, DEBUGGING
- 13 .debug_pubtypes 00000114  00000000  00000000  0003d116  2**0
+ 13 .debug_pubtypes 00000114  00000000  00000000  000425ff  2**0
                   CONTENTS, READONLY, DEBUGGING
- 14 .debug_str    0000056e  00000000  00000000  0003d22a  2**0
+ 14 .debug_str    000005b0  00000000  00000000  00042713  2**0
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .text:
@@ -848,10 +848,10 @@ U0: subs    r0,r0,#1
  c0006a8:	0c0006d8 	.word	0x0c0006d8
  c0006ac:	0c7ff100 	.word	0x0c7ff100
  c0006b0:	0c0003e4 	.word	0x0c0003e4
- c0006b4:	0c001e0c 	.word	0x0c001e0c
- c0006b8:	0c001e0c 	.word	0x0c001e0c
- c0006bc:	0c001e68 	.word	0x0c001e68
- c0006c0:	0c001e9c 	.word	0x0c001e9c
+ c0006b4:	0c001f88 	.word	0x0c001f88
+ c0006b8:	0c001f88 	.word	0x0c001f88
+ c0006bc:	0c001fe4 	.word	0x0c001fe4
+ c0006c0:	0c002020 	.word	0x0c002020
  c0006c4:	0c7ff200 	.word	0x0c7ff200
  c0006c8:	0c7ff300 	.word	0x0c7ff300
  c0006cc:	0c7ff400 	.word	0x0c7ff400
@@ -967,7 +967,7 @@ void Delay(int time)
  c0007f8:	e1a03303 	lsl	r3, r3, #6
  c0007fc:	e59f003c 	ldr	r0, [pc, #60]	; c000840 <Delay+0x134>
  c000800:	e1a01003 	mov	r1, r3
- c000804:	eb00052d 	bl	c001cc0 <__aeabi_idiv>
+ c000804:	eb00058c 	bl	c001e3c <__aeabi_idiv>
  c000808:	e1a03000 	mov	r3, r0
  c00080c:	e1a02003 	mov	r2, r3
  c000810:	e59f300c 	ldr	r3, [pc, #12]	; c000824 <Delay+0x118>
@@ -977,7 +977,7 @@ void Delay(int time)
  c000818:	e24bd00c 	sub	sp, fp, #12
  c00081c:	e89d6800 	ldm	sp, {fp, sp, lr}
  c000820:	e12fff1e 	bx	lr
- c000824:	0c001e1c 	.word	0x0c001e1c
+ c000824:	0c001f98 	.word	0x0c001f98
  c000828:	01d30000 	.word	0x01d30000
  c00082c:	00003f10 	.word	0x00003f10
  c000830:	01d30004 	.word	0x01d30004
@@ -1244,7 +1244,7 @@ void *malloc(unsigned nbyte)
  c000ac4:	e24bd00c 	sub	sp, fp, #12
  c000ac8:	e89d6800 	ldm	sp, {fp, sp, lr}
  c000acc:	e12fff1e 	bx	lr
- c000ad0:	0c001e14 	.word	0x0c001e14
+ c000ad0:	0c001f90 	.word	0x0c001f90
  c000ad4:	0c7ff000 	.word	0x0c7ff000
 
 0c000ad8 <free>:
@@ -1264,7 +1264,7 @@ void free(void *pt)
  c000af8:	e24bd00c 	sub	sp, fp, #12
  c000afc:	e89d6800 	ldm	sp, {fp, sp, lr}
  c000b00:	e12fff1e 	bx	lr
- c000b04:	0c001e14 	.word	0x0c001e14
+ c000b04:	0c001f90 	.word	0x0c001f90
 
 0c000b08 <sys_init>:
 
@@ -1359,7 +1359,7 @@ void D8Led_symbol(int value)
  c000be0:	e24bd00c 	sub	sp, fp, #12
  c000be4:	e89d6800 	ldm	sp, {fp, sp, lr}
  c000be8:	e12fff1e 	bx	lr
- c000bec:	0c001e20 	.word	0x0c001e20
+ c000bec:	0c001f9c 	.word	0x0c001f9c
 
 0c000bf0 <boton_confirmado>:
   Cuando se pulsa un botón sumamos y con el otro restamos. ¡A veces hay rebotes! */
@@ -1380,7 +1380,7 @@ static void boton_confirmado(uint8_t boton_id)
  c000c10:	0a000002 	beq	c000c20 <boton_confirmado+0x30>
  c000c14:	e3530008 	cmp	r3, #8
  c000c18:	0a00000e 	beq	c000c58 <boton_confirmado+0x68>
-                        int_count--;
+                        int_count++;
                         cola_depuracion(timer2_count(), EVENTO_BOTON_DERECHO, int_count);
                         break;
                 default:
@@ -1392,14 +1392,14 @@ static void boton_confirmado(uint8_t boton_id)
         switch (boton_id)
         {
                 case EVENTO_BOTON_IZQUIERDO:
-                        int_count++;
+                        int_count--;
  c000c20:	e59f3088 	ldr	r3, [pc, #136]	; c000cb0 <boton_confirmado+0xc0>
  c000c24:	e5933000 	ldr	r3, [r3]
- c000c28:	e2832001 	add	r2, r3, #1
+ c000c28:	e2432001 	sub	r2, r3, #1
  c000c2c:	e59f307c 	ldr	r3, [pc, #124]	; c000cb0 <boton_confirmado+0xc0>
  c000c30:	e5832000 	str	r2, [r3]
                         cola_depuracion(timer2_count(), EVENTO_BOTON_IZQUIERDO, int_count);
- c000c34:	eb000291 	bl	c001680 <timer2_count>
+ c000c34:	eb0002f0 	bl	c0017fc <timer2_count>
  c000c38:	e1a02000 	mov	r2, r0
  c000c3c:	e59f306c 	ldr	r3, [pc, #108]	; c000cb0 <boton_confirmado+0xc0>
  c000c40:	e5933000 	ldr	r3, [r3]
@@ -1410,14 +1410,14 @@ static void boton_confirmado(uint8_t boton_id)
                         break;
  c000c54:	ea00000d 	b	c000c90 <boton_confirmado+0xa0>
                 case EVENTO_BOTON_DERECHO:
-                        int_count--;
+                        int_count++;
  c000c58:	e59f3050 	ldr	r3, [pc, #80]	; c000cb0 <boton_confirmado+0xc0>
  c000c5c:	e5933000 	ldr	r3, [r3]
- c000c60:	e2432001 	sub	r2, r3, #1
+ c000c60:	e2832001 	add	r2, r3, #1
  c000c64:	e59f3044 	ldr	r3, [pc, #68]	; c000cb0 <boton_confirmado+0xc0>
  c000c68:	e5832000 	str	r2, [r3]
                         cola_depuracion(timer2_count(), EVENTO_BOTON_DERECHO, int_count);
- c000c6c:	eb000283 	bl	c001680 <timer2_count>
+ c000c6c:	eb0002e2 	bl	c0017fc <timer2_count>
  c000c70:	e1a02000 	mov	r2, r0
  c000c74:	e59f3034 	ldr	r3, [pc, #52]	; c000cb0 <boton_confirmado+0xc0>
  c000c78:	e5933000 	ldr	r3, [r3]
@@ -1442,7 +1442,7 @@ static void boton_confirmado(uint8_t boton_id)
  c000ca4:	e24bd00c 	sub	sp, fp, #12
  c000ca8:	e89d6800 	ldm	sp, {fp, sp, lr}
  c000cac:	e12fff1e 	bx	lr
- c000cb0:	0c001e6c 	.word	0x0c001e6c
+ c000cb0:	0c001fe8 	.word	0x0c001fe8
 
 0c000cb4 <Eint4567_ISR>:
  * https://gcc.gnu.org/onlinedocs/gcc/ARM-Function-Attributes.html */
@@ -1499,7 +1499,7 @@ void Eint4567_ISR(void)
                 timer3_start_antirrebote(boton_id);
  c000d20:	e55b301d 	ldrb	r3, [fp, #-29]	; 0xffffffe3
  c000d24:	e1a00003 	mov	r0, r3
- c000d28:	eb000329 	bl	c0019d4 <timer3_start_antirrebote>
+ c000d28:	eb000388 	bl	c001b50 <timer3_start_antirrebote>
         }
 
         /* Finalizar ISR */
@@ -1531,7 +1531,7 @@ void Eint4567_init(void)
         /* Inicializar el temporizador dedicado a la eliminación de rebotes */
         timer3_init(boton_confirmado);
  c000d70:	e59f00ac 	ldr	r0, [pc, #172]	; c000e24 <Eint4567_init+0xc0>
- c000d74:	eb0002cb 	bl	c0018a8 <timer3_init>
+ c000d74:	eb00032a 	bl	c001a24 <timer3_init>
 
         /* Configuracion del controlador de interrupciones. Estos registros están definidos en 44b.h */
         rI_ISPC    = 0x3ffffff;         // Borra INTPND escribiendo 1s en I_ISPC
@@ -1699,7 +1699,7 @@ void cola_init(void)
  c000f38:	e24bd00c 	sub	sp, fp, #12
  c000f3c:	e89d6800 	ldm	sp, {fp, sp, lr}
  c000f40:	e12fff1e 	bx	lr
- c000f44:	0c001e64 	.word	0x0c001e64
+ c000f44:	0c001fe0 	.word	0x0c001fe0
 
 0c000f48 <cola_depuracion>:
  * @param instant Instante de tiempo en microsegundos (normalmente de timer2_count())
@@ -1795,7 +1795,7 @@ void cola_depuracion(uint32_t instant, uint8_t ID_evento, uint32_t auxData)
  c00105c:	e24bd00c 	sub	sp, fp, #12
  c001060:	e89d6800 	ldm	sp, {fp, sp, lr}
  c001064:	e12fff1e 	bx	lr
- c001068:	0c001e64 	.word	0x0c001e64
+ c001068:	0c001fe0 	.word	0x0c001fe0
 
 0c00106c <cola_get_num_eventos>:
  * 
@@ -1816,7 +1816,7 @@ uint32_t cola_get_num_eventos(void)
  c001088:	e24bd00c 	sub	sp, fp, #12
  c00108c:	e89d6800 	ldm	sp, {fp, sp, lr}
  c001090:	e12fff1e 	bx	lr
- c001094:	0c001e64 	.word	0x0c001e64
+ c001094:	0c001fe0 	.word	0x0c001fe0
 
 0c001098 <cola_get_indice>:
  * Obtiene el índice actual de escritura.
@@ -1837,7 +1837,7 @@ uint32_t cola_get_indice(void)
  c0010b4:	e24bd00c 	sub	sp, fp, #12
  c0010b8:	e89d6800 	ldm	sp, {fp, sp, lr}
  c0010bc:	e12fff1e 	bx	lr
- c0010c0:	0c001e64 	.word	0x0c001e64
+ c0010c0:	0c001fe0 	.word	0x0c001fe0
 
 0c0010c4 <leds_on>:
 /*--- variables globales del módulo ---*/
@@ -1894,7 +1894,7 @@ void led1_on()
  c001134:	e24bd00c 	sub	sp, fp, #12
  c001138:	e89d6800 	ldm	sp, {fp, sp, lr}
  c00113c:	e12fff1e 	bx	lr
- c001140:	0c001e70 	.word	0x0c001e70
+ c001140:	0c001fec 	.word	0x0c001fec
 
 0c001144 <led1_off>:
 
@@ -1918,7 +1918,7 @@ void led1_off()
  c001174:	e24bd00c 	sub	sp, fp, #12
  c001178:	e89d6800 	ldm	sp, {fp, sp, lr}
  c00117c:	e12fff1e 	bx	lr
- c001180:	0c001e70 	.word	0x0c001e70
+ c001180:	0c001fec 	.word	0x0c001fec
 
 0c001184 <led2_on>:
 
@@ -1942,7 +1942,7 @@ void led2_on()
  c0011b4:	e24bd00c 	sub	sp, fp, #12
  c0011b8:	e89d6800 	ldm	sp, {fp, sp, lr}
  c0011bc:	e12fff1e 	bx	lr
- c0011c0:	0c001e70 	.word	0x0c001e70
+ c0011c0:	0c001fec 	.word	0x0c001fec
 
 0c0011c4 <led2_off>:
 
@@ -1966,7 +1966,7 @@ void led2_off()
  c0011f4:	e24bd00c 	sub	sp, fp, #12
  c0011f8:	e89d6800 	ldm	sp, {fp, sp, lr}
  c0011fc:	e12fff1e 	bx	lr
- c001200:	0c001e70 	.word	0x0c001e70
+ c001200:	0c001fec 	.word	0x0c001fec
 
 0c001204 <leds_switch>:
 
@@ -1991,7 +1991,7 @@ void leds_switch()
  c001234:	e24bd00c 	sub	sp, fp, #12
  c001238:	e89d6800 	ldm	sp, {fp, sp, lr}
  c00123c:	e12fff1e 	bx	lr
- c001240:	0c001e70 	.word	0x0c001e70
+ c001240:	0c001fec 	.word	0x0c001fec
 
 0c001244 <Led_Display>:
 
@@ -2053,13 +2053,13 @@ void Led_Display(int LedStatus)
  c0012e8:	e24bd00c 	sub	sp, fp, #12
  c0012ec:	e89d6800 	ldm	sp, {fp, sp, lr}
  c0012f0:	e12fff1e 	bx	lr
- c0012f4:	0c001e70 	.word	0x0c001e70
+ c0012f4:	0c001fec 	.word	0x0c001fec
  c0012f8:	01d2000c 	.word	0x01d2000c
  c0012fc:	000005ff 	.word	0x000005ff
 
 0c001300 <Main>:
-/*--- variables globales ---*/
-
+#include "44blib.h"
+#include "44b.h"
 
 /*--- codigo de funciones ---*/
 void Main(void)
@@ -2076,11 +2076,11 @@ void Main(void)
 	sys_init();         // Inicializacion de la placa, interrupciones y puertos
  c001310:	ebfffdfc 	bl	c000b08 <sys_init>
 	timer2_init();      // Inicializacion del timer2 para medicion de tiempo
- c001314:	eb00006b 	bl	c0014c8 <timer2_init>
+ c001314:	eb0000ca 	bl	c001644 <timer2_init>
+	timer1_init();      // Inicializacion del timer1 para latido (heartbeat) - Paso 6
+ c001318:	eb000073 	bl	c0014ec <timer1_init>
 	cola_init();        // Inicializacion de la cola de depuracion (Paso 4)
- c001318:	ebfffecd 	bl	c000e54 <cola_init>
-	timer_init();	    // Inicializacion del temporizador
- c00131c:	eb000025 	bl	c0013b8 <timer_init>
+ c00131c:	ebfffecc 	bl	c000e54 <cola_init>
 	Eint4567_init();	// inicializamos los pulsadores. Cada vez que se pulse se ver� reflejado en el 8led
  c001320:	ebfffe8f 	bl	c000d64 <Eint4567_init>
 	D8Led_init();       // inicializamos el 8led
@@ -2089,1107 +2089,1258 @@ void Main(void)
 	/* Valor inicial de los leds */
 	leds_off();
  c001328:	ebffff6d 	bl	c0010e4 <leds_off>
-	led1_on();
- c00132c:	ebffff74 	bl	c001104 <led1_on>
 	
 	/* Apuntar a la cola para poder observarla en el depurador */
 	p_cola = cola_global;
- c001330:	e59f3030 	ldr	r3, [pc, #48]	; c001368 <Main+0x68>
- c001334:	e5933000 	ldr	r3, [r3]
- c001338:	e50b3010 	str	r3, [fp, #-16]
- c00133c:	ea000000 	b	c001344 <Main+0x44>
-		if (switch_leds == 1)
-		{
-			leds_switch();
-			switch_leds = 0;
-		}
-	}
- c001340:	e1a00000 	nop			; (mov r0, r0)
-	
+ c00132c:	e59f3008 	ldr	r3, [pc, #8]	; c00133c <Main+0x3c>
+ c001330:	e5933000 	ldr	r3, [r3]
+ c001334:	e50b3010 	str	r3, [fp, #-16]
 	/* Bucle principal */
 	while (1)
 	{
-		/* Cambia los leds con cada interrupcion del temporizador */
-		if (switch_leds == 1)
- c001344:	e59f3020 	ldr	r3, [pc, #32]	; c00136c <Main+0x6c>
- c001348:	e5933000 	ldr	r3, [r3]
- c00134c:	e3530001 	cmp	r3, #1
- c001350:	1afffffa 	bne	c001340 <Main+0x40>
-		{
-			leds_switch();
- c001354:	ebffffaa 	bl	c001204 <leds_switch>
-			switch_leds = 0;
- c001358:	e59f300c 	ldr	r3, [pc, #12]	; c00136c <Main+0x6c>
- c00135c:	e3a02000 	mov	r2, #0
- c001360:	e5832000 	str	r2, [r3]
-		}
+		/* El latido (LED2 parpadeando) se gestiona automáticamente por timer1 */
+		/* El programa está vivo mientras el LED2 parpadee a 6 Hz */
 	}
- c001364:	eafffff6 	b	c001344 <Main+0x44>
- c001368:	0c001e64 	.word	0x0c001e64
- c00136c:	0c001e74 	.word	0x0c001e74
+ c001338:	eafffffe 	b	c001338 <Main+0x38>
+ c00133c:	0c001fe0 	.word	0x0c001fe0
 
-0c001370 <timer_ISR>:
+0c001340 <timer_ISR>:
  * https://gcc.gnu.org/onlinedocs/gcc/ARM-Function-Attributes.html */
 void timer_ISR(void) __attribute__((interrupt("IRQ")));
 
 /*--- codigo de las funciones ---*/
 void timer_ISR(void)
 {
- c001370:	e52dc004 	push	{ip}		; (str ip, [sp, #-4]!)
- c001374:	e1a0c00d 	mov	ip, sp
- c001378:	e92dd80c 	push	{r2, r3, fp, ip, lr, pc}
- c00137c:	e24cb004 	sub	fp, ip, #4
+ c001340:	e52dc004 	push	{ip}		; (str ip, [sp, #-4]!)
+ c001344:	e1a0c00d 	mov	ip, sp
+ c001348:	e92dd80c 	push	{r2, r3, fp, ip, lr, pc}
+ c00134c:	e24cb004 	sub	fp, ip, #4
 	switch_leds = 1;
- c001380:	e59f3028 	ldr	r3, [pc, #40]	; c0013b0 <timer_ISR+0x40>
- c001384:	e3a02001 	mov	r2, #1
- c001388:	e5832000 	str	r2, [r3]
+ c001350:	e59f3028 	ldr	r3, [pc, #40]	; c001380 <timer_ISR+0x40>
+ c001354:	e3a02001 	mov	r2, #1
+ c001358:	e5832000 	str	r2, [r3]
 
 	/* borrar bit en I_ISPC para desactivar la solicitud de interrupci�n*/
 	rI_ISPC |= BIT_TIMER0; // BIT_TIMER0 est� definido en 44b.h y pone un uno en el bit 13 que corresponde al Timer0
- c00138c:	e59f3020 	ldr	r3, [pc, #32]	; c0013b4 <timer_ISR+0x44>
- c001390:	e59f201c 	ldr	r2, [pc, #28]	; c0013b4 <timer_ISR+0x44>
- c001394:	e5922000 	ldr	r2, [r2]
- c001398:	e3822a02 	orr	r2, r2, #8192	; 0x2000
- c00139c:	e5832000 	str	r2, [r3]
+ c00135c:	e59f3020 	ldr	r3, [pc, #32]	; c001384 <timer_ISR+0x44>
+ c001360:	e59f201c 	ldr	r2, [pc, #28]	; c001384 <timer_ISR+0x44>
+ c001364:	e5922000 	ldr	r2, [r2]
+ c001368:	e3822a02 	orr	r2, r2, #8192	; 0x2000
+ c00136c:	e5832000 	str	r2, [r3]
 }
- c0013a0:	e24bd014 	sub	sp, fp, #20
- c0013a4:	e89d680c 	ldm	sp, {r2, r3, fp, sp, lr}
- c0013a8:	e49dc004 	pop	{ip}		; (ldr ip, [sp], #4)
- c0013ac:	e25ef004 	subs	pc, lr, #4
- c0013b0:	0c001e74 	.word	0x0c001e74
- c0013b4:	01e00024 	.word	0x01e00024
+ c001370:	e24bd014 	sub	sp, fp, #20
+ c001374:	e89d680c 	ldm	sp, {r2, r3, fp, sp, lr}
+ c001378:	e49dc004 	pop	{ip}		; (ldr ip, [sp], #4)
+ c00137c:	e25ef004 	subs	pc, lr, #4
+ c001380:	0c001ff0 	.word	0x0c001ff0
+ c001384:	01e00024 	.word	0x01e00024
 
-0c0013b8 <timer_init>:
+0c001388 <timer_init>:
 
 void timer_init(void)
 {
- c0013b8:	e1a0c00d 	mov	ip, sp
- c0013bc:	e92dd800 	push	{fp, ip, lr, pc}
- c0013c0:	e24cb004 	sub	fp, ip, #4
+ c001388:	e1a0c00d 	mov	ip, sp
+ c00138c:	e92dd800 	push	{fp, ip, lr, pc}
+ c001390:	e24cb004 	sub	fp, ip, #4
 	/* Configuracion controlador de interrupciones */
 	rINTMOD = 0x0; // Configura las lineas como de tipo IRQ
- c0013c4:	e59f3084 	ldr	r3, [pc, #132]	; c001450 <timer_init+0x98>
- c0013c8:	e3a02000 	mov	r2, #0
- c0013cc:	e5832000 	str	r2, [r3]
+ c001394:	e59f3084 	ldr	r3, [pc, #132]	; c001420 <timer_init+0x98>
+ c001398:	e3a02000 	mov	r2, #0
+ c00139c:	e5832000 	str	r2, [r3]
 	rINTCON = 0x1; // Habilita int. vectorizadas y la linea IRQ (FIQ no)
- c0013d0:	e3a0361e 	mov	r3, #31457280	; 0x1e00000
- c0013d4:	e3a02001 	mov	r2, #1
- c0013d8:	e5832000 	str	r2, [r3]
+ c0013a0:	e3a0361e 	mov	r3, #31457280	; 0x1e00000
+ c0013a4:	e3a02001 	mov	r2, #1
+ c0013a8:	e5832000 	str	r2, [r3]
 	rINTMSK &= ~(BIT_TIMER0); // habilitamos en vector de mascaras de interrupcion el Timer0 (bits 26 y 13, BIT_GLOBAL y BIT_TIMER0 est�n definidos en 44b.h)
- c0013dc:	e59f3070 	ldr	r3, [pc, #112]	; c001454 <timer_init+0x9c>
- c0013e0:	e59f206c 	ldr	r2, [pc, #108]	; c001454 <timer_init+0x9c>
- c0013e4:	e5922000 	ldr	r2, [r2]
- c0013e8:	e3c22a02 	bic	r2, r2, #8192	; 0x2000
- c0013ec:	e5832000 	str	r2, [r3]
+ c0013ac:	e59f3070 	ldr	r3, [pc, #112]	; c001424 <timer_init+0x9c>
+ c0013b0:	e59f206c 	ldr	r2, [pc, #108]	; c001424 <timer_init+0x9c>
+ c0013b4:	e5922000 	ldr	r2, [r2]
+ c0013b8:	e3c22a02 	bic	r2, r2, #8192	; 0x2000
+ c0013bc:	e5832000 	str	r2, [r3]
 
 	/* Establece la rutina de servicio para TIMER0 */
 	pISR_TIMER0 = (unsigned) timer_ISR;
- c0013f0:	e59f3060 	ldr	r3, [pc, #96]	; c001458 <timer_init+0xa0>
- c0013f4:	e59f2060 	ldr	r2, [pc, #96]	; c00145c <timer_init+0xa4>
- c0013f8:	e5832000 	str	r2, [r3]
+ c0013c0:	e59f3060 	ldr	r3, [pc, #96]	; c001428 <timer_init+0xa0>
+ c0013c4:	e59f2060 	ldr	r2, [pc, #96]	; c00142c <timer_init+0xa4>
+ c0013c8:	e5832000 	str	r2, [r3]
 
 	/* Configura el Timer0 */
 	rTCFG0 = 255; // ajusta el preescalado
- c0013fc:	e59f305c 	ldr	r3, [pc, #92]	; c001460 <timer_init+0xa8>
- c001400:	e3a020ff 	mov	r2, #255	; 0xff
- c001404:	e5832000 	str	r2, [r3]
+ c0013cc:	e59f305c 	ldr	r3, [pc, #92]	; c001430 <timer_init+0xa8>
+ c0013d0:	e3a020ff 	mov	r2, #255	; 0xff
+ c0013d4:	e5832000 	str	r2, [r3]
 	rTCFG1 = 0x0; // selecciona la entrada del mux que proporciona el reloj. La 00 corresponde a un divisor de 1/2.
- c001408:	e59f3054 	ldr	r3, [pc, #84]	; c001464 <timer_init+0xac>
- c00140c:	e3a02000 	mov	r2, #0
- c001410:	e5832000 	str	r2, [r3]
+ c0013d8:	e59f3054 	ldr	r3, [pc, #84]	; c001434 <timer_init+0xac>
+ c0013dc:	e3a02000 	mov	r2, #0
+ c0013e0:	e5832000 	str	r2, [r3]
 	rTCNTB0 = 65535;// valor inicial de cuenta (la cuenta es descendente)
- c001414:	e59f304c 	ldr	r3, [pc, #76]	; c001468 <timer_init+0xb0>
- c001418:	e59f204c 	ldr	r2, [pc, #76]	; c00146c <timer_init+0xb4>
- c00141c:	e5832000 	str	r2, [r3]
+ c0013e4:	e59f304c 	ldr	r3, [pc, #76]	; c001438 <timer_init+0xb0>
+ c0013e8:	e59f204c 	ldr	r2, [pc, #76]	; c00143c <timer_init+0xb4>
+ c0013ec:	e5832000 	str	r2, [r3]
 	rTCMPB0 = 12800;// valor de comparaci�n
- c001420:	e59f3048 	ldr	r3, [pc, #72]	; c001470 <timer_init+0xb8>
- c001424:	e3a02c32 	mov	r2, #12800	; 0x3200
- c001428:	e5832000 	str	r2, [r3]
+ c0013f0:	e59f3048 	ldr	r3, [pc, #72]	; c001440 <timer_init+0xb8>
+ c0013f4:	e3a02c32 	mov	r2, #12800	; 0x3200
+ c0013f8:	e5832000 	str	r2, [r3]
 	/* establecer update=manual (bit 1) + inverter=on (�? ser� inverter off un cero en el bit 2 pone el inverter en off)*/
 	rTCON = 0x2;
- c00142c:	e59f3040 	ldr	r3, [pc, #64]	; c001474 <timer_init+0xbc>
- c001430:	e3a02002 	mov	r2, #2
- c001434:	e5832000 	str	r2, [r3]
+ c0013fc:	e59f3040 	ldr	r3, [pc, #64]	; c001444 <timer_init+0xbc>
+ c001400:	e3a02002 	mov	r2, #2
+ c001404:	e5832000 	str	r2, [r3]
 	/* iniciar timer (bit 0) con auto-reload (bit 3)*/
 	rTCON = 0x09;
- c001438:	e59f3034 	ldr	r3, [pc, #52]	; c001474 <timer_init+0xbc>
- c00143c:	e3a02009 	mov	r2, #9
- c001440:	e5832000 	str	r2, [r3]
+ c001408:	e59f3034 	ldr	r3, [pc, #52]	; c001444 <timer_init+0xbc>
+ c00140c:	e3a02009 	mov	r2, #9
+ c001410:	e5832000 	str	r2, [r3]
 }
- c001444:	e24bd00c 	sub	sp, fp, #12
- c001448:	e89d6800 	ldm	sp, {fp, sp, lr}
- c00144c:	e12fff1e 	bx	lr
- c001450:	01e00008 	.word	0x01e00008
- c001454:	01e0000c 	.word	0x01e0000c
- c001458:	0c7fff54 	.word	0x0c7fff54
- c00145c:	0c001370 	.word	0x0c001370
- c001460:	01d50000 	.word	0x01d50000
- c001464:	01d50004 	.word	0x01d50004
- c001468:	01d5000c 	.word	0x01d5000c
- c00146c:	0000ffff 	.word	0x0000ffff
- c001470:	01d50010 	.word	0x01d50010
- c001474:	01d50008 	.word	0x01d50008
+ c001414:	e24bd00c 	sub	sp, fp, #12
+ c001418:	e89d6800 	ldm	sp, {fp, sp, lr}
+ c00141c:	e12fff1e 	bx	lr
+ c001420:	01e00008 	.word	0x01e00008
+ c001424:	01e0000c 	.word	0x01e0000c
+ c001428:	0c7fff54 	.word	0x0c7fff54
+ c00142c:	0c001340 	.word	0x0c001340
+ c001430:	01d50000 	.word	0x01d50000
+ c001434:	01d50004 	.word	0x01d50004
+ c001438:	01d5000c 	.word	0x01d5000c
+ c00143c:	0000ffff 	.word	0x0000ffff
+ c001440:	01d50010 	.word	0x01d50010
+ c001444:	01d50008 	.word	0x01d50008
 
-0c001478 <timer2_ISR>:
- * NOTA: No registramos cada interrupción en la cola para no sobrecargarla,
- * ya que el timer2 genera muchas interrupciones por segundo (~488 Hz).
- * Solo registramos si es necesario para depuración específica.
+0c001448 <timer1_ISR>:
+ * Interrupciones por segundo: 60
+ * Interrupciones por ciclo de parpadeo: 60 / 6 = 10
+ * Por tanto, alternamos el LED cada 10 interrupciones.
  */
-void timer2_ISR(void)
+void timer1_ISR(void)
 {
- c001478:	e52dc004 	push	{ip}		; (str ip, [sp, #-4]!)
- c00147c:	e1a0c00d 	mov	ip, sp
- c001480:	e92dd80c 	push	{r2, r3, fp, ip, lr, pc}
- c001484:	e24cb004 	sub	fp, ip, #4
-	/* Incrementar el contador de periodos completos */
-	timer2_numero_int++;
- c001488:	e59f3030 	ldr	r3, [pc, #48]	; c0014c0 <timer2_ISR+0x48>
- c00148c:	e5933000 	ldr	r3, [r3]
- c001490:	e2832001 	add	r2, r3, #1
- c001494:	e59f3024 	ldr	r3, [pc, #36]	; c0014c0 <timer2_ISR+0x48>
+ c001448:	e52dc004 	push	{ip}		; (str ip, [sp, #-4]!)
+ c00144c:	e1a0c00d 	mov	ip, sp
+ c001450:	e92dd80f 	push	{r0, r1, r2, r3, fp, ip, lr, pc}
+ c001454:	e24cb004 	sub	fp, ip, #4
+	timer1_contador++;
+ c001458:	e59f3080 	ldr	r3, [pc, #128]	; c0014e0 <timer1_ISR+0x98>
+ c00145c:	e5933000 	ldr	r3, [r3]
+ c001460:	e2832001 	add	r2, r3, #1
+ c001464:	e59f3074 	ldr	r3, [pc, #116]	; c0014e0 <timer1_ISR+0x98>
+ c001468:	e5832000 	str	r2, [r3]
+	
+	/* Cambiar estado del LED cada 10 interrupciones */
+	/* 60 interrupciones/seg ÷ 6 Hz = 10 interrupciones por ciclo completo */
+	if (timer1_contador >= 10)
+ c00146c:	e59f306c 	ldr	r3, [pc, #108]	; c0014e0 <timer1_ISR+0x98>
+ c001470:	e5933000 	ldr	r3, [r3]
+ c001474:	e3530009 	cmp	r3, #9
+ c001478:	9a00000f 	bls	c0014bc <timer1_ISR+0x74>
+	{
+		if (led2_encendido)
+ c00147c:	e59f3060 	ldr	r3, [pc, #96]	; c0014e4 <timer1_ISR+0x9c>
+ c001480:	e5933000 	ldr	r3, [r3]
+ c001484:	e3530000 	cmp	r3, #0
+ c001488:	0a000004 	beq	c0014a0 <timer1_ISR+0x58>
+		{
+			led2_off();  // Apaga el LED de la derecha
+ c00148c:	ebffff4c 	bl	c0011c4 <led2_off>
+			led2_encendido = 0;
+ c001490:	e59f304c 	ldr	r3, [pc, #76]	; c0014e4 <timer1_ISR+0x9c>
+ c001494:	e3a02000 	mov	r2, #0
  c001498:	e5832000 	str	r2, [r3]
+ c00149c:	ea000003 	b	c0014b0 <timer1_ISR+0x68>
+		}
+		else
+		{
+			led2_on();   // Enciende el LED de la derecha
+ c0014a0:	ebffff37 	bl	c001184 <led2_on>
+			led2_encendido = 1;
+ c0014a4:	e59f3038 	ldr	r3, [pc, #56]	; c0014e4 <timer1_ISR+0x9c>
+ c0014a8:	e3a02001 	mov	r2, #1
+ c0014ac:	e5832000 	str	r2, [r3]
+		}
+		timer1_contador = 0;
+ c0014b0:	e59f3028 	ldr	r3, [pc, #40]	; c0014e0 <timer1_ISR+0x98>
+ c0014b4:	e3a02000 	mov	r2, #0
+ c0014b8:	e5832000 	str	r2, [r3]
+	}
 	
 	/* Borrar bit en I_ISPC para desactivar la solicitud de interrupción */
-	rI_ISPC |= BIT_TIMER2; // BIT_TIMER2 pone un uno en el bit 11 que corresponde al Timer2
- c00149c:	e59f3020 	ldr	r3, [pc, #32]	; c0014c4 <timer2_ISR+0x4c>
- c0014a0:	e59f201c 	ldr	r2, [pc, #28]	; c0014c4 <timer2_ISR+0x4c>
- c0014a4:	e5922000 	ldr	r2, [r2]
- c0014a8:	e3822b02 	orr	r2, r2, #2048	; 0x800
- c0014ac:	e5832000 	str	r2, [r3]
+	rI_ISPC |= BIT_TIMER1;
+ c0014bc:	e59f3024 	ldr	r3, [pc, #36]	; c0014e8 <timer1_ISR+0xa0>
+ c0014c0:	e59f2020 	ldr	r2, [pc, #32]	; c0014e8 <timer1_ISR+0xa0>
+ c0014c4:	e5922000 	ldr	r2, [r2]
+ c0014c8:	e3822a01 	orr	r2, r2, #4096	; 0x1000
+ c0014cc:	e5832000 	str	r2, [r3]
 }
- c0014b0:	e24bd014 	sub	sp, fp, #20
- c0014b4:	e89d680c 	ldm	sp, {r2, r3, fp, sp, lr}
- c0014b8:	e49dc004 	pop	{ip}		; (ldr ip, [sp], #4)
- c0014bc:	e25ef004 	subs	pc, lr, #4
- c0014c0:	0c001e78 	.word	0x0c001e78
- c0014c4:	01e00024 	.word	0x01e00024
+ c0014d0:	e24bd01c 	sub	sp, fp, #28
+ c0014d4:	e89d680f 	ldm	sp, {r0, r1, r2, r3, fp, sp, lr}
+ c0014d8:	e49dc004 	pop	{ip}		; (ldr ip, [sp], #4)
+ c0014dc:	e25ef004 	subs	pc, lr, #4
+ c0014e0:	0c001ff4 	.word	0x0c001ff4
+ c0014e4:	0c001ff8 	.word	0x0c001ff8
+ c0014e8:	01e00024 	.word	0x01e00024
 
-0c0014c8 <timer2_init>:
- * - Periodo del timer: 1/32 MHz = 0.03125 microsegundos
- * - Valor de cuenta máximo: 65535 (16 bits)
- * - Tiempo por ciclo completo: 65535 * 0.03125 = 2047.96875 microsegundos (~2.048 ms)
+0c0014ec <timer1_init>:
+ * - Cuenta: 260 ticks para obtener 60 interrupciones/segundo
+ * - Resolución: 1/15625 Hz = 64 µs por tick
+ * - Rango: 260 ticks × 64 µs ≈ 16.64 ms por interrupción
  */
-void timer2_init(void)
+void timer1_init(void)
 {
- c0014c8:	e1a0c00d 	mov	ip, sp
- c0014cc:	e92dd800 	push	{fp, ip, lr, pc}
- c0014d0:	e24cb004 	sub	fp, ip, #4
+ c0014ec:	e1a0c00d 	mov	ip, sp
+ c0014f0:	e92dd800 	push	{fp, ip, lr, pc}
+ c0014f4:	e24cb004 	sub	fp, ip, #4
 	/* Configuración del controlador de interrupciones */
-	rINTMOD = 0x0;              // Configura las líneas como de tipo IRQ
- c0014d4:	e59f30ec 	ldr	r3, [pc, #236]	; c0015c8 <timer2_init+0x100>
- c0014d8:	e3a02000 	mov	r2, #0
- c0014dc:	e5832000 	str	r2, [r3]
-	rINTCON = 0x1;              // Habilita int. vectorizadas y la línea IRQ (FIQ no)
- c0014e0:	e3a0361e 	mov	r3, #31457280	; 0x1e00000
- c0014e4:	e3a02001 	mov	r2, #1
- c0014e8:	e5832000 	str	r2, [r3]
-	rINTMSK &= ~(BIT_TIMER2);   // Habilita en vector de máscaras de interrupción el Timer2
- c0014ec:	e59f30d8 	ldr	r3, [pc, #216]	; c0015cc <timer2_init+0x104>
- c0014f0:	e59f20d4 	ldr	r2, [pc, #212]	; c0015cc <timer2_init+0x104>
- c0014f4:	e5922000 	ldr	r2, [r2]
- c0014f8:	e3c22b02 	bic	r2, r2, #2048	; 0x800
- c0014fc:	e5832000 	str	r2, [r3]
+	rINTMOD = 0x0;				// Configura las líneas como de tipo IRQ
+ c0014f8:	e59f30c8 	ldr	r3, [pc, #200]	; c0015c8 <timer1_init+0xdc>
+ c0014fc:	e3a02000 	mov	r2, #0
+ c001500:	e5832000 	str	r2, [r3]
+	rINTCON = 0x1;				// Habilita int. vectorizadas y la línea IRQ
+ c001504:	e3a0361e 	mov	r3, #31457280	; 0x1e00000
+ c001508:	e3a02001 	mov	r2, #1
+ c00150c:	e5832000 	str	r2, [r3]
+	rINTMSK &= ~(BIT_TIMER1);	// Habilita interrupción del Timer1
+ c001510:	e59f30b4 	ldr	r3, [pc, #180]	; c0015cc <timer1_init+0xe0>
+ c001514:	e59f20b0 	ldr	r2, [pc, #176]	; c0015cc <timer1_init+0xe0>
+ c001518:	e5922000 	ldr	r2, [r2]
+ c00151c:	e3c22a01 	bic	r2, r2, #4096	; 0x1000
+ c001520:	e5832000 	str	r2, [r3]
 	
-	/* Establece la rutina de servicio para TIMER2 */
-	pISR_TIMER2 = (unsigned) timer2_ISR;
- c001500:	e59f30c8 	ldr	r3, [pc, #200]	; c0015d0 <timer2_init+0x108>
- c001504:	e59f20c8 	ldr	r2, [pc, #200]	; c0015d4 <timer2_init+0x10c>
- c001508:	e5832000 	str	r2, [r3]
-	
-	/* Configura el Timer2 para máxima precisión */
-	/* TCFG0: registro de preescalado
-	 * Timer2 y Timer3 comparten los bits [15:8]
-	 * Preescalado = 0 para máxima precisión (divide por 1) */
-	rTCFG0 &= ~(0xFF << 8);     // Limpia los bits [15:8]
- c00150c:	e59f30c4 	ldr	r3, [pc, #196]	; c0015d8 <timer2_init+0x110>
- c001510:	e59f20c0 	ldr	r2, [pc, #192]	; c0015d8 <timer2_init+0x110>
- c001514:	e5922000 	ldr	r2, [r2]
- c001518:	e3c22cff 	bic	r2, r2, #65280	; 0xff00
- c00151c:	e5832000 	str	r2, [r3]
-	rTCFG0 |= (0 << 8);         // Establece preescalado = 0 (divide por 0+1 = 1)
- c001520:	e59f30b0 	ldr	r3, [pc, #176]	; c0015d8 <timer2_init+0x110>
- c001524:	e59f20ac 	ldr	r2, [pc, #172]	; c0015d8 <timer2_init+0x110>
- c001528:	e5922000 	ldr	r2, [r2]
+	/* Establece la rutina de servicio para TIMER1 */
+	pISR_TIMER1 = (unsigned) timer1_ISR;
+ c001524:	e59f30a4 	ldr	r3, [pc, #164]	; c0015d0 <timer1_init+0xe4>
+ c001528:	e59f20a4 	ldr	r2, [pc, #164]	; c0015d4 <timer1_init+0xe8>
  c00152c:	e5832000 	str	r2, [r3]
 	
-	/* TCFG1: registro de selección de divisor
-	 * Timer2 usa los bits [11:8]
-	 * Valor 0000 = divisor 1/2 */
-	rTCFG1 &= ~(0xF << 8);      // Limpia los bits [11:8]
- c001530:	e59f30a4 	ldr	r3, [pc, #164]	; c0015dc <timer2_init+0x114>
- c001534:	e59f20a0 	ldr	r2, [pc, #160]	; c0015dc <timer2_init+0x114>
+	/* Configura el Timer1 */
+	/* TCFG0[7:0] controla el prescaler del timer1 (compartido con timer0) */
+	rTCFG0 = (rTCFG0 & ~(0xFF << 0)) | (TIMER1_PRESCALER << 0);
+ c001530:	e59f30a0 	ldr	r3, [pc, #160]	; c0015d8 <timer1_init+0xec>
+ c001534:	e59f209c 	ldr	r2, [pc, #156]	; c0015d8 <timer1_init+0xec>
  c001538:	e5922000 	ldr	r2, [r2]
- c00153c:	e3c22c0f 	bic	r2, r2, #3840	; 0xf00
+ c00153c:	e38220ff 	orr	r2, r2, #255	; 0xff
  c001540:	e5832000 	str	r2, [r3]
-	rTCFG1 |= (0x0 << 8);       // Establece divisor = 1/2
- c001544:	e59f3090 	ldr	r3, [pc, #144]	; c0015dc <timer2_init+0x114>
- c001548:	e59f208c 	ldr	r2, [pc, #140]	; c0015dc <timer2_init+0x114>
+	
+	/* TCFG1[7:4] controla el divisor MUX del timer1 */
+	rTCFG1 = (rTCFG1 & ~(0xF << 4)) | (TIMER1_MUX_DIV << 4);
+ c001544:	e59f3090 	ldr	r3, [pc, #144]	; c0015dc <timer1_init+0xf0>
+ c001548:	e59f208c 	ldr	r2, [pc, #140]	; c0015dc <timer1_init+0xf0>
  c00154c:	e5922000 	ldr	r2, [r2]
- c001550:	e5832000 	str	r2, [r3]
+ c001550:	e3c220f0 	bic	r2, r2, #240	; 0xf0
+ c001554:	e3822030 	orr	r2, r2, #48	; 0x30
+ c001558:	e5832000 	str	r2, [r3]
 	
-	/* TCNTB2: valor inicial de cuenta (cuenta descendente) 
-	 * Usamos el valor máximo de 16 bits para maximizar el rango */
-	rTCNTB2 = 65535;
- c001554:	e59f3084 	ldr	r3, [pc, #132]	; c0015e0 <timer2_init+0x118>
- c001558:	e59f2084 	ldr	r2, [pc, #132]	; c0015e4 <timer2_init+0x11c>
- c00155c:	e5832000 	str	r2, [r3]
+	/* Configura el valor de cuenta inicial */
+	rTCNTB1 = TIMER1_COUNT;
+ c00155c:	e59f307c 	ldr	r3, [pc, #124]	; c0015e0 <timer1_init+0xf4>
+ c001560:	e3a02f41 	mov	r2, #260	; 0x104
+ c001564:	e5832000 	str	r2, [r3]
 	
-	/* TCMPB2: valor de comparación (no se usa para medición de tiempo) */
-	rTCMPB2 = 0;
- c001560:	e59f3080 	ldr	r3, [pc, #128]	; c0015e8 <timer2_init+0x120>
- c001564:	e3a02000 	mov	r2, #0
- c001568:	e5832000 	str	r2, [r3]
-	 * Bit 14: Timer2 manual update (1=update TCNTB2 y TCMPB2)
-	 * Bit 13: Timer2 output inverter on/off
-	 * Bit 12: Timer2 auto reload on/off (1=auto-reload) */
+	/* Valor de comparación (no se usa para generar señal, solo interrupción) */
+	rTCMPB1 = 0;
+ c001568:	e59f3074 	ldr	r3, [pc, #116]	; c0015e4 <timer1_init+0xf8>
+ c00156c:	e3a02000 	mov	r2, #0
+ c001570:	e5832000 	str	r2, [r3]
 	
-	/* Primero establecer manual update para cargar los valores */
-	rTCON &= ~(0xF << 12);      // Limpia los bits del Timer2
- c00156c:	e59f3078 	ldr	r3, [pc, #120]	; c0015ec <timer2_init+0x124>
- c001570:	e59f2074 	ldr	r2, [pc, #116]	; c0015ec <timer2_init+0x124>
- c001574:	e5922000 	ldr	r2, [r2]
- c001578:	e3c22a0f 	bic	r2, r2, #61440	; 0xf000
- c00157c:	e5832000 	str	r2, [r3]
-	rTCON |= (1 << 13);         // Establece manual update
- c001580:	e59f3064 	ldr	r3, [pc, #100]	; c0015ec <timer2_init+0x124>
- c001584:	e59f2060 	ldr	r2, [pc, #96]	; c0015ec <timer2_init+0x124>
- c001588:	e5922000 	ldr	r2, [r2]
- c00158c:	e3822a02 	orr	r2, r2, #8192	; 0x2000
- c001590:	e5832000 	str	r2, [r3]
+	/* Manual update (bit 9) para cargar TCNTB1 en TCNT1 */
+	rTCON |= (1 << 9);
+ c001574:	e59f306c 	ldr	r3, [pc, #108]	; c0015e8 <timer1_init+0xfc>
+ c001578:	e59f2068 	ldr	r2, [pc, #104]	; c0015e8 <timer1_init+0xfc>
+ c00157c:	e5922000 	ldr	r2, [r2]
+ c001580:	e3822c02 	orr	r2, r2, #512	; 0x200
+ c001584:	e5832000 	str	r2, [r3]
 	
-	/* Luego iniciar el timer con auto-reload (sin manual update) */
-	rTCON &= ~(0xF << 12);      // Limpia los bits del Timer2
- c001594:	e59f3050 	ldr	r3, [pc, #80]	; c0015ec <timer2_init+0x124>
- c001598:	e59f204c 	ldr	r2, [pc, #76]	; c0015ec <timer2_init+0x124>
- c00159c:	e5922000 	ldr	r2, [r2]
- c0015a0:	e3c22a0f 	bic	r2, r2, #61440	; 0xf000
- c0015a4:	e5832000 	str	r2, [r3]
-	rTCON |= (1 << 15) | (1 << 12);  // Start + auto-reload
- c0015a8:	e59f303c 	ldr	r3, [pc, #60]	; c0015ec <timer2_init+0x124>
- c0015ac:	e59f2038 	ldr	r2, [pc, #56]	; c0015ec <timer2_init+0x124>
- c0015b0:	e5922000 	ldr	r2, [r2]
- c0015b4:	e3822a09 	orr	r2, r2, #36864	; 0x9000
- c0015b8:	e5832000 	str	r2, [r3]
+	/* Iniciar timer1 (bit 8) con auto-reload (bit 11), quitar manual update (bit 9) */
+	rTCON = (rTCON & ~(0xF << 8)) | (1 << 11) | (1 << 8);
+ c001588:	e59f3058 	ldr	r3, [pc, #88]	; c0015e8 <timer1_init+0xfc>
+ c00158c:	e59f2054 	ldr	r2, [pc, #84]	; c0015e8 <timer1_init+0xfc>
+ c001590:	e5922000 	ldr	r2, [r2]
+ c001594:	e3c22c0f 	bic	r2, r2, #3840	; 0xf00
+ c001598:	e3822c09 	orr	r2, r2, #2304	; 0x900
+ c00159c:	e5832000 	str	r2, [r3]
+	
+	/* Inicializar contadores y estado del LED */
+	timer1_contador = 0;
+ c0015a0:	e59f3044 	ldr	r3, [pc, #68]	; c0015ec <timer1_init+0x100>
+ c0015a4:	e3a02000 	mov	r2, #0
+ c0015a8:	e5832000 	str	r2, [r3]
+	led2_encendido = 0;
+ c0015ac:	e59f303c 	ldr	r3, [pc, #60]	; c0015f0 <timer1_init+0x104>
+ c0015b0:	e3a02000 	mov	r2, #0
+ c0015b4:	e5832000 	str	r2, [r3]
+	led2_off();  // Asegurar que el LED empieza apagado
+ c0015b8:	ebffff01 	bl	c0011c4 <led2_off>
 }
  c0015bc:	e24bd00c 	sub	sp, fp, #12
  c0015c0:	e89d6800 	ldm	sp, {fp, sp, lr}
  c0015c4:	e12fff1e 	bx	lr
  c0015c8:	01e00008 	.word	0x01e00008
  c0015cc:	01e0000c 	.word	0x01e0000c
- c0015d0:	0c7fff4c 	.word	0x0c7fff4c
- c0015d4:	0c001478 	.word	0x0c001478
+ c0015d0:	0c7fff50 	.word	0x0c7fff50
+ c0015d4:	0c001448 	.word	0x0c001448
  c0015d8:	01d50000 	.word	0x01d50000
  c0015dc:	01d50004 	.word	0x01d50004
- c0015e0:	01d50024 	.word	0x01d50024
- c0015e4:	0000ffff 	.word	0x0000ffff
- c0015e8:	01d50028 	.word	0x01d50028
- c0015ec:	01d50008 	.word	0x01d50008
+ c0015e0:	01d50018 	.word	0x01d50018
+ c0015e4:	01d5001c 	.word	0x01d5001c
+ c0015e8:	01d50008 	.word	0x01d50008
+ c0015ec:	0c001ff4 	.word	0x0c001ff4
+ c0015f0:	0c001ff8 	.word	0x0c001ff8
 
-0c0015f0 <timer2_start>:
+0c0015f4 <timer2_ISR>:
+ * NOTA: No registramos cada interrupción en la cola para no sobrecargarla,
+ * ya que el timer2 genera muchas interrupciones por segundo (~488 Hz).
+ * Solo registramos si es necesario para depuración específica.
+ */
+void timer2_ISR(void)
+{
+ c0015f4:	e52dc004 	push	{ip}		; (str ip, [sp, #-4]!)
+ c0015f8:	e1a0c00d 	mov	ip, sp
+ c0015fc:	e92dd80c 	push	{r2, r3, fp, ip, lr, pc}
+ c001600:	e24cb004 	sub	fp, ip, #4
+	/* Incrementar el contador de periodos completos */
+	timer2_numero_int++;
+ c001604:	e59f3030 	ldr	r3, [pc, #48]	; c00163c <timer2_ISR+0x48>
+ c001608:	e5933000 	ldr	r3, [r3]
+ c00160c:	e2832001 	add	r2, r3, #1
+ c001610:	e59f3024 	ldr	r3, [pc, #36]	; c00163c <timer2_ISR+0x48>
+ c001614:	e5832000 	str	r2, [r3]
+	
+	/* Borrar bit en I_ISPC para desactivar la solicitud de interrupción */
+	rI_ISPC |= BIT_TIMER2; // BIT_TIMER2 pone un uno en el bit 11 que corresponde al Timer2
+ c001618:	e59f3020 	ldr	r3, [pc, #32]	; c001640 <timer2_ISR+0x4c>
+ c00161c:	e59f201c 	ldr	r2, [pc, #28]	; c001640 <timer2_ISR+0x4c>
+ c001620:	e5922000 	ldr	r2, [r2]
+ c001624:	e3822b02 	orr	r2, r2, #2048	; 0x800
+ c001628:	e5832000 	str	r2, [r3]
+}
+ c00162c:	e24bd014 	sub	sp, fp, #20
+ c001630:	e89d680c 	ldm	sp, {r2, r3, fp, sp, lr}
+ c001634:	e49dc004 	pop	{ip}		; (ldr ip, [sp], #4)
+ c001638:	e25ef004 	subs	pc, lr, #4
+ c00163c:	0c001ffc 	.word	0x0c001ffc
+ c001640:	01e00024 	.word	0x01e00024
+
+0c001644 <timer2_init>:
+ * - Periodo del timer: 1/32 MHz = 0.03125 microsegundos
+ * - Valor de cuenta máximo: 65535 (16 bits)
+ * - Tiempo por ciclo completo: 65535 * 0.03125 = 2047.96875 microsegundos (~2.048 ms)
+ */
+void timer2_init(void)
+{
+ c001644:	e1a0c00d 	mov	ip, sp
+ c001648:	e92dd800 	push	{fp, ip, lr, pc}
+ c00164c:	e24cb004 	sub	fp, ip, #4
+	/* Configuración del controlador de interrupciones */
+	rINTMOD = 0x0;              // Configura las líneas como de tipo IRQ
+ c001650:	e59f30ec 	ldr	r3, [pc, #236]	; c001744 <timer2_init+0x100>
+ c001654:	e3a02000 	mov	r2, #0
+ c001658:	e5832000 	str	r2, [r3]
+	rINTCON = 0x1;              // Habilita int. vectorizadas y la línea IRQ (FIQ no)
+ c00165c:	e3a0361e 	mov	r3, #31457280	; 0x1e00000
+ c001660:	e3a02001 	mov	r2, #1
+ c001664:	e5832000 	str	r2, [r3]
+	rINTMSK &= ~(BIT_TIMER2);   // Habilita en vector de máscaras de interrupción el Timer2
+ c001668:	e59f30d8 	ldr	r3, [pc, #216]	; c001748 <timer2_init+0x104>
+ c00166c:	e59f20d4 	ldr	r2, [pc, #212]	; c001748 <timer2_init+0x104>
+ c001670:	e5922000 	ldr	r2, [r2]
+ c001674:	e3c22b02 	bic	r2, r2, #2048	; 0x800
+ c001678:	e5832000 	str	r2, [r3]
+	
+	/* Establece la rutina de servicio para TIMER2 */
+	pISR_TIMER2 = (unsigned) timer2_ISR;
+ c00167c:	e59f30c8 	ldr	r3, [pc, #200]	; c00174c <timer2_init+0x108>
+ c001680:	e59f20c8 	ldr	r2, [pc, #200]	; c001750 <timer2_init+0x10c>
+ c001684:	e5832000 	str	r2, [r3]
+	
+	/* Configura el Timer2 para máxima precisión */
+	/* TCFG0: registro de preescalado
+	 * Timer2 y Timer3 comparten los bits [15:8]
+	 * Preescalado = 0 para máxima precisión (divide por 1) */
+	rTCFG0 &= ~(0xFF << 8);     // Limpia los bits [15:8]
+ c001688:	e59f30c4 	ldr	r3, [pc, #196]	; c001754 <timer2_init+0x110>
+ c00168c:	e59f20c0 	ldr	r2, [pc, #192]	; c001754 <timer2_init+0x110>
+ c001690:	e5922000 	ldr	r2, [r2]
+ c001694:	e3c22cff 	bic	r2, r2, #65280	; 0xff00
+ c001698:	e5832000 	str	r2, [r3]
+	rTCFG0 |= (0 << 8);         // Establece preescalado = 0 (divide por 0+1 = 1)
+ c00169c:	e59f30b0 	ldr	r3, [pc, #176]	; c001754 <timer2_init+0x110>
+ c0016a0:	e59f20ac 	ldr	r2, [pc, #172]	; c001754 <timer2_init+0x110>
+ c0016a4:	e5922000 	ldr	r2, [r2]
+ c0016a8:	e5832000 	str	r2, [r3]
+	
+	/* TCFG1: registro de selección de divisor
+	 * Timer2 usa los bits [11:8]
+	 * Valor 0000 = divisor 1/2 */
+	rTCFG1 &= ~(0xF << 8);      // Limpia los bits [11:8]
+ c0016ac:	e59f30a4 	ldr	r3, [pc, #164]	; c001758 <timer2_init+0x114>
+ c0016b0:	e59f20a0 	ldr	r2, [pc, #160]	; c001758 <timer2_init+0x114>
+ c0016b4:	e5922000 	ldr	r2, [r2]
+ c0016b8:	e3c22c0f 	bic	r2, r2, #3840	; 0xf00
+ c0016bc:	e5832000 	str	r2, [r3]
+	rTCFG1 |= (0x0 << 8);       // Establece divisor = 1/2
+ c0016c0:	e59f3090 	ldr	r3, [pc, #144]	; c001758 <timer2_init+0x114>
+ c0016c4:	e59f208c 	ldr	r2, [pc, #140]	; c001758 <timer2_init+0x114>
+ c0016c8:	e5922000 	ldr	r2, [r2]
+ c0016cc:	e5832000 	str	r2, [r3]
+	
+	/* TCNTB2: valor inicial de cuenta (cuenta descendente) 
+	 * Usamos el valor máximo de 16 bits para maximizar el rango */
+	rTCNTB2 = 65535;
+ c0016d0:	e59f3084 	ldr	r3, [pc, #132]	; c00175c <timer2_init+0x118>
+ c0016d4:	e59f2084 	ldr	r2, [pc, #132]	; c001760 <timer2_init+0x11c>
+ c0016d8:	e5832000 	str	r2, [r3]
+	
+	/* TCMPB2: valor de comparación (no se usa para medición de tiempo) */
+	rTCMPB2 = 0;
+ c0016dc:	e59f3080 	ldr	r3, [pc, #128]	; c001764 <timer2_init+0x120>
+ c0016e0:	e3a02000 	mov	r2, #0
+ c0016e4:	e5832000 	str	r2, [r3]
+	 * Bit 14: Timer2 manual update (1=update TCNTB2 y TCMPB2)
+	 * Bit 13: Timer2 output inverter on/off
+	 * Bit 12: Timer2 auto reload on/off (1=auto-reload) */
+	
+	/* Primero establecer manual update para cargar los valores */
+	rTCON &= ~(0xF << 12);      // Limpia los bits del Timer2
+ c0016e8:	e59f3078 	ldr	r3, [pc, #120]	; c001768 <timer2_init+0x124>
+ c0016ec:	e59f2074 	ldr	r2, [pc, #116]	; c001768 <timer2_init+0x124>
+ c0016f0:	e5922000 	ldr	r2, [r2]
+ c0016f4:	e3c22a0f 	bic	r2, r2, #61440	; 0xf000
+ c0016f8:	e5832000 	str	r2, [r3]
+	rTCON |= (1 << 13);         // Establece manual update
+ c0016fc:	e59f3064 	ldr	r3, [pc, #100]	; c001768 <timer2_init+0x124>
+ c001700:	e59f2060 	ldr	r2, [pc, #96]	; c001768 <timer2_init+0x124>
+ c001704:	e5922000 	ldr	r2, [r2]
+ c001708:	e3822a02 	orr	r2, r2, #8192	; 0x2000
+ c00170c:	e5832000 	str	r2, [r3]
+	
+	/* Luego iniciar el timer con auto-reload (sin manual update) */
+	rTCON &= ~(0xF << 12);      // Limpia los bits del Timer2
+ c001710:	e59f3050 	ldr	r3, [pc, #80]	; c001768 <timer2_init+0x124>
+ c001714:	e59f204c 	ldr	r2, [pc, #76]	; c001768 <timer2_init+0x124>
+ c001718:	e5922000 	ldr	r2, [r2]
+ c00171c:	e3c22a0f 	bic	r2, r2, #61440	; 0xf000
+ c001720:	e5832000 	str	r2, [r3]
+	rTCON |= (1 << 15) | (1 << 12);  // Start + auto-reload
+ c001724:	e59f303c 	ldr	r3, [pc, #60]	; c001768 <timer2_init+0x124>
+ c001728:	e59f2038 	ldr	r2, [pc, #56]	; c001768 <timer2_init+0x124>
+ c00172c:	e5922000 	ldr	r2, [r2]
+ c001730:	e3822a09 	orr	r2, r2, #36864	; 0x9000
+ c001734:	e5832000 	str	r2, [r3]
+}
+ c001738:	e24bd00c 	sub	sp, fp, #12
+ c00173c:	e89d6800 	ldm	sp, {fp, sp, lr}
+ c001740:	e12fff1e 	bx	lr
+ c001744:	01e00008 	.word	0x01e00008
+ c001748:	01e0000c 	.word	0x01e0000c
+ c00174c:	0c7fff4c 	.word	0x0c7fff4c
+ c001750:	0c0015f4 	.word	0x0c0015f4
+ c001754:	01d50000 	.word	0x01d50000
+ c001758:	01d50004 	.word	0x01d50004
+ c00175c:	01d50024 	.word	0x01d50024
+ c001760:	0000ffff 	.word	0x0000ffff
+ c001764:	01d50028 	.word	0x01d50028
+ c001768:	01d50008 	.word	0x01d50008
+
+0c00176c <timer2_start>:
 /**
  * Reinicia la cuenta de tiempo y comienza a medir.
  * Resetea tanto el contador de interrupciones como el valor del timer.
  */
 void timer2_start(void)
 {
- c0015f0:	e1a0c00d 	mov	ip, sp
- c0015f4:	e92dd800 	push	{fp, ip, lr, pc}
- c0015f8:	e24cb004 	sub	fp, ip, #4
+ c00176c:	e1a0c00d 	mov	ip, sp
+ c001770:	e92dd800 	push	{fp, ip, lr, pc}
+ c001774:	e24cb004 	sub	fp, ip, #4
 	/* Reiniciar el contador de interrupciones */
 	timer2_numero_int = 0;
- c0015fc:	e59f306c 	ldr	r3, [pc, #108]	; c001670 <timer2_start+0x80>
- c001600:	e3a02000 	mov	r2, #0
- c001604:	e5832000 	str	r2, [r3]
+ c001778:	e59f306c 	ldr	r3, [pc, #108]	; c0017ec <timer2_start+0x80>
+ c00177c:	e3a02000 	mov	r2, #0
+ c001780:	e5832000 	str	r2, [r3]
 	
 	/* Detener el timer */
 	rTCON &= ~(1 << 15);        // Clear bit 15 (stop timer2)
- c001608:	e59f3064 	ldr	r3, [pc, #100]	; c001674 <timer2_start+0x84>
- c00160c:	e59f2060 	ldr	r2, [pc, #96]	; c001674 <timer2_start+0x84>
- c001610:	e5922000 	ldr	r2, [r2]
- c001614:	e3c22902 	bic	r2, r2, #32768	; 0x8000
- c001618:	e5832000 	str	r2, [r3]
+ c001784:	e59f3064 	ldr	r3, [pc, #100]	; c0017f0 <timer2_start+0x84>
+ c001788:	e59f2060 	ldr	r2, [pc, #96]	; c0017f0 <timer2_start+0x84>
+ c00178c:	e5922000 	ldr	r2, [r2]
+ c001790:	e3c22902 	bic	r2, r2, #32768	; 0x8000
+ c001794:	e5832000 	str	r2, [r3]
 	
 	/* Recargar el valor inicial del contador */
 	rTCNTB2 = 65535;
- c00161c:	e59f3054 	ldr	r3, [pc, #84]	; c001678 <timer2_start+0x88>
- c001620:	e59f2054 	ldr	r2, [pc, #84]	; c00167c <timer2_start+0x8c>
- c001624:	e5832000 	str	r2, [r3]
+ c001798:	e59f3054 	ldr	r3, [pc, #84]	; c0017f4 <timer2_start+0x88>
+ c00179c:	e59f2054 	ldr	r2, [pc, #84]	; c0017f8 <timer2_start+0x8c>
+ c0017a0:	e5832000 	str	r2, [r3]
 	
 	/* Establecer manual update para recargar el valor */
 	rTCON |= (1 << 13);         // Set manual update
- c001628:	e59f3044 	ldr	r3, [pc, #68]	; c001674 <timer2_start+0x84>
- c00162c:	e59f2040 	ldr	r2, [pc, #64]	; c001674 <timer2_start+0x84>
- c001630:	e5922000 	ldr	r2, [r2]
- c001634:	e3822a02 	orr	r2, r2, #8192	; 0x2000
- c001638:	e5832000 	str	r2, [r3]
+ c0017a4:	e59f3044 	ldr	r3, [pc, #68]	; c0017f0 <timer2_start+0x84>
+ c0017a8:	e59f2040 	ldr	r2, [pc, #64]	; c0017f0 <timer2_start+0x84>
+ c0017ac:	e5922000 	ldr	r2, [r2]
+ c0017b0:	e3822a02 	orr	r2, r2, #8192	; 0x2000
+ c0017b4:	e5832000 	str	r2, [r3]
 	
 	/* Iniciar el timer con auto-reload */
 	rTCON &= ~(0xF << 12);      // Limpia los bits del Timer2
- c00163c:	e59f3030 	ldr	r3, [pc, #48]	; c001674 <timer2_start+0x84>
- c001640:	e59f202c 	ldr	r2, [pc, #44]	; c001674 <timer2_start+0x84>
- c001644:	e5922000 	ldr	r2, [r2]
- c001648:	e3c22a0f 	bic	r2, r2, #61440	; 0xf000
- c00164c:	e5832000 	str	r2, [r3]
+ c0017b8:	e59f3030 	ldr	r3, [pc, #48]	; c0017f0 <timer2_start+0x84>
+ c0017bc:	e59f202c 	ldr	r2, [pc, #44]	; c0017f0 <timer2_start+0x84>
+ c0017c0:	e5922000 	ldr	r2, [r2]
+ c0017c4:	e3c22a0f 	bic	r2, r2, #61440	; 0xf000
+ c0017c8:	e5832000 	str	r2, [r3]
 	rTCON |= (1 << 15) | (1 << 12);  // Start + auto-reload
- c001650:	e59f301c 	ldr	r3, [pc, #28]	; c001674 <timer2_start+0x84>
- c001654:	e59f2018 	ldr	r2, [pc, #24]	; c001674 <timer2_start+0x84>
- c001658:	e5922000 	ldr	r2, [r2]
- c00165c:	e3822a09 	orr	r2, r2, #36864	; 0x9000
- c001660:	e5832000 	str	r2, [r3]
+ c0017cc:	e59f301c 	ldr	r3, [pc, #28]	; c0017f0 <timer2_start+0x84>
+ c0017d0:	e59f2018 	ldr	r2, [pc, #24]	; c0017f0 <timer2_start+0x84>
+ c0017d4:	e5922000 	ldr	r2, [r2]
+ c0017d8:	e3822a09 	orr	r2, r2, #36864	; 0x9000
+ c0017dc:	e5832000 	str	r2, [r3]
 }
- c001664:	e24bd00c 	sub	sp, fp, #12
- c001668:	e89d6800 	ldm	sp, {fp, sp, lr}
- c00166c:	e12fff1e 	bx	lr
- c001670:	0c001e78 	.word	0x0c001e78
- c001674:	01d50008 	.word	0x01d50008
- c001678:	01d50024 	.word	0x01d50024
- c00167c:	0000ffff 	.word	0x0000ffff
+ c0017e0:	e24bd00c 	sub	sp, fp, #12
+ c0017e4:	e89d6800 	ldm	sp, {fp, sp, lr}
+ c0017e8:	e12fff1e 	bx	lr
+ c0017ec:	0c001ffc 	.word	0x0c001ffc
+ c0017f0:	01d50008 	.word	0x01d50008
+ c0017f4:	01d50024 	.word	0x01d50024
+ c0017f8:	0000ffff 	.word	0x0000ffff
 
-0c001680 <timer2_count>:
+0c0017fc <timer2_count>:
  * - Cada tick del timer: 0.03125 microsegundos (1/32 MHz)
  * - Ticks transcurridos = (65535 - TCNTO2) + (65536 * timer2_numero_int)
  * - Tiempo (µs) = ticks * 0.03125 = ticks / 32
  */
 unsigned int timer2_count(void)
 {
- c001680:	e1a0c00d 	mov	ip, sp
- c001684:	e92dd800 	push	{fp, ip, lr, pc}
- c001688:	e24cb004 	sub	fp, ip, #4
- c00168c:	e24dd018 	sub	sp, sp, #24
+ c0017fc:	e1a0c00d 	mov	ip, sp
+ c001800:	e92dd800 	push	{fp, ip, lr, pc}
+ c001804:	e24cb004 	sub	fp, ip, #4
+ c001808:	e24dd018 	sub	sp, sp, #24
 	unsigned int contador_actual;
 	unsigned int ticks_totales;
 	unsigned int tiempo_us;
 	
 	/* Leer el número de interrupciones de forma atómica */
 	interrupciones = timer2_numero_int;
- c001690:	e59f3054 	ldr	r3, [pc, #84]	; c0016ec <timer2_count+0x6c>
- c001694:	e5933000 	ldr	r3, [r3]
- c001698:	e50b3010 	str	r3, [fp, #-16]
+ c00180c:	e59f3054 	ldr	r3, [pc, #84]	; c001868 <timer2_count+0x6c>
+ c001810:	e5933000 	ldr	r3, [r3]
+ c001814:	e50b3010 	str	r3, [fp, #-16]
 	
 	/* Leer el valor actual del contador (cuenta descendente desde 65535) */
 	contador_actual = rTCNTO2;
- c00169c:	e59f304c 	ldr	r3, [pc, #76]	; c0016f0 <timer2_count+0x70>
- c0016a0:	e5933000 	ldr	r3, [r3]
- c0016a4:	e50b3014 	str	r3, [fp, #-20]	; 0xffffffec
+ c001818:	e59f304c 	ldr	r3, [pc, #76]	; c00186c <timer2_count+0x70>
+ c00181c:	e5933000 	ldr	r3, [r3]
+ c001820:	e50b3014 	str	r3, [fp, #-20]	; 0xffffffec
 	
 	/* Calcular los ticks transcurridos en el periodo actual */
 	/* Como cuenta descendente: ticks = valor_inicial - valor_actual */
 	unsigned int ticks_periodo_actual = 65535 - contador_actual;
- c0016a8:	e51b3014 	ldr	r3, [fp, #-20]	; 0xffffffec
- c0016ac:	e2633cff 	rsb	r3, r3, #65280	; 0xff00
- c0016b0:	e28330ff 	add	r3, r3, #255	; 0xff
- c0016b4:	e50b3018 	str	r3, [fp, #-24]	; 0xffffffe8
+ c001824:	e51b3014 	ldr	r3, [fp, #-20]	; 0xffffffec
+ c001828:	e2633cff 	rsb	r3, r3, #65280	; 0xff00
+ c00182c:	e28330ff 	add	r3, r3, #255	; 0xff
+ c001830:	e50b3018 	str	r3, [fp, #-24]	; 0xffffffe8
 	
 	/* Calcular el total de ticks:
 	 * ticks totales = ticks de periodos completos + ticks del periodo actual */
 	ticks_totales = (interrupciones * 65536) + ticks_periodo_actual;
- c0016b8:	e51b3010 	ldr	r3, [fp, #-16]
- c0016bc:	e1a02803 	lsl	r2, r3, #16
- c0016c0:	e51b3018 	ldr	r3, [fp, #-24]	; 0xffffffe8
- c0016c4:	e0823003 	add	r3, r2, r3
- c0016c8:	e50b301c 	str	r3, [fp, #-28]	; 0xffffffe4
+ c001834:	e51b3010 	ldr	r3, [fp, #-16]
+ c001838:	e1a02803 	lsl	r2, r3, #16
+ c00183c:	e51b3018 	ldr	r3, [fp, #-24]	; 0xffffffe8
+ c001840:	e0823003 	add	r3, r2, r3
+ c001844:	e50b301c 	str	r3, [fp, #-28]	; 0xffffffe4
 	
 	/* Convertir ticks a microsegundos:
 	 * Cada tick = 1/(32 MHz) = 0.03125 µs
 	 * Tiempo (µs) = ticks / 32
 	 * Para evitar usar división en punto flotante: ticks * 1000000 / 32000000 = ticks / 32 */
 	tiempo_us = ticks_totales / 32;
- c0016cc:	e51b301c 	ldr	r3, [fp, #-28]	; 0xffffffe4
- c0016d0:	e1a032a3 	lsr	r3, r3, #5
- c0016d4:	e50b3020 	str	r3, [fp, #-32]	; 0xffffffe0
+ c001848:	e51b301c 	ldr	r3, [fp, #-28]	; 0xffffffe4
+ c00184c:	e1a032a3 	lsr	r3, r3, #5
+ c001850:	e50b3020 	str	r3, [fp, #-32]	; 0xffffffe0
 	
 	return tiempo_us;
- c0016d8:	e51b3020 	ldr	r3, [fp, #-32]	; 0xffffffe0
+ c001854:	e51b3020 	ldr	r3, [fp, #-32]	; 0xffffffe0
 }
- c0016dc:	e1a00003 	mov	r0, r3
- c0016e0:	e24bd00c 	sub	sp, fp, #12
- c0016e4:	e89d6800 	ldm	sp, {fp, sp, lr}
- c0016e8:	e12fff1e 	bx	lr
- c0016ec:	0c001e78 	.word	0x0c001e78
- c0016f0:	01d5002c 	.word	0x01d5002c
+ c001858:	e1a00003 	mov	r0, r3
+ c00185c:	e24bd00c 	sub	sp, fp, #12
+ c001860:	e89d6800 	ldm	sp, {fp, sp, lr}
+ c001864:	e12fff1e 	bx	lr
+ c001868:	0c001ffc 	.word	0x0c001ffc
+ c00186c:	01d5002c 	.word	0x01d5002c
 
-0c0016f4 <boton_sigue_pulsado>:
+0c001870 <boton_sigue_pulsado>:
 /* Declaración de la ISR del timer3 */
 void timer3_ISR(void) __attribute__((interrupt("IRQ")));
 
 /*--- Funciones auxiliares internas ---*/
 static inline int boton_sigue_pulsado(void)
 {
- c0016f4:	e1a0c00d 	mov	ip, sp
- c0016f8:	e92dd800 	push	{fp, ip, lr, pc}
- c0016fc:	e24cb004 	sub	fp, ip, #4
- c001700:	e24dd008 	sub	sp, sp, #8
+ c001870:	e1a0c00d 	mov	ip, sp
+ c001874:	e92dd800 	push	{fp, ip, lr, pc}
+ c001878:	e24cb004 	sub	fp, ip, #4
+ c00187c:	e24dd008 	sub	sp, sp, #8
         unsigned int estado = (~rPDATG) & mascara_boton;
- c001704:	e59f3034 	ldr	r3, [pc, #52]	; c001740 <boton_sigue_pulsado+0x4c>
- c001708:	e5933000 	ldr	r3, [r3]
- c00170c:	e1e02003 	mvn	r2, r3
- c001710:	e59f302c 	ldr	r3, [pc, #44]	; c001744 <boton_sigue_pulsado+0x50>
- c001714:	e5933000 	ldr	r3, [r3]
- c001718:	e0023003 	and	r3, r2, r3
- c00171c:	e50b3010 	str	r3, [fp, #-16]
+ c001880:	e59f3034 	ldr	r3, [pc, #52]	; c0018bc <boton_sigue_pulsado+0x4c>
+ c001884:	e5933000 	ldr	r3, [r3]
+ c001888:	e1e02003 	mvn	r2, r3
+ c00188c:	e59f302c 	ldr	r3, [pc, #44]	; c0018c0 <boton_sigue_pulsado+0x50>
+ c001890:	e5933000 	ldr	r3, [r3]
+ c001894:	e0023003 	and	r3, r2, r3
+ c001898:	e50b3010 	str	r3, [fp, #-16]
         return (estado != 0);
- c001720:	e51b3010 	ldr	r3, [fp, #-16]
- c001724:	e3530000 	cmp	r3, #0
- c001728:	03a03000 	moveq	r3, #0
- c00172c:	13a03001 	movne	r3, #1
+ c00189c:	e51b3010 	ldr	r3, [fp, #-16]
+ c0018a0:	e3530000 	cmp	r3, #0
+ c0018a4:	03a03000 	moveq	r3, #0
+ c0018a8:	13a03001 	movne	r3, #1
 }
- c001730:	e1a00003 	mov	r0, r3
- c001734:	e24bd00c 	sub	sp, fp, #12
- c001738:	e89d6800 	ldm	sp, {fp, sp, lr}
- c00173c:	e12fff1e 	bx	lr
- c001740:	01d20044 	.word	0x01d20044
- c001744:	0c001e8c 	.word	0x0c001e8c
+ c0018ac:	e1a00003 	mov	r0, r3
+ c0018b0:	e24bd00c 	sub	sp, fp, #12
+ c0018b4:	e89d6800 	ldm	sp, {fp, sp, lr}
+ c0018b8:	e12fff1e 	bx	lr
+ c0018bc:	01d20044 	.word	0x01d20044
+ c0018c0:	0c002010 	.word	0x0c002010
 
-0c001748 <timer3_detener>:
+0c0018c4 <timer3_detener>:
 
 static void timer3_detener(void)
 {
- c001748:	e1a0c00d 	mov	ip, sp
- c00174c:	e92dd800 	push	{fp, ip, lr, pc}
- c001750:	e24cb004 	sub	fp, ip, #4
+ c0018c4:	e1a0c00d 	mov	ip, sp
+ c0018c8:	e92dd800 	push	{fp, ip, lr, pc}
+ c0018cc:	e24cb004 	sub	fp, ip, #4
         /* Parar el timer y enmascarar la interrupción */
         rTCON &= ~(1 << 16);             /* Bit 16 controla start/stop del timer3 */
- c001754:	e59f302c 	ldr	r3, [pc, #44]	; c001788 <timer3_detener+0x40>
- c001758:	e59f2028 	ldr	r2, [pc, #40]	; c001788 <timer3_detener+0x40>
- c00175c:	e5922000 	ldr	r2, [r2]
- c001760:	e3c22801 	bic	r2, r2, #65536	; 0x10000
- c001764:	e5832000 	str	r2, [r3]
+ c0018d0:	e59f302c 	ldr	r3, [pc, #44]	; c001904 <timer3_detener+0x40>
+ c0018d4:	e59f2028 	ldr	r2, [pc, #40]	; c001904 <timer3_detener+0x40>
+ c0018d8:	e5922000 	ldr	r2, [r2]
+ c0018dc:	e3c22801 	bic	r2, r2, #65536	; 0x10000
+ c0018e0:	e5832000 	str	r2, [r3]
         rINTMSK |= BIT_TIMER3;
- c001768:	e59f301c 	ldr	r3, [pc, #28]	; c00178c <timer3_detener+0x44>
- c00176c:	e59f2018 	ldr	r2, [pc, #24]	; c00178c <timer3_detener+0x44>
- c001770:	e5922000 	ldr	r2, [r2]
- c001774:	e3822b01 	orr	r2, r2, #1024	; 0x400
- c001778:	e5832000 	str	r2, [r3]
+ c0018e4:	e59f301c 	ldr	r3, [pc, #28]	; c001908 <timer3_detener+0x44>
+ c0018e8:	e59f2018 	ldr	r2, [pc, #24]	; c001908 <timer3_detener+0x44>
+ c0018ec:	e5922000 	ldr	r2, [r2]
+ c0018f0:	e3822b01 	orr	r2, r2, #1024	; 0x400
+ c0018f4:	e5832000 	str	r2, [r3]
 }
- c00177c:	e24bd00c 	sub	sp, fp, #12
- c001780:	e89d6800 	ldm	sp, {fp, sp, lr}
- c001784:	e12fff1e 	bx	lr
- c001788:	01d50008 	.word	0x01d50008
- c00178c:	01e0000c 	.word	0x01e0000c
+ c0018f8:	e24bd00c 	sub	sp, fp, #12
+ c0018fc:	e89d6800 	ldm	sp, {fp, sp, lr}
+ c001900:	e12fff1e 	bx	lr
+ c001904:	01d50008 	.word	0x01d50008
+ c001908:	01e0000c 	.word	0x01e0000c
 
-0c001790 <timer3_preparar_tick>:
+0c00190c <timer3_preparar_tick>:
 
 static void timer3_preparar_tick(void)
 {
- c001790:	e1a0c00d 	mov	ip, sp
- c001794:	e92dd800 	push	{fp, ip, lr, pc}
- c001798:	e24cb004 	sub	fp, ip, #4
+ c00190c:	e1a0c00d 	mov	ip, sp
+ c001910:	e92dd800 	push	{fp, ip, lr, pc}
+ c001914:	e24cb004 	sub	fp, ip, #4
         /* Configurar el valor de cuenta para 1 ms */
         rTCNTB3 = TIMER3_1MS_COUNT;
- c00179c:	e59f304c 	ldr	r3, [pc, #76]	; c0017f0 <timer3_preparar_tick+0x60>
- c0017a0:	e3a02c7d 	mov	r2, #32000	; 0x7d00
- c0017a4:	e5832000 	str	r2, [r3]
+ c001918:	e59f304c 	ldr	r3, [pc, #76]	; c00196c <timer3_preparar_tick+0x60>
+ c00191c:	e3a02c7d 	mov	r2, #32000	; 0x7d00
+ c001920:	e5832000 	str	r2, [r3]
         rTCMPB3 = 0;
- c0017a8:	e59f3044 	ldr	r3, [pc, #68]	; c0017f4 <timer3_preparar_tick+0x64>
- c0017ac:	e3a02000 	mov	r2, #0
- c0017b0:	e5832000 	str	r2, [r3]
+ c001924:	e59f3044 	ldr	r3, [pc, #68]	; c001970 <timer3_preparar_tick+0x64>
+ c001928:	e3a02000 	mov	r2, #0
+ c00192c:	e5832000 	str	r2, [r3]
 
         /* Cargar los nuevos valores (manual update) */
         rTCON = (rTCON & ~(0xF << 16)) | (1 << 17);
- c0017b4:	e59f303c 	ldr	r3, [pc, #60]	; c0017f8 <timer3_preparar_tick+0x68>
- c0017b8:	e59f2038 	ldr	r2, [pc, #56]	; c0017f8 <timer3_preparar_tick+0x68>
- c0017bc:	e5922000 	ldr	r2, [r2]
- c0017c0:	e3c2280f 	bic	r2, r2, #983040	; 0xf0000
- c0017c4:	e3822802 	orr	r2, r2, #131072	; 0x20000
- c0017c8:	e5832000 	str	r2, [r3]
+ c001930:	e59f303c 	ldr	r3, [pc, #60]	; c001974 <timer3_preparar_tick+0x68>
+ c001934:	e59f2038 	ldr	r2, [pc, #56]	; c001974 <timer3_preparar_tick+0x68>
+ c001938:	e5922000 	ldr	r2, [r2]
+ c00193c:	e3c2280f 	bic	r2, r2, #983040	; 0xf0000
+ c001940:	e3822802 	orr	r2, r2, #131072	; 0x20000
+ c001944:	e5832000 	str	r2, [r3]
         /* Activar auto-reload y arrancar el timer */
         rTCON = (rTCON & ~(0xF << 16)) | (1 << 19) | (1 << 16);
- c0017cc:	e59f3024 	ldr	r3, [pc, #36]	; c0017f8 <timer3_preparar_tick+0x68>
- c0017d0:	e59f2020 	ldr	r2, [pc, #32]	; c0017f8 <timer3_preparar_tick+0x68>
- c0017d4:	e5922000 	ldr	r2, [r2]
- c0017d8:	e3c2280f 	bic	r2, r2, #983040	; 0xf0000
- c0017dc:	e3822809 	orr	r2, r2, #589824	; 0x90000
- c0017e0:	e5832000 	str	r2, [r3]
+ c001948:	e59f3024 	ldr	r3, [pc, #36]	; c001974 <timer3_preparar_tick+0x68>
+ c00194c:	e59f2020 	ldr	r2, [pc, #32]	; c001974 <timer3_preparar_tick+0x68>
+ c001950:	e5922000 	ldr	r2, [r2]
+ c001954:	e3c2280f 	bic	r2, r2, #983040	; 0xf0000
+ c001958:	e3822809 	orr	r2, r2, #589824	; 0x90000
+ c00195c:	e5832000 	str	r2, [r3]
 }
- c0017e4:	e24bd00c 	sub	sp, fp, #12
- c0017e8:	e89d6800 	ldm	sp, {fp, sp, lr}
- c0017ec:	e12fff1e 	bx	lr
- c0017f0:	01d50030 	.word	0x01d50030
- c0017f4:	01d50034 	.word	0x01d50034
- c0017f8:	01d50008 	.word	0x01d50008
+ c001960:	e24bd00c 	sub	sp, fp, #12
+ c001964:	e89d6800 	ldm	sp, {fp, sp, lr}
+ c001968:	e12fff1e 	bx	lr
+ c00196c:	01d50030 	.word	0x01d50030
+ c001970:	01d50034 	.word	0x01d50034
+ c001974:	01d50008 	.word	0x01d50008
 
-0c0017fc <finalizar_antirrebote>:
+0c001978 <finalizar_antirrebote>:
 
 static void finalizar_antirrebote(void)
 {
- c0017fc:	e1a0c00d 	mov	ip, sp
- c001800:	e92dd800 	push	{fp, ip, lr, pc}
- c001804:	e24cb004 	sub	fp, ip, #4
+ c001978:	e1a0c00d 	mov	ip, sp
+ c00197c:	e92dd800 	push	{fp, ip, lr, pc}
+ c001980:	e24cb004 	sub	fp, ip, #4
         /* Detener el temporizador */
         timer3_detener();
- c001808:	ebffffce 	bl	c001748 <timer3_detener>
+ c001984:	ebffffce 	bl	c0018c4 <timer3_detener>
 
         /* Rehabilitar las interrupciones de los botones */
         rEXTINTPND = 0xf;
- c00180c:	e59f3074 	ldr	r3, [pc, #116]	; c001888 <finalizar_antirrebote+0x8c>
- c001810:	e3a0200f 	mov	r2, #15
- c001814:	e5832000 	str	r2, [r3]
+ c001988:	e59f3074 	ldr	r3, [pc, #116]	; c001a04 <finalizar_antirrebote+0x8c>
+ c00198c:	e3a0200f 	mov	r2, #15
+ c001990:	e5832000 	str	r2, [r3]
         rINTMSK &= ~(BIT_EINT4567);
- c001818:	e59f306c 	ldr	r3, [pc, #108]	; c00188c <finalizar_antirrebote+0x90>
- c00181c:	e59f2068 	ldr	r2, [pc, #104]	; c00188c <finalizar_antirrebote+0x90>
- c001820:	e5922000 	ldr	r2, [r2]
- c001824:	e3c22602 	bic	r2, r2, #2097152	; 0x200000
- c001828:	e5832000 	str	r2, [r3]
+ c001994:	e59f306c 	ldr	r3, [pc, #108]	; c001a08 <finalizar_antirrebote+0x90>
+ c001998:	e59f2068 	ldr	r2, [pc, #104]	; c001a08 <finalizar_antirrebote+0x90>
+ c00199c:	e5922000 	ldr	r2, [r2]
+ c0019a0:	e3c22602 	bic	r2, r2, #2097152	; 0x200000
+ c0019a4:	e5832000 	str	r2, [r3]
         rI_ISPC |= BIT_EINT4567;
- c00182c:	e59f305c 	ldr	r3, [pc, #92]	; c001890 <finalizar_antirrebote+0x94>
- c001830:	e59f2058 	ldr	r2, [pc, #88]	; c001890 <finalizar_antirrebote+0x94>
- c001834:	e5922000 	ldr	r2, [r2]
- c001838:	e3822602 	orr	r2, r2, #2097152	; 0x200000
- c00183c:	e5832000 	str	r2, [r3]
-
-        /* Ya no notificamos aquí, se hizo en REBOTE_PRESION */
+ c0019a8:	e59f305c 	ldr	r3, [pc, #92]	; c001a0c <finalizar_antirrebote+0x94>
+ c0019ac:	e59f2058 	ldr	r2, [pc, #88]	; c001a0c <finalizar_antirrebote+0x94>
+ c0019b0:	e5922000 	ldr	r2, [r2]
+ c0019b4:	e3822602 	orr	r2, r2, #2097152	; 0x200000
+ c0019b8:	e5832000 	str	r2, [r3]
 
         /* Resetear el estado interno */
         estado_actual = ESPERANDO_PULSACION;
- c001840:	e59f304c 	ldr	r3, [pc, #76]	; c001894 <finalizar_antirrebote+0x98>
- c001844:	e3a02000 	mov	r2, #0
- c001848:	e5c32000 	strb	r2, [r3]
+ c0019bc:	e59f304c 	ldr	r3, [pc, #76]	; c001a10 <finalizar_antirrebote+0x98>
+ c0019c0:	e3a02000 	mov	r2, #0
+ c0019c4:	e5c32000 	strb	r2, [r3]
         contador_ms = 0;
- c00184c:	e59f3044 	ldr	r3, [pc, #68]	; c001898 <finalizar_antirrebote+0x9c>
- c001850:	e3a02000 	mov	r2, #0
- c001854:	e5832000 	str	r2, [r3]
+ c0019c8:	e59f3044 	ldr	r3, [pc, #68]	; c001a14 <finalizar_antirrebote+0x9c>
+ c0019cc:	e3a02000 	mov	r2, #0
+ c0019d0:	e5832000 	str	r2, [r3]
         monitor_ms = 0;
- c001858:	e59f303c 	ldr	r3, [pc, #60]	; c00189c <finalizar_antirrebote+0xa0>
- c00185c:	e3a02000 	mov	r2, #0
- c001860:	e5832000 	str	r2, [r3]
+ c0019d4:	e59f303c 	ldr	r3, [pc, #60]	; c001a18 <finalizar_antirrebote+0xa0>
+ c0019d8:	e3a02000 	mov	r2, #0
+ c0019dc:	e5832000 	str	r2, [r3]
         boton_en_proceso = 0;
- c001864:	e59f3034 	ldr	r3, [pc, #52]	; c0018a0 <finalizar_antirrebote+0xa4>
- c001868:	e3a02000 	mov	r2, #0
- c00186c:	e5c32000 	strb	r2, [r3]
+ c0019e0:	e59f3034 	ldr	r3, [pc, #52]	; c001a1c <finalizar_antirrebote+0xa4>
+ c0019e4:	e3a02000 	mov	r2, #0
+ c0019e8:	e5c32000 	strb	r2, [r3]
         mascara_boton = 0;
- c001870:	e59f302c 	ldr	r3, [pc, #44]	; c0018a4 <finalizar_antirrebote+0xa8>
- c001874:	e3a02000 	mov	r2, #0
- c001878:	e5832000 	str	r2, [r3]
+ c0019ec:	e59f302c 	ldr	r3, [pc, #44]	; c001a20 <finalizar_antirrebote+0xa8>
+ c0019f0:	e3a02000 	mov	r2, #0
+ c0019f4:	e5832000 	str	r2, [r3]
 }
- c00187c:	e24bd00c 	sub	sp, fp, #12
- c001880:	e89d6800 	ldm	sp, {fp, sp, lr}
- c001884:	e12fff1e 	bx	lr
- c001888:	01d20054 	.word	0x01d20054
- c00188c:	01e0000c 	.word	0x01e0000c
- c001890:	01e00024 	.word	0x01e00024
- c001894:	0c001e7c 	.word	0x0c001e7c
- c001898:	0c001e80 	.word	0x0c001e80
- c00189c:	0c001e84 	.word	0x0c001e84
- c0018a0:	0c001e88 	.word	0x0c001e88
- c0018a4:	0c001e8c 	.word	0x0c001e8c
+ c0019f8:	e24bd00c 	sub	sp, fp, #12
+ c0019fc:	e89d6800 	ldm	sp, {fp, sp, lr}
+ c001a00:	e12fff1e 	bx	lr
+ c001a04:	01d20054 	.word	0x01d20054
+ c001a08:	01e0000c 	.word	0x01e0000c
+ c001a0c:	01e00024 	.word	0x01e00024
+ c001a10:	0c002000 	.word	0x0c002000
+ c001a14:	0c002004 	.word	0x0c002004
+ c001a18:	0c002008 	.word	0x0c002008
+ c001a1c:	0c00200c 	.word	0x0c00200c
+ c001a20:	0c002010 	.word	0x0c002010
 
-0c0018a8 <timer3_init>:
+0c001a24 <timer3_init>:
 
 /*--- Código de las funciones públicas ---*/
 void timer3_init(timer3_callback_t callback)
 {
- c0018a8:	e1a0c00d 	mov	ip, sp
- c0018ac:	e92dd800 	push	{fp, ip, lr, pc}
- c0018b0:	e24cb004 	sub	fp, ip, #4
- c0018b4:	e24dd008 	sub	sp, sp, #8
- c0018b8:	e50b0010 	str	r0, [fp, #-16]
+ c001a24:	e1a0c00d 	mov	ip, sp
+ c001a28:	e92dd800 	push	{fp, ip, lr, pc}
+ c001a2c:	e24cb004 	sub	fp, ip, #4
+ c001a30:	e24dd008 	sub	sp, sp, #8
+ c001a34:	e50b0010 	str	r0, [fp, #-16]
         callback_validacion = callback;
- c0018bc:	e59f30d8 	ldr	r3, [pc, #216]	; c00199c <timer3_init+0xf4>
- c0018c0:	e51b2010 	ldr	r2, [fp, #-16]
- c0018c4:	e5832000 	str	r2, [r3]
+ c001a38:	e59f30d8 	ldr	r3, [pc, #216]	; c001b18 <timer3_init+0xf4>
+ c001a3c:	e51b2010 	ldr	r2, [fp, #-16]
+ c001a40:	e5832000 	str	r2, [r3]
         estado_actual = ESPERANDO_PULSACION;
- c0018c8:	e59f30d0 	ldr	r3, [pc, #208]	; c0019a0 <timer3_init+0xf8>
- c0018cc:	e3a02000 	mov	r2, #0
- c0018d0:	e5c32000 	strb	r2, [r3]
+ c001a44:	e59f30d0 	ldr	r3, [pc, #208]	; c001b1c <timer3_init+0xf8>
+ c001a48:	e3a02000 	mov	r2, #0
+ c001a4c:	e5c32000 	strb	r2, [r3]
         contador_ms = 0;
- c0018d4:	e59f30c8 	ldr	r3, [pc, #200]	; c0019a4 <timer3_init+0xfc>
- c0018d8:	e3a02000 	mov	r2, #0
- c0018dc:	e5832000 	str	r2, [r3]
+ c001a50:	e59f30c8 	ldr	r3, [pc, #200]	; c001b20 <timer3_init+0xfc>
+ c001a54:	e3a02000 	mov	r2, #0
+ c001a58:	e5832000 	str	r2, [r3]
         monitor_ms = 0;
- c0018e0:	e59f30c0 	ldr	r3, [pc, #192]	; c0019a8 <timer3_init+0x100>
- c0018e4:	e3a02000 	mov	r2, #0
- c0018e8:	e5832000 	str	r2, [r3]
+ c001a5c:	e59f30c0 	ldr	r3, [pc, #192]	; c001b24 <timer3_init+0x100>
+ c001a60:	e3a02000 	mov	r2, #0
+ c001a64:	e5832000 	str	r2, [r3]
         boton_en_proceso = 0;
- c0018ec:	e59f30b8 	ldr	r3, [pc, #184]	; c0019ac <timer3_init+0x104>
- c0018f0:	e3a02000 	mov	r2, #0
- c0018f4:	e5c32000 	strb	r2, [r3]
+ c001a68:	e59f30b8 	ldr	r3, [pc, #184]	; c001b28 <timer3_init+0x104>
+ c001a6c:	e3a02000 	mov	r2, #0
+ c001a70:	e5c32000 	strb	r2, [r3]
         mascara_boton = 0;
- c0018f8:	e59f30b0 	ldr	r3, [pc, #176]	; c0019b0 <timer3_init+0x108>
- c0018fc:	e3a02000 	mov	r2, #0
- c001900:	e5832000 	str	r2, [r3]
+ c001a74:	e59f30b0 	ldr	r3, [pc, #176]	; c001b2c <timer3_init+0x108>
+ c001a78:	e3a02000 	mov	r2, #0
+ c001a7c:	e5832000 	str	r2, [r3]
 
         /* Enmascarar la interrupción del timer3 inicialmente */
         rINTMSK |= BIT_TIMER3;
- c001904:	e59f30a8 	ldr	r3, [pc, #168]	; c0019b4 <timer3_init+0x10c>
- c001908:	e59f20a4 	ldr	r2, [pc, #164]	; c0019b4 <timer3_init+0x10c>
- c00190c:	e5922000 	ldr	r2, [r2]
- c001910:	e3822b01 	orr	r2, r2, #1024	; 0x400
- c001914:	e5832000 	str	r2, [r3]
+ c001a80:	e59f30a8 	ldr	r3, [pc, #168]	; c001b30 <timer3_init+0x10c>
+ c001a84:	e59f20a4 	ldr	r2, [pc, #164]	; c001b30 <timer3_init+0x10c>
+ c001a88:	e5922000 	ldr	r2, [r2]
+ c001a8c:	e3822b01 	orr	r2, r2, #1024	; 0x400
+ c001a90:	e5832000 	str	r2, [r3]
 
         /* Configurar el vector de interrupción */
         pISR_TIMER3 = (unsigned) timer3_ISR;
- c001918:	e59f3098 	ldr	r3, [pc, #152]	; c0019b8 <timer3_init+0x110>
- c00191c:	e59f2098 	ldr	r2, [pc, #152]	; c0019bc <timer3_init+0x114>
- c001920:	e5832000 	str	r2, [r3]
+ c001a94:	e59f3098 	ldr	r3, [pc, #152]	; c001b34 <timer3_init+0x110>
+ c001a98:	e59f2098 	ldr	r2, [pc, #152]	; c001b38 <timer3_init+0x114>
+ c001a9c:	e5832000 	str	r2, [r3]
 
         /* Configurar divisor (1/2) compartido con el timer2 */
         rTCFG1 = (rTCFG1 & ~(0xF << 12)) | (0x0 << 12);
- c001924:	e59f3094 	ldr	r3, [pc, #148]	; c0019c0 <timer3_init+0x118>
- c001928:	e59f2090 	ldr	r2, [pc, #144]	; c0019c0 <timer3_init+0x118>
- c00192c:	e5922000 	ldr	r2, [r2]
- c001930:	e3c22a0f 	bic	r2, r2, #61440	; 0xf000
- c001934:	e5832000 	str	r2, [r3]
+ c001aa0:	e59f3094 	ldr	r3, [pc, #148]	; c001b3c <timer3_init+0x118>
+ c001aa4:	e59f2090 	ldr	r2, [pc, #144]	; c001b3c <timer3_init+0x118>
+ c001aa8:	e5922000 	ldr	r2, [r2]
+ c001aac:	e3c22a0f 	bic	r2, r2, #61440	; 0xf000
+ c001ab0:	e5832000 	str	r2, [r3]
 
         /* Cargar el valor inicial y dejar el timer parado */
         rTCNTB3 = TIMER3_1MS_COUNT;
- c001938:	e59f3084 	ldr	r3, [pc, #132]	; c0019c4 <timer3_init+0x11c>
- c00193c:	e3a02c7d 	mov	r2, #32000	; 0x7d00
- c001940:	e5832000 	str	r2, [r3]
+ c001ab4:	e59f3084 	ldr	r3, [pc, #132]	; c001b40 <timer3_init+0x11c>
+ c001ab8:	e3a02c7d 	mov	r2, #32000	; 0x7d00
+ c001abc:	e5832000 	str	r2, [r3]
         rTCMPB3 = 0;
- c001944:	e59f307c 	ldr	r3, [pc, #124]	; c0019c8 <timer3_init+0x120>
- c001948:	e3a02000 	mov	r2, #0
- c00194c:	e5832000 	str	r2, [r3]
+ c001ac0:	e59f307c 	ldr	r3, [pc, #124]	; c001b44 <timer3_init+0x120>
+ c001ac4:	e3a02000 	mov	r2, #0
+ c001ac8:	e5832000 	str	r2, [r3]
         rTCON = (rTCON & ~(0xF << 16)) | (1 << 17);
- c001950:	e59f3074 	ldr	r3, [pc, #116]	; c0019cc <timer3_init+0x124>
- c001954:	e59f2070 	ldr	r2, [pc, #112]	; c0019cc <timer3_init+0x124>
- c001958:	e5922000 	ldr	r2, [r2]
- c00195c:	e3c2280f 	bic	r2, r2, #983040	; 0xf0000
- c001960:	e3822802 	orr	r2, r2, #131072	; 0x20000
- c001964:	e5832000 	str	r2, [r3]
+ c001acc:	e59f3074 	ldr	r3, [pc, #116]	; c001b48 <timer3_init+0x124>
+ c001ad0:	e59f2070 	ldr	r2, [pc, #112]	; c001b48 <timer3_init+0x124>
+ c001ad4:	e5922000 	ldr	r2, [r2]
+ c001ad8:	e3c2280f 	bic	r2, r2, #983040	; 0xf0000
+ c001adc:	e3822802 	orr	r2, r2, #131072	; 0x20000
+ c001ae0:	e5832000 	str	r2, [r3]
         rTCON &= ~(0xF << 16);
- c001968:	e59f305c 	ldr	r3, [pc, #92]	; c0019cc <timer3_init+0x124>
- c00196c:	e59f2058 	ldr	r2, [pc, #88]	; c0019cc <timer3_init+0x124>
- c001970:	e5922000 	ldr	r2, [r2]
- c001974:	e3c2280f 	bic	r2, r2, #983040	; 0xf0000
- c001978:	e5832000 	str	r2, [r3]
+ c001ae4:	e59f305c 	ldr	r3, [pc, #92]	; c001b48 <timer3_init+0x124>
+ c001ae8:	e59f2058 	ldr	r2, [pc, #88]	; c001b48 <timer3_init+0x124>
+ c001aec:	e5922000 	ldr	r2, [r2]
+ c001af0:	e3c2280f 	bic	r2, r2, #983040	; 0xf0000
+ c001af4:	e5832000 	str	r2, [r3]
 
         /* Limpiar posibles peticiones pendientes */
         rI_ISPC |= BIT_TIMER3;
- c00197c:	e59f304c 	ldr	r3, [pc, #76]	; c0019d0 <timer3_init+0x128>
- c001980:	e59f2048 	ldr	r2, [pc, #72]	; c0019d0 <timer3_init+0x128>
- c001984:	e5922000 	ldr	r2, [r2]
- c001988:	e3822b01 	orr	r2, r2, #1024	; 0x400
- c00198c:	e5832000 	str	r2, [r3]
+ c001af8:	e59f304c 	ldr	r3, [pc, #76]	; c001b4c <timer3_init+0x128>
+ c001afc:	e59f2048 	ldr	r2, [pc, #72]	; c001b4c <timer3_init+0x128>
+ c001b00:	e5922000 	ldr	r2, [r2]
+ c001b04:	e3822b01 	orr	r2, r2, #1024	; 0x400
+ c001b08:	e5832000 	str	r2, [r3]
 }
- c001990:	e24bd00c 	sub	sp, fp, #12
- c001994:	e89d6800 	ldm	sp, {fp, sp, lr}
- c001998:	e12fff1e 	bx	lr
- c00199c:	0c001e90 	.word	0x0c001e90
- c0019a0:	0c001e7c 	.word	0x0c001e7c
- c0019a4:	0c001e80 	.word	0x0c001e80
- c0019a8:	0c001e84 	.word	0x0c001e84
- c0019ac:	0c001e88 	.word	0x0c001e88
- c0019b0:	0c001e8c 	.word	0x0c001e8c
- c0019b4:	01e0000c 	.word	0x01e0000c
- c0019b8:	0c7fff48 	.word	0x0c7fff48
- c0019bc:	0c001b08 	.word	0x0c001b08
- c0019c0:	01d50004 	.word	0x01d50004
- c0019c4:	01d50030 	.word	0x01d50030
- c0019c8:	01d50034 	.word	0x01d50034
- c0019cc:	01d50008 	.word	0x01d50008
- c0019d0:	01e00024 	.word	0x01e00024
+ c001b0c:	e24bd00c 	sub	sp, fp, #12
+ c001b10:	e89d6800 	ldm	sp, {fp, sp, lr}
+ c001b14:	e12fff1e 	bx	lr
+ c001b18:	0c002014 	.word	0x0c002014
+ c001b1c:	0c002000 	.word	0x0c002000
+ c001b20:	0c002004 	.word	0x0c002004
+ c001b24:	0c002008 	.word	0x0c002008
+ c001b28:	0c00200c 	.word	0x0c00200c
+ c001b2c:	0c002010 	.word	0x0c002010
+ c001b30:	01e0000c 	.word	0x01e0000c
+ c001b34:	0c7fff48 	.word	0x0c7fff48
+ c001b38:	0c001c84 	.word	0x0c001c84
+ c001b3c:	01d50004 	.word	0x01d50004
+ c001b40:	01d50030 	.word	0x01d50030
+ c001b44:	01d50034 	.word	0x01d50034
+ c001b48:	01d50008 	.word	0x01d50008
+ c001b4c:	01e00024 	.word	0x01e00024
 
-0c0019d4 <timer3_start_antirrebote>:
+0c001b50 <timer3_start_antirrebote>:
 
 int timer3_start_antirrebote(uint8_t boton_id)
 {
- c0019d4:	e1a0c00d 	mov	ip, sp
- c0019d8:	e92dd800 	push	{fp, ip, lr, pc}
- c0019dc:	e24cb004 	sub	fp, ip, #4
- c0019e0:	e24dd008 	sub	sp, sp, #8
- c0019e4:	e1a03000 	mov	r3, r0
- c0019e8:	e54b300d 	strb	r3, [fp, #-13]
+ c001b50:	e1a0c00d 	mov	ip, sp
+ c001b54:	e92dd800 	push	{fp, ip, lr, pc}
+ c001b58:	e24cb004 	sub	fp, ip, #4
+ c001b5c:	e24dd008 	sub	sp, sp, #8
+ c001b60:	e1a03000 	mov	r3, r0
+ c001b64:	e54b300d 	strb	r3, [fp, #-13]
         if (estado_actual != ESPERANDO_PULSACION)
- c0019ec:	e59f30c4 	ldr	r3, [pc, #196]	; c001ab8 <timer3_start_antirrebote+0xe4>
- c0019f0:	e5d33000 	ldrb	r3, [r3]
- c0019f4:	e20330ff 	and	r3, r3, #255	; 0xff
- c0019f8:	e3530000 	cmp	r3, #0
- c0019fc:	0a000001 	beq	c001a08 <timer3_start_antirrebote+0x34>
+ c001b68:	e59f30c4 	ldr	r3, [pc, #196]	; c001c34 <timer3_start_antirrebote+0xe4>
+ c001b6c:	e5d33000 	ldrb	r3, [r3]
+ c001b70:	e20330ff 	and	r3, r3, #255	; 0xff
+ c001b74:	e3530000 	cmp	r3, #0
+ c001b78:	0a000001 	beq	c001b84 <timer3_start_antirrebote+0x34>
         {
                 return 0;
- c001a00:	e3a03000 	mov	r3, #0
- c001a04:	ea000027 	b	c001aa8 <timer3_start_antirrebote+0xd4>
+ c001b7c:	e3a03000 	mov	r3, #0
+ c001b80:	ea000027 	b	c001c24 <timer3_start_antirrebote+0xd4>
         }
 
         /* Seleccionar la máscara del puerto correspondiente */
         switch (boton_id)
- c001a08:	e55b300d 	ldrb	r3, [fp, #-13]
- c001a0c:	e3530004 	cmp	r3, #4
- c001a10:	0a000002 	beq	c001a20 <timer3_start_antirrebote+0x4c>
- c001a14:	e3530008 	cmp	r3, #8
- c001a18:	0a000004 	beq	c001a30 <timer3_start_antirrebote+0x5c>
- c001a1c:	ea000007 	b	c001a40 <timer3_start_antirrebote+0x6c>
+ c001b84:	e55b300d 	ldrb	r3, [fp, #-13]
+ c001b88:	e3530004 	cmp	r3, #4
+ c001b8c:	0a000002 	beq	c001b9c <timer3_start_antirrebote+0x4c>
+ c001b90:	e3530008 	cmp	r3, #8
+ c001b94:	0a000004 	beq	c001bac <timer3_start_antirrebote+0x5c>
+ c001b98:	ea000007 	b	c001bbc <timer3_start_antirrebote+0x6c>
         {
                 case EVENTO_BOTON_IZQUIERDO:
                         mascara_boton = BOTON_MASK_EINT6;
- c001a20:	e59f3094 	ldr	r3, [pc, #148]	; c001abc <timer3_start_antirrebote+0xe8>
- c001a24:	e3a02040 	mov	r2, #64	; 0x40
- c001a28:	e5832000 	str	r2, [r3]
+ c001b9c:	e59f3094 	ldr	r3, [pc, #148]	; c001c38 <timer3_start_antirrebote+0xe8>
+ c001ba0:	e3a02040 	mov	r2, #64	; 0x40
+ c001ba4:	e5832000 	str	r2, [r3]
                         break;
- c001a2c:	ea000005 	b	c001a48 <timer3_start_antirrebote+0x74>
+ c001ba8:	ea000005 	b	c001bc4 <timer3_start_antirrebote+0x74>
                 case EVENTO_BOTON_DERECHO:
                         mascara_boton = BOTON_MASK_EINT7;
- c001a30:	e59f3084 	ldr	r3, [pc, #132]	; c001abc <timer3_start_antirrebote+0xe8>
- c001a34:	e3a02080 	mov	r2, #128	; 0x80
- c001a38:	e5832000 	str	r2, [r3]
+ c001bac:	e59f3084 	ldr	r3, [pc, #132]	; c001c38 <timer3_start_antirrebote+0xe8>
+ c001bb0:	e3a02080 	mov	r2, #128	; 0x80
+ c001bb4:	e5832000 	str	r2, [r3]
                         break;
- c001a3c:	ea000001 	b	c001a48 <timer3_start_antirrebote+0x74>
+ c001bb8:	ea000001 	b	c001bc4 <timer3_start_antirrebote+0x74>
                 default:
                         return 0;
- c001a40:	e3a03000 	mov	r3, #0
- c001a44:	ea000017 	b	c001aa8 <timer3_start_antirrebote+0xd4>
+ c001bbc:	e3a03000 	mov	r3, #0
+ c001bc0:	ea000017 	b	c001c24 <timer3_start_antirrebote+0xd4>
         }
 
         boton_en_proceso = boton_id;
- c001a48:	e59f3070 	ldr	r3, [pc, #112]	; c001ac0 <timer3_start_antirrebote+0xec>
- c001a4c:	e55b200d 	ldrb	r2, [fp, #-13]
- c001a50:	e5c32000 	strb	r2, [r3]
+ c001bc4:	e59f3070 	ldr	r3, [pc, #112]	; c001c3c <timer3_start_antirrebote+0xec>
+ c001bc8:	e55b200d 	ldrb	r2, [fp, #-13]
+ c001bcc:	e5c32000 	strb	r2, [r3]
         estado_actual = REBOTE_PRESION;
- c001a54:	e59f305c 	ldr	r3, [pc, #92]	; c001ab8 <timer3_start_antirrebote+0xe4>
- c001a58:	e3a02001 	mov	r2, #1
- c001a5c:	e5c32000 	strb	r2, [r3]
+ c001bd0:	e59f305c 	ldr	r3, [pc, #92]	; c001c34 <timer3_start_antirrebote+0xe4>
+ c001bd4:	e3a02001 	mov	r2, #1
+ c001bd8:	e5c32000 	strb	r2, [r3]
         contador_ms = TIMER3_TRP_MS;
- c001a60:	e59f305c 	ldr	r3, [pc, #92]	; c001ac4 <timer3_start_antirrebote+0xf0>
- c001a64:	e3a0201e 	mov	r2, #30
- c001a68:	e5832000 	str	r2, [r3]
+ c001bdc:	e59f305c 	ldr	r3, [pc, #92]	; c001c40 <timer3_start_antirrebote+0xf0>
+ c001be0:	e3a0201e 	mov	r2, #30
+ c001be4:	e5832000 	str	r2, [r3]
         monitor_ms = TIMER3_MONITOR_MS;
- c001a6c:	e59f3054 	ldr	r3, [pc, #84]	; c001ac8 <timer3_start_antirrebote+0xf4>
- c001a70:	e3a02064 	mov	r2, #100	; 0x64
- c001a74:	e5832000 	str	r2, [r3]
+ c001be8:	e59f3054 	ldr	r3, [pc, #84]	; c001c44 <timer3_start_antirrebote+0xf4>
+ c001bec:	e3a02064 	mov	r2, #100	; 0x64
+ c001bf0:	e5832000 	str	r2, [r3]
 
         /* Deshabilitar las interrupciones de los botones */
         rINTMSK |= BIT_EINT4567;
- c001a78:	e59f304c 	ldr	r3, [pc, #76]	; c001acc <timer3_start_antirrebote+0xf8>
- c001a7c:	e59f2048 	ldr	r2, [pc, #72]	; c001acc <timer3_start_antirrebote+0xf8>
- c001a80:	e5922000 	ldr	r2, [r2]
- c001a84:	e3822602 	orr	r2, r2, #2097152	; 0x200000
- c001a88:	e5832000 	str	r2, [r3]
+ c001bf4:	e59f304c 	ldr	r3, [pc, #76]	; c001c48 <timer3_start_antirrebote+0xf8>
+ c001bf8:	e59f2048 	ldr	r2, [pc, #72]	; c001c48 <timer3_start_antirrebote+0xf8>
+ c001bfc:	e5922000 	ldr	r2, [r2]
+ c001c00:	e3822602 	orr	r2, r2, #2097152	; 0x200000
+ c001c04:	e5832000 	str	r2, [r3]
 
         /* Preparar y arrancar el temporizador */
         timer3_preparar_tick();
- c001a8c:	ebffff3f 	bl	c001790 <timer3_preparar_tick>
+ c001c08:	ebffff3f 	bl	c00190c <timer3_preparar_tick>
 
         /* Habilitar la interrupción del timer3 */
         rINTMSK &= ~(BIT_TIMER3);
- c001a90:	e59f3034 	ldr	r3, [pc, #52]	; c001acc <timer3_start_antirrebote+0xf8>
- c001a94:	e59f2030 	ldr	r2, [pc, #48]	; c001acc <timer3_start_antirrebote+0xf8>
- c001a98:	e5922000 	ldr	r2, [r2]
- c001a9c:	e3c22b01 	bic	r2, r2, #1024	; 0x400
- c001aa0:	e5832000 	str	r2, [r3]
+ c001c0c:	e59f3034 	ldr	r3, [pc, #52]	; c001c48 <timer3_start_antirrebote+0xf8>
+ c001c10:	e59f2030 	ldr	r2, [pc, #48]	; c001c48 <timer3_start_antirrebote+0xf8>
+ c001c14:	e5922000 	ldr	r2, [r2]
+ c001c18:	e3c22b01 	bic	r2, r2, #1024	; 0x400
+ c001c1c:	e5832000 	str	r2, [r3]
 
         return 1;
- c001aa4:	e3a03001 	mov	r3, #1
+ c001c20:	e3a03001 	mov	r3, #1
 }
- c001aa8:	e1a00003 	mov	r0, r3
- c001aac:	e24bd00c 	sub	sp, fp, #12
- c001ab0:	e89d6800 	ldm	sp, {fp, sp, lr}
- c001ab4:	e12fff1e 	bx	lr
- c001ab8:	0c001e7c 	.word	0x0c001e7c
- c001abc:	0c001e8c 	.word	0x0c001e8c
- c001ac0:	0c001e88 	.word	0x0c001e88
- c001ac4:	0c001e80 	.word	0x0c001e80
- c001ac8:	0c001e84 	.word	0x0c001e84
- c001acc:	01e0000c 	.word	0x01e0000c
+ c001c24:	e1a00003 	mov	r0, r3
+ c001c28:	e24bd00c 	sub	sp, fp, #12
+ c001c2c:	e89d6800 	ldm	sp, {fp, sp, lr}
+ c001c30:	e12fff1e 	bx	lr
+ c001c34:	0c002000 	.word	0x0c002000
+ c001c38:	0c002010 	.word	0x0c002010
+ c001c3c:	0c00200c 	.word	0x0c00200c
+ c001c40:	0c002004 	.word	0x0c002004
+ c001c44:	0c002008 	.word	0x0c002008
+ c001c48:	01e0000c 	.word	0x01e0000c
 
-0c001ad0 <timer3_esta_ocupado>:
+0c001c4c <timer3_esta_ocupado>:
 
 int timer3_esta_ocupado(void)
 {
- c001ad0:	e1a0c00d 	mov	ip, sp
- c001ad4:	e92dd800 	push	{fp, ip, lr, pc}
- c001ad8:	e24cb004 	sub	fp, ip, #4
+ c001c4c:	e1a0c00d 	mov	ip, sp
+ c001c50:	e92dd800 	push	{fp, ip, lr, pc}
+ c001c54:	e24cb004 	sub	fp, ip, #4
         return (estado_actual != ESPERANDO_PULSACION);
- c001adc:	e59f3020 	ldr	r3, [pc, #32]	; c001b04 <timer3_esta_ocupado+0x34>
- c001ae0:	e5d33000 	ldrb	r3, [r3]
- c001ae4:	e20330ff 	and	r3, r3, #255	; 0xff
- c001ae8:	e3530000 	cmp	r3, #0
- c001aec:	03a03000 	moveq	r3, #0
- c001af0:	13a03001 	movne	r3, #1
+ c001c58:	e59f3020 	ldr	r3, [pc, #32]	; c001c80 <timer3_esta_ocupado+0x34>
+ c001c5c:	e5d33000 	ldrb	r3, [r3]
+ c001c60:	e20330ff 	and	r3, r3, #255	; 0xff
+ c001c64:	e3530000 	cmp	r3, #0
+ c001c68:	03a03000 	moveq	r3, #0
+ c001c6c:	13a03001 	movne	r3, #1
 }
- c001af4:	e1a00003 	mov	r0, r3
- c001af8:	e24bd00c 	sub	sp, fp, #12
- c001afc:	e89d6800 	ldm	sp, {fp, sp, lr}
- c001b00:	e12fff1e 	bx	lr
- c001b04:	0c001e7c 	.word	0x0c001e7c
+ c001c70:	e1a00003 	mov	r0, r3
+ c001c74:	e24bd00c 	sub	sp, fp, #12
+ c001c78:	e89d6800 	ldm	sp, {fp, sp, lr}
+ c001c7c:	e12fff1e 	bx	lr
+ c001c80:	0c002000 	.word	0x0c002000
 
-0c001b08 <timer3_ISR>:
+0c001c84 <timer3_ISR>:
 
 /*--- Código de la ISR ---*/
 void timer3_ISR(void)
 {
- c001b08:	e52dc004 	push	{ip}		; (str ip, [sp, #-4]!)
- c001b0c:	e1a0c00d 	mov	ip, sp
- c001b10:	e92dd80f 	push	{r0, r1, r2, r3, fp, ip, lr, pc}
- c001b14:	e24cb004 	sub	fp, ip, #4
+ c001c84:	e52dc004 	push	{ip}		; (str ip, [sp, #-4]!)
+ c001c88:	e1a0c00d 	mov	ip, sp
+ c001c8c:	e92dd80f 	push	{r0, r1, r2, r3, fp, ip, lr, pc}
+ c001c90:	e24cb004 	sub	fp, ip, #4
         switch (estado_actual)
- c001b18:	e59f3188 	ldr	r3, [pc, #392]	; c001ca8 <timer3_ISR+0x1a0>
- c001b1c:	e5d33000 	ldrb	r3, [r3]
- c001b20:	e20330ff 	and	r3, r3, #255	; 0xff
- c001b24:	e3530002 	cmp	r3, #2
- c001b28:	0a000023 	beq	c001bbc <timer3_ISR+0xb4>
- c001b2c:	e3530003 	cmp	r3, #3
- c001b30:	0a00003d 	beq	c001c2c <timer3_ISR+0x124>
- c001b34:	e3530001 	cmp	r3, #1
- c001b38:	1a00004a 	bne	c001c68 <timer3_ISR+0x160>
+ c001c94:	e59f3188 	ldr	r3, [pc, #392]	; c001e24 <timer3_ISR+0x1a0>
+ c001c98:	e5d33000 	ldrb	r3, [r3]
+ c001c9c:	e20330ff 	and	r3, r3, #255	; 0xff
+ c001ca0:	e3530002 	cmp	r3, #2
+ c001ca4:	0a000023 	beq	c001d38 <timer3_ISR+0xb4>
+ c001ca8:	e3530003 	cmp	r3, #3
+ c001cac:	0a00003d 	beq	c001da8 <timer3_ISR+0x124>
+ c001cb0:	e3530001 	cmp	r3, #1
+ c001cb4:	1a00004a 	bne	c001de4 <timer3_ISR+0x160>
         {
                 case REBOTE_PRESION:
                         if (contador_ms > 0)
- c001b3c:	e59f3168 	ldr	r3, [pc, #360]	; c001cac <timer3_ISR+0x1a4>
- c001b40:	e5933000 	ldr	r3, [r3]
- c001b44:	e3530000 	cmp	r3, #0
- c001b48:	0a000004 	beq	c001b60 <timer3_ISR+0x58>
+ c001cb8:	e59f3168 	ldr	r3, [pc, #360]	; c001e28 <timer3_ISR+0x1a4>
+ c001cbc:	e5933000 	ldr	r3, [r3]
+ c001cc0:	e3530000 	cmp	r3, #0
+ c001cc4:	0a000004 	beq	c001cdc <timer3_ISR+0x58>
                         {
                                 contador_ms -= TIMER3_TICK_MS;
- c001b4c:	e59f3158 	ldr	r3, [pc, #344]	; c001cac <timer3_ISR+0x1a4>
- c001b50:	e5933000 	ldr	r3, [r3]
- c001b54:	e2432001 	sub	r2, r3, #1
- c001b58:	e59f314c 	ldr	r3, [pc, #332]	; c001cac <timer3_ISR+0x1a4>
- c001b5c:	e5832000 	str	r2, [r3]
+ c001cc8:	e59f3158 	ldr	r3, [pc, #344]	; c001e28 <timer3_ISR+0x1a4>
+ c001ccc:	e5933000 	ldr	r3, [r3]
+ c001cd0:	e2432001 	sub	r2, r3, #1
+ c001cd4:	e59f314c 	ldr	r3, [pc, #332]	; c001e28 <timer3_ISR+0x1a4>
+ c001cd8:	e5832000 	str	r2, [r3]
                         }
                         if (contador_ms == 0)
- c001b60:	e59f3144 	ldr	r3, [pc, #324]	; c001cac <timer3_ISR+0x1a4>
- c001b64:	e5933000 	ldr	r3, [r3]
- c001b68:	e3530000 	cmp	r3, #0
- c001b6c:	1a00003f 	bne	c001c70 <timer3_ISR+0x168>
+ c001cdc:	e59f3144 	ldr	r3, [pc, #324]	; c001e28 <timer3_ISR+0x1a4>
+ c001ce0:	e5933000 	ldr	r3, [r3]
+ c001ce4:	e3530000 	cmp	r3, #0
+ c001ce8:	1a00003f 	bne	c001dec <timer3_ISR+0x168>
                         {
                                 /* Notificar la pulsación validada (cuando se confirma que está pulsado) */
                                 if (callback_validacion)
- c001b70:	e59f3138 	ldr	r3, [pc, #312]	; c001cb0 <timer3_ISR+0x1a8>
- c001b74:	e5933000 	ldr	r3, [r3]
- c001b78:	e3530000 	cmp	r3, #0
- c001b7c:	0a000007 	beq	c001ba0 <timer3_ISR+0x98>
+ c001cec:	e59f3138 	ldr	r3, [pc, #312]	; c001e2c <timer3_ISR+0x1a8>
+ c001cf0:	e5933000 	ldr	r3, [r3]
+ c001cf4:	e3530000 	cmp	r3, #0
+ c001cf8:	0a000007 	beq	c001d1c <timer3_ISR+0x98>
                                 {
                                         callback_validacion(boton_en_proceso);
- c001b80:	e59f3128 	ldr	r3, [pc, #296]	; c001cb0 <timer3_ISR+0x1a8>
- c001b84:	e5933000 	ldr	r3, [r3]
- c001b88:	e59f2124 	ldr	r2, [pc, #292]	; c001cb4 <timer3_ISR+0x1ac>
- c001b8c:	e5d22000 	ldrb	r2, [r2]
- c001b90:	e20220ff 	and	r2, r2, #255	; 0xff
- c001b94:	e1a00002 	mov	r0, r2
- c001b98:	e1a0e00f 	mov	lr, pc
- c001b9c:	e12fff13 	bx	r3
+ c001cfc:	e59f3128 	ldr	r3, [pc, #296]	; c001e2c <timer3_ISR+0x1a8>
+ c001d00:	e5933000 	ldr	r3, [r3]
+ c001d04:	e59f2124 	ldr	r2, [pc, #292]	; c001e30 <timer3_ISR+0x1ac>
+ c001d08:	e5d22000 	ldrb	r2, [r2]
+ c001d0c:	e20220ff 	and	r2, r2, #255	; 0xff
+ c001d10:	e1a00002 	mov	r0, r2
+ c001d14:	e1a0e00f 	mov	lr, pc
+ c001d18:	e12fff13 	bx	r3
                                 }
                                 
                                 estado_actual = MONITORIZANDO;
- c001ba0:	e59f3100 	ldr	r3, [pc, #256]	; c001ca8 <timer3_ISR+0x1a0>
- c001ba4:	e3a02002 	mov	r2, #2
- c001ba8:	e5c32000 	strb	r2, [r3]
+ c001d1c:	e59f3100 	ldr	r3, [pc, #256]	; c001e24 <timer3_ISR+0x1a0>
+ c001d20:	e3a02002 	mov	r2, #2
+ c001d24:	e5c32000 	strb	r2, [r3]
                                 monitor_ms = TIMER3_MONITOR_MS;
- c001bac:	e59f3104 	ldr	r3, [pc, #260]	; c001cb8 <timer3_ISR+0x1b0>
- c001bb0:	e3a02064 	mov	r2, #100	; 0x64
- c001bb4:	e5832000 	str	r2, [r3]
+ c001d28:	e59f3104 	ldr	r3, [pc, #260]	; c001e34 <timer3_ISR+0x1b0>
+ c001d2c:	e3a02064 	mov	r2, #100	; 0x64
+ c001d30:	e5832000 	str	r2, [r3]
                         }
                         break;
- c001bb8:	ea000031 	b	c001c84 <timer3_ISR+0x17c>
+ c001d34:	ea000031 	b	c001e00 <timer3_ISR+0x17c>
 
                 case MONITORIZANDO:
                         if (monitor_ms > 0)
- c001bbc:	e59f30f4 	ldr	r3, [pc, #244]	; c001cb8 <timer3_ISR+0x1b0>
- c001bc0:	e5933000 	ldr	r3, [r3]
- c001bc4:	e3530000 	cmp	r3, #0
- c001bc8:	0a000004 	beq	c001be0 <timer3_ISR+0xd8>
+ c001d38:	e59f30f4 	ldr	r3, [pc, #244]	; c001e34 <timer3_ISR+0x1b0>
+ c001d3c:	e5933000 	ldr	r3, [r3]
+ c001d40:	e3530000 	cmp	r3, #0
+ c001d44:	0a000004 	beq	c001d5c <timer3_ISR+0xd8>
                         {
                                 monitor_ms -= TIMER3_TICK_MS;
- c001bcc:	e59f30e4 	ldr	r3, [pc, #228]	; c001cb8 <timer3_ISR+0x1b0>
- c001bd0:	e5933000 	ldr	r3, [r3]
- c001bd4:	e2432001 	sub	r2, r3, #1
- c001bd8:	e59f30d8 	ldr	r3, [pc, #216]	; c001cb8 <timer3_ISR+0x1b0>
- c001bdc:	e5832000 	str	r2, [r3]
+ c001d48:	e59f30e4 	ldr	r3, [pc, #228]	; c001e34 <timer3_ISR+0x1b0>
+ c001d4c:	e5933000 	ldr	r3, [r3]
+ c001d50:	e2432001 	sub	r2, r3, #1
+ c001d54:	e59f30d8 	ldr	r3, [pc, #216]	; c001e34 <timer3_ISR+0x1b0>
+ c001d58:	e5832000 	str	r2, [r3]
                         }
                         if (monitor_ms == 0)
- c001be0:	e59f30d0 	ldr	r3, [pc, #208]	; c001cb8 <timer3_ISR+0x1b0>
- c001be4:	e5933000 	ldr	r3, [r3]
- c001be8:	e3530000 	cmp	r3, #0
- c001bec:	1a000021 	bne	c001c78 <timer3_ISR+0x170>
+ c001d5c:	e59f30d0 	ldr	r3, [pc, #208]	; c001e34 <timer3_ISR+0x1b0>
+ c001d60:	e5933000 	ldr	r3, [r3]
+ c001d64:	e3530000 	cmp	r3, #0
+ c001d68:	1a000021 	bne	c001df4 <timer3_ISR+0x170>
                         {
                                 if (boton_sigue_pulsado())
- c001bf0:	ebfffebf 	bl	c0016f4 <boton_sigue_pulsado>
- c001bf4:	e1a03000 	mov	r3, r0
- c001bf8:	e3530000 	cmp	r3, #0
- c001bfc:	0a000003 	beq	c001c10 <timer3_ISR+0x108>
+ c001d6c:	ebfffebf 	bl	c001870 <boton_sigue_pulsado>
+ c001d70:	e1a03000 	mov	r3, r0
+ c001d74:	e3530000 	cmp	r3, #0
+ c001d78:	0a000003 	beq	c001d8c <timer3_ISR+0x108>
                                 {
                                         monitor_ms = TIMER3_MONITOR_MS;
- c001c00:	e59f30b0 	ldr	r3, [pc, #176]	; c001cb8 <timer3_ISR+0x1b0>
- c001c04:	e3a02064 	mov	r2, #100	; 0x64
- c001c08:	e5832000 	str	r2, [r3]
+ c001d7c:	e59f30b0 	ldr	r3, [pc, #176]	; c001e34 <timer3_ISR+0x1b0>
+ c001d80:	e3a02064 	mov	r2, #100	; 0x64
+ c001d84:	e5832000 	str	r2, [r3]
                                 {
                                         estado_actual = REBOTE_DEPRESION;
                                         contador_ms = TIMER3_TRD_MS;
                                 }
                         }
                         break;
- c001c0c:	ea00001c 	b	c001c84 <timer3_ISR+0x17c>
+ c001d88:	ea00001c 	b	c001e00 <timer3_ISR+0x17c>
                                 {
                                         monitor_ms = TIMER3_MONITOR_MS;
                                 }
                                 else
                                 {
                                         estado_actual = REBOTE_DEPRESION;
- c001c10:	e59f3090 	ldr	r3, [pc, #144]	; c001ca8 <timer3_ISR+0x1a0>
- c001c14:	e3a02003 	mov	r2, #3
- c001c18:	e5c32000 	strb	r2, [r3]
+ c001d8c:	e59f3090 	ldr	r3, [pc, #144]	; c001e24 <timer3_ISR+0x1a0>
+ c001d90:	e3a02003 	mov	r2, #3
+ c001d94:	e5c32000 	strb	r2, [r3]
                                         contador_ms = TIMER3_TRD_MS;
- c001c1c:	e59f3088 	ldr	r3, [pc, #136]	; c001cac <timer3_ISR+0x1a4>
- c001c20:	e3a0201e 	mov	r2, #30
- c001c24:	e5832000 	str	r2, [r3]
+ c001d98:	e59f3088 	ldr	r3, [pc, #136]	; c001e28 <timer3_ISR+0x1a4>
+ c001d9c:	e3a0201e 	mov	r2, #30
+ c001da0:	e5832000 	str	r2, [r3]
                                 }
                         }
                         break;
- c001c28:	ea000015 	b	c001c84 <timer3_ISR+0x17c>
+ c001da4:	ea000015 	b	c001e00 <timer3_ISR+0x17c>
 
                 case REBOTE_DEPRESION:
                         if (contador_ms > 0)
- c001c2c:	e59f3078 	ldr	r3, [pc, #120]	; c001cac <timer3_ISR+0x1a4>
- c001c30:	e5933000 	ldr	r3, [r3]
- c001c34:	e3530000 	cmp	r3, #0
- c001c38:	0a000004 	beq	c001c50 <timer3_ISR+0x148>
+ c001da8:	e59f3078 	ldr	r3, [pc, #120]	; c001e28 <timer3_ISR+0x1a4>
+ c001dac:	e5933000 	ldr	r3, [r3]
+ c001db0:	e3530000 	cmp	r3, #0
+ c001db4:	0a000004 	beq	c001dcc <timer3_ISR+0x148>
                         {
                                 contador_ms -= TIMER3_TICK_MS;
- c001c3c:	e59f3068 	ldr	r3, [pc, #104]	; c001cac <timer3_ISR+0x1a4>
- c001c40:	e5933000 	ldr	r3, [r3]
- c001c44:	e2432001 	sub	r2, r3, #1
- c001c48:	e59f305c 	ldr	r3, [pc, #92]	; c001cac <timer3_ISR+0x1a4>
- c001c4c:	e5832000 	str	r2, [r3]
+ c001db8:	e59f3068 	ldr	r3, [pc, #104]	; c001e28 <timer3_ISR+0x1a4>
+ c001dbc:	e5933000 	ldr	r3, [r3]
+ c001dc0:	e2432001 	sub	r2, r3, #1
+ c001dc4:	e59f305c 	ldr	r3, [pc, #92]	; c001e28 <timer3_ISR+0x1a4>
+ c001dc8:	e5832000 	str	r2, [r3]
                         }
                         if (contador_ms == 0)
- c001c50:	e59f3054 	ldr	r3, [pc, #84]	; c001cac <timer3_ISR+0x1a4>
- c001c54:	e5933000 	ldr	r3, [r3]
- c001c58:	e3530000 	cmp	r3, #0
- c001c5c:	1a000007 	bne	c001c80 <timer3_ISR+0x178>
+ c001dcc:	e59f3054 	ldr	r3, [pc, #84]	; c001e28 <timer3_ISR+0x1a4>
+ c001dd0:	e5933000 	ldr	r3, [r3]
+ c001dd4:	e3530000 	cmp	r3, #0
+ c001dd8:	1a000007 	bne	c001dfc <timer3_ISR+0x178>
                         {
                                 finalizar_antirrebote();
- c001c60:	ebfffee5 	bl	c0017fc <finalizar_antirrebote>
+ c001ddc:	ebfffee5 	bl	c001978 <finalizar_antirrebote>
                         }
                         break;
- c001c64:	ea000006 	b	c001c84 <timer3_ISR+0x17c>
+ c001de0:	ea000006 	b	c001e00 <timer3_ISR+0x17c>
 
                 default:
                         break;
- c001c68:	e1a00000 	nop			; (mov r0, r0)
- c001c6c:	ea000004 	b	c001c84 <timer3_ISR+0x17c>
+ c001de4:	e1a00000 	nop			; (mov r0, r0)
+ c001de8:	ea000004 	b	c001e00 <timer3_ISR+0x17c>
                                 }
                                 
                                 estado_actual = MONITORIZANDO;
                                 monitor_ms = TIMER3_MONITOR_MS;
                         }
                         break;
- c001c70:	e1a00000 	nop			; (mov r0, r0)
- c001c74:	ea000002 	b	c001c84 <timer3_ISR+0x17c>
+ c001dec:	e1a00000 	nop			; (mov r0, r0)
+ c001df0:	ea000002 	b	c001e00 <timer3_ISR+0x17c>
                                 {
                                         estado_actual = REBOTE_DEPRESION;
                                         contador_ms = TIMER3_TRD_MS;
                                 }
                         }
                         break;
- c001c78:	e1a00000 	nop			; (mov r0, r0)
- c001c7c:	ea000000 	b	c001c84 <timer3_ISR+0x17c>
+ c001df4:	e1a00000 	nop			; (mov r0, r0)
+ c001df8:	ea000000 	b	c001e00 <timer3_ISR+0x17c>
                         }
                         if (contador_ms == 0)
                         {
                                 finalizar_antirrebote();
                         }
                         break;
- c001c80:	e1a00000 	nop			; (mov r0, r0)
+ c001dfc:	e1a00000 	nop			; (mov r0, r0)
                 default:
                         break;
         }
 
         /* Limpiar la petición de interrupción */
         rI_ISPC |= BIT_TIMER3;
- c001c84:	e59f3030 	ldr	r3, [pc, #48]	; c001cbc <timer3_ISR+0x1b4>
- c001c88:	e59f202c 	ldr	r2, [pc, #44]	; c001cbc <timer3_ISR+0x1b4>
- c001c8c:	e5922000 	ldr	r2, [r2]
- c001c90:	e3822b01 	orr	r2, r2, #1024	; 0x400
- c001c94:	e5832000 	str	r2, [r3]
+ c001e00:	e59f3030 	ldr	r3, [pc, #48]	; c001e38 <timer3_ISR+0x1b4>
+ c001e04:	e59f202c 	ldr	r2, [pc, #44]	; c001e38 <timer3_ISR+0x1b4>
+ c001e08:	e5922000 	ldr	r2, [r2]
+ c001e0c:	e3822b01 	orr	r2, r2, #1024	; 0x400
+ c001e10:	e5832000 	str	r2, [r3]
 }
- c001c98:	e24bd01c 	sub	sp, fp, #28
- c001c9c:	e89d680f 	ldm	sp, {r0, r1, r2, r3, fp, sp, lr}
- c001ca0:	e49dc004 	pop	{ip}		; (ldr ip, [sp], #4)
- c001ca4:	e25ef004 	subs	pc, lr, #4
- c001ca8:	0c001e7c 	.word	0x0c001e7c
- c001cac:	0c001e80 	.word	0x0c001e80
- c001cb0:	0c001e90 	.word	0x0c001e90
- c001cb4:	0c001e88 	.word	0x0c001e88
- c001cb8:	0c001e84 	.word	0x0c001e84
- c001cbc:	01e00024 	.word	0x01e00024
+ c001e14:	e24bd01c 	sub	sp, fp, #28
+ c001e18:	e89d680f 	ldm	sp, {r0, r1, r2, r3, fp, sp, lr}
+ c001e1c:	e49dc004 	pop	{ip}		; (ldr ip, [sp], #4)
+ c001e20:	e25ef004 	subs	pc, lr, #4
+ c001e24:	0c002000 	.word	0x0c002000
+ c001e28:	0c002004 	.word	0x0c002004
+ c001e2c:	0c002014 	.word	0x0c002014
+ c001e30:	0c00200c 	.word	0x0c00200c
+ c001e34:	0c002008 	.word	0x0c002008
+ c001e38:	01e00024 	.word	0x01e00024
 
-0c001cc0 <__aeabi_idiv>:
- c001cc0:	e3510000 	cmp	r1, #0
- c001cc4:	0a000043 	beq	c001dd8 <.divsi3_skip_div0_test+0x110>
+0c001e3c <__aeabi_idiv>:
+ c001e3c:	e3510000 	cmp	r1, #0
+ c001e40:	0a000043 	beq	c001f54 <.divsi3_skip_div0_test+0x110>
 
-0c001cc8 <.divsi3_skip_div0_test>:
- c001cc8:	e020c001 	eor	ip, r0, r1
- c001ccc:	42611000 	rsbmi	r1, r1, #0
- c001cd0:	e2512001 	subs	r2, r1, #1
- c001cd4:	0a000027 	beq	c001d78 <.divsi3_skip_div0_test+0xb0>
- c001cd8:	e1b03000 	movs	r3, r0
- c001cdc:	42603000 	rsbmi	r3, r0, #0
- c001ce0:	e1530001 	cmp	r3, r1
- c001ce4:	9a000026 	bls	c001d84 <.divsi3_skip_div0_test+0xbc>
- c001ce8:	e1110002 	tst	r1, r2
- c001cec:	0a000028 	beq	c001d94 <.divsi3_skip_div0_test+0xcc>
- c001cf0:	e311020e 	tst	r1, #-536870912	; 0xe0000000
- c001cf4:	01a01181 	lsleq	r1, r1, #3
- c001cf8:	03a02008 	moveq	r2, #8
- c001cfc:	13a02001 	movne	r2, #1
- c001d00:	e3510201 	cmp	r1, #268435456	; 0x10000000
- c001d04:	31510003 	cmpcc	r1, r3
- c001d08:	31a01201 	lslcc	r1, r1, #4
- c001d0c:	31a02202 	lslcc	r2, r2, #4
- c001d10:	3afffffa 	bcc	c001d00 <.divsi3_skip_div0_test+0x38>
- c001d14:	e3510102 	cmp	r1, #-2147483648	; 0x80000000
- c001d18:	31510003 	cmpcc	r1, r3
- c001d1c:	31a01081 	lslcc	r1, r1, #1
- c001d20:	31a02082 	lslcc	r2, r2, #1
- c001d24:	3afffffa 	bcc	c001d14 <.divsi3_skip_div0_test+0x4c>
- c001d28:	e3a00000 	mov	r0, #0
- c001d2c:	e1530001 	cmp	r3, r1
- c001d30:	20433001 	subcs	r3, r3, r1
- c001d34:	21800002 	orrcs	r0, r0, r2
- c001d38:	e15300a1 	cmp	r3, r1, lsr #1
- c001d3c:	204330a1 	subcs	r3, r3, r1, lsr #1
- c001d40:	218000a2 	orrcs	r0, r0, r2, lsr #1
- c001d44:	e1530121 	cmp	r3, r1, lsr #2
- c001d48:	20433121 	subcs	r3, r3, r1, lsr #2
- c001d4c:	21800122 	orrcs	r0, r0, r2, lsr #2
- c001d50:	e15301a1 	cmp	r3, r1, lsr #3
- c001d54:	204331a1 	subcs	r3, r3, r1, lsr #3
- c001d58:	218001a2 	orrcs	r0, r0, r2, lsr #3
- c001d5c:	e3530000 	cmp	r3, #0
- c001d60:	11b02222 	lsrsne	r2, r2, #4
- c001d64:	11a01221 	lsrne	r1, r1, #4
- c001d68:	1affffef 	bne	c001d2c <.divsi3_skip_div0_test+0x64>
- c001d6c:	e35c0000 	cmp	ip, #0
- c001d70:	42600000 	rsbmi	r0, r0, #0
- c001d74:	e12fff1e 	bx	lr
- c001d78:	e13c0000 	teq	ip, r0
- c001d7c:	42600000 	rsbmi	r0, r0, #0
- c001d80:	e12fff1e 	bx	lr
- c001d84:	33a00000 	movcc	r0, #0
- c001d88:	01a00fcc 	asreq	r0, ip, #31
- c001d8c:	03800001 	orreq	r0, r0, #1
- c001d90:	e12fff1e 	bx	lr
- c001d94:	e3510801 	cmp	r1, #65536	; 0x10000
- c001d98:	21a01821 	lsrcs	r1, r1, #16
- c001d9c:	23a02010 	movcs	r2, #16
- c001da0:	33a02000 	movcc	r2, #0
- c001da4:	e3510c01 	cmp	r1, #256	; 0x100
- c001da8:	21a01421 	lsrcs	r1, r1, #8
- c001dac:	22822008 	addcs	r2, r2, #8
- c001db0:	e3510010 	cmp	r1, #16
- c001db4:	21a01221 	lsrcs	r1, r1, #4
- c001db8:	22822004 	addcs	r2, r2, #4
- c001dbc:	e3510004 	cmp	r1, #4
- c001dc0:	82822003 	addhi	r2, r2, #3
- c001dc4:	908220a1 	addls	r2, r2, r1, lsr #1
- c001dc8:	e35c0000 	cmp	ip, #0
- c001dcc:	e1a00233 	lsr	r0, r3, r2
- c001dd0:	42600000 	rsbmi	r0, r0, #0
- c001dd4:	e12fff1e 	bx	lr
- c001dd8:	e3500000 	cmp	r0, #0
- c001ddc:	c3e00102 	mvngt	r0, #-2147483648	; 0x80000000
- c001de0:	b3a00102 	movlt	r0, #-2147483648	; 0x80000000
- c001de4:	ea000007 	b	c001e08 <__aeabi_idiv0>
+0c001e44 <.divsi3_skip_div0_test>:
+ c001e44:	e020c001 	eor	ip, r0, r1
+ c001e48:	42611000 	rsbmi	r1, r1, #0
+ c001e4c:	e2512001 	subs	r2, r1, #1
+ c001e50:	0a000027 	beq	c001ef4 <.divsi3_skip_div0_test+0xb0>
+ c001e54:	e1b03000 	movs	r3, r0
+ c001e58:	42603000 	rsbmi	r3, r0, #0
+ c001e5c:	e1530001 	cmp	r3, r1
+ c001e60:	9a000026 	bls	c001f00 <.divsi3_skip_div0_test+0xbc>
+ c001e64:	e1110002 	tst	r1, r2
+ c001e68:	0a000028 	beq	c001f10 <.divsi3_skip_div0_test+0xcc>
+ c001e6c:	e311020e 	tst	r1, #-536870912	; 0xe0000000
+ c001e70:	01a01181 	lsleq	r1, r1, #3
+ c001e74:	03a02008 	moveq	r2, #8
+ c001e78:	13a02001 	movne	r2, #1
+ c001e7c:	e3510201 	cmp	r1, #268435456	; 0x10000000
+ c001e80:	31510003 	cmpcc	r1, r3
+ c001e84:	31a01201 	lslcc	r1, r1, #4
+ c001e88:	31a02202 	lslcc	r2, r2, #4
+ c001e8c:	3afffffa 	bcc	c001e7c <.divsi3_skip_div0_test+0x38>
+ c001e90:	e3510102 	cmp	r1, #-2147483648	; 0x80000000
+ c001e94:	31510003 	cmpcc	r1, r3
+ c001e98:	31a01081 	lslcc	r1, r1, #1
+ c001e9c:	31a02082 	lslcc	r2, r2, #1
+ c001ea0:	3afffffa 	bcc	c001e90 <.divsi3_skip_div0_test+0x4c>
+ c001ea4:	e3a00000 	mov	r0, #0
+ c001ea8:	e1530001 	cmp	r3, r1
+ c001eac:	20433001 	subcs	r3, r3, r1
+ c001eb0:	21800002 	orrcs	r0, r0, r2
+ c001eb4:	e15300a1 	cmp	r3, r1, lsr #1
+ c001eb8:	204330a1 	subcs	r3, r3, r1, lsr #1
+ c001ebc:	218000a2 	orrcs	r0, r0, r2, lsr #1
+ c001ec0:	e1530121 	cmp	r3, r1, lsr #2
+ c001ec4:	20433121 	subcs	r3, r3, r1, lsr #2
+ c001ec8:	21800122 	orrcs	r0, r0, r2, lsr #2
+ c001ecc:	e15301a1 	cmp	r3, r1, lsr #3
+ c001ed0:	204331a1 	subcs	r3, r3, r1, lsr #3
+ c001ed4:	218001a2 	orrcs	r0, r0, r2, lsr #3
+ c001ed8:	e3530000 	cmp	r3, #0
+ c001edc:	11b02222 	lsrsne	r2, r2, #4
+ c001ee0:	11a01221 	lsrne	r1, r1, #4
+ c001ee4:	1affffef 	bne	c001ea8 <.divsi3_skip_div0_test+0x64>
+ c001ee8:	e35c0000 	cmp	ip, #0
+ c001eec:	42600000 	rsbmi	r0, r0, #0
+ c001ef0:	e12fff1e 	bx	lr
+ c001ef4:	e13c0000 	teq	ip, r0
+ c001ef8:	42600000 	rsbmi	r0, r0, #0
+ c001efc:	e12fff1e 	bx	lr
+ c001f00:	33a00000 	movcc	r0, #0
+ c001f04:	01a00fcc 	asreq	r0, ip, #31
+ c001f08:	03800001 	orreq	r0, r0, #1
+ c001f0c:	e12fff1e 	bx	lr
+ c001f10:	e3510801 	cmp	r1, #65536	; 0x10000
+ c001f14:	21a01821 	lsrcs	r1, r1, #16
+ c001f18:	23a02010 	movcs	r2, #16
+ c001f1c:	33a02000 	movcc	r2, #0
+ c001f20:	e3510c01 	cmp	r1, #256	; 0x100
+ c001f24:	21a01421 	lsrcs	r1, r1, #8
+ c001f28:	22822008 	addcs	r2, r2, #8
+ c001f2c:	e3510010 	cmp	r1, #16
+ c001f30:	21a01221 	lsrcs	r1, r1, #4
+ c001f34:	22822004 	addcs	r2, r2, #4
+ c001f38:	e3510004 	cmp	r1, #4
+ c001f3c:	82822003 	addhi	r2, r2, #3
+ c001f40:	908220a1 	addls	r2, r2, r1, lsr #1
+ c001f44:	e35c0000 	cmp	ip, #0
+ c001f48:	e1a00233 	lsr	r0, r3, r2
+ c001f4c:	42600000 	rsbmi	r0, r0, #0
+ c001f50:	e12fff1e 	bx	lr
+ c001f54:	e3500000 	cmp	r0, #0
+ c001f58:	c3e00102 	mvngt	r0, #-2147483648	; 0x80000000
+ c001f5c:	b3a00102 	movlt	r0, #-2147483648	; 0x80000000
+ c001f60:	ea000007 	b	c001f84 <__aeabi_idiv0>
 
-0c001de8 <__aeabi_idivmod>:
- c001de8:	e3510000 	cmp	r1, #0
- c001dec:	0afffff9 	beq	c001dd8 <.divsi3_skip_div0_test+0x110>
- c001df0:	e92d4003 	push	{r0, r1, lr}
- c001df4:	ebffffb3 	bl	c001cc8 <.divsi3_skip_div0_test>
- c001df8:	e8bd4006 	pop	{r1, r2, lr}
- c001dfc:	e0030092 	mul	r3, r2, r0
- c001e00:	e0411003 	sub	r1, r1, r3
- c001e04:	e12fff1e 	bx	lr
+0c001f64 <__aeabi_idivmod>:
+ c001f64:	e3510000 	cmp	r1, #0
+ c001f68:	0afffff9 	beq	c001f54 <.divsi3_skip_div0_test+0x110>
+ c001f6c:	e92d4003 	push	{r0, r1, lr}
+ c001f70:	ebffffb3 	bl	c001e44 <.divsi3_skip_div0_test>
+ c001f74:	e8bd4006 	pop	{r1, r2, lr}
+ c001f78:	e0030092 	mul	r3, r2, r0
+ c001f7c:	e0411003 	sub	r1, r1, r3
+ c001f80:	e12fff1e 	bx	lr
 
-0c001e08 <__aeabi_idiv0>:
- c001e08:	e12fff1e 	bx	lr
+0c001f84 <__aeabi_idiv0>:
+ c001f84:	e12fff1e 	bx	lr

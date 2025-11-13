@@ -27,11 +27,11 @@ static void boton_confirmado(uint8_t boton_id)
         switch (boton_id)
         {
                 case EVENTO_BOTON_IZQUIERDO:
-                        int_count++;
+                        int_count--;
                         cola_depuracion(timer2_count(), EVENTO_BOTON_IZQUIERDO, int_count);
                         break;
                 case EVENTO_BOTON_DERECHO:
-                        int_count--;
+                        int_count++;
                         cola_depuracion(timer2_count(), EVENTO_BOTON_DERECHO, int_count);
                         break;
                 default:

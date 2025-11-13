@@ -10,6 +10,7 @@ C_SRCS += \
 ../led.c \
 ../main.c \
 ../timer.c \
+../timer1.c \
 ../timer2.c \
 ../timer3.c 
 
@@ -20,6 +21,7 @@ OBJS += \
 ./led.o \
 ./main.o \
 ./timer.o \
+./timer1.o \
 ./timer2.o \
 ./timer3.o 
 
@@ -30,6 +32,7 @@ C_DEPS += \
 ./led.d \
 ./main.d \
 ./timer.d \
+./timer1.d \
 ./timer2.d \
 ./timer3.d 
 

@@ -71,11 +71,11 @@
  2277 0028 0E00000A 		beq	.L4
   28:../button.c   ****         {
   29:../button.c   ****                 case EVENTO_BOTON_IZQUIERDO:
-  30:../button.c   ****                         int_count++;
+  30:../button.c   ****                         int_count--;
   31:../button.c   ****                         cola_depuracion(timer2_count(), EVENTO_BOTON_IZQUIERDO, int_count);
   32:../button.c   ****                         break;
   33:../button.c   ****                 case EVENTO_BOTON_DERECHO:
-  34:../button.c   ****                         int_count--;
+  34:../button.c   ****                         int_count++;
   35:../button.c   ****                         cola_depuracion(timer2_count(), EVENTO_BOTON_DERECHO, int_count);
   36:../button.c   ****                         break;
   37:../button.c   ****                 default:
@@ -84,11 +84,11 @@
  2278              		.loc 1 39 0
  2279 002c 1B0000EA 		b	.L5
  2280              	.L3:
-  30:../button.c   ****                         int_count++;
+  30:../button.c   ****                         int_count--;
  2281              		.loc 1 30 0
  2282 0030 88309FE5 		ldr	r3, .L6
  2283 0034 003093E5 		ldr	r3, [r3, #0]
- 2284 0038 012083E2 		add	r2, r3, #1
+ 2284 0038 012043E2 		sub	r2, r3, #1
  2285 003c 7C309FE5 		ldr	r3, .L6
  2286 0040 002083E5 		str	r2, [r3, #0]
   31:../button.c   ****                         cola_depuracion(timer2_count(), EVENTO_BOTON_IZQUIERDO, int_count);
@@ -105,11 +105,11 @@
  2296              		.loc 1 32 0
  2297 0064 0D0000EA 		b	.L5
  2298              	.L4:
-  34:../button.c   ****                         int_count--;
+  34:../button.c   ****                         int_count++;
  2299              		.loc 1 34 0
  2300 0068 50309FE5 		ldr	r3, .L6
  2301 006c 003093E5 		ldr	r3, [r3, #0]
- 2302 0070 012043E2 		sub	r2, r3, #1
+ 2302 0070 012083E2 		add	r2, r3, #1
  2303 0074 44309FE5 		ldr	r3, .L6
  2304 0078 002083E5 		str	r2, [r3, #0]
   35:../button.c   ****                         cola_depuracion(timer2_count(), EVENTO_BOTON_DERECHO, int_count);
@@ -384,17 +384,17 @@
  2515              	.Letext0:
 DEFINED SYMBOLS
                             *ABS*:00000000 button.c
-C:\Users\jaime\AppData\Local\Temp\ccCRbK68.s:2246   .bss:00000000 $d
-C:\Users\jaime\AppData\Local\Temp\ccCRbK68.s:2247   .bss:00000000 int_count
-C:\Users\jaime\AppData\Local\Temp\ccCRbK68.s:2250   .text:00000000 $a
-C:\Users\jaime\AppData\Local\Temp\ccCRbK68.s:2252   .text:00000000 boton_confirmado
-C:\Users\jaime\AppData\Local\Temp\ccCRbK68.s:2330   .text:000000c0 $d
-C:\Users\jaime\AppData\Local\Temp\ccCRbK68.s:2334   .text:000000c4 $a
-C:\Users\jaime\AppData\Local\Temp\ccCRbK68.s:2337   .text:000000c4 Eint4567_ISR
-C:\Users\jaime\AppData\Local\Temp\ccCRbK68.s:2414   .text:0000016c $d
-C:\Users\jaime\AppData\Local\Temp\ccCRbK68.s:2419   .text:00000174 $a
-C:\Users\jaime\AppData\Local\Temp\ccCRbK68.s:2422   .text:00000174 Eint4567_init
-C:\Users\jaime\AppData\Local\Temp\ccCRbK68.s:2500   .text:00000234 $d
+C:\Users\jaime\AppData\Local\Temp\cc3n0us4.s:2246   .bss:00000000 $d
+C:\Users\jaime\AppData\Local\Temp\cc3n0us4.s:2247   .bss:00000000 int_count
+C:\Users\jaime\AppData\Local\Temp\cc3n0us4.s:2250   .text:00000000 $a
+C:\Users\jaime\AppData\Local\Temp\cc3n0us4.s:2252   .text:00000000 boton_confirmado
+C:\Users\jaime\AppData\Local\Temp\cc3n0us4.s:2330   .text:000000c0 $d
+C:\Users\jaime\AppData\Local\Temp\cc3n0us4.s:2334   .text:000000c4 $a
+C:\Users\jaime\AppData\Local\Temp\cc3n0us4.s:2337   .text:000000c4 Eint4567_ISR
+C:\Users\jaime\AppData\Local\Temp\cc3n0us4.s:2414   .text:0000016c $d
+C:\Users\jaime\AppData\Local\Temp\cc3n0us4.s:2419   .text:00000174 $a
+C:\Users\jaime\AppData\Local\Temp\cc3n0us4.s:2422   .text:00000174 Eint4567_init
+C:\Users\jaime\AppData\Local\Temp\cc3n0us4.s:2500   .text:00000234 $d
                      .debug_frame:00000010 $d
 
 UNDEFINED SYMBOLS
