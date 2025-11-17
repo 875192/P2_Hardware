@@ -295,7 +295,7 @@
  117:../timer1.c   **** 	led2_off();  // Asegurar que el LED empieza apagado
  2064              		.loc 1 117 0
  2065 0170 FEFFFFEB 		bl	led2_off
- 118:../timer1.c   **** }
+ 118:../timer1.c   **** }...
  2066              		.loc 1 118 0
  2067 0174 0CD04BE2 		sub	sp, fp, #12
  2068 0178 00689DE8 		ldmfd	sp, {fp, sp, lr}
@@ -319,15 +319,15 @@
  2087              	.Letext0:
 DEFINED SYMBOLS
                             *ABS*:00000000 timer1.c
-C:\Users\jaime\AppData\Local\Temp\cc0NVItZ.s:1896   .bss:00000000 $d
-C:\Users\jaime\AppData\Local\Temp\cc0NVItZ.s:1897   .bss:00000000 timer1_contador
-C:\Users\jaime\AppData\Local\Temp\cc0NVItZ.s:1900   .bss:00000004 led2_encendido
-C:\Users\jaime\AppData\Local\Temp\cc0NVItZ.s:1903   .text:00000000 $a
-C:\Users\jaime\AppData\Local\Temp\cc0NVItZ.s:1906   .text:00000000 timer1_ISR
-C:\Users\jaime\AppData\Local\Temp\cc0NVItZ.s:1978   .text:00000098 $d
-C:\Users\jaime\AppData\Local\Temp\cc0NVItZ.s:1984   .text:000000a4 $a
-C:\Users\jaime\AppData\Local\Temp\cc0NVItZ.s:1987   .text:000000a4 timer1_init
-C:\Users\jaime\AppData\Local\Temp\cc0NVItZ.s:2073   .text:00000180 $d
+C:\Users\jaime\AppData\Local\Temp\cc6x3JyS.s:1896   .bss:00000000 $d
+C:\Users\jaime\AppData\Local\Temp\cc6x3JyS.s:1897   .bss:00000000 timer1_contador
+C:\Users\jaime\AppData\Local\Temp\cc6x3JyS.s:1900   .bss:00000004 led2_encendido
+C:\Users\jaime\AppData\Local\Temp\cc6x3JyS.s:1903   .text:00000000 $a
+C:\Users\jaime\AppData\Local\Temp\cc6x3JyS.s:1906   .text:00000000 timer1_ISR
+C:\Users\jaime\AppData\Local\Temp\cc6x3JyS.s:1978   .text:00000098 $d
+C:\Users\jaime\AppData\Local\Temp\cc6x3JyS.s:1984   .text:000000a4 $a
+C:\Users\jaime\AppData\Local\Temp\cc6x3JyS.s:1987   .text:000000a4 timer1_init
+C:\Users\jaime\AppData\Local\Temp\cc6x3JyS.s:2073   .text:00000180 $d
                      .debug_frame:00000010 $d
 
 UNDEFINED SYMBOLS

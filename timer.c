@@ -47,4 +47,3 @@ void timer_init(void)
 	/* iniciar timer (bit 0) con auto-reload (bit 3)*/
 	rTCON = 0x09;
 }
-

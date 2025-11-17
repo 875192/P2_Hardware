@@ -106,7 +106,7 @@ static int candidatos_actualizar_c_arm(CELDA cuadricula[NUM_FILAS][NUM_COLUMNAS]
 		for (j = 0; j < NUM_FILAS; j++) {
 			if (celda_leer_valor(cuadricula[i][j]) != 0) {
 				// Celda con valor - propagar usando función ARM optimizada
-				candidatos_propagar_arm(cuadricula, i, j);
+				//candidatos_propagar_arm(cuadricula, i, j);
 			}
 		}
 	}

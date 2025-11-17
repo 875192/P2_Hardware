@@ -8,8 +8,13 @@
 /*--- Ficheros de cabecera ---*/
 #include "timer3.h"
 #include "eventos.h"
+#include "8led.h"
+#include "sudoku_2025.h"
+#include "tableros.h"
 #include "44b.h"
 #include "44blib.h"
+
+/* Variables globales extern<as (definidas en main.c) */
 
 /*--- Constantes ---*/
 #define TIMER3_1MS_COUNT           32000U        /* Cuenta necesaria para 1 ms con preescalado 0 y divisor 1/2 */
@@ -28,6 +33,13 @@ static volatile uint32_t monitor_ms = 0;
 static volatile uint8_t boton_en_proceso = 0;
 static volatile unsigned int mascara_boton = 0;
 static timer3_callback_t callback_validacion = 0;
+
+/* Variables globales para la máquina de estados del Sudoku (accesibles desde main.c) */
+volatile EstadoSudoku estado_sudoku = ESPERANDO_INICIO;
+volatile int int_count = 0;
+volatile int fila = 0;
+volatile int columna = 0;
+volatile int valor = 0;
 
 /* Declaración de la ISR del timer3 */
 void timer3_ISR(void) __attribute__((interrupt("IRQ")));
@@ -60,9 +72,6 @@ static void timer3_preparar_tick(void)
 
 static void finalizar_antirrebote(void)
 {
-        /* Detener el temporizador */
-        timer3_detener();
-
         /* Rehabilitar las interrupciones de los botones */
         rEXTINTPND = 0xf;
         rINTMSK &= ~(BIT_EINT4567);
@@ -196,6 +205,10 @@ void timer3_ISR(void)
                         }
                         if (contador_ms == 0)
                         {
+                                /* Detener el temporizador */
+                                timer3_detener();
+                                
+                                /* Finalizar el proceso de antirrebote */
                                 finalizar_antirrebote();
                         }
                         break;

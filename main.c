@@ -11,9 +11,19 @@
 #include "led.h"
 #include "timer1.h"
 #include "timer2.h"
+#include "timer3.h"
 #include "cola.h"
 #include "44blib.h"
 #include "44b.h"
+#include "sudoku_2025.h"
+
+/*--- variables globales ---*/
+#include "tableros.h"
+
+/* Apuntar a una de las cuadrículas disponibles */
+CELDA (*cuadricula)[NUM_COLUMNAS] = cuadricula_C_C;
+int celdas_vacias = 0;
+
 
 /*--- codigo de funciones ---*/
 void Main(void)

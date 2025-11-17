@@ -11,26 +11,922 @@
   11              		.file	"timer3.c"
   21              	.Ltext0:
   22              		.file 1 "../timer3.c"
- 2152              	estado_actual:
- 2153 0000 00       		.space	1
- 2154 0001 000000   		.align	2
- 2155              	contador_ms:
- 2156 0004 00000000 		.space	4
- 2157              		.align	2
- 2158              	monitor_ms:
- 2159 0008 00000000 		.space	4
- 2160              	boton_en_proceso:
- 2161 000c 00       		.space	1
- 2162 000d 000000   		.align	2
- 2163              	mascara_boton:
- 2164 0010 00000000 		.space	4
- 2165              		.align	2
- 2166              	callback_validacion:
- 2167 0014 00000000 		.space	4
- 2168              		.text
- 2169              		.align	2
- 2171              	boton_sigue_pulsado:
- 2172              	.LFB0:
+ 2755              		.align	5
+ 2758              	cuadricula_C_C:
+ 2759 0000 1500     		.short	21
+ 2760 0002 0000     		.short	0
+ 2761 0004 0000     		.short	0
+ 2762 0006 1300     		.short	19
+ 2763 0008 0000     		.short	0
+ 2764 000a 0000     		.short	0
+ 2765 000c 0000     		.short	0
+ 2766 000e 0000     		.short	0
+ 2767 0010 0000     		.short	0
+ 2768 0012 0000     		.short	0
+ 2769 0014 0000     		.short	0
+ 2770 0016 0000     		.short	0
+ 2771 0018 0000     		.short	0
+ 2772 001a 0000     		.short	0
+ 2773 001c 0000     		.short	0
+ 2774 001e 0000     		.short	0
+ 2775 0020 0000     		.short	0
+ 2776 0022 0000     		.short	0
+ 2777 0024 0000     		.short	0
+ 2778 0026 0000     		.short	0
+ 2779 0028 1900     		.short	25
+ 2780 002a 0000     		.short	0
+ 2781 002c 0000     		.short	0
+ 2782 002e 0000     		.short	0
+ 2783 0030 1500     		.short	21
+ 2784 0032 0000     		.short	0
+ 2785 0034 0000     		.short	0
+ 2786 0036 0000     		.short	0
+ 2787 0038 0000     		.short	0
+ 2788 003a 0000     		.short	0
+ 2789 003c 0000     		.short	0
+ 2790 003e 0000     		.short	0
+ 2791 0040 0000     		.short	0
+ 2792 0042 1900     		.short	25
+ 2793 0044 1600     		.short	22
+ 2794 0046 1700     		.short	23
+ 2795 0048 0000     		.short	0
+ 2796 004a 1500     		.short	21
+ 2797 004c 0000     		.short	0
+ 2798 004e 1300     		.short	19
+ 2799 0050 0000     		.short	0
+ 2800 0052 0000     		.short	0
+ 2801 0054 0000     		.short	0
+ 2802 0056 0000     		.short	0
+ 2803 0058 0000     		.short	0
+ 2804 005a 0000     		.short	0
+ 2805 005c 0000     		.short	0
+ 2806 005e 0000     		.short	0
+ 2807 0060 0000     		.short	0
+ 2808 0062 1800     		.short	24
+ 2809 0064 0000     		.short	0
+ 2810 0066 1900     		.short	25
+ 2811 0068 0000     		.short	0
+ 2812 006a 0000     		.short	0
+ 2813 006c 1600     		.short	22
+ 2814 006e 0000     		.short	0
+ 2815 0070 0000     		.short	0
+ 2816 0072 0000     		.short	0
+ 2817 0074 0000     		.short	0
+ 2818 0076 0000     		.short	0
+ 2819 0078 0000     		.short	0
+ 2820 007a 0000     		.short	0
+ 2821 007c 0000     		.short	0
+ 2822 007e 0000     		.short	0
+ 2823 0080 0000     		.short	0
+ 2824 0082 0000     		.short	0
+ 2825 0084 1500     		.short	21
+ 2826 0086 1800     		.short	24
+ 2827 0088 1600     		.short	22
+ 2828 008a 1100     		.short	17
+ 2829 008c 1400     		.short	20
+ 2830 008e 0000     		.short	0
+ 2831 0090 0000     		.short	0
+ 2832 0092 0000     		.short	0
+ 2833 0094 0000     		.short	0
+ 2834 0096 0000     		.short	0
+ 2835 0098 0000     		.short	0
+ 2836 009a 0000     		.short	0
+ 2837 009c 0000     		.short	0
+ 2838 009e 0000     		.short	0
+ 2839 00a0 0000     		.short	0
+ 2840 00a2 0000     		.short	0
+ 2841 00a4 1400     		.short	20
+ 2842 00a6 1200     		.short	18
+ 2843 00a8 0000     		.short	0
+ 2844 00aa 1300     		.short	19
+ 2845 00ac 0000     		.short	0
+ 2846 00ae 1700     		.short	23
+ 2847 00b0 0000     		.short	0
+ 2848 00b2 0000     		.short	0
+ 2849 00b4 0000     		.short	0
+ 2850 00b6 0000     		.short	0
+ 2851 00b8 0000     		.short	0
+ 2852 00ba 0000     		.short	0
+ 2853 00bc 0000     		.short	0
+ 2854 00be 0000     		.short	0
+ 2855 00c0 0000     		.short	0
+ 2856 00c2 1700     		.short	23
+ 2857 00c4 0000     		.short	0
+ 2858 00c6 1500     		.short	21
+ 2859 00c8 0000     		.short	0
+ 2860 00ca 1900     		.short	25
+ 2861 00cc 1200     		.short	18
+ 2862 00ce 1600     		.short	22
+ 2863 00d0 0000     		.short	0
+ 2864 00d2 0000     		.short	0
+ 2865 00d4 0000     		.short	0
+ 2866 00d6 0000     		.short	0
+ 2867 00d8 0000     		.short	0
+ 2868 00da 0000     		.short	0
+ 2869 00dc 0000     		.short	0
+ 2870 00de 0000     		.short	0
+ 2871 00e0 1600     		.short	22
+ 2872 00e2 0000     		.short	0
+ 2873 00e4 0000     		.short	0
+ 2874 00e6 0000     		.short	0
+ 2875 00e8 1800     		.short	24
+ 2876 00ea 0000     		.short	0
+ 2877 00ec 0000     		.short	0
+ 2878 00ee 0000     		.short	0
+ 2879 00f0 0000     		.short	0
+ 2880 00f2 0000     		.short	0
+ 2881 00f4 0000     		.short	0
+ 2882 00f6 0000     		.short	0
+ 2883 00f8 0000     		.short	0
+ 2884 00fa 0000     		.short	0
+ 2885 00fc 0000     		.short	0
+ 2886 00fe 0000     		.short	0
+ 2887 0100 0000     		.short	0
+ 2888 0102 0000     		.short	0
+ 2889 0104 0000     		.short	0
+ 2890 0106 0000     		.short	0
+ 2891 0108 0000     		.short	0
+ 2892 010a 1200     		.short	18
+ 2893 010c 0000     		.short	0
+ 2894 010e 0000     		.short	0
+ 2895 0110 1100     		.short	17
+ 2896 0112 0000     		.short	0
+ 2897 0114 0000     		.short	0
+ 2898 0116 0000     		.short	0
+ 2899 0118 0000     		.short	0
+ 2900 011a 0000     		.short	0
+ 2901 011c 0000     		.short	0
+ 2902 011e 0000     		.short	0
+ 2903              		.align	5
+ 2906              	cuadricula_C_ARM:
+ 2907 0120 1500     		.short	21
+ 2908 0122 0000     		.short	0
+ 2909 0124 0000     		.short	0
+ 2910 0126 1300     		.short	19
+ 2911 0128 0000     		.short	0
+ 2912 012a 0000     		.short	0
+ 2913 012c 0000     		.short	0
+ 2914 012e 0000     		.short	0
+ 2915 0130 0000     		.short	0
+ 2916 0132 0000     		.short	0
+ 2917 0134 0000     		.short	0
+ 2918 0136 0000     		.short	0
+ 2919 0138 0000     		.short	0
+ 2920 013a 0000     		.short	0
+ 2921 013c 0000     		.short	0
+ 2922 013e 0000     		.short	0
+ 2923 0140 0000     		.short	0
+ 2924 0142 0000     		.short	0
+ 2925 0144 0000     		.short	0
+ 2926 0146 0000     		.short	0
+ 2927 0148 1900     		.short	25
+ 2928 014a 0000     		.short	0
+ 2929 014c 0000     		.short	0
+ 2930 014e 0000     		.short	0
+ 2931 0150 1500     		.short	21
+ 2932 0152 0000     		.short	0
+ 2933 0154 0000     		.short	0
+ 2934 0156 0000     		.short	0
+ 2935 0158 0000     		.short	0
+ 2936 015a 0000     		.short	0
+ 2937 015c 0000     		.short	0
+ 2938 015e 0000     		.short	0
+ 2939 0160 0000     		.short	0
+ 2940 0162 1900     		.short	25
+ 2941 0164 1600     		.short	22
+ 2942 0166 1700     		.short	23
+ 2943 0168 0000     		.short	0
+ 2944 016a 1500     		.short	21
+ 2945 016c 0000     		.short	0
+ 2946 016e 1300     		.short	19
+ 2947 0170 0000     		.short	0
+ 2948 0172 0000     		.short	0
+ 2949 0174 0000     		.short	0
+ 2950 0176 0000     		.short	0
+ 2951 0178 0000     		.short	0
+ 2952 017a 0000     		.short	0
+ 2953 017c 0000     		.short	0
+ 2954 017e 0000     		.short	0
+ 2955 0180 0000     		.short	0
+ 2956 0182 1800     		.short	24
+ 2957 0184 0000     		.short	0
+ 2958 0186 1900     		.short	25
+ 2959 0188 0000     		.short	0
+ 2960 018a 0000     		.short	0
+ 2961 018c 1600     		.short	22
+ 2962 018e 0000     		.short	0
+ 2963 0190 0000     		.short	0
+ 2964 0192 0000     		.short	0
+ 2965 0194 0000     		.short	0
+ 2966 0196 0000     		.short	0
+ 2967 0198 0000     		.short	0
+ 2968 019a 0000     		.short	0
+ 2969 019c 0000     		.short	0
+ 2970 019e 0000     		.short	0
+ 2971 01a0 0000     		.short	0
+ 2972 01a2 0000     		.short	0
+ 2973 01a4 1500     		.short	21
+ 2974 01a6 1800     		.short	24
+ 2975 01a8 1600     		.short	22
+ 2976 01aa 1100     		.short	17
+ 2977 01ac 1400     		.short	20
+ 2978 01ae 0000     		.short	0
+ 2979 01b0 0000     		.short	0
+ 2980 01b2 0000     		.short	0
+ 2981 01b4 0000     		.short	0
+ 2982 01b6 0000     		.short	0
+ 2983 01b8 0000     		.short	0
+ 2984 01ba 0000     		.short	0
+ 2985 01bc 0000     		.short	0
+ 2986 01be 0000     		.short	0
+ 2987 01c0 0000     		.short	0
+ 2988 01c2 0000     		.short	0
+ 2989 01c4 1400     		.short	20
+ 2990 01c6 1200     		.short	18
+ 2991 01c8 0000     		.short	0
+ 2992 01ca 1300     		.short	19
+ 2993 01cc 0000     		.short	0
+ 2994 01ce 1700     		.short	23
+ 2995 01d0 0000     		.short	0
+ 2996 01d2 0000     		.short	0
+ 2997 01d4 0000     		.short	0
+ 2998 01d6 0000     		.short	0
+ 2999 01d8 0000     		.short	0
+ 3000 01da 0000     		.short	0
+ 3001 01dc 0000     		.short	0
+ 3002 01de 0000     		.short	0
+ 3003 01e0 0000     		.short	0
+ 3004 01e2 1700     		.short	23
+ 3005 01e4 0000     		.short	0
+ 3006 01e6 1500     		.short	21
+ 3007 01e8 0000     		.short	0
+ 3008 01ea 1900     		.short	25
+ 3009 01ec 1200     		.short	18
+ 3010 01ee 1600     		.short	22
+ 3011 01f0 0000     		.short	0
+ 3012 01f2 0000     		.short	0
+ 3013 01f4 0000     		.short	0
+ 3014 01f6 0000     		.short	0
+ 3015 01f8 0000     		.short	0
+ 3016 01fa 0000     		.short	0
+ 3017 01fc 0000     		.short	0
+ 3018 01fe 0000     		.short	0
+ 3019 0200 1600     		.short	22
+ 3020 0202 0000     		.short	0
+ 3021 0204 0000     		.short	0
+ 3022 0206 0000     		.short	0
+ 3023 0208 1800     		.short	24
+ 3024 020a 0000     		.short	0
+ 3025 020c 0000     		.short	0
+ 3026 020e 0000     		.short	0
+ 3027 0210 0000     		.short	0
+ 3028 0212 0000     		.short	0
+ 3029 0214 0000     		.short	0
+ 3030 0216 0000     		.short	0
+ 3031 0218 0000     		.short	0
+ 3032 021a 0000     		.short	0
+ 3033 021c 0000     		.short	0
+ 3034 021e 0000     		.short	0
+ 3035 0220 0000     		.short	0
+ 3036 0222 0000     		.short	0
+ 3037 0224 0000     		.short	0
+ 3038 0226 0000     		.short	0
+ 3039 0228 0000     		.short	0
+ 3040 022a 1200     		.short	18
+ 3041 022c 0000     		.short	0
+ 3042 022e 0000     		.short	0
+ 3043 0230 1100     		.short	17
+ 3044 0232 0000     		.short	0
+ 3045 0234 0000     		.short	0
+ 3046 0236 0000     		.short	0
+ 3047 0238 0000     		.short	0
+ 3048 023a 0000     		.short	0
+ 3049 023c 0000     		.short	0
+ 3050 023e 0000     		.short	0
+ 3051              		.align	5
+ 3054              	cuadricula_ARM_C:
+ 3055 0240 1500     		.short	21
+ 3056 0242 0000     		.short	0
+ 3057 0244 0000     		.short	0
+ 3058 0246 1300     		.short	19
+ 3059 0248 0000     		.short	0
+ 3060 024a 0000     		.short	0
+ 3061 024c 0000     		.short	0
+ 3062 024e 0000     		.short	0
+ 3063 0250 0000     		.short	0
+ 3064 0252 0000     		.short	0
+ 3065 0254 0000     		.short	0
+ 3066 0256 0000     		.short	0
+ 3067 0258 0000     		.short	0
+ 3068 025a 0000     		.short	0
+ 3069 025c 0000     		.short	0
+ 3070 025e 0000     		.short	0
+ 3071 0260 0000     		.short	0
+ 3072 0262 0000     		.short	0
+ 3073 0264 0000     		.short	0
+ 3074 0266 0000     		.short	0
+ 3075 0268 1900     		.short	25
+ 3076 026a 0000     		.short	0
+ 3077 026c 0000     		.short	0
+ 3078 026e 0000     		.short	0
+ 3079 0270 1500     		.short	21
+ 3080 0272 0000     		.short	0
+ 3081 0274 0000     		.short	0
+ 3082 0276 0000     		.short	0
+ 3083 0278 0000     		.short	0
+ 3084 027a 0000     		.short	0
+ 3085 027c 0000     		.short	0
+ 3086 027e 0000     		.short	0
+ 3087 0280 0000     		.short	0
+ 3088 0282 1900     		.short	25
+ 3089 0284 1600     		.short	22
+ 3090 0286 1700     		.short	23
+ 3091 0288 0000     		.short	0
+ 3092 028a 1500     		.short	21
+ 3093 028c 0000     		.short	0
+ 3094 028e 1300     		.short	19
+ 3095 0290 0000     		.short	0
+ 3096 0292 0000     		.short	0
+ 3097 0294 0000     		.short	0
+ 3098 0296 0000     		.short	0
+ 3099 0298 0000     		.short	0
+ 3100 029a 0000     		.short	0
+ 3101 029c 0000     		.short	0
+ 3102 029e 0000     		.short	0
+ 3103 02a0 0000     		.short	0
+ 3104 02a2 1800     		.short	24
+ 3105 02a4 0000     		.short	0
+ 3106 02a6 1900     		.short	25
+ 3107 02a8 0000     		.short	0
+ 3108 02aa 0000     		.short	0
+ 3109 02ac 1600     		.short	22
+ 3110 02ae 0000     		.short	0
+ 3111 02b0 0000     		.short	0
+ 3112 02b2 0000     		.short	0
+ 3113 02b4 0000     		.short	0
+ 3114 02b6 0000     		.short	0
+ 3115 02b8 0000     		.short	0
+ 3116 02ba 0000     		.short	0
+ 3117 02bc 0000     		.short	0
+ 3118 02be 0000     		.short	0
+ 3119 02c0 0000     		.short	0
+ 3120 02c2 0000     		.short	0
+ 3121 02c4 1500     		.short	21
+ 3122 02c6 1800     		.short	24
+ 3123 02c8 1600     		.short	22
+ 3124 02ca 1100     		.short	17
+ 3125 02cc 1400     		.short	20
+ 3126 02ce 0000     		.short	0
+ 3127 02d0 0000     		.short	0
+ 3128 02d2 0000     		.short	0
+ 3129 02d4 0000     		.short	0
+ 3130 02d6 0000     		.short	0
+ 3131 02d8 0000     		.short	0
+ 3132 02da 0000     		.short	0
+ 3133 02dc 0000     		.short	0
+ 3134 02de 0000     		.short	0
+ 3135 02e0 0000     		.short	0
+ 3136 02e2 0000     		.short	0
+ 3137 02e4 1400     		.short	20
+ 3138 02e6 1200     		.short	18
+ 3139 02e8 0000     		.short	0
+ 3140 02ea 1300     		.short	19
+ 3141 02ec 0000     		.short	0
+ 3142 02ee 1700     		.short	23
+ 3143 02f0 0000     		.short	0
+ 3144 02f2 0000     		.short	0
+ 3145 02f4 0000     		.short	0
+ 3146 02f6 0000     		.short	0
+ 3147 02f8 0000     		.short	0
+ 3148 02fa 0000     		.short	0
+ 3149 02fc 0000     		.short	0
+ 3150 02fe 0000     		.short	0
+ 3151 0300 0000     		.short	0
+ 3152 0302 1700     		.short	23
+ 3153 0304 0000     		.short	0
+ 3154 0306 1500     		.short	21
+ 3155 0308 0000     		.short	0
+ 3156 030a 1900     		.short	25
+ 3157 030c 1200     		.short	18
+ 3158 030e 1600     		.short	22
+ 3159 0310 0000     		.short	0
+ 3160 0312 0000     		.short	0
+ 3161 0314 0000     		.short	0
+ 3162 0316 0000     		.short	0
+ 3163 0318 0000     		.short	0
+ 3164 031a 0000     		.short	0
+ 3165 031c 0000     		.short	0
+ 3166 031e 0000     		.short	0
+ 3167 0320 1600     		.short	22
+ 3168 0322 0000     		.short	0
+ 3169 0324 0000     		.short	0
+ 3170 0326 0000     		.short	0
+ 3171 0328 1800     		.short	24
+ 3172 032a 0000     		.short	0
+ 3173 032c 0000     		.short	0
+ 3174 032e 0000     		.short	0
+ 3175 0330 0000     		.short	0
+ 3176 0332 0000     		.short	0
+ 3177 0334 0000     		.short	0
+ 3178 0336 0000     		.short	0
+ 3179 0338 0000     		.short	0
+ 3180 033a 0000     		.short	0
+ 3181 033c 0000     		.short	0
+ 3182 033e 0000     		.short	0
+ 3183 0340 0000     		.short	0
+ 3184 0342 0000     		.short	0
+ 3185 0344 0000     		.short	0
+ 3186 0346 0000     		.short	0
+ 3187 0348 0000     		.short	0
+ 3188 034a 1200     		.short	18
+ 3189 034c 0000     		.short	0
+ 3190 034e 0000     		.short	0
+ 3191 0350 1100     		.short	17
+ 3192 0352 0000     		.short	0
+ 3193 0354 0000     		.short	0
+ 3194 0356 0000     		.short	0
+ 3195 0358 0000     		.short	0
+ 3196 035a 0000     		.short	0
+ 3197 035c 0000     		.short	0
+ 3198 035e 0000     		.short	0
+ 3199              		.align	5
+ 3202              	cuadricula_ARM_ARM:
+ 3203 0360 1500     		.short	21
+ 3204 0362 0000     		.short	0
+ 3205 0364 0000     		.short	0
+ 3206 0366 1300     		.short	19
+ 3207 0368 0000     		.short	0
+ 3208 036a 0000     		.short	0
+ 3209 036c 0000     		.short	0
+ 3210 036e 0000     		.short	0
+ 3211 0370 0000     		.short	0
+ 3212 0372 0000     		.short	0
+ 3213 0374 0000     		.short	0
+ 3214 0376 0000     		.short	0
+ 3215 0378 0000     		.short	0
+ 3216 037a 0000     		.short	0
+ 3217 037c 0000     		.short	0
+ 3218 037e 0000     		.short	0
+ 3219 0380 0000     		.short	0
+ 3220 0382 0000     		.short	0
+ 3221 0384 0000     		.short	0
+ 3222 0386 0000     		.short	0
+ 3223 0388 1900     		.short	25
+ 3224 038a 0000     		.short	0
+ 3225 038c 0000     		.short	0
+ 3226 038e 0000     		.short	0
+ 3227 0390 1500     		.short	21
+ 3228 0392 0000     		.short	0
+ 3229 0394 0000     		.short	0
+ 3230 0396 0000     		.short	0
+ 3231 0398 0000     		.short	0
+ 3232 039a 0000     		.short	0
+ 3233 039c 0000     		.short	0
+ 3234 039e 0000     		.short	0
+ 3235 03a0 0000     		.short	0
+ 3236 03a2 1900     		.short	25
+ 3237 03a4 1600     		.short	22
+ 3238 03a6 1700     		.short	23
+ 3239 03a8 0000     		.short	0
+ 3240 03aa 1500     		.short	21
+ 3241 03ac 0000     		.short	0
+ 3242 03ae 1300     		.short	19
+ 3243 03b0 0000     		.short	0
+ 3244 03b2 0000     		.short	0
+ 3245 03b4 0000     		.short	0
+ 3246 03b6 0000     		.short	0
+ 3247 03b8 0000     		.short	0
+ 3248 03ba 0000     		.short	0
+ 3249 03bc 0000     		.short	0
+ 3250 03be 0000     		.short	0
+ 3251 03c0 0000     		.short	0
+ 3252 03c2 1800     		.short	24
+ 3253 03c4 0000     		.short	0
+ 3254 03c6 1900     		.short	25
+ 3255 03c8 0000     		.short	0
+ 3256 03ca 0000     		.short	0
+ 3257 03cc 1600     		.short	22
+ 3258 03ce 0000     		.short	0
+ 3259 03d0 0000     		.short	0
+ 3260 03d2 0000     		.short	0
+ 3261 03d4 0000     		.short	0
+ 3262 03d6 0000     		.short	0
+ 3263 03d8 0000     		.short	0
+ 3264 03da 0000     		.short	0
+ 3265 03dc 0000     		.short	0
+ 3266 03de 0000     		.short	0
+ 3267 03e0 0000     		.short	0
+ 3268 03e2 0000     		.short	0
+ 3269 03e4 1500     		.short	21
+ 3270 03e6 1800     		.short	24
+ 3271 03e8 1600     		.short	22
+ 3272 03ea 1100     		.short	17
+ 3273 03ec 1400     		.short	20
+ 3274 03ee 0000     		.short	0
+ 3275 03f0 0000     		.short	0
+ 3276 03f2 0000     		.short	0
+ 3277 03f4 0000     		.short	0
+ 3278 03f6 0000     		.short	0
+ 3279 03f8 0000     		.short	0
+ 3280 03fa 0000     		.short	0
+ 3281 03fc 0000     		.short	0
+ 3282 03fe 0000     		.short	0
+ 3283 0400 0000     		.short	0
+ 3284 0402 0000     		.short	0
+ 3285 0404 1400     		.short	20
+ 3286 0406 1200     		.short	18
+ 3287 0408 0000     		.short	0
+ 3288 040a 1300     		.short	19
+ 3289 040c 0000     		.short	0
+ 3290 040e 1700     		.short	23
+ 3291 0410 0000     		.short	0
+ 3292 0412 0000     		.short	0
+ 3293 0414 0000     		.short	0
+ 3294 0416 0000     		.short	0
+ 3295 0418 0000     		.short	0
+ 3296 041a 0000     		.short	0
+ 3297 041c 0000     		.short	0
+ 3298 041e 0000     		.short	0
+ 3299 0420 0000     		.short	0
+ 3300 0422 1700     		.short	23
+ 3301 0424 0000     		.short	0
+ 3302 0426 1500     		.short	21
+ 3303 0428 0000     		.short	0
+ 3304 042a 1900     		.short	25
+ 3305 042c 1200     		.short	18
+ 3306 042e 1600     		.short	22
+ 3307 0430 0000     		.short	0
+ 3308 0432 0000     		.short	0
+ 3309 0434 0000     		.short	0
+ 3310 0436 0000     		.short	0
+ 3311 0438 0000     		.short	0
+ 3312 043a 0000     		.short	0
+ 3313 043c 0000     		.short	0
+ 3314 043e 0000     		.short	0
+ 3315 0440 1600     		.short	22
+ 3316 0442 0000     		.short	0
+ 3317 0444 0000     		.short	0
+ 3318 0446 0000     		.short	0
+ 3319 0448 1800     		.short	24
+ 3320 044a 0000     		.short	0
+ 3321 044c 0000     		.short	0
+ 3322 044e 0000     		.short	0
+ 3323 0450 0000     		.short	0
+ 3324 0452 0000     		.short	0
+ 3325 0454 0000     		.short	0
+ 3326 0456 0000     		.short	0
+ 3327 0458 0000     		.short	0
+ 3328 045a 0000     		.short	0
+ 3329 045c 0000     		.short	0
+ 3330 045e 0000     		.short	0
+ 3331 0460 0000     		.short	0
+ 3332 0462 0000     		.short	0
+ 3333 0464 0000     		.short	0
+ 3334 0466 0000     		.short	0
+ 3335 0468 0000     		.short	0
+ 3336 046a 1200     		.short	18
+ 3337 046c 0000     		.short	0
+ 3338 046e 0000     		.short	0
+ 3339 0470 1100     		.short	17
+ 3340 0472 0000     		.short	0
+ 3341 0474 0000     		.short	0
+ 3342 0476 0000     		.short	0
+ 3343 0478 0000     		.short	0
+ 3344 047a 0000     		.short	0
+ 3345 047c 0000     		.short	0
+ 3346 047e 0000     		.short	0
+ 3347              		.align	5
+ 3350              	cuadricula_ARM_ARM_ALL:
+ 3351 0480 1500     		.short	21
+ 3352 0482 0000     		.short	0
+ 3353 0484 0000     		.short	0
+ 3354 0486 1300     		.short	19
+ 3355 0488 0000     		.short	0
+ 3356 048a 0000     		.short	0
+ 3357 048c 0000     		.short	0
+ 3358 048e 0000     		.short	0
+ 3359 0490 0000     		.short	0
+ 3360 0492 0000     		.short	0
+ 3361 0494 0000     		.short	0
+ 3362 0496 0000     		.short	0
+ 3363 0498 0000     		.short	0
+ 3364 049a 0000     		.short	0
+ 3365 049c 0000     		.short	0
+ 3366 049e 0000     		.short	0
+ 3367 04a0 0000     		.short	0
+ 3368 04a2 0000     		.short	0
+ 3369 04a4 0000     		.short	0
+ 3370 04a6 0000     		.short	0
+ 3371 04a8 1900     		.short	25
+ 3372 04aa 0000     		.short	0
+ 3373 04ac 0000     		.short	0
+ 3374 04ae 0000     		.short	0
+ 3375 04b0 1500     		.short	21
+ 3376 04b2 0000     		.short	0
+ 3377 04b4 0000     		.short	0
+ 3378 04b6 0000     		.short	0
+ 3379 04b8 0000     		.short	0
+ 3380 04ba 0000     		.short	0
+ 3381 04bc 0000     		.short	0
+ 3382 04be 0000     		.short	0
+ 3383 04c0 0000     		.short	0
+ 3384 04c2 1900     		.short	25
+ 3385 04c4 1600     		.short	22
+ 3386 04c6 1700     		.short	23
+ 3387 04c8 0000     		.short	0
+ 3388 04ca 1500     		.short	21
+ 3389 04cc 0000     		.short	0
+ 3390 04ce 1300     		.short	19
+ 3391 04d0 0000     		.short	0
+ 3392 04d2 0000     		.short	0
+ 3393 04d4 0000     		.short	0
+ 3394 04d6 0000     		.short	0
+ 3395 04d8 0000     		.short	0
+ 3396 04da 0000     		.short	0
+ 3397 04dc 0000     		.short	0
+ 3398 04de 0000     		.short	0
+ 3399 04e0 0000     		.short	0
+ 3400 04e2 1800     		.short	24
+ 3401 04e4 0000     		.short	0
+ 3402 04e6 1900     		.short	25
+ 3403 04e8 0000     		.short	0
+ 3404 04ea 0000     		.short	0
+ 3405 04ec 1600     		.short	22
+ 3406 04ee 0000     		.short	0
+ 3407 04f0 0000     		.short	0
+ 3408 04f2 0000     		.short	0
+ 3409 04f4 0000     		.short	0
+ 3410 04f6 0000     		.short	0
+ 3411 04f8 0000     		.short	0
+ 3412 04fa 0000     		.short	0
+ 3413 04fc 0000     		.short	0
+ 3414 04fe 0000     		.short	0
+ 3415 0500 0000     		.short	0
+ 3416 0502 0000     		.short	0
+ 3417 0504 1500     		.short	21
+ 3418 0506 1800     		.short	24
+ 3419 0508 1600     		.short	22
+ 3420 050a 1100     		.short	17
+ 3421 050c 1400     		.short	20
+ 3422 050e 0000     		.short	0
+ 3423 0510 0000     		.short	0
+ 3424 0512 0000     		.short	0
+ 3425 0514 0000     		.short	0
+ 3426 0516 0000     		.short	0
+ 3427 0518 0000     		.short	0
+ 3428 051a 0000     		.short	0
+ 3429 051c 0000     		.short	0
+ 3430 051e 0000     		.short	0
+ 3431 0520 0000     		.short	0
+ 3432 0522 0000     		.short	0
+ 3433 0524 1400     		.short	20
+ 3434 0526 1200     		.short	18
+ 3435 0528 0000     		.short	0
+ 3436 052a 1300     		.short	19
+ 3437 052c 0000     		.short	0
+ 3438 052e 1700     		.short	23
+ 3439 0530 0000     		.short	0
+ 3440 0532 0000     		.short	0
+ 3441 0534 0000     		.short	0
+ 3442 0536 0000     		.short	0
+ 3443 0538 0000     		.short	0
+ 3444 053a 0000     		.short	0
+ 3445 053c 0000     		.short	0
+ 3446 053e 0000     		.short	0
+ 3447 0540 0000     		.short	0
+ 3448 0542 1700     		.short	23
+ 3449 0544 0000     		.short	0
+ 3450 0546 1500     		.short	21
+ 3451 0548 0000     		.short	0
+ 3452 054a 1900     		.short	25
+ 3453 054c 1200     		.short	18
+ 3454 054e 1600     		.short	22
+ 3455 0550 0000     		.short	0
+ 3456 0552 0000     		.short	0
+ 3457 0554 0000     		.short	0
+ 3458 0556 0000     		.short	0
+ 3459 0558 0000     		.short	0
+ 3460 055a 0000     		.short	0
+ 3461 055c 0000     		.short	0
+ 3462 055e 0000     		.short	0
+ 3463 0560 1600     		.short	22
+ 3464 0562 0000     		.short	0
+ 3465 0564 0000     		.short	0
+ 3466 0566 0000     		.short	0
+ 3467 0568 1800     		.short	24
+ 3468 056a 0000     		.short	0
+ 3469 056c 0000     		.short	0
+ 3470 056e 0000     		.short	0
+ 3471 0570 0000     		.short	0
+ 3472 0572 0000     		.short	0
+ 3473 0574 0000     		.short	0
+ 3474 0576 0000     		.short	0
+ 3475 0578 0000     		.short	0
+ 3476 057a 0000     		.short	0
+ 3477 057c 0000     		.short	0
+ 3478 057e 0000     		.short	0
+ 3479 0580 0000     		.short	0
+ 3480 0582 0000     		.short	0
+ 3481 0584 0000     		.short	0
+ 3482 0586 0000     		.short	0
+ 3483 0588 0000     		.short	0
+ 3484 058a 1200     		.short	18
+ 3485 058c 0000     		.short	0
+ 3486 058e 0000     		.short	0
+ 3487 0590 1100     		.short	17
+ 3488 0592 0000     		.short	0
+ 3489 0594 0000     		.short	0
+ 3490 0596 0000     		.short	0
+ 3491 0598 0000     		.short	0
+ 3492 059a 0000     		.short	0
+ 3493 059c 0000     		.short	0
+ 3494 059e 0000     		.short	0
+ 3495              		.align	5
+ 3498              	solucion:
+ 3499 05a0 159A     		.short	-26091
+ 3500 05a2 00FA     		.short	-1536
+ 3501 05a4 009E     		.short	-25088
+ 3502 05a6 13EB     		.short	-5357
+ 3503 05a8 00FA     		.short	-1536
+ 3504 05aa 80AB     		.short	-21632
+ 3505 05ac 001F     		.short	7936
+ 3506 05ae 003A     		.short	14848
+ 3507 05b0 800A     		.short	2688
+ 3508 05b2 0000     		.short	0
+ 3509 05b4 0000     		.short	0
+ 3510 05b6 0000     		.short	0
+ 3511 05b8 0000     		.short	0
+ 3512 05ba 0000     		.short	0
+ 3513 05bc 0000     		.short	0
+ 3514 05be 0000     		.short	0
+ 3515 05c0 0098     		.short	-26624
+ 3516 05c2 00F8     		.short	-2048
+ 3517 05c4 009C     		.short	-25600
+ 3518 05c6 00EB     		.short	-5376
+ 3519 05c8 19FA     		.short	-1511
+ 3520 05ca 80AB     		.short	-21632
+ 3521 05cc 009F     		.short	-24832
+ 3522 05ce 00BA     		.short	-17920
+ 3523 05d0 958A     		.short	-30059
+ 3524 05d2 0000     		.short	0
+ 3525 05d4 0000     		.short	0
+ 3526 05d6 0000     		.short	0
+ 3527 05d8 0000     		.short	0
+ 3528 05da 0000     		.short	0
+ 3529 05dc 0000     		.short	0
+ 3530 05de 0000     		.short	0
+ 3531 05e0 00BA     		.short	-17920
+ 3532 05e2 19FA     		.short	-1511
+ 3533 05e4 16BE     		.short	-16874
+ 3534 05e6 17FB     		.short	-1257
+ 3535 05e8 00FA     		.short	-1536
+ 3536 05ea 95BB     		.short	-17515
+ 3537 05ec 00BF     		.short	-16640
+ 3538 05ee 13BA     		.short	-17901
+ 3539 05f0 80BA     		.short	-17792
+ 3540 05f2 0000     		.short	0
+ 3541 05f4 0000     		.short	0
+ 3542 05f6 0000     		.short	0
+ 3543 05f8 0000     		.short	0
+ 3544 05fa 0000     		.short	0
+ 3545 05fc 0000     		.short	0
+ 3546 05fe 0000     		.short	0
+ 3547 0600 00DC     		.short	-9216
+ 3548 0602 18FC     		.short	-1000
+ 3549 0604 00DC     		.short	-9216
+ 3550 0606 99FB     		.short	-1127
+ 3551 0608 80D3     		.short	-11392
+ 3552 060a 80DB     		.short	-9344
+ 3553 060c 16F5     		.short	-2794
+ 3554 060e 00F6     		.short	-2560
+ 3555 0610 80FC     		.short	-896
+ 3556 0612 0000     		.short	0
+ 3557 0614 0000     		.short	0
+ 3558 0616 0000     		.short	0
+ 3559 0618 0000     		.short	0
+ 3560 061a 0000     		.short	0
+ 3561 061c 0000     		.short	0
+ 3562 061e 0000     		.short	0
+ 3563 0620 805C     		.short	23680
+ 3564 0622 80FC     		.short	-896
+ 3565 0624 955C     		.short	23701
+ 3566 0626 98FF     		.short	-104
+ 3567 0628 96DF     		.short	-8298
+ 3568 062a 91DF     		.short	-8303
+ 3569 062c 947D     		.short	32148
+ 3570 062e 807E     		.short	32384
+ 3571 0630 807C     		.short	31872
+ 3572 0632 0000     		.short	0
+ 3573 0634 0000     		.short	0
+ 3574 0636 0000     		.short	0
+ 3575 0638 0000     		.short	0
+ 3576 063a 0000     		.short	0
+ 3577 063c 0000     		.short	0
+ 3578 063e 0000     		.short	0
+ 3579 0640 007F     		.short	32512
+ 3580 0642 00EF     		.short	-4352
+ 3581 0644 147F     		.short	32532
+ 3582 0646 92FF     		.short	-110
+ 3583 0648 80F7     		.short	-2176
+ 3584 064a 93FF     		.short	-109
+ 3585 064c 0037     		.short	14080
+ 3586 064e 1737     		.short	14103
+ 3587 0650 803F     		.short	16256
+ 3588 0652 0000     		.short	0
+ 3589 0654 0000     		.short	0
+ 3590 0656 0000     		.short	0
+ 3591 0658 0000     		.short	0
+ 3592 065a 0000     		.short	0
+ 3593 065c 0000     		.short	0
+ 3594 065e 0000     		.short	0
+ 3595 0660 00B9     		.short	-18176
+ 3596 0662 17F9     		.short	-1769
+ 3597 0664 00BD     		.short	-17152
+ 3598 0666 15FB     		.short	-1259
+ 3599 0668 00F9     		.short	-1792
+ 3600 066a 99FB     		.short	-1127
+ 3601 066c 92BD     		.short	-17006
+ 3602 066e 96BB     		.short	-17514
+ 3603 0670 80B9     		.short	-18048
+ 3604 0672 0000     		.short	0
+ 3605 0674 0000     		.short	0
+ 3606 0676 0000     		.short	0
+ 3607 0678 0000     		.short	0
+ 3608 067a 0000     		.short	0
+ 3609 067c 0000     		.short	0
+ 3610 067e 0000     		.short	0
+ 3611 0680 1678     		.short	30742
+ 3612 0682 00F0     		.short	-4096
+ 3613 0684 007C     		.short	31744
+ 3614 0686 00FB     		.short	-1280
+ 3615 0688 18D9     		.short	-9960
+ 3616 068a 80DB     		.short	-9344
+ 3617 068c 8055     		.short	21888
+ 3618 068e 8073     		.short	29568
+ 3619 0690 8059     		.short	22912
+ 3620 0692 0000     		.short	0
+ 3621 0694 0000     		.short	0
+ 3622 0696 0000     		.short	0
+ 3623 0698 0000     		.short	0
+ 3624 069a 0000     		.short	0
+ 3625 069c 0000     		.short	0
+ 3626 069e 0000     		.short	0
+ 3627 06a0 8039     		.short	14720
+ 3628 06a2 80F1     		.short	-3712
+ 3629 06a4 803D     		.short	15744
+ 3630 06a6 80EB     		.short	-5248
+ 3631 06a8 80D9     		.short	-9856
+ 3632 06aa 92CB     		.short	-13422
+ 3633 06ac 8015     		.short	5504
+ 3634 06ae 8033     		.short	13184
+ 3635 06b0 9119     		.short	6545
+ 3636 06b2 0000     		.short	0
+ 3637 06b4 0000     		.short	0
+ 3638 06b6 0000     		.short	0
+ 3639 06b8 0000     		.short	0
+ 3640 06ba 0000     		.short	0
+ 3641 06bc 0000     		.short	0
+ 3642 06be 0000     		.short	0
+ 3643              		.bss
+ 3644              	estado_actual:
+ 3645 0000 00       		.space	1
+ 3646 0001 000000   		.align	2
+ 3647              	contador_ms:
+ 3648 0004 00000000 		.space	4
+ 3649              		.align	2
+ 3650              	monitor_ms:
+ 3651 0008 00000000 		.space	4
+ 3652              	boton_en_proceso:
+ 3653 000c 00       		.space	1
+ 3654 000d 000000   		.align	2
+ 3655              	mascara_boton:
+ 3656 0010 00000000 		.space	4
+ 3657              		.align	2
+ 3658              	callback_validacion:
+ 3659 0014 00000000 		.space	4
+ 3660              		.global	estado_sudoku
+ 3663              	estado_sudoku:
+ 3664 0018 00       		.space	1
+ 3665              		.global	int_count
+ 3666 0019 000000   		.align	2
+ 3669              	int_count:
+ 3670 001c 00000000 		.space	4
+ 3671              		.global	fila
+ 3672              		.align	2
+ 3675              	fila:
+ 3676 0020 00000000 		.space	4
+ 3677              		.global	columna
+ 3678              		.align	2
+ 3681              	columna:
+ 3682 0024 00000000 		.space	4
+ 3683              		.global	valor
+ 3684              		.align	2
+ 3687              	valor:
+ 3688 0028 00000000 		.space	4
+ 3689              		.text
+ 3690              		.align	2
+ 3692              	boton_sigue_pulsado:
+ 3693              	.LFB3:
    1:../timer3.c   **** /*********************************************************************************************
    2:../timer3.c   **** * Fichero:              timer3.c
    3:../timer3.c   **** * Autor:
@@ -41,883 +937,908 @@
    8:../timer3.c   **** /*--- Ficheros de cabecera ---*/
    9:../timer3.c   **** #include "timer3.h"
   10:../timer3.c   **** #include "eventos.h"
-  11:../timer3.c   **** #include "44b.h"
-  12:../timer3.c   **** #include "44blib.h"
-  13:../timer3.c   **** 
-  14:../timer3.c   **** /*--- Constantes ---*/
-  15:../timer3.c   **** #define TIMER3_1MS_COUNT           32000U        /* Cuenta necesaria para 1 ms con preescalado 0 y 
-  16:../timer3.c   **** #define TIMER3_TICK_MS             1U
-  17:../timer3.c   **** #define TIMER3_TRP_MS              30U           /* Retardo tras la pulsación */
-  18:../timer3.c   **** #define TIMER3_TRD_MS              30U           /* Retardo tras soltar el botón */
-  19:../timer3.c   **** #define TIMER3_MONITOR_MS          100U          /* Periodo de monitorización */
-  20:../timer3.c   **** 
-  21:../timer3.c   **** #define BOTON_MASK_EINT6           (1U << 6)    /* EINT6 usa el pin PG6 */
-  22:../timer3.c   **** #define BOTON_MASK_EINT7           (1U << 7)    /* EINT7 usa el pin PG7 */
-  23:../timer3.c   **** 
-  24:../timer3.c   **** /*--- Variables internas ---*/
-  25:../timer3.c   **** static volatile EstadoPulsador estado_actual = ESPERANDO_PULSACION;
-  26:../timer3.c   **** static volatile uint32_t contador_ms = 0;
-  27:../timer3.c   **** static volatile uint32_t monitor_ms = 0;
-  28:../timer3.c   **** static volatile uint8_t boton_en_proceso = 0;
-  29:../timer3.c   **** static volatile unsigned int mascara_boton = 0;
-  30:../timer3.c   **** static timer3_callback_t callback_validacion = 0;
-  31:../timer3.c   **** 
-  32:../timer3.c   **** /* Declaración de la ISR del timer3 */
-  33:../timer3.c   **** void timer3_ISR(void) __attribute__((interrupt("IRQ")));
-  34:../timer3.c   **** 
-  35:../timer3.c   **** /*--- Funciones auxiliares internas ---*/
-  36:../timer3.c   **** static inline int boton_sigue_pulsado(void)
-  37:../timer3.c   **** {
- 2173              		.loc 1 37 0
- 2174              		.cfi_startproc
- 2175              		@ Function supports interworking.
- 2176              		@ args = 0, pretend = 0, frame = 8
- 2177              		@ frame_needed = 1, uses_anonymous_args = 0
- 2178 0000 0DC0A0E1 		mov	ip, sp
- 2179              	.LCFI0:
- 2180              		.cfi_def_cfa_register 12
- 2181 0004 00D82DE9 		stmfd	sp!, {fp, ip, lr, pc}
- 2182 0008 04B04CE2 		sub	fp, ip, #4
- 2183              		.cfi_offset 14, -8
- 2184              		.cfi_offset 13, -12
- 2185              		.cfi_offset 11, -16
- 2186              	.LCFI1:
- 2187              		.cfi_def_cfa 11, 4
- 2188 000c 08D04DE2 		sub	sp, sp, #8
-  38:../timer3.c   ****         unsigned int estado = (~rPDATG) & mascara_boton;
- 2189              		.loc 1 38 0
- 2190 0010 34309FE5 		ldr	r3, .L2
- 2191 0014 003093E5 		ldr	r3, [r3, #0]
- 2192 0018 0320E0E1 		mvn	r2, r3
- 2193 001c 2C309FE5 		ldr	r3, .L2+4
- 2194 0020 003093E5 		ldr	r3, [r3, #0]
- 2195 0024 033002E0 		and	r3, r2, r3
- 2196 0028 10300BE5 		str	r3, [fp, #-16]
-  39:../timer3.c   ****         return (estado != 0);
- 2197              		.loc 1 39 0
- 2198 002c 10301BE5 		ldr	r3, [fp, #-16]
- 2199 0030 000053E3 		cmp	r3, #0
- 2200 0034 0030A003 		moveq	r3, #0
- 2201 0038 0130A013 		movne	r3, #1
-  40:../timer3.c   **** }
- 2202              		.loc 1 40 0
- 2203 003c 0300A0E1 		mov	r0, r3
- 2204 0040 0CD04BE2 		sub	sp, fp, #12
- 2205 0044 00689DE8 		ldmfd	sp, {fp, sp, lr}
- 2206 0048 1EFF2FE1 		bx	lr
- 2207              	.L3:
- 2208              		.align	2
- 2209              	.L2:
- 2210 004c 4400D201 		.word	30539844
- 2211 0050 10000000 		.word	mascara_boton
- 2212              		.cfi_endproc
- 2213              	.LFE0:
- 2215              		.align	2
- 2217              	timer3_detener:
- 2218              	.LFB1:
-  41:../timer3.c   **** 
-  42:../timer3.c   **** static void timer3_detener(void)
-  43:../timer3.c   **** {
- 2219              		.loc 1 43 0
- 2220              		.cfi_startproc
- 2221              		@ Function supports interworking.
- 2222              		@ args = 0, pretend = 0, frame = 0
- 2223              		@ frame_needed = 1, uses_anonymous_args = 0
- 2224 0054 0DC0A0E1 		mov	ip, sp
- 2225              	.LCFI2:
- 2226              		.cfi_def_cfa_register 12
- 2227 0058 00D82DE9 		stmfd	sp!, {fp, ip, lr, pc}
- 2228 005c 04B04CE2 		sub	fp, ip, #4
- 2229              		.cfi_offset 14, -8
- 2230              		.cfi_offset 13, -12
- 2231              		.cfi_offset 11, -16
- 2232              	.LCFI3:
- 2233              		.cfi_def_cfa 11, 4
-  44:../timer3.c   ****         /* Parar el timer y enmascarar la interrupción */
-  45:../timer3.c   ****         rTCON &= ~(1 << 16);             /* Bit 16 controla start/stop del timer3 */
- 2234              		.loc 1 45 0
- 2235 0060 2C309FE5 		ldr	r3, .L5
- 2236 0064 28209FE5 		ldr	r2, .L5
- 2237 0068 002092E5 		ldr	r2, [r2, #0]
- 2238 006c 0128C2E3 		bic	r2, r2, #65536
- 2239 0070 002083E5 		str	r2, [r3, #0]
-  46:../timer3.c   ****         rINTMSK |= BIT_TIMER3;
- 2240              		.loc 1 46 0
- 2241 0074 1C309FE5 		ldr	r3, .L5+4
- 2242 0078 18209FE5 		ldr	r2, .L5+4
- 2243 007c 002092E5 		ldr	r2, [r2, #0]
- 2244 0080 012B82E3 		orr	r2, r2, #1024
- 2245 0084 002083E5 		str	r2, [r3, #0]
-  47:../timer3.c   **** }
- 2246              		.loc 1 47 0
- 2247 0088 0CD04BE2 		sub	sp, fp, #12
- 2248 008c 00689DE8 		ldmfd	sp, {fp, sp, lr}
- 2249 0090 1EFF2FE1 		bx	lr
- 2250              	.L6:
- 2251              		.align	2
- 2252              	.L5:
- 2253 0094 0800D501 		.word	30736392
- 2254 0098 0C00E001 		.word	31457292
- 2255              		.cfi_endproc
- 2256              	.LFE1:
- 2258              		.align	2
- 2260              	timer3_preparar_tick:
- 2261              	.LFB2:
-  48:../timer3.c   **** 
-  49:../timer3.c   **** static void timer3_preparar_tick(void)
-  50:../timer3.c   **** {
- 2262              		.loc 1 50 0
- 2263              		.cfi_startproc
- 2264              		@ Function supports interworking.
- 2265              		@ args = 0, pretend = 0, frame = 0
- 2266              		@ frame_needed = 1, uses_anonymous_args = 0
- 2267 009c 0DC0A0E1 		mov	ip, sp
- 2268              	.LCFI4:
- 2269              		.cfi_def_cfa_register 12
- 2270 00a0 00D82DE9 		stmfd	sp!, {fp, ip, lr, pc}
- 2271 00a4 04B04CE2 		sub	fp, ip, #4
- 2272              		.cfi_offset 14, -8
- 2273              		.cfi_offset 13, -12
- 2274              		.cfi_offset 11, -16
- 2275              	.LCFI5:
- 2276              		.cfi_def_cfa 11, 4
-  51:../timer3.c   ****         /* Configurar el valor de cuenta para 1 ms */
-  52:../timer3.c   ****         rTCNTB3 = TIMER3_1MS_COUNT;
- 2277              		.loc 1 52 0
- 2278 00a8 4C309FE5 		ldr	r3, .L8
- 2279 00ac 7D2CA0E3 		mov	r2, #32000
- 2280 00b0 002083E5 		str	r2, [r3, #0]
-  53:../timer3.c   ****         rTCMPB3 = 0;
- 2281              		.loc 1 53 0
- 2282 00b4 44309FE5 		ldr	r3, .L8+4
- 2283 00b8 0020A0E3 		mov	r2, #0
- 2284 00bc 002083E5 		str	r2, [r3, #0]
-  54:../timer3.c   **** 
-  55:../timer3.c   ****         /* Cargar los nuevos valores (manual update) */
-  56:../timer3.c   ****         rTCON = (rTCON & ~(0xF << 16)) | (1 << 17);
- 2285              		.loc 1 56 0
- 2286 00c0 3C309FE5 		ldr	r3, .L8+8
- 2287 00c4 38209FE5 		ldr	r2, .L8+8
- 2288 00c8 002092E5 		ldr	r2, [r2, #0]
- 2289 00cc 0F28C2E3 		bic	r2, r2, #983040
- 2290 00d0 022882E3 		orr	r2, r2, #131072
- 2291 00d4 002083E5 		str	r2, [r3, #0]
-  57:../timer3.c   ****         /* Activar auto-reload y arrancar el timer */
-  58:../timer3.c   ****         rTCON = (rTCON & ~(0xF << 16)) | (1 << 19) | (1 << 16);
- 2292              		.loc 1 58 0
- 2293 00d8 24309FE5 		ldr	r3, .L8+8
- 2294 00dc 20209FE5 		ldr	r2, .L8+8
- 2295 00e0 002092E5 		ldr	r2, [r2, #0]
- 2296 00e4 0F28C2E3 		bic	r2, r2, #983040
- 2297 00e8 092882E3 		orr	r2, r2, #589824
- 2298 00ec 002083E5 		str	r2, [r3, #0]
+  11:../timer3.c   **** #include "8led.h"
+  12:../timer3.c   **** #include "sudoku_2025.h"
+  13:../timer3.c   **** #include "tableros.h"
+  14:../timer3.c   **** #include "44b.h"
+  15:../timer3.c   **** #include "44blib.h"
+  16:../timer3.c   **** 
+  17:../timer3.c   **** /* Variables globales extern<as (definidas en main.c) */
+  18:../timer3.c   **** 
+  19:../timer3.c   **** /*--- Constantes ---*/
+  20:../timer3.c   **** #define TIMER3_1MS_COUNT           32000U        /* Cuenta necesaria para 1 ms con preescalado 0 y 
+  21:../timer3.c   **** #define TIMER3_TICK_MS             1U
+  22:../timer3.c   **** #define TIMER3_TRP_MS              30U           /* Retardo tras la pulsación */
+  23:../timer3.c   **** #define TIMER3_TRD_MS              30U           /* Retardo tras soltar el botón */
+  24:../timer3.c   **** #define TIMER3_MONITOR_MS          100U          /* Periodo de monitorización */
+  25:../timer3.c   **** 
+  26:../timer3.c   **** #define BOTON_MASK_EINT6           (1U << 6)    /* EINT6 usa el pin PG6 */
+  27:../timer3.c   **** #define BOTON_MASK_EINT7           (1U << 7)    /* EINT7 usa el pin PG7 */
+  28:../timer3.c   **** 
+  29:../timer3.c   **** /*--- Variables internas ---*/
+  30:../timer3.c   **** static volatile EstadoPulsador estado_actual = ESPERANDO_PULSACION;
+  31:../timer3.c   **** static volatile uint32_t contador_ms = 0;
+  32:../timer3.c   **** static volatile uint32_t monitor_ms = 0;
+  33:../timer3.c   **** static volatile uint8_t boton_en_proceso = 0;
+  34:../timer3.c   **** static volatile unsigned int mascara_boton = 0;
+  35:../timer3.c   **** static timer3_callback_t callback_validacion = 0;
+  36:../timer3.c   **** 
+  37:../timer3.c   **** /* Variables globales para la máquina de estados del Sudoku (accesibles desde main.c) */
+  38:../timer3.c   **** volatile EstadoSudoku estado_sudoku = ESPERANDO_INICIO;
+  39:../timer3.c   **** volatile int int_count = 0;
+  40:../timer3.c   **** volatile int fila = 0;
+  41:../timer3.c   **** volatile int columna = 0;
+  42:../timer3.c   **** volatile int valor = 0;
+  43:../timer3.c   **** 
+  44:../timer3.c   **** /* Declaración de la ISR del timer3 */
+  45:../timer3.c   **** void timer3_ISR(void) __attribute__((interrupt("IRQ")));
+  46:../timer3.c   **** 
+  47:../timer3.c   **** /*--- Funciones auxiliares internas ---*/
+  48:../timer3.c   **** static inline int boton_sigue_pulsado(void)
+  49:../timer3.c   **** {
+ 3694              		.loc 1 49 0
+ 3695              		.cfi_startproc
+ 3696              		@ Function supports interworking.
+ 3697              		@ args = 0, pretend = 0, frame = 8
+ 3698              		@ frame_needed = 1, uses_anonymous_args = 0
+ 3699 0000 0DC0A0E1 		mov	ip, sp
+ 3700              	.LCFI0:
+ 3701              		.cfi_def_cfa_register 12
+ 3702 0004 00D82DE9 		stmfd	sp!, {fp, ip, lr, pc}
+ 3703 0008 04B04CE2 		sub	fp, ip, #4
+ 3704              		.cfi_offset 14, -8
+ 3705              		.cfi_offset 13, -12
+ 3706              		.cfi_offset 11, -16
+ 3707              	.LCFI1:
+ 3708              		.cfi_def_cfa 11, 4
+ 3709 000c 08D04DE2 		sub	sp, sp, #8
+  50:../timer3.c   ****         unsigned int estado = (~rPDATG) & mascara_boton;
+ 3710              		.loc 1 50 0
+ 3711 0010 34309FE5 		ldr	r3, .L2
+ 3712 0014 003093E5 		ldr	r3, [r3, #0]
+ 3713 0018 0320E0E1 		mvn	r2, r3
+ 3714 001c 2C309FE5 		ldr	r3, .L2+4
+ 3715 0020 003093E5 		ldr	r3, [r3, #0]
+ 3716 0024 033002E0 		and	r3, r2, r3
+ 3717 0028 10300BE5 		str	r3, [fp, #-16]
+  51:../timer3.c   ****         return (estado != 0);
+ 3718              		.loc 1 51 0
+ 3719 002c 10301BE5 		ldr	r3, [fp, #-16]
+ 3720 0030 000053E3 		cmp	r3, #0
+ 3721 0034 0030A003 		moveq	r3, #0
+ 3722 0038 0130A013 		movne	r3, #1
+  52:../timer3.c   **** }
+ 3723              		.loc 1 52 0
+ 3724 003c 0300A0E1 		mov	r0, r3
+ 3725 0040 0CD04BE2 		sub	sp, fp, #12
+ 3726 0044 00689DE8 		ldmfd	sp, {fp, sp, lr}
+ 3727 0048 1EFF2FE1 		bx	lr
+ 3728              	.L3:
+ 3729              		.align	2
+ 3730              	.L2:
+ 3731 004c 4400D201 		.word	30539844
+ 3732 0050 10000000 		.word	mascara_boton
+ 3733              		.cfi_endproc
+ 3734              	.LFE3:
+ 3736              		.align	2
+ 3738              	timer3_detener:
+ 3739              	.LFB4:
+  53:../timer3.c   **** 
+  54:../timer3.c   **** static void timer3_detener(void)
+  55:../timer3.c   **** {
+ 3740              		.loc 1 55 0
+ 3741              		.cfi_startproc
+ 3742              		@ Function supports interworking.
+ 3743              		@ args = 0, pretend = 0, frame = 0
+ 3744              		@ frame_needed = 1, uses_anonymous_args = 0
+ 3745 0054 0DC0A0E1 		mov	ip, sp
+ 3746              	.LCFI2:
+ 3747              		.cfi_def_cfa_register 12
+ 3748 0058 00D82DE9 		stmfd	sp!, {fp, ip, lr, pc}
+ 3749 005c 04B04CE2 		sub	fp, ip, #4
+ 3750              		.cfi_offset 14, -8
+ 3751              		.cfi_offset 13, -12
+ 3752              		.cfi_offset 11, -16
+ 3753              	.LCFI3:
+ 3754              		.cfi_def_cfa 11, 4
+  56:../timer3.c   ****         /* Parar el timer y enmascarar la interrupción */
+  57:../timer3.c   ****         rTCON &= ~(1 << 16);             /* Bit 16 controla start/stop del timer3 */
+ 3755              		.loc 1 57 0
+ 3756 0060 2C309FE5 		ldr	r3, .L5
+ 3757 0064 28209FE5 		ldr	r2, .L5
+ 3758 0068 002092E5 		ldr	r2, [r2, #0]
+ 3759 006c 0128C2E3 		bic	r2, r2, #65536
+ 3760 0070 002083E5 		str	r2, [r3, #0]
+  58:../timer3.c   ****         rINTMSK |= BIT_TIMER3;
+ 3761              		.loc 1 58 0
+ 3762 0074 1C309FE5 		ldr	r3, .L5+4
+ 3763 0078 18209FE5 		ldr	r2, .L5+4
+ 3764 007c 002092E5 		ldr	r2, [r2, #0]
+ 3765 0080 012B82E3 		orr	r2, r2, #1024
+ 3766 0084 002083E5 		str	r2, [r3, #0]
   59:../timer3.c   **** }
- 2299              		.loc 1 59 0
- 2300 00f0 0CD04BE2 		sub	sp, fp, #12
- 2301 00f4 00689DE8 		ldmfd	sp, {fp, sp, lr}
- 2302 00f8 1EFF2FE1 		bx	lr
- 2303              	.L9:
- 2304              		.align	2
- 2305              	.L8:
- 2306 00fc 3000D501 		.word	30736432
- 2307 0100 3400D501 		.word	30736436
- 2308 0104 0800D501 		.word	30736392
- 2309              		.cfi_endproc
- 2310              	.LFE2:
- 2312              		.align	2
- 2314              	finalizar_antirrebote:
- 2315              	.LFB3:
+ 3767              		.loc 1 59 0
+ 3768 0088 0CD04BE2 		sub	sp, fp, #12
+ 3769 008c 00689DE8 		ldmfd	sp, {fp, sp, lr}
+ 3770 0090 1EFF2FE1 		bx	lr
+ 3771              	.L6:
+ 3772              		.align	2
+ 3773              	.L5:
+ 3774 0094 0800D501 		.word	30736392
+ 3775 0098 0C00E001 		.word	31457292
+ 3776              		.cfi_endproc
+ 3777              	.LFE4:
+ 3779              		.align	2
+ 3781              	timer3_preparar_tick:
+ 3782              	.LFB5:
   60:../timer3.c   **** 
-  61:../timer3.c   **** static void finalizar_antirrebote(void)
+  61:../timer3.c   **** static void timer3_preparar_tick(void)
   62:../timer3.c   **** {
- 2316              		.loc 1 62 0
- 2317              		.cfi_startproc
- 2318              		@ Function supports interworking.
- 2319              		@ args = 0, pretend = 0, frame = 0
- 2320              		@ frame_needed = 1, uses_anonymous_args = 0
- 2321 0108 0DC0A0E1 		mov	ip, sp
- 2322              	.LCFI6:
- 2323              		.cfi_def_cfa_register 12
- 2324 010c 00D82DE9 		stmfd	sp!, {fp, ip, lr, pc}
- 2325 0110 04B04CE2 		sub	fp, ip, #4
- 2326              		.cfi_offset 14, -8
- 2327              		.cfi_offset 13, -12
- 2328              		.cfi_offset 11, -16
- 2329              	.LCFI7:
- 2330              		.cfi_def_cfa 11, 4
-  63:../timer3.c   ****         /* Detener el temporizador */
-  64:../timer3.c   ****         timer3_detener();
- 2331              		.loc 1 64 0
- 2332 0114 CEFFFFEB 		bl	timer3_detener
-  65:../timer3.c   **** 
-  66:../timer3.c   ****         /* Rehabilitar las interrupciones de los botones */
-  67:../timer3.c   ****         rEXTINTPND = 0xf;
- 2333              		.loc 1 67 0
- 2334 0118 74309FE5 		ldr	r3, .L11
- 2335 011c 0F20A0E3 		mov	r2, #15
- 2336 0120 002083E5 		str	r2, [r3, #0]
-  68:../timer3.c   ****         rINTMSK &= ~(BIT_EINT4567);
- 2337              		.loc 1 68 0
- 2338 0124 6C309FE5 		ldr	r3, .L11+4
- 2339 0128 68209FE5 		ldr	r2, .L11+4
- 2340 012c 002092E5 		ldr	r2, [r2, #0]
- 2341 0130 0226C2E3 		bic	r2, r2, #2097152
- 2342 0134 002083E5 		str	r2, [r3, #0]
-  69:../timer3.c   ****         rI_ISPC |= BIT_EINT4567;
- 2343              		.loc 1 69 0
- 2344 0138 5C309FE5 		ldr	r3, .L11+8
- 2345 013c 58209FE5 		ldr	r2, .L11+8
- 2346 0140 002092E5 		ldr	r2, [r2, #0]
- 2347 0144 022682E3 		orr	r2, r2, #2097152
- 2348 0148 002083E5 		str	r2, [r3, #0]
-  70:../timer3.c   **** 
-  71:../timer3.c   ****         /* Resetear el estado interno */
-  72:../timer3.c   ****         estado_actual = ESPERANDO_PULSACION;
- 2349              		.loc 1 72 0
- 2350 014c 4C309FE5 		ldr	r3, .L11+12
- 2351 0150 0020A0E3 		mov	r2, #0
- 2352 0154 0020C3E5 		strb	r2, [r3, #0]
-  73:../timer3.c   ****         contador_ms = 0;
- 2353              		.loc 1 73 0
- 2354 0158 44309FE5 		ldr	r3, .L11+16
- 2355 015c 0020A0E3 		mov	r2, #0
- 2356 0160 002083E5 		str	r2, [r3, #0]
-  74:../timer3.c   ****         monitor_ms = 0;
- 2357              		.loc 1 74 0
- 2358 0164 3C309FE5 		ldr	r3, .L11+20
- 2359 0168 0020A0E3 		mov	r2, #0
- 2360 016c 002083E5 		str	r2, [r3, #0]
-  75:../timer3.c   ****         boton_en_proceso = 0;
- 2361              		.loc 1 75 0
- 2362 0170 34309FE5 		ldr	r3, .L11+24
- 2363 0174 0020A0E3 		mov	r2, #0
- 2364 0178 0020C3E5 		strb	r2, [r3, #0]
-  76:../timer3.c   ****         mascara_boton = 0;
- 2365              		.loc 1 76 0
- 2366 017c 2C309FE5 		ldr	r3, .L11+28
- 2367 0180 0020A0E3 		mov	r2, #0
- 2368 0184 002083E5 		str	r2, [r3, #0]
-  77:../timer3.c   **** }
- 2369              		.loc 1 77 0
- 2370 0188 0CD04BE2 		sub	sp, fp, #12
- 2371 018c 00689DE8 		ldmfd	sp, {fp, sp, lr}
- 2372 0190 1EFF2FE1 		bx	lr
- 2373              	.L12:
- 2374              		.align	2
- 2375              	.L11:
- 2376 0194 5400D201 		.word	30539860
- 2377 0198 0C00E001 		.word	31457292
- 2378 019c 2400E001 		.word	31457316
- 2379 01a0 00000000 		.word	estado_actual
- 2380 01a4 04000000 		.word	contador_ms
- 2381 01a8 08000000 		.word	monitor_ms
- 2382 01ac 0C000000 		.word	boton_en_proceso
- 2383 01b0 10000000 		.word	mascara_boton
- 2384              		.cfi_endproc
- 2385              	.LFE3:
- 2387              		.align	2
- 2388              		.global	timer3_init
- 2390              	timer3_init:
- 2391              	.LFB4:
-  78:../timer3.c   **** 
-  79:../timer3.c   **** /*--- Código de las funciones públicas ---*/
-  80:../timer3.c   **** void timer3_init(timer3_callback_t callback)
-  81:../timer3.c   **** {
- 2392              		.loc 1 81 0
- 2393              		.cfi_startproc
- 2394              		@ Function supports interworking.
- 2395              		@ args = 0, pretend = 0, frame = 8
- 2396              		@ frame_needed = 1, uses_anonymous_args = 0
- 2397 01b4 0DC0A0E1 		mov	ip, sp
- 2398              	.LCFI8:
- 2399              		.cfi_def_cfa_register 12
- 2400 01b8 00D82DE9 		stmfd	sp!, {fp, ip, lr, pc}
- 2401 01bc 04B04CE2 		sub	fp, ip, #4
- 2402              		.cfi_offset 14, -8
- 2403              		.cfi_offset 13, -12
- 2404              		.cfi_offset 11, -16
- 2405              	.LCFI9:
- 2406              		.cfi_def_cfa 11, 4
- 2407 01c0 08D04DE2 		sub	sp, sp, #8
- 2408 01c4 10000BE5 		str	r0, [fp, #-16]
-  82:../timer3.c   ****         callback_validacion = callback;
- 2409              		.loc 1 82 0
- 2410 01c8 D8309FE5 		ldr	r3, .L14
- 2411 01cc 10201BE5 		ldr	r2, [fp, #-16]
- 2412 01d0 002083E5 		str	r2, [r3, #0]
-  83:../timer3.c   ****         estado_actual = ESPERANDO_PULSACION;
- 2413              		.loc 1 83 0
- 2414 01d4 D0309FE5 		ldr	r3, .L14+4
- 2415 01d8 0020A0E3 		mov	r2, #0
- 2416 01dc 0020C3E5 		strb	r2, [r3, #0]
-  84:../timer3.c   ****         contador_ms = 0;
- 2417              		.loc 1 84 0
- 2418 01e0 C8309FE5 		ldr	r3, .L14+8
- 2419 01e4 0020A0E3 		mov	r2, #0
- 2420 01e8 002083E5 		str	r2, [r3, #0]
-  85:../timer3.c   ****         monitor_ms = 0;
- 2421              		.loc 1 85 0
- 2422 01ec C0309FE5 		ldr	r3, .L14+12
- 2423 01f0 0020A0E3 		mov	r2, #0
- 2424 01f4 002083E5 		str	r2, [r3, #0]
-  86:../timer3.c   ****         boton_en_proceso = 0;
- 2425              		.loc 1 86 0
- 2426 01f8 B8309FE5 		ldr	r3, .L14+16
- 2427 01fc 0020A0E3 		mov	r2, #0
- 2428 0200 0020C3E5 		strb	r2, [r3, #0]
-  87:../timer3.c   ****         mascara_boton = 0;
- 2429              		.loc 1 87 0
- 2430 0204 B0309FE5 		ldr	r3, .L14+20
- 2431 0208 0020A0E3 		mov	r2, #0
- 2432 020c 002083E5 		str	r2, [r3, #0]
-  88:../timer3.c   **** 
-  89:../timer3.c   ****         /* Enmascarar la interrupción del timer3 inicialmente */
-  90:../timer3.c   ****         rINTMSK |= BIT_TIMER3;
- 2433              		.loc 1 90 0
- 2434 0210 A8309FE5 		ldr	r3, .L14+24
- 2435 0214 A4209FE5 		ldr	r2, .L14+24
- 2436 0218 002092E5 		ldr	r2, [r2, #0]
- 2437 021c 012B82E3 		orr	r2, r2, #1024
- 2438 0220 002083E5 		str	r2, [r3, #0]
-  91:../timer3.c   **** 
-  92:../timer3.c   ****         /* Configurar el vector de interrupción */
-  93:../timer3.c   ****         pISR_TIMER3 = (unsigned) timer3_ISR;
- 2439              		.loc 1 93 0
- 2440 0224 98309FE5 		ldr	r3, .L14+28
- 2441 0228 98209FE5 		ldr	r2, .L14+32
- 2442 022c 002083E5 		str	r2, [r3, #0]
-  94:../timer3.c   **** 
-  95:../timer3.c   ****         /* Configurar divisor (1/2) compartido con el timer2 */
-  96:../timer3.c   ****         rTCFG1 = (rTCFG1 & ~(0xF << 12)) | (0x0 << 12);
- 2443              		.loc 1 96 0
- 2444 0230 94309FE5 		ldr	r3, .L14+36
- 2445 0234 90209FE5 		ldr	r2, .L14+36
- 2446 0238 002092E5 		ldr	r2, [r2, #0]
- 2447 023c 0F2AC2E3 		bic	r2, r2, #61440
- 2448 0240 002083E5 		str	r2, [r3, #0]
+ 3783              		.loc 1 62 0
+ 3784              		.cfi_startproc
+ 3785              		@ Function supports interworking.
+ 3786              		@ args = 0, pretend = 0, frame = 0
+ 3787              		@ frame_needed = 1, uses_anonymous_args = 0
+ 3788 009c 0DC0A0E1 		mov	ip, sp
+ 3789              	.LCFI4:
+ 3790              		.cfi_def_cfa_register 12
+ 3791 00a0 00D82DE9 		stmfd	sp!, {fp, ip, lr, pc}
+ 3792 00a4 04B04CE2 		sub	fp, ip, #4
+ 3793              		.cfi_offset 14, -8
+ 3794              		.cfi_offset 13, -12
+ 3795              		.cfi_offset 11, -16
+ 3796              	.LCFI5:
+ 3797              		.cfi_def_cfa 11, 4
+  63:../timer3.c   ****         /* Configurar el valor de cuenta para 1 ms */
+  64:../timer3.c   ****         rTCNTB3 = TIMER3_1MS_COUNT;
+ 3798              		.loc 1 64 0
+ 3799 00a8 4C309FE5 		ldr	r3, .L8
+ 3800 00ac 7D2CA0E3 		mov	r2, #32000
+ 3801 00b0 002083E5 		str	r2, [r3, #0]
+  65:../timer3.c   ****         rTCMPB3 = 0;
+ 3802              		.loc 1 65 0
+ 3803 00b4 44309FE5 		ldr	r3, .L8+4
+ 3804 00b8 0020A0E3 		mov	r2, #0
+ 3805 00bc 002083E5 		str	r2, [r3, #0]
+  66:../timer3.c   **** 
+  67:../timer3.c   ****         /* Cargar los nuevos valores (manual update) */
+  68:../timer3.c   ****         rTCON = (rTCON & ~(0xF << 16)) | (1 << 17);
+ 3806              		.loc 1 68 0
+ 3807 00c0 3C309FE5 		ldr	r3, .L8+8
+ 3808 00c4 38209FE5 		ldr	r2, .L8+8
+ 3809 00c8 002092E5 		ldr	r2, [r2, #0]
+ 3810 00cc 0F28C2E3 		bic	r2, r2, #983040
+ 3811 00d0 022882E3 		orr	r2, r2, #131072
+ 3812 00d4 002083E5 		str	r2, [r3, #0]
+  69:../timer3.c   ****         /* Activar auto-reload y arrancar el timer */
+  70:../timer3.c   ****         rTCON = (rTCON & ~(0xF << 16)) | (1 << 19) | (1 << 16);
+ 3813              		.loc 1 70 0
+ 3814 00d8 24309FE5 		ldr	r3, .L8+8
+ 3815 00dc 20209FE5 		ldr	r2, .L8+8
+ 3816 00e0 002092E5 		ldr	r2, [r2, #0]
+ 3817 00e4 0F28C2E3 		bic	r2, r2, #983040
+ 3818 00e8 092882E3 		orr	r2, r2, #589824
+ 3819 00ec 002083E5 		str	r2, [r3, #0]
+  71:../timer3.c   **** }
+ 3820              		.loc 1 71 0
+ 3821 00f0 0CD04BE2 		sub	sp, fp, #12
+ 3822 00f4 00689DE8 		ldmfd	sp, {fp, sp, lr}
+ 3823 00f8 1EFF2FE1 		bx	lr
+ 3824              	.L9:
+ 3825              		.align	2
+ 3826              	.L8:
+ 3827 00fc 3000D501 		.word	30736432
+ 3828 0100 3400D501 		.word	30736436
+ 3829 0104 0800D501 		.word	30736392
+ 3830              		.cfi_endproc
+ 3831              	.LFE5:
+ 3833              		.align	2
+ 3835              	finalizar_antirrebote:
+ 3836              	.LFB6:
+  72:../timer3.c   **** 
+  73:../timer3.c   **** static void finalizar_antirrebote(void)
+  74:../timer3.c   **** {
+ 3837              		.loc 1 74 0
+ 3838              		.cfi_startproc
+ 3839              		@ Function supports interworking.
+ 3840              		@ args = 0, pretend = 0, frame = 0
+ 3841              		@ frame_needed = 1, uses_anonymous_args = 0
+ 3842 0108 0DC0A0E1 		mov	ip, sp
+ 3843              	.LCFI6:
+ 3844              		.cfi_def_cfa_register 12
+ 3845 010c 00D82DE9 		stmfd	sp!, {fp, ip, lr, pc}
+ 3846 0110 04B04CE2 		sub	fp, ip, #4
+ 3847              		.cfi_offset 14, -8
+ 3848              		.cfi_offset 13, -12
+ 3849              		.cfi_offset 11, -16
+ 3850              	.LCFI7:
+ 3851              		.cfi_def_cfa 11, 4
+  75:../timer3.c   ****         /* Rehabilitar las interrupciones de los botones */
+  76:../timer3.c   ****         rEXTINTPND = 0xf;
+ 3852              		.loc 1 76 0
+ 3853 0114 74309FE5 		ldr	r3, .L11
+ 3854 0118 0F20A0E3 		mov	r2, #15
+ 3855 011c 002083E5 		str	r2, [r3, #0]
+  77:../timer3.c   ****         rINTMSK &= ~(BIT_EINT4567);
+ 3856              		.loc 1 77 0
+ 3857 0120 6C309FE5 		ldr	r3, .L11+4
+ 3858 0124 68209FE5 		ldr	r2, .L11+4
+ 3859 0128 002092E5 		ldr	r2, [r2, #0]
+ 3860 012c 0226C2E3 		bic	r2, r2, #2097152
+ 3861 0130 002083E5 		str	r2, [r3, #0]
+  78:../timer3.c   ****         rI_ISPC |= BIT_EINT4567;
+ 3862              		.loc 1 78 0
+ 3863 0134 5C309FE5 		ldr	r3, .L11+8
+ 3864 0138 58209FE5 		ldr	r2, .L11+8
+ 3865 013c 002092E5 		ldr	r2, [r2, #0]
+ 3866 0140 022682E3 		orr	r2, r2, #2097152
+ 3867 0144 002083E5 		str	r2, [r3, #0]
+  79:../timer3.c   **** 
+  80:../timer3.c   ****         /* Resetear el estado interno */
+  81:../timer3.c   ****         estado_actual = ESPERANDO_PULSACION;
+ 3868              		.loc 1 81 0
+ 3869 0148 4C309FE5 		ldr	r3, .L11+12
+ 3870 014c 0020A0E3 		mov	r2, #0
+ 3871 0150 0020C3E5 		strb	r2, [r3, #0]
+  82:../timer3.c   ****         contador_ms = 0;
+ 3872              		.loc 1 82 0
+ 3873 0154 44309FE5 		ldr	r3, .L11+16
+ 3874 0158 0020A0E3 		mov	r2, #0
+ 3875 015c 002083E5 		str	r2, [r3, #0]
+  83:../timer3.c   ****         monitor_ms = 0;
+ 3876              		.loc 1 83 0
+ 3877 0160 3C309FE5 		ldr	r3, .L11+20
+ 3878 0164 0020A0E3 		mov	r2, #0
+ 3879 0168 002083E5 		str	r2, [r3, #0]
+  84:../timer3.c   ****         boton_en_proceso = 0;
+ 3880              		.loc 1 84 0
+ 3881 016c 34309FE5 		ldr	r3, .L11+24
+ 3882 0170 0020A0E3 		mov	r2, #0
+ 3883 0174 0020C3E5 		strb	r2, [r3, #0]
+  85:../timer3.c   ****         mascara_boton = 0;
+ 3884              		.loc 1 85 0
+ 3885 0178 2C309FE5 		ldr	r3, .L11+28
+ 3886 017c 0020A0E3 		mov	r2, #0
+ 3887 0180 002083E5 		str	r2, [r3, #0]
+  86:../timer3.c   **** }
+ 3888              		.loc 1 86 0
+ 3889 0184 0CD04BE2 		sub	sp, fp, #12
+ 3890 0188 00689DE8 		ldmfd	sp, {fp, sp, lr}
+ 3891 018c 1EFF2FE1 		bx	lr
+ 3892              	.L12:
+ 3893              		.align	2
+ 3894              	.L11:
+ 3895 0190 5400D201 		.word	30539860
+ 3896 0194 0C00E001 		.word	31457292
+ 3897 0198 2400E001 		.word	31457316
+ 3898 019c 00000000 		.word	estado_actual
+ 3899 01a0 04000000 		.word	contador_ms
+ 3900 01a4 08000000 		.word	monitor_ms
+ 3901 01a8 0C000000 		.word	boton_en_proceso
+ 3902 01ac 10000000 		.word	mascara_boton
+ 3903              		.cfi_endproc
+ 3904              	.LFE6:
+ 3906              		.align	2
+ 3907              		.global	timer3_init
+ 3909              	timer3_init:
+ 3910              	.LFB7:
+  87:../timer3.c   **** 
+  88:../timer3.c   **** /*--- Código de las funciones públicas ---*/
+  89:../timer3.c   **** void timer3_init(timer3_callback_t callback)
+  90:../timer3.c   **** {
+ 3911              		.loc 1 90 0
+ 3912              		.cfi_startproc
+ 3913              		@ Function supports interworking.
+ 3914              		@ args = 0, pretend = 0, frame = 8
+ 3915              		@ frame_needed = 1, uses_anonymous_args = 0
+ 3916 01b0 0DC0A0E1 		mov	ip, sp
+ 3917              	.LCFI8:
+ 3918              		.cfi_def_cfa_register 12
+ 3919 01b4 00D82DE9 		stmfd	sp!, {fp, ip, lr, pc}
+ 3920 01b8 04B04CE2 		sub	fp, ip, #4
+ 3921              		.cfi_offset 14, -8
+ 3922              		.cfi_offset 13, -12
+ 3923              		.cfi_offset 11, -16
+ 3924              	.LCFI9:
+ 3925              		.cfi_def_cfa 11, 4
+ 3926 01bc 08D04DE2 		sub	sp, sp, #8
+ 3927 01c0 10000BE5 		str	r0, [fp, #-16]
+  91:../timer3.c   ****         callback_validacion = callback;
+ 3928              		.loc 1 91 0
+ 3929 01c4 D8309FE5 		ldr	r3, .L14
+ 3930 01c8 10201BE5 		ldr	r2, [fp, #-16]
+ 3931 01cc 002083E5 		str	r2, [r3, #0]
+  92:../timer3.c   ****         estado_actual = ESPERANDO_PULSACION;
+ 3932              		.loc 1 92 0
+ 3933 01d0 D0309FE5 		ldr	r3, .L14+4
+ 3934 01d4 0020A0E3 		mov	r2, #0
+ 3935 01d8 0020C3E5 		strb	r2, [r3, #0]
+  93:../timer3.c   ****         contador_ms = 0;
+ 3936              		.loc 1 93 0
+ 3937 01dc C8309FE5 		ldr	r3, .L14+8
+ 3938 01e0 0020A0E3 		mov	r2, #0
+ 3939 01e4 002083E5 		str	r2, [r3, #0]
+  94:../timer3.c   ****         monitor_ms = 0;
+ 3940              		.loc 1 94 0
+ 3941 01e8 C0309FE5 		ldr	r3, .L14+12
+ 3942 01ec 0020A0E3 		mov	r2, #0
+ 3943 01f0 002083E5 		str	r2, [r3, #0]
+  95:../timer3.c   ****         boton_en_proceso = 0;
+ 3944              		.loc 1 95 0
+ 3945 01f4 B8309FE5 		ldr	r3, .L14+16
+ 3946 01f8 0020A0E3 		mov	r2, #0
+ 3947 01fc 0020C3E5 		strb	r2, [r3, #0]
+  96:../timer3.c   ****         mascara_boton = 0;
+ 3948              		.loc 1 96 0
+ 3949 0200 B0309FE5 		ldr	r3, .L14+20
+ 3950 0204 0020A0E3 		mov	r2, #0
+ 3951 0208 002083E5 		str	r2, [r3, #0]
   97:../timer3.c   **** 
-  98:../timer3.c   ****         /* Cargar el valor inicial y dejar el timer parado */
-  99:../timer3.c   ****         rTCNTB3 = TIMER3_1MS_COUNT;
- 2449              		.loc 1 99 0
- 2450 0244 84309FE5 		ldr	r3, .L14+40
- 2451 0248 7D2CA0E3 		mov	r2, #32000
- 2452 024c 002083E5 		str	r2, [r3, #0]
- 100:../timer3.c   ****         rTCMPB3 = 0;
- 2453              		.loc 1 100 0
- 2454 0250 7C309FE5 		ldr	r3, .L14+44
- 2455 0254 0020A0E3 		mov	r2, #0
- 2456 0258 002083E5 		str	r2, [r3, #0]
- 101:../timer3.c   ****         rTCON = (rTCON & ~(0xF << 16)) | (1 << 17);
- 2457              		.loc 1 101 0
- 2458 025c 74309FE5 		ldr	r3, .L14+48
- 2459 0260 70209FE5 		ldr	r2, .L14+48
- 2460 0264 002092E5 		ldr	r2, [r2, #0]
- 2461 0268 0F28C2E3 		bic	r2, r2, #983040
- 2462 026c 022882E3 		orr	r2, r2, #131072
- 2463 0270 002083E5 		str	r2, [r3, #0]
- 102:../timer3.c   ****         rTCON &= ~(0xF << 16);
- 2464              		.loc 1 102 0
- 2465 0274 5C309FE5 		ldr	r3, .L14+48
- 2466 0278 58209FE5 		ldr	r2, .L14+48
- 2467 027c 002092E5 		ldr	r2, [r2, #0]
- 2468 0280 0F28C2E3 		bic	r2, r2, #983040
- 2469 0284 002083E5 		str	r2, [r3, #0]
+  98:../timer3.c   ****         /* Enmascarar la interrupción del timer3 inicialmente */
+  99:../timer3.c   ****         rINTMSK |= BIT_TIMER3;
+ 3952              		.loc 1 99 0
+ 3953 020c A8309FE5 		ldr	r3, .L14+24
+ 3954 0210 A4209FE5 		ldr	r2, .L14+24
+ 3955 0214 002092E5 		ldr	r2, [r2, #0]
+ 3956 0218 012B82E3 		orr	r2, r2, #1024
+ 3957 021c 002083E5 		str	r2, [r3, #0]
+ 100:../timer3.c   **** 
+ 101:../timer3.c   ****         /* Configurar el vector de interrupción */
+ 102:../timer3.c   ****         pISR_TIMER3 = (unsigned) timer3_ISR;
+ 3958              		.loc 1 102 0
+ 3959 0220 98309FE5 		ldr	r3, .L14+28
+ 3960 0224 98209FE5 		ldr	r2, .L14+32
+ 3961 0228 002083E5 		str	r2, [r3, #0]
  103:../timer3.c   **** 
- 104:../timer3.c   ****         /* Limpiar posibles peticiones pendientes */
- 105:../timer3.c   ****         rI_ISPC |= BIT_TIMER3;
- 2470              		.loc 1 105 0
- 2471 0288 4C309FE5 		ldr	r3, .L14+52
- 2472 028c 48209FE5 		ldr	r2, .L14+52
- 2473 0290 002092E5 		ldr	r2, [r2, #0]
- 2474 0294 012B82E3 		orr	r2, r2, #1024
- 2475 0298 002083E5 		str	r2, [r3, #0]
- 106:../timer3.c   **** }
- 2476              		.loc 1 106 0
- 2477 029c 0CD04BE2 		sub	sp, fp, #12
- 2478 02a0 00689DE8 		ldmfd	sp, {fp, sp, lr}
- 2479 02a4 1EFF2FE1 		bx	lr
- 2480              	.L15:
- 2481              		.align	2
- 2482              	.L14:
- 2483 02a8 14000000 		.word	callback_validacion
- 2484 02ac 00000000 		.word	estado_actual
- 2485 02b0 04000000 		.word	contador_ms
- 2486 02b4 08000000 		.word	monitor_ms
- 2487 02b8 0C000000 		.word	boton_en_proceso
- 2488 02bc 10000000 		.word	mascara_boton
- 2489 02c0 0C00E001 		.word	31457292
- 2490 02c4 48FF7F0C 		.word	209715016
- 2491 02c8 00000000 		.word	timer3_ISR
- 2492 02cc 0400D501 		.word	30736388
- 2493 02d0 3000D501 		.word	30736432
- 2494 02d4 3400D501 		.word	30736436
- 2495 02d8 0800D501 		.word	30736392
- 2496 02dc 2400E001 		.word	31457316
- 2497              		.cfi_endproc
- 2498              	.LFE4:
- 2500              		.align	2
- 2501              		.global	timer3_start_antirrebote
- 2503              	timer3_start_antirrebote:
- 2504              	.LFB5:
- 107:../timer3.c   **** 
- 108:../timer3.c   **** int timer3_start_antirrebote(uint8_t boton_id)
- 109:../timer3.c   **** {
- 2505              		.loc 1 109 0
- 2506              		.cfi_startproc
- 2507              		@ Function supports interworking.
- 2508              		@ args = 0, pretend = 0, frame = 8
- 2509              		@ frame_needed = 1, uses_anonymous_args = 0
- 2510 02e0 0DC0A0E1 		mov	ip, sp
- 2511              	.LCFI10:
- 2512              		.cfi_def_cfa_register 12
- 2513 02e4 00D82DE9 		stmfd	sp!, {fp, ip, lr, pc}
- 2514 02e8 04B04CE2 		sub	fp, ip, #4
- 2515              		.cfi_offset 14, -8
- 2516              		.cfi_offset 13, -12
- 2517              		.cfi_offset 11, -16
- 2518              	.LCFI11:
- 2519              		.cfi_def_cfa 11, 4
- 2520 02ec 08D04DE2 		sub	sp, sp, #8
- 2521 02f0 0030A0E1 		mov	r3, r0
- 2522 02f4 0D304BE5 		strb	r3, [fp, #-13]
- 110:../timer3.c   ****         if (estado_actual != ESPERANDO_PULSACION)
- 2523              		.loc 1 110 0
- 2524 02f8 C4309FE5 		ldr	r3, .L24
- 2525 02fc 0030D3E5 		ldrb	r3, [r3, #0]
- 2526 0300 FF3003E2 		and	r3, r3, #255
- 2527 0304 000053E3 		cmp	r3, #0
- 2528 0308 0100000A 		beq	.L17
- 111:../timer3.c   ****         {
- 112:../timer3.c   ****                 return 0;
- 2529              		.loc 1 112 0
- 2530 030c 0030A0E3 		mov	r3, #0
- 2531 0310 270000EA 		b	.L18
- 2532              	.L17:
- 113:../timer3.c   ****         }
- 114:../timer3.c   **** 
- 115:../timer3.c   ****         /* Seleccionar la máscara del puerto correspondiente */
- 116:../timer3.c   ****         switch (boton_id)
- 2533              		.loc 1 116 0
- 2534 0314 0D305BE5 		ldrb	r3, [fp, #-13]	@ zero_extendqisi2
- 2535 0318 040053E3 		cmp	r3, #4
- 2536 031c 0200000A 		beq	.L20
- 2537 0320 080053E3 		cmp	r3, #8
- 2538 0324 0400000A 		beq	.L21
- 2539 0328 070000EA 		b	.L23
- 2540              	.L20:
- 117:../timer3.c   ****         {
- 118:../timer3.c   ****                 case EVENTO_BOTON_IZQUIERDO:
- 119:../timer3.c   ****                         mascara_boton = BOTON_MASK_EINT6;
- 2541              		.loc 1 119 0
- 2542 032c 94309FE5 		ldr	r3, .L24+4
- 2543 0330 4020A0E3 		mov	r2, #64
- 2544 0334 002083E5 		str	r2, [r3, #0]
- 120:../timer3.c   ****                         break;
- 2545              		.loc 1 120 0
- 2546 0338 050000EA 		b	.L22
- 2547              	.L21:
- 121:../timer3.c   ****                 case EVENTO_BOTON_DERECHO:
- 122:../timer3.c   ****                         mascara_boton = BOTON_MASK_EINT7;
- 2548              		.loc 1 122 0
- 2549 033c 84309FE5 		ldr	r3, .L24+4
- 2550 0340 8020A0E3 		mov	r2, #128
- 2551 0344 002083E5 		str	r2, [r3, #0]
- 123:../timer3.c   ****                         break;
- 2552              		.loc 1 123 0
- 2553 0348 010000EA 		b	.L22
- 2554              	.L23:
- 124:../timer3.c   ****                 default:
- 125:../timer3.c   ****                         return 0;
- 2555              		.loc 1 125 0
- 2556 034c 0030A0E3 		mov	r3, #0
- 2557 0350 170000EA 		b	.L18
- 2558              	.L22:
- 126:../timer3.c   ****         }
- 127:../timer3.c   **** 
- 128:../timer3.c   ****         boton_en_proceso = boton_id;
- 2559              		.loc 1 128 0
- 2560 0354 70309FE5 		ldr	r3, .L24+8
- 2561 0358 0D205BE5 		ldrb	r2, [fp, #-13]
- 2562 035c 0020C3E5 		strb	r2, [r3, #0]
- 129:../timer3.c   ****         estado_actual = REBOTE_PRESION;
- 2563              		.loc 1 129 0
- 2564 0360 5C309FE5 		ldr	r3, .L24
- 2565 0364 0120A0E3 		mov	r2, #1
- 2566 0368 0020C3E5 		strb	r2, [r3, #0]
- 130:../timer3.c   ****         contador_ms = TIMER3_TRP_MS;
- 2567              		.loc 1 130 0
- 2568 036c 5C309FE5 		ldr	r3, .L24+12
- 2569 0370 1E20A0E3 		mov	r2, #30
- 2570 0374 002083E5 		str	r2, [r3, #0]
- 131:../timer3.c   ****         monitor_ms = TIMER3_MONITOR_MS;
- 2571              		.loc 1 131 0
- 2572 0378 54309FE5 		ldr	r3, .L24+16
- 2573 037c 6420A0E3 		mov	r2, #100
- 2574 0380 002083E5 		str	r2, [r3, #0]
- 132:../timer3.c   **** 
- 133:../timer3.c   ****         /* Deshabilitar las interrupciones de los botones */
- 134:../timer3.c   ****         rINTMSK |= BIT_EINT4567;
- 2575              		.loc 1 134 0
- 2576 0384 4C309FE5 		ldr	r3, .L24+20
- 2577 0388 48209FE5 		ldr	r2, .L24+20
- 2578 038c 002092E5 		ldr	r2, [r2, #0]
- 2579 0390 022682E3 		orr	r2, r2, #2097152
- 2580 0394 002083E5 		str	r2, [r3, #0]
- 135:../timer3.c   **** 
- 136:../timer3.c   ****         /* Preparar y arrancar el temporizador */
- 137:../timer3.c   ****         timer3_preparar_tick();
- 2581              		.loc 1 137 0
- 2582 0398 3FFFFFEB 		bl	timer3_preparar_tick
- 138:../timer3.c   **** 
- 139:../timer3.c   ****         /* Habilitar la interrupción del timer3 */
- 140:../timer3.c   ****         rINTMSK &= ~(BIT_TIMER3);
- 2583              		.loc 1 140 0
- 2584 039c 34309FE5 		ldr	r3, .L24+20
- 2585 03a0 30209FE5 		ldr	r2, .L24+20
- 2586 03a4 002092E5 		ldr	r2, [r2, #0]
- 2587 03a8 012BC2E3 		bic	r2, r2, #1024
- 2588 03ac 002083E5 		str	r2, [r3, #0]
+ 104:../timer3.c   ****         /* Configurar divisor (1/2) compartido con el timer2 */
+ 105:../timer3.c   ****         rTCFG1 = (rTCFG1 & ~(0xF << 12)) | (0x0 << 12);
+ 3962              		.loc 1 105 0
+ 3963 022c 94309FE5 		ldr	r3, .L14+36
+ 3964 0230 90209FE5 		ldr	r2, .L14+36
+ 3965 0234 002092E5 		ldr	r2, [r2, #0]
+ 3966 0238 0F2AC2E3 		bic	r2, r2, #61440
+ 3967 023c 002083E5 		str	r2, [r3, #0]
+ 106:../timer3.c   **** 
+ 107:../timer3.c   ****         /* Cargar el valor inicial y dejar el timer parado */
+ 108:../timer3.c   ****         rTCNTB3 = TIMER3_1MS_COUNT;
+ 3968              		.loc 1 108 0
+ 3969 0240 84309FE5 		ldr	r3, .L14+40
+ 3970 0244 7D2CA0E3 		mov	r2, #32000
+ 3971 0248 002083E5 		str	r2, [r3, #0]
+ 109:../timer3.c   ****         rTCMPB3 = 0;
+ 3972              		.loc 1 109 0
+ 3973 024c 7C309FE5 		ldr	r3, .L14+44
+ 3974 0250 0020A0E3 		mov	r2, #0
+ 3975 0254 002083E5 		str	r2, [r3, #0]
+ 110:../timer3.c   ****         rTCON = (rTCON & ~(0xF << 16)) | (1 << 17);
+ 3976              		.loc 1 110 0
+ 3977 0258 74309FE5 		ldr	r3, .L14+48
+ 3978 025c 70209FE5 		ldr	r2, .L14+48
+ 3979 0260 002092E5 		ldr	r2, [r2, #0]
+ 3980 0264 0F28C2E3 		bic	r2, r2, #983040
+ 3981 0268 022882E3 		orr	r2, r2, #131072
+ 3982 026c 002083E5 		str	r2, [r3, #0]
+ 111:../timer3.c   ****         rTCON &= ~(0xF << 16);
+ 3983              		.loc 1 111 0
+ 3984 0270 5C309FE5 		ldr	r3, .L14+48
+ 3985 0274 58209FE5 		ldr	r2, .L14+48
+ 3986 0278 002092E5 		ldr	r2, [r2, #0]
+ 3987 027c 0F28C2E3 		bic	r2, r2, #983040
+ 3988 0280 002083E5 		str	r2, [r3, #0]
+ 112:../timer3.c   **** 
+ 113:../timer3.c   ****         /* Limpiar posibles peticiones pendientes */
+ 114:../timer3.c   ****         rI_ISPC |= BIT_TIMER3;
+ 3989              		.loc 1 114 0
+ 3990 0284 4C309FE5 		ldr	r3, .L14+52
+ 3991 0288 48209FE5 		ldr	r2, .L14+52
+ 3992 028c 002092E5 		ldr	r2, [r2, #0]
+ 3993 0290 012B82E3 		orr	r2, r2, #1024
+ 3994 0294 002083E5 		str	r2, [r3, #0]
+ 115:../timer3.c   **** }
+ 3995              		.loc 1 115 0
+ 3996 0298 0CD04BE2 		sub	sp, fp, #12
+ 3997 029c 00689DE8 		ldmfd	sp, {fp, sp, lr}
+ 3998 02a0 1EFF2FE1 		bx	lr
+ 3999              	.L15:
+ 4000              		.align	2
+ 4001              	.L14:
+ 4002 02a4 14000000 		.word	callback_validacion
+ 4003 02a8 00000000 		.word	estado_actual
+ 4004 02ac 04000000 		.word	contador_ms
+ 4005 02b0 08000000 		.word	monitor_ms
+ 4006 02b4 0C000000 		.word	boton_en_proceso
+ 4007 02b8 10000000 		.word	mascara_boton
+ 4008 02bc 0C00E001 		.word	31457292
+ 4009 02c0 48FF7F0C 		.word	209715016
+ 4010 02c4 00000000 		.word	timer3_ISR
+ 4011 02c8 0400D501 		.word	30736388
+ 4012 02cc 3000D501 		.word	30736432
+ 4013 02d0 3400D501 		.word	30736436
+ 4014 02d4 0800D501 		.word	30736392
+ 4015 02d8 2400E001 		.word	31457316
+ 4016              		.cfi_endproc
+ 4017              	.LFE7:
+ 4019              		.align	2
+ 4020              		.global	timer3_start_antirrebote
+ 4022              	timer3_start_antirrebote:
+ 4023              	.LFB8:
+ 116:../timer3.c   **** 
+ 117:../timer3.c   **** int timer3_start_antirrebote(uint8_t boton_id)
+ 118:../timer3.c   **** {
+ 4024              		.loc 1 118 0
+ 4025              		.cfi_startproc
+ 4026              		@ Function supports interworking.
+ 4027              		@ args = 0, pretend = 0, frame = 8
+ 4028              		@ frame_needed = 1, uses_anonymous_args = 0
+ 4029 02dc 0DC0A0E1 		mov	ip, sp
+ 4030              	.LCFI10:
+ 4031              		.cfi_def_cfa_register 12
+ 4032 02e0 00D82DE9 		stmfd	sp!, {fp, ip, lr, pc}
+ 4033 02e4 04B04CE2 		sub	fp, ip, #4
+ 4034              		.cfi_offset 14, -8
+ 4035              		.cfi_offset 13, -12
+ 4036              		.cfi_offset 11, -16
+ 4037              	.LCFI11:
+ 4038              		.cfi_def_cfa 11, 4
+ 4039 02e8 08D04DE2 		sub	sp, sp, #8
+ 4040 02ec 0030A0E1 		mov	r3, r0
+ 4041 02f0 0D304BE5 		strb	r3, [fp, #-13]
+ 119:../timer3.c   ****         if (estado_actual != ESPERANDO_PULSACION)
+ 4042              		.loc 1 119 0
+ 4043 02f4 C4309FE5 		ldr	r3, .L24
+ 4044 02f8 0030D3E5 		ldrb	r3, [r3, #0]
+ 4045 02fc FF3003E2 		and	r3, r3, #255
+ 4046 0300 000053E3 		cmp	r3, #0
+ 4047 0304 0100000A 		beq	.L17
+ 120:../timer3.c   ****         {
+ 121:../timer3.c   ****                 return 0;
+ 4048              		.loc 1 121 0
+ 4049 0308 0030A0E3 		mov	r3, #0
+ 4050 030c 270000EA 		b	.L18
+ 4051              	.L17:
+ 122:../timer3.c   ****         }
+ 123:../timer3.c   **** 
+ 124:../timer3.c   ****         /* Seleccionar la máscara del puerto correspondiente */
+ 125:../timer3.c   ****         switch (boton_id)
+ 4052              		.loc 1 125 0
+ 4053 0310 0D305BE5 		ldrb	r3, [fp, #-13]	@ zero_extendqisi2
+ 4054 0314 040053E3 		cmp	r3, #4
+ 4055 0318 0200000A 		beq	.L20
+ 4056 031c 080053E3 		cmp	r3, #8
+ 4057 0320 0400000A 		beq	.L21
+ 4058 0324 070000EA 		b	.L23
+ 4059              	.L20:
+ 126:../timer3.c   ****         {
+ 127:../timer3.c   ****                 case EVENTO_BOTON_IZQUIERDO:
+ 128:../timer3.c   ****                         mascara_boton = BOTON_MASK_EINT6;
+ 4060              		.loc 1 128 0
+ 4061 0328 94309FE5 		ldr	r3, .L24+4
+ 4062 032c 4020A0E3 		mov	r2, #64
+ 4063 0330 002083E5 		str	r2, [r3, #0]
+ 129:../timer3.c   ****                         break;
+ 4064              		.loc 1 129 0
+ 4065 0334 050000EA 		b	.L22
+ 4066              	.L21:
+ 130:../timer3.c   ****                 case EVENTO_BOTON_DERECHO:
+ 131:../timer3.c   ****                         mascara_boton = BOTON_MASK_EINT7;
+ 4067              		.loc 1 131 0
+ 4068 0338 84309FE5 		ldr	r3, .L24+4
+ 4069 033c 8020A0E3 		mov	r2, #128
+ 4070 0340 002083E5 		str	r2, [r3, #0]
+ 132:../timer3.c   ****                         break;
+ 4071              		.loc 1 132 0
+ 4072 0344 010000EA 		b	.L22
+ 4073              	.L23:
+ 133:../timer3.c   ****                 default:
+ 134:../timer3.c   ****                         return 0;
+ 4074              		.loc 1 134 0
+ 4075 0348 0030A0E3 		mov	r3, #0
+ 4076 034c 170000EA 		b	.L18
+ 4077              	.L22:
+ 135:../timer3.c   ****         }
+ 136:../timer3.c   **** 
+ 137:../timer3.c   ****         boton_en_proceso = boton_id;
+ 4078              		.loc 1 137 0
+ 4079 0350 70309FE5 		ldr	r3, .L24+8
+ 4080 0354 0D205BE5 		ldrb	r2, [fp, #-13]
+ 4081 0358 0020C3E5 		strb	r2, [r3, #0]
+ 138:../timer3.c   ****         estado_actual = REBOTE_PRESION;
+ 4082              		.loc 1 138 0
+ 4083 035c 5C309FE5 		ldr	r3, .L24
+ 4084 0360 0120A0E3 		mov	r2, #1
+ 4085 0364 0020C3E5 		strb	r2, [r3, #0]
+ 139:../timer3.c   ****         contador_ms = TIMER3_TRP_MS;
+ 4086              		.loc 1 139 0
+ 4087 0368 5C309FE5 		ldr	r3, .L24+12
+ 4088 036c 1E20A0E3 		mov	r2, #30
+ 4089 0370 002083E5 		str	r2, [r3, #0]
+ 140:../timer3.c   ****         monitor_ms = TIMER3_MONITOR_MS;
+ 4090              		.loc 1 140 0
+ 4091 0374 54309FE5 		ldr	r3, .L24+16
+ 4092 0378 6420A0E3 		mov	r2, #100
+ 4093 037c 002083E5 		str	r2, [r3, #0]
  141:../timer3.c   **** 
- 142:../timer3.c   ****         return 1;
- 2589              		.loc 1 142 0
- 2590 03b0 0130A0E3 		mov	r3, #1
- 2591              	.L18:
- 143:../timer3.c   **** }
- 2592              		.loc 1 143 0
- 2593 03b4 0300A0E1 		mov	r0, r3
- 2594 03b8 0CD04BE2 		sub	sp, fp, #12
- 2595 03bc 00689DE8 		ldmfd	sp, {fp, sp, lr}
- 2596 03c0 1EFF2FE1 		bx	lr
- 2597              	.L25:
- 2598              		.align	2
- 2599              	.L24:
- 2600 03c4 00000000 		.word	estado_actual
- 2601 03c8 10000000 		.word	mascara_boton
- 2602 03cc 0C000000 		.word	boton_en_proceso
- 2603 03d0 04000000 		.word	contador_ms
- 2604 03d4 08000000 		.word	monitor_ms
- 2605 03d8 0C00E001 		.word	31457292
- 2606              		.cfi_endproc
- 2607              	.LFE5:
- 2609              		.align	2
- 2610              		.global	timer3_esta_ocupado
- 2612              	timer3_esta_ocupado:
- 2613              	.LFB6:
+ 142:../timer3.c   ****         /* Deshabilitar las interrupciones de los botones */
+ 143:../timer3.c   ****         rINTMSK |= BIT_EINT4567;
+ 4094              		.loc 1 143 0
+ 4095 0380 4C309FE5 		ldr	r3, .L24+20
+ 4096 0384 48209FE5 		ldr	r2, .L24+20
+ 4097 0388 002092E5 		ldr	r2, [r2, #0]
+ 4098 038c 022682E3 		orr	r2, r2, #2097152
+ 4099 0390 002083E5 		str	r2, [r3, #0]
  144:../timer3.c   **** 
- 145:../timer3.c   **** int timer3_esta_ocupado(void)
- 146:../timer3.c   **** {
- 2614              		.loc 1 146 0
- 2615              		.cfi_startproc
- 2616              		@ Function supports interworking.
- 2617              		@ args = 0, pretend = 0, frame = 0
- 2618              		@ frame_needed = 1, uses_anonymous_args = 0
- 2619 03dc 0DC0A0E1 		mov	ip, sp
- 2620              	.LCFI12:
- 2621              		.cfi_def_cfa_register 12
- 2622 03e0 00D82DE9 		stmfd	sp!, {fp, ip, lr, pc}
- 2623 03e4 04B04CE2 		sub	fp, ip, #4
- 2624              		.cfi_offset 14, -8
- 2625              		.cfi_offset 13, -12
- 2626              		.cfi_offset 11, -16
- 2627              	.LCFI13:
- 2628              		.cfi_def_cfa 11, 4
- 147:../timer3.c   ****         return (estado_actual != ESPERANDO_PULSACION);
- 2629              		.loc 1 147 0
- 2630 03e8 20309FE5 		ldr	r3, .L27
- 2631 03ec 0030D3E5 		ldrb	r3, [r3, #0]
- 2632 03f0 FF3003E2 		and	r3, r3, #255
- 2633 03f4 000053E3 		cmp	r3, #0
- 2634 03f8 0030A003 		moveq	r3, #0
- 2635 03fc 0130A013 		movne	r3, #1
- 148:../timer3.c   **** }
- 2636              		.loc 1 148 0
- 2637 0400 0300A0E1 		mov	r0, r3
- 2638 0404 0CD04BE2 		sub	sp, fp, #12
- 2639 0408 00689DE8 		ldmfd	sp, {fp, sp, lr}
- 2640 040c 1EFF2FE1 		bx	lr
- 2641              	.L28:
- 2642              		.align	2
- 2643              	.L27:
- 2644 0410 00000000 		.word	estado_actual
- 2645              		.cfi_endproc
- 2646              	.LFE6:
- 2648              		.align	2
- 2649              		.global	timer3_ISR
- 2651              	timer3_ISR:
- 2652              	.LFB7:
- 149:../timer3.c   **** 
- 150:../timer3.c   **** /*--- Código de la ISR ---*/
- 151:../timer3.c   **** void timer3_ISR(void)
- 152:../timer3.c   **** {
- 2653              		.loc 1 152 0
- 2654              		.cfi_startproc
- 2655              		@ Interrupt Service Routine.
- 2656              		@ args = 0, pretend = 0, frame = 0
- 2657              		@ frame_needed = 1, uses_anonymous_args = 0
- 2658 0414 04C02DE5 		str	ip, [sp, #-4]!
- 2659 0418 0DC0A0E1 		mov	ip, sp
- 2660              	.LCFI14:
- 2661              		.cfi_def_cfa_register 12
- 2662 041c 0FD82DE9 		stmfd	sp!, {r0, r1, r2, r3, fp, ip, lr, pc}
- 2663 0420 04B04CE2 		sub	fp, ip, #4
- 2664              		.cfi_offset 14, -8
- 2665              		.cfi_offset 13, -12
- 2666              		.cfi_offset 11, -16
- 2667              		.cfi_offset 3, -20
- 2668              		.cfi_offset 2, -24
- 2669              		.cfi_offset 1, -28
- 2670              		.cfi_offset 0, -32
- 2671              	.LCFI15:
- 2672              		.cfi_def_cfa 11, 4
- 153:../timer3.c   ****         switch (estado_actual)
- 2673              		.loc 1 153 0
- 2674 0424 88319FE5 		ldr	r3, .L47
- 2675 0428 0030D3E5 		ldrb	r3, [r3, #0]
- 2676 042c FF3003E2 		and	r3, r3, #255
- 2677 0430 020053E3 		cmp	r3, #2
- 2678 0434 2300000A 		beq	.L32
- 2679 0438 030053E3 		cmp	r3, #3
- 2680 043c 3D00000A 		beq	.L33
- 2681 0440 010053E3 		cmp	r3, #1
- 2682 0444 4A00001A 		bne	.L43
- 2683              	.L31:
- 154:../timer3.c   ****         {
- 155:../timer3.c   ****                 case REBOTE_PRESION:
- 156:../timer3.c   ****                         if (contador_ms > 0)
- 2684              		.loc 1 156 0
- 2685 0448 68319FE5 		ldr	r3, .L47+4
- 2686 044c 003093E5 		ldr	r3, [r3, #0]
- 2687 0450 000053E3 		cmp	r3, #0
- 2688 0454 0400000A 		beq	.L34
- 157:../timer3.c   ****                         {
- 158:../timer3.c   ****                                 contador_ms -= TIMER3_TICK_MS;
- 2689              		.loc 1 158 0
- 2690 0458 58319FE5 		ldr	r3, .L47+4
- 2691 045c 003093E5 		ldr	r3, [r3, #0]
- 2692 0460 012043E2 		sub	r2, r3, #1
- 2693 0464 4C319FE5 		ldr	r3, .L47+4
- 2694 0468 002083E5 		str	r2, [r3, #0]
- 2695              	.L34:
- 159:../timer3.c   ****                         }
- 160:../timer3.c   ****                         if (contador_ms == 0)
- 2696              		.loc 1 160 0
- 2697 046c 44319FE5 		ldr	r3, .L47+4
- 2698 0470 003093E5 		ldr	r3, [r3, #0]
- 2699 0474 000053E3 		cmp	r3, #0
- 2700 0478 3F00001A 		bne	.L44
- 161:../timer3.c   ****                         {
- 162:../timer3.c   ****                                 /* Notificar la pulsación validada (cuando se confirma que está p
- 163:../timer3.c   ****                                 if (callback_validacion)
- 2701              		.loc 1 163 0
- 2702 047c 38319FE5 		ldr	r3, .L47+8
- 2703 0480 003093E5 		ldr	r3, [r3, #0]
- 2704 0484 000053E3 		cmp	r3, #0
- 2705 0488 0700000A 		beq	.L36
- 164:../timer3.c   ****                                 {
- 165:../timer3.c   ****                                         callback_validacion(boton_en_proceso);
- 2706              		.loc 1 165 0
- 2707 048c 28319FE5 		ldr	r3, .L47+8
- 2708 0490 003093E5 		ldr	r3, [r3, #0]
- 2709 0494 24219FE5 		ldr	r2, .L47+12
- 2710 0498 0020D2E5 		ldrb	r2, [r2, #0]
- 2711 049c FF2002E2 		and	r2, r2, #255
- 2712 04a0 0200A0E1 		mov	r0, r2
- 2713 04a4 0FE0A0E1 		mov	lr, pc
- 2714 04a8 13FF2FE1 		bx	r3
- 2715              	.L36:
- 166:../timer3.c   ****                                 }
- 167:../timer3.c   ****                                 
- 168:../timer3.c   ****                                 estado_actual = MONITORIZANDO;
- 2716              		.loc 1 168 0
- 2717 04ac 00319FE5 		ldr	r3, .L47
- 2718 04b0 0220A0E3 		mov	r2, #2
- 2719 04b4 0020C3E5 		strb	r2, [r3, #0]
- 169:../timer3.c   ****                                 monitor_ms = TIMER3_MONITOR_MS;
- 2720              		.loc 1 169 0
- 2721 04b8 04319FE5 		ldr	r3, .L47+16
- 2722 04bc 6420A0E3 		mov	r2, #100
- 2723 04c0 002083E5 		str	r2, [r3, #0]
- 170:../timer3.c   ****                         }
- 171:../timer3.c   ****                         break;
- 2724              		.loc 1 171 0
- 2725 04c4 310000EA 		b	.L37
- 2726              	.L32:
- 172:../timer3.c   **** 
- 173:../timer3.c   ****                 case MONITORIZANDO:
- 174:../timer3.c   ****                         if (monitor_ms > 0)
- 2727              		.loc 1 174 0
- 2728 04c8 F4309FE5 		ldr	r3, .L47+16
- 2729 04cc 003093E5 		ldr	r3, [r3, #0]
- 2730 04d0 000053E3 		cmp	r3, #0
- 2731 04d4 0400000A 		beq	.L38
- 175:../timer3.c   ****                         {
- 176:../timer3.c   ****                                 monitor_ms -= TIMER3_TICK_MS;
- 2732              		.loc 1 176 0
- 2733 04d8 E4309FE5 		ldr	r3, .L47+16
- 2734 04dc 003093E5 		ldr	r3, [r3, #0]
- 2735 04e0 012043E2 		sub	r2, r3, #1
- 2736 04e4 D8309FE5 		ldr	r3, .L47+16
- 2737 04e8 002083E5 		str	r2, [r3, #0]
- 2738              	.L38:
- 177:../timer3.c   ****                         }
- 178:../timer3.c   ****                         if (monitor_ms == 0)
- 2739              		.loc 1 178 0
- 2740 04ec D0309FE5 		ldr	r3, .L47+16
- 2741 04f0 003093E5 		ldr	r3, [r3, #0]
- 2742 04f4 000053E3 		cmp	r3, #0
- 2743 04f8 2100001A 		bne	.L45
- 179:../timer3.c   ****                         {
- 180:../timer3.c   ****                                 if (boton_sigue_pulsado())
- 2744              		.loc 1 180 0
- 2745 04fc BFFEFFEB 		bl	boton_sigue_pulsado
- 2746 0500 0030A0E1 		mov	r3, r0
- 2747 0504 000053E3 		cmp	r3, #0
- 2748 0508 0300000A 		beq	.L40
- 181:../timer3.c   ****                                 {
- 182:../timer3.c   ****                                         monitor_ms = TIMER3_MONITOR_MS;
- 2749              		.loc 1 182 0
- 2750 050c B0309FE5 		ldr	r3, .L47+16
- 2751 0510 6420A0E3 		mov	r2, #100
- 2752 0514 002083E5 		str	r2, [r3, #0]
- 183:../timer3.c   ****                                 }
- 184:../timer3.c   ****                                 else
- 185:../timer3.c   ****                                 {
- 186:../timer3.c   ****                                         estado_actual = REBOTE_DEPRESION;
- 187:../timer3.c   ****                                         contador_ms = TIMER3_TRD_MS;
- 188:../timer3.c   ****                                 }
- 189:../timer3.c   ****                         }
- 190:../timer3.c   ****                         break;
- 2753              		.loc 1 190 0
- 2754 0518 1C0000EA 		b	.L37
- 2755              	.L40:
- 186:../timer3.c   ****                                         estado_actual = REBOTE_DEPRESION;
- 2756              		.loc 1 186 0
- 2757 051c 90309FE5 		ldr	r3, .L47
- 2758 0520 0320A0E3 		mov	r2, #3
- 2759 0524 0020C3E5 		strb	r2, [r3, #0]
- 187:../timer3.c   ****                                         contador_ms = TIMER3_TRD_MS;
- 2760              		.loc 1 187 0
- 2761 0528 88309FE5 		ldr	r3, .L47+4
- 2762 052c 1E20A0E3 		mov	r2, #30
- 2763 0530 002083E5 		str	r2, [r3, #0]
- 2764              		.loc 1 190 0
- 2765 0534 150000EA 		b	.L37
- 2766              	.L33:
- 191:../timer3.c   **** 
- 192:../timer3.c   ****                 case REBOTE_DEPRESION:
- 193:../timer3.c   ****                         if (contador_ms > 0)
- 2767              		.loc 1 193 0
- 2768 0538 78309FE5 		ldr	r3, .L47+4
- 2769 053c 003093E5 		ldr	r3, [r3, #0]
- 2770 0540 000053E3 		cmp	r3, #0
- 2771 0544 0400000A 		beq	.L41
- 194:../timer3.c   ****                         {
- 195:../timer3.c   ****                                 contador_ms -= TIMER3_TICK_MS;
- 2772              		.loc 1 195 0
- 2773 0548 68309FE5 		ldr	r3, .L47+4
- 2774 054c 003093E5 		ldr	r3, [r3, #0]
- 2775 0550 012043E2 		sub	r2, r3, #1
- 2776 0554 5C309FE5 		ldr	r3, .L47+4
- 2777 0558 002083E5 		str	r2, [r3, #0]
- 2778              	.L41:
- 196:../timer3.c   ****                         }
- 197:../timer3.c   ****                         if (contador_ms == 0)
- 2779              		.loc 1 197 0
- 2780 055c 54309FE5 		ldr	r3, .L47+4
- 2781 0560 003093E5 		ldr	r3, [r3, #0]
- 2782 0564 000053E3 		cmp	r3, #0
- 2783 0568 0700001A 		bne	.L46
- 198:../timer3.c   ****                         {
- 199:../timer3.c   ****                                 finalizar_antirrebote();
- 2784              		.loc 1 199 0
- 2785 056c E5FEFFEB 		bl	finalizar_antirrebote
- 200:../timer3.c   ****                         }
- 201:../timer3.c   ****                         break;
- 2786              		.loc 1 201 0
- 2787 0570 060000EA 		b	.L37
- 2788              	.L43:
- 202:../timer3.c   **** 
- 203:../timer3.c   ****                 default:
- 204:../timer3.c   ****                         break;
- 2789              		.loc 1 204 0
- 2790 0574 0000A0E1 		mov	r0, r0	@ nop
- 2791 0578 040000EA 		b	.L37
- 2792              	.L44:
- 171:../timer3.c   ****                         break;
- 2793              		.loc 1 171 0
- 2794 057c 0000A0E1 		mov	r0, r0	@ nop
- 2795 0580 020000EA 		b	.L37
- 2796              	.L45:
- 190:../timer3.c   ****                         break;
- 2797              		.loc 1 190 0
- 2798 0584 0000A0E1 		mov	r0, r0	@ nop
- 2799 0588 000000EA 		b	.L37
- 2800              	.L46:
- 201:../timer3.c   ****                         break;
- 2801              		.loc 1 201 0
- 2802 058c 0000A0E1 		mov	r0, r0	@ nop
- 2803              	.L37:
- 205:../timer3.c   ****         }
- 206:../timer3.c   **** 
- 207:../timer3.c   ****         /* Limpiar la petición de interrupción */
- 208:../timer3.c   ****         rI_ISPC |= BIT_TIMER3;
- 2804              		.loc 1 208 0
- 2805 0590 30309FE5 		ldr	r3, .L47+20
- 2806 0594 2C209FE5 		ldr	r2, .L47+20
- 2807 0598 002092E5 		ldr	r2, [r2, #0]
- 2808 059c 012B82E3 		orr	r2, r2, #1024
- 2809 05a0 002083E5 		str	r2, [r3, #0]
- 209:../timer3.c   **** }
- 2810              		.loc 1 209 0
- 2811 05a4 1CD04BE2 		sub	sp, fp, #28
- 2812 05a8 0F689DE8 		ldmfd	sp, {r0, r1, r2, r3, fp, sp, lr}
- 2813 05ac 04C09DE4 		ldmfd	sp!, {ip}
- 2814 05b0 04F05EE2 		subs	pc, lr, #4
- 2815              	.L48:
- 2816              		.align	2
- 2817              	.L47:
- 2818 05b4 00000000 		.word	estado_actual
- 2819 05b8 04000000 		.word	contador_ms
- 2820 05bc 14000000 		.word	callback_validacion
- 2821 05c0 0C000000 		.word	boton_en_proceso
- 2822 05c4 08000000 		.word	monitor_ms
- 2823 05c8 2400E001 		.word	31457316
- 2824              		.cfi_endproc
- 2825              	.LFE7:
- 2827              	.Letext0:
+ 145:../timer3.c   ****         /* Preparar y arrancar el temporizador */
+ 146:../timer3.c   ****         timer3_preparar_tick();
+ 4100              		.loc 1 146 0
+ 4101 0394 40FFFFEB 		bl	timer3_preparar_tick
+ 147:../timer3.c   **** 
+ 148:../timer3.c   ****         /* Habilitar la interrupción del timer3 */
+ 149:../timer3.c   ****         rINTMSK &= ~(BIT_TIMER3);
+ 4102              		.loc 1 149 0
+ 4103 0398 34309FE5 		ldr	r3, .L24+20
+ 4104 039c 30209FE5 		ldr	r2, .L24+20
+ 4105 03a0 002092E5 		ldr	r2, [r2, #0]
+ 4106 03a4 012BC2E3 		bic	r2, r2, #1024
+ 4107 03a8 002083E5 		str	r2, [r3, #0]
+ 150:../timer3.c   **** 
+ 151:../timer3.c   ****         return 1;
+ 4108              		.loc 1 151 0
+ 4109 03ac 0130A0E3 		mov	r3, #1
+ 4110              	.L18:
+ 152:../timer3.c   **** }
+ 4111              		.loc 1 152 0
+ 4112 03b0 0300A0E1 		mov	r0, r3
+ 4113 03b4 0CD04BE2 		sub	sp, fp, #12
+ 4114 03b8 00689DE8 		ldmfd	sp, {fp, sp, lr}
+ 4115 03bc 1EFF2FE1 		bx	lr
+ 4116              	.L25:
+ 4117              		.align	2
+ 4118              	.L24:
+ 4119 03c0 00000000 		.word	estado_actual
+ 4120 03c4 10000000 		.word	mascara_boton
+ 4121 03c8 0C000000 		.word	boton_en_proceso
+ 4122 03cc 04000000 		.word	contador_ms
+ 4123 03d0 08000000 		.word	monitor_ms
+ 4124 03d4 0C00E001 		.word	31457292
+ 4125              		.cfi_endproc
+ 4126              	.LFE8:
+ 4128              		.align	2
+ 4129              		.global	timer3_esta_ocupado
+ 4131              	timer3_esta_ocupado:
+ 4132              	.LFB9:
+ 153:../timer3.c   **** 
+ 154:../timer3.c   **** int timer3_esta_ocupado(void)
+ 155:../timer3.c   **** {
+ 4133              		.loc 1 155 0
+ 4134              		.cfi_startproc
+ 4135              		@ Function supports interworking.
+ 4136              		@ args = 0, pretend = 0, frame = 0
+ 4137              		@ frame_needed = 1, uses_anonymous_args = 0
+ 4138 03d8 0DC0A0E1 		mov	ip, sp
+ 4139              	.LCFI12:
+ 4140              		.cfi_def_cfa_register 12
+ 4141 03dc 00D82DE9 		stmfd	sp!, {fp, ip, lr, pc}
+ 4142 03e0 04B04CE2 		sub	fp, ip, #4
+ 4143              		.cfi_offset 14, -8
+ 4144              		.cfi_offset 13, -12
+ 4145              		.cfi_offset 11, -16
+ 4146              	.LCFI13:
+ 4147              		.cfi_def_cfa 11, 4
+ 156:../timer3.c   ****         return (estado_actual != ESPERANDO_PULSACION);
+ 4148              		.loc 1 156 0
+ 4149 03e4 20309FE5 		ldr	r3, .L27
+ 4150 03e8 0030D3E5 		ldrb	r3, [r3, #0]
+ 4151 03ec FF3003E2 		and	r3, r3, #255
+ 4152 03f0 000053E3 		cmp	r3, #0
+ 4153 03f4 0030A003 		moveq	r3, #0
+ 4154 03f8 0130A013 		movne	r3, #1
+ 157:../timer3.c   **** }
+ 4155              		.loc 1 157 0
+ 4156 03fc 0300A0E1 		mov	r0, r3
+ 4157 0400 0CD04BE2 		sub	sp, fp, #12
+ 4158 0404 00689DE8 		ldmfd	sp, {fp, sp, lr}
+ 4159 0408 1EFF2FE1 		bx	lr
+ 4160              	.L28:
+ 4161              		.align	2
+ 4162              	.L27:
+ 4163 040c 00000000 		.word	estado_actual
+ 4164              		.cfi_endproc
+ 4165              	.LFE9:
+ 4167              		.align	2
+ 4168              		.global	timer3_ISR
+ 4170              	timer3_ISR:
+ 4171              	.LFB10:
+ 158:../timer3.c   **** 
+ 159:../timer3.c   **** /*--- Código de la ISR ---*/
+ 160:../timer3.c   **** void timer3_ISR(void)
+ 161:../timer3.c   **** {
+ 4172              		.loc 1 161 0
+ 4173              		.cfi_startproc
+ 4174              		@ Interrupt Service Routine.
+ 4175              		@ args = 0, pretend = 0, frame = 0
+ 4176              		@ frame_needed = 1, uses_anonymous_args = 0
+ 4177 0410 04C02DE5 		str	ip, [sp, #-4]!
+ 4178 0414 0DC0A0E1 		mov	ip, sp
+ 4179              	.LCFI14:
+ 4180              		.cfi_def_cfa_register 12
+ 4181 0418 0FD82DE9 		stmfd	sp!, {r0, r1, r2, r3, fp, ip, lr, pc}
+ 4182 041c 04B04CE2 		sub	fp, ip, #4
+ 4183              		.cfi_offset 14, -8
+ 4184              		.cfi_offset 13, -12
+ 4185              		.cfi_offset 11, -16
+ 4186              		.cfi_offset 3, -20
+ 4187              		.cfi_offset 2, -24
+ 4188              		.cfi_offset 1, -28
+ 4189              		.cfi_offset 0, -32
+ 4190              	.LCFI15:
+ 4191              		.cfi_def_cfa 11, 4
+ 162:../timer3.c   ****         switch (estado_actual)
+ 4192              		.loc 1 162 0
+ 4193 0420 8C319FE5 		ldr	r3, .L47
+ 4194 0424 0030D3E5 		ldrb	r3, [r3, #0]
+ 4195 0428 FF3003E2 		and	r3, r3, #255
+ 4196 042c 020053E3 		cmp	r3, #2
+ 4197 0430 2300000A 		beq	.L32
+ 4198 0434 030053E3 		cmp	r3, #3
+ 4199 0438 3D00000A 		beq	.L33
+ 4200 043c 010053E3 		cmp	r3, #1
+ 4201 0440 4B00001A 		bne	.L43
+ 4202              	.L31:
+ 163:../timer3.c   ****         {
+ 164:../timer3.c   ****                 case REBOTE_PRESION:
+ 165:../timer3.c   ****                         if (contador_ms > 0)
+ 4203              		.loc 1 165 0
+ 4204 0444 6C319FE5 		ldr	r3, .L47+4
+ 4205 0448 003093E5 		ldr	r3, [r3, #0]
+ 4206 044c 000053E3 		cmp	r3, #0
+ 4207 0450 0400000A 		beq	.L34
+ 166:../timer3.c   ****                         {
+ 167:../timer3.c   ****                                 contador_ms -= TIMER3_TICK_MS;
+ 4208              		.loc 1 167 0
+ 4209 0454 5C319FE5 		ldr	r3, .L47+4
+ 4210 0458 003093E5 		ldr	r3, [r3, #0]
+ 4211 045c 012043E2 		sub	r2, r3, #1
+ 4212 0460 50319FE5 		ldr	r3, .L47+4
+ 4213 0464 002083E5 		str	r2, [r3, #0]
+ 4214              	.L34:
+ 168:../timer3.c   ****                         }
+ 169:../timer3.c   ****                         if (contador_ms == 0)
+ 4215              		.loc 1 169 0
+ 4216 0468 48319FE5 		ldr	r3, .L47+4
+ 4217 046c 003093E5 		ldr	r3, [r3, #0]
+ 4218 0470 000053E3 		cmp	r3, #0
+ 4219 0474 4000001A 		bne	.L44
+ 170:../timer3.c   ****                         {
+ 171:../timer3.c   ****                                 /* Notificar la pulsación validada (cuando se confirma que está p
+ 172:../timer3.c   ****                                 if (callback_validacion)
+ 4220              		.loc 1 172 0
+ 4221 0478 3C319FE5 		ldr	r3, .L47+8
+ 4222 047c 003093E5 		ldr	r3, [r3, #0]
+ 4223 0480 000053E3 		cmp	r3, #0
+ 4224 0484 0700000A 		beq	.L36
+ 173:../timer3.c   ****                                 {
+ 174:../timer3.c   ****                                         callback_validacion(boton_en_proceso);
+ 4225              		.loc 1 174 0
+ 4226 0488 2C319FE5 		ldr	r3, .L47+8
+ 4227 048c 003093E5 		ldr	r3, [r3, #0]
+ 4228 0490 28219FE5 		ldr	r2, .L47+12
+ 4229 0494 0020D2E5 		ldrb	r2, [r2, #0]
+ 4230 0498 FF2002E2 		and	r2, r2, #255
+ 4231 049c 0200A0E1 		mov	r0, r2
+ 4232 04a0 0FE0A0E1 		mov	lr, pc
+ 4233 04a4 13FF2FE1 		bx	r3
+ 4234              	.L36:
+ 175:../timer3.c   ****                                 }
+ 176:../timer3.c   ****                                 
+ 177:../timer3.c   ****                                 estado_actual = MONITORIZANDO;
+ 4235              		.loc 1 177 0
+ 4236 04a8 04319FE5 		ldr	r3, .L47
+ 4237 04ac 0220A0E3 		mov	r2, #2
+ 4238 04b0 0020C3E5 		strb	r2, [r3, #0]
+ 178:../timer3.c   ****                                 monitor_ms = TIMER3_MONITOR_MS;
+ 4239              		.loc 1 178 0
+ 4240 04b4 08319FE5 		ldr	r3, .L47+16
+ 4241 04b8 6420A0E3 		mov	r2, #100
+ 4242 04bc 002083E5 		str	r2, [r3, #0]
+ 179:../timer3.c   ****                         }
+ 180:../timer3.c   ****                         break;
+ 4243              		.loc 1 180 0
+ 4244 04c0 320000EA 		b	.L37
+ 4245              	.L32:
+ 181:../timer3.c   **** 
+ 182:../timer3.c   ****                 case MONITORIZANDO:
+ 183:../timer3.c   ****                         if (monitor_ms > 0)
+ 4246              		.loc 1 183 0
+ 4247 04c4 F8309FE5 		ldr	r3, .L47+16
+ 4248 04c8 003093E5 		ldr	r3, [r3, #0]
+ 4249 04cc 000053E3 		cmp	r3, #0
+ 4250 04d0 0400000A 		beq	.L38
+ 184:../timer3.c   ****                         {
+ 185:../timer3.c   ****                                 monitor_ms -= TIMER3_TICK_MS;
+ 4251              		.loc 1 185 0
+ 4252 04d4 E8309FE5 		ldr	r3, .L47+16
+ 4253 04d8 003093E5 		ldr	r3, [r3, #0]
+ 4254 04dc 012043E2 		sub	r2, r3, #1
+ 4255 04e0 DC309FE5 		ldr	r3, .L47+16
+ 4256 04e4 002083E5 		str	r2, [r3, #0]
+ 4257              	.L38:
+ 186:../timer3.c   ****                         }
+ 187:../timer3.c   ****                         if (monitor_ms == 0)
+ 4258              		.loc 1 187 0
+ 4259 04e8 D4309FE5 		ldr	r3, .L47+16
+ 4260 04ec 003093E5 		ldr	r3, [r3, #0]
+ 4261 04f0 000053E3 		cmp	r3, #0
+ 4262 04f4 2200001A 		bne	.L45
+ 188:../timer3.c   ****                         {
+ 189:../timer3.c   ****                                 if (boton_sigue_pulsado())
+ 4263              		.loc 1 189 0
+ 4264 04f8 C0FEFFEB 		bl	boton_sigue_pulsado
+ 4265 04fc 0030A0E1 		mov	r3, r0
+ 4266 0500 000053E3 		cmp	r3, #0
+ 4267 0504 0300000A 		beq	.L40
+ 190:../timer3.c   ****                                 {
+ 191:../timer3.c   ****                                         monitor_ms = TIMER3_MONITOR_MS;
+ 4268              		.loc 1 191 0
+ 4269 0508 B4309FE5 		ldr	r3, .L47+16
+ 4270 050c 6420A0E3 		mov	r2, #100
+ 4271 0510 002083E5 		str	r2, [r3, #0]
+ 192:../timer3.c   ****                                 }
+ 193:../timer3.c   ****                                 else
+ 194:../timer3.c   ****                                 {
+ 195:../timer3.c   ****                                         estado_actual = REBOTE_DEPRESION;
+ 196:../timer3.c   ****                                         contador_ms = TIMER3_TRD_MS;
+ 197:../timer3.c   ****                                 }
+ 198:../timer3.c   ****                         }
+ 199:../timer3.c   ****                         break;
+ 4272              		.loc 1 199 0
+ 4273 0514 1D0000EA 		b	.L37
+ 4274              	.L40:
+ 195:../timer3.c   ****                                         estado_actual = REBOTE_DEPRESION;
+ 4275              		.loc 1 195 0
+ 4276 0518 94309FE5 		ldr	r3, .L47
+ 4277 051c 0320A0E3 		mov	r2, #3
+ 4278 0520 0020C3E5 		strb	r2, [r3, #0]
+ 196:../timer3.c   ****                                         contador_ms = TIMER3_TRD_MS;
+ 4279              		.loc 1 196 0
+ 4280 0524 8C309FE5 		ldr	r3, .L47+4
+ 4281 0528 1E20A0E3 		mov	r2, #30
+ 4282 052c 002083E5 		str	r2, [r3, #0]
+ 4283              		.loc 1 199 0
+ 4284 0530 160000EA 		b	.L37
+ 4285              	.L33:
+ 200:../timer3.c   **** 
+ 201:../timer3.c   ****                 case REBOTE_DEPRESION:
+ 202:../timer3.c   ****                         if (contador_ms > 0)
+ 4286              		.loc 1 202 0
+ 4287 0534 7C309FE5 		ldr	r3, .L47+4
+ 4288 0538 003093E5 		ldr	r3, [r3, #0]
+ 4289 053c 000053E3 		cmp	r3, #0
+ 4290 0540 0400000A 		beq	.L41
+ 203:../timer3.c   ****                         {
+ 204:../timer3.c   ****                                 contador_ms -= TIMER3_TICK_MS;
+ 4291              		.loc 1 204 0
+ 4292 0544 6C309FE5 		ldr	r3, .L47+4
+ 4293 0548 003093E5 		ldr	r3, [r3, #0]
+ 4294 054c 012043E2 		sub	r2, r3, #1
+ 4295 0550 60309FE5 		ldr	r3, .L47+4
+ 4296 0554 002083E5 		str	r2, [r3, #0]
+ 4297              	.L41:
+ 205:../timer3.c   ****                         }
+ 206:../timer3.c   ****                         if (contador_ms == 0)
+ 4298              		.loc 1 206 0
+ 4299 0558 58309FE5 		ldr	r3, .L47+4
+ 4300 055c 003093E5 		ldr	r3, [r3, #0]
+ 4301 0560 000053E3 		cmp	r3, #0
+ 4302 0564 0800001A 		bne	.L46
+ 207:../timer3.c   ****                         {
+ 208:../timer3.c   ****                                 /* Detener el temporizador */
+ 209:../timer3.c   ****                                 timer3_detener();
+ 4303              		.loc 1 209 0
+ 4304 0568 B9FEFFEB 		bl	timer3_detener
+ 210:../timer3.c   ****                                 
+ 211:../timer3.c   ****                                 /* Finalizar el proceso de antirrebote */
+ 212:../timer3.c   ****                                 finalizar_antirrebote();
+ 4305              		.loc 1 212 0
+ 4306 056c E5FEFFEB 		bl	finalizar_antirrebote
+ 213:../timer3.c   ****                         }
+ 214:../timer3.c   ****                         break;
+ 4307              		.loc 1 214 0
+ 4308 0570 060000EA 		b	.L37
+ 4309              	.L43:
+ 215:../timer3.c   **** 
+ 216:../timer3.c   ****                 default:
+ 217:../timer3.c   ****                         break;
+ 4310              		.loc 1 217 0
+ 4311 0574 0000A0E1 		mov	r0, r0	@ nop
+ 4312 0578 040000EA 		b	.L37
+ 4313              	.L44:
+ 180:../timer3.c   ****                         break;
+ 4314              		.loc 1 180 0
+ 4315 057c 0000A0E1 		mov	r0, r0	@ nop
+ 4316 0580 020000EA 		b	.L37
+ 4317              	.L45:
+ 199:../timer3.c   ****                         break;
+ 4318              		.loc 1 199 0
+ 4319 0584 0000A0E1 		mov	r0, r0	@ nop
+ 4320 0588 000000EA 		b	.L37
+ 4321              	.L46:
+ 214:../timer3.c   ****                         break;
+ 4322              		.loc 1 214 0
+ 4323 058c 0000A0E1 		mov	r0, r0	@ nop
+ 4324              	.L37:
+ 218:../timer3.c   ****         }
+ 219:../timer3.c   **** 
+ 220:../timer3.c   ****         /* Limpiar la petición de interrupción */
+ 221:../timer3.c   ****         rI_ISPC |= BIT_TIMER3;
+ 4325              		.loc 1 221 0
+ 4326 0590 30309FE5 		ldr	r3, .L47+20
+ 4327 0594 2C209FE5 		ldr	r2, .L47+20
+ 4328 0598 002092E5 		ldr	r2, [r2, #0]
+ 4329 059c 012B82E3 		orr	r2, r2, #1024
+ 4330 05a0 002083E5 		str	r2, [r3, #0]
+ 222:../timer3.c   **** }
+ 4331              		.loc 1 222 0
+ 4332 05a4 1CD04BE2 		sub	sp, fp, #28
+ 4333 05a8 0F689DE8 		ldmfd	sp, {r0, r1, r2, r3, fp, sp, lr}
+ 4334 05ac 04C09DE4 		ldmfd	sp!, {ip}
+ 4335 05b0 04F05EE2 		subs	pc, lr, #4
+ 4336              	.L48:
+ 4337              		.align	2
+ 4338              	.L47:
+ 4339 05b4 00000000 		.word	estado_actual
+ 4340 05b8 04000000 		.word	contador_ms
+ 4341 05bc 14000000 		.word	callback_validacion
+ 4342 05c0 0C000000 		.word	boton_en_proceso
+ 4343 05c4 08000000 		.word	monitor_ms
+ 4344 05c8 2400E001 		.word	31457316
+ 4345              		.cfi_endproc
+ 4346              	.LFE10:
+ 4348              	.Letext0:
 DEFINED SYMBOLS
                             *ABS*:00000000 timer3.c
-C:\Users\jaime\AppData\Local\Temp\ccu0EdmM.s:2152   .bss:00000000 estado_actual
-C:\Users\jaime\AppData\Local\Temp\ccu0EdmM.s:2153   .bss:00000000 $d
-C:\Users\jaime\AppData\Local\Temp\ccu0EdmM.s:2155   .bss:00000004 contador_ms
-C:\Users\jaime\AppData\Local\Temp\ccu0EdmM.s:2158   .bss:00000008 monitor_ms
-C:\Users\jaime\AppData\Local\Temp\ccu0EdmM.s:2160   .bss:0000000c boton_en_proceso
-C:\Users\jaime\AppData\Local\Temp\ccu0EdmM.s:2163   .bss:00000010 mascara_boton
-C:\Users\jaime\AppData\Local\Temp\ccu0EdmM.s:2166   .bss:00000014 callback_validacion
-C:\Users\jaime\AppData\Local\Temp\ccu0EdmM.s:2169   .text:00000000 $a
-C:\Users\jaime\AppData\Local\Temp\ccu0EdmM.s:2171   .text:00000000 boton_sigue_pulsado
-C:\Users\jaime\AppData\Local\Temp\ccu0EdmM.s:2210   .text:0000004c $d
-C:\Users\jaime\AppData\Local\Temp\ccu0EdmM.s:2215   .text:00000054 $a
-C:\Users\jaime\AppData\Local\Temp\ccu0EdmM.s:2217   .text:00000054 timer3_detener
-C:\Users\jaime\AppData\Local\Temp\ccu0EdmM.s:2253   .text:00000094 $d
-C:\Users\jaime\AppData\Local\Temp\ccu0EdmM.s:2258   .text:0000009c $a
-C:\Users\jaime\AppData\Local\Temp\ccu0EdmM.s:2260   .text:0000009c timer3_preparar_tick
-C:\Users\jaime\AppData\Local\Temp\ccu0EdmM.s:2306   .text:000000fc $d
-C:\Users\jaime\AppData\Local\Temp\ccu0EdmM.s:2312   .text:00000108 $a
-C:\Users\jaime\AppData\Local\Temp\ccu0EdmM.s:2314   .text:00000108 finalizar_antirrebote
-C:\Users\jaime\AppData\Local\Temp\ccu0EdmM.s:2376   .text:00000194 $d
-C:\Users\jaime\AppData\Local\Temp\ccu0EdmM.s:2387   .text:000001b4 $a
-C:\Users\jaime\AppData\Local\Temp\ccu0EdmM.s:2390   .text:000001b4 timer3_init
-C:\Users\jaime\AppData\Local\Temp\ccu0EdmM.s:2483   .text:000002a8 $d
-C:\Users\jaime\AppData\Local\Temp\ccu0EdmM.s:2651   .text:00000414 timer3_ISR
-C:\Users\jaime\AppData\Local\Temp\ccu0EdmM.s:2500   .text:000002e0 $a
-C:\Users\jaime\AppData\Local\Temp\ccu0EdmM.s:2503   .text:000002e0 timer3_start_antirrebote
-C:\Users\jaime\AppData\Local\Temp\ccu0EdmM.s:2600   .text:000003c4 $d
-C:\Users\jaime\AppData\Local\Temp\ccu0EdmM.s:2609   .text:000003dc $a
-C:\Users\jaime\AppData\Local\Temp\ccu0EdmM.s:2612   .text:000003dc timer3_esta_ocupado
-C:\Users\jaime\AppData\Local\Temp\ccu0EdmM.s:2644   .text:00000410 $d
-C:\Users\jaime\AppData\Local\Temp\ccu0EdmM.s:2648   .text:00000414 $a
-C:\Users\jaime\AppData\Local\Temp\ccu0EdmM.s:2818   .text:000005b4 $d
+C:\Users\jaime\AppData\Local\Temp\ccHbKW8R.s:2755   .data:00000000 $d
+C:\Users\jaime\AppData\Local\Temp\ccHbKW8R.s:2758   .data:00000000 cuadricula_C_C
+C:\Users\jaime\AppData\Local\Temp\ccHbKW8R.s:2906   .data:00000120 cuadricula_C_ARM
+C:\Users\jaime\AppData\Local\Temp\ccHbKW8R.s:3054   .data:00000240 cuadricula_ARM_C
+C:\Users\jaime\AppData\Local\Temp\ccHbKW8R.s:3202   .data:00000360 cuadricula_ARM_ARM
+C:\Users\jaime\AppData\Local\Temp\ccHbKW8R.s:3350   .data:00000480 cuadricula_ARM_ARM_ALL
+C:\Users\jaime\AppData\Local\Temp\ccHbKW8R.s:3498   .data:000005a0 solucion
+C:\Users\jaime\AppData\Local\Temp\ccHbKW8R.s:3644   .bss:00000000 estado_actual
+C:\Users\jaime\AppData\Local\Temp\ccHbKW8R.s:3645   .bss:00000000 $d
+C:\Users\jaime\AppData\Local\Temp\ccHbKW8R.s:3647   .bss:00000004 contador_ms
+C:\Users\jaime\AppData\Local\Temp\ccHbKW8R.s:3650   .bss:00000008 monitor_ms
+C:\Users\jaime\AppData\Local\Temp\ccHbKW8R.s:3652   .bss:0000000c boton_en_proceso
+C:\Users\jaime\AppData\Local\Temp\ccHbKW8R.s:3655   .bss:00000010 mascara_boton
+C:\Users\jaime\AppData\Local\Temp\ccHbKW8R.s:3658   .bss:00000014 callback_validacion
+C:\Users\jaime\AppData\Local\Temp\ccHbKW8R.s:3663   .bss:00000018 estado_sudoku
+C:\Users\jaime\AppData\Local\Temp\ccHbKW8R.s:3669   .bss:0000001c int_count
+C:\Users\jaime\AppData\Local\Temp\ccHbKW8R.s:3675   .bss:00000020 fila
+C:\Users\jaime\AppData\Local\Temp\ccHbKW8R.s:3681   .bss:00000024 columna
+C:\Users\jaime\AppData\Local\Temp\ccHbKW8R.s:3687   .bss:00000028 valor
+C:\Users\jaime\AppData\Local\Temp\ccHbKW8R.s:3690   .text:00000000 $a
+C:\Users\jaime\AppData\Local\Temp\ccHbKW8R.s:3692   .text:00000000 boton_sigue_pulsado
+C:\Users\jaime\AppData\Local\Temp\ccHbKW8R.s:3731   .text:0000004c $d
+C:\Users\jaime\AppData\Local\Temp\ccHbKW8R.s:3736   .text:00000054 $a
+C:\Users\jaime\AppData\Local\Temp\ccHbKW8R.s:3738   .text:00000054 timer3_detener
+C:\Users\jaime\AppData\Local\Temp\ccHbKW8R.s:3774   .text:00000094 $d
+C:\Users\jaime\AppData\Local\Temp\ccHbKW8R.s:3779   .text:0000009c $a
+C:\Users\jaime\AppData\Local\Temp\ccHbKW8R.s:3781   .text:0000009c timer3_preparar_tick
+C:\Users\jaime\AppData\Local\Temp\ccHbKW8R.s:3827   .text:000000fc $d
+C:\Users\jaime\AppData\Local\Temp\ccHbKW8R.s:3833   .text:00000108 $a
+C:\Users\jaime\AppData\Local\Temp\ccHbKW8R.s:3835   .text:00000108 finalizar_antirrebote
+C:\Users\jaime\AppData\Local\Temp\ccHbKW8R.s:3895   .text:00000190 $d
+C:\Users\jaime\AppData\Local\Temp\ccHbKW8R.s:3906   .text:000001b0 $a
+C:\Users\jaime\AppData\Local\Temp\ccHbKW8R.s:3909   .text:000001b0 timer3_init
+C:\Users\jaime\AppData\Local\Temp\ccHbKW8R.s:4002   .text:000002a4 $d
+C:\Users\jaime\AppData\Local\Temp\ccHbKW8R.s:4170   .text:00000410 timer3_ISR
+C:\Users\jaime\AppData\Local\Temp\ccHbKW8R.s:4019   .text:000002dc $a
+C:\Users\jaime\AppData\Local\Temp\ccHbKW8R.s:4022   .text:000002dc timer3_start_antirrebote
+C:\Users\jaime\AppData\Local\Temp\ccHbKW8R.s:4119   .text:000003c0 $d
+C:\Users\jaime\AppData\Local\Temp\ccHbKW8R.s:4128   .text:000003d8 $a
+C:\Users\jaime\AppData\Local\Temp\ccHbKW8R.s:4131   .text:000003d8 timer3_esta_ocupado
+C:\Users\jaime\AppData\Local\Temp\ccHbKW8R.s:4163   .text:0000040c $d
+C:\Users\jaime\AppData\Local\Temp\ccHbKW8R.s:4167   .text:00000410 $a
+C:\Users\jaime\AppData\Local\Temp\ccHbKW8R.s:4339   .text:000005b4 $d
                      .debug_frame:00000010 $d
 
 NO UNDEFINED SYMBOLS

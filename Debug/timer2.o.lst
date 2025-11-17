@@ -455,20 +455,20 @@
  2168              	.Letext0:
 DEFINED SYMBOLS
                             *ABS*:00000000 timer2.c
-C:\Users\jaime\AppData\Local\Temp\ccPfcC6O.s:1879   .bss:00000000 $d
-C:\Users\jaime\AppData\Local\Temp\ccPfcC6O.s:1880   .bss:00000000 timer2_numero_int
-C:\Users\jaime\AppData\Local\Temp\ccPfcC6O.s:1883   .text:00000000 $a
-C:\Users\jaime\AppData\Local\Temp\ccPfcC6O.s:1886   .text:00000000 timer2_ISR
-C:\Users\jaime\AppData\Local\Temp\ccPfcC6O.s:1926   .text:00000048 $d
-C:\Users\jaime\AppData\Local\Temp\ccPfcC6O.s:1931   .text:00000050 $a
-C:\Users\jaime\AppData\Local\Temp\ccPfcC6O.s:1934   .text:00000050 timer2_init
-C:\Users\jaime\AppData\Local\Temp\ccPfcC6O.s:2030   .text:00000150 $d
-C:\Users\jaime\AppData\Local\Temp\ccPfcC6O.s:2043   .text:00000178 $a
-C:\Users\jaime\AppData\Local\Temp\ccPfcC6O.s:2046   .text:00000178 timer2_start
-C:\Users\jaime\AppData\Local\Temp\ccPfcC6O.s:2102   .text:000001f8 $d
-C:\Users\jaime\AppData\Local\Temp\ccPfcC6O.s:2109   .text:00000208 $a
-C:\Users\jaime\AppData\Local\Temp\ccPfcC6O.s:2112   .text:00000208 timer2_count
-C:\Users\jaime\AppData\Local\Temp\ccPfcC6O.s:2163   .text:00000274 $d
+C:\Users\jaime\AppData\Local\Temp\cc1ALHKe.s:1879   .bss:00000000 $d
+C:\Users\jaime\AppData\Local\Temp\cc1ALHKe.s:1880   .bss:00000000 timer2_numero_int
+C:\Users\jaime\AppData\Local\Temp\cc1ALHKe.s:1883   .text:00000000 $a
+C:\Users\jaime\AppData\Local\Temp\cc1ALHKe.s:1886   .text:00000000 timer2_ISR
+C:\Users\jaime\AppData\Local\Temp\cc1ALHKe.s:1926   .text:00000048 $d
+C:\Users\jaime\AppData\Local\Temp\cc1ALHKe.s:1931   .text:00000050 $a
+C:\Users\jaime\AppData\Local\Temp\cc1ALHKe.s:1934   .text:00000050 timer2_init
+C:\Users\jaime\AppData\Local\Temp\cc1ALHKe.s:2030   .text:00000150 $d
+C:\Users\jaime\AppData\Local\Temp\cc1ALHKe.s:2043   .text:00000178 $a
+C:\Users\jaime\AppData\Local\Temp\cc1ALHKe.s:2046   .text:00000178 timer2_start
+C:\Users\jaime\AppData\Local\Temp\cc1ALHKe.s:2102   .text:000001f8 $d
+C:\Users\jaime\AppData\Local\Temp\cc1ALHKe.s:2109   .text:00000208 $a
+C:\Users\jaime\AppData\Local\Temp\cc1ALHKe.s:2112   .text:00000208 timer2_count
+C:\Users\jaime\AppData\Local\Temp\cc1ALHKe.s:2163   .text:00000274 $d
                      .debug_frame:00000010 $d
 
 NO UNDEFINED SYMBOLS

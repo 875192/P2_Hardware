@@ -341,7 +341,8 @@ estados que permita al usuario jugar. En concreto:
 ASIGNATURA: PROYECTO HARDWARE                                                                                                8
 Curso 2025-26. 5º Semestre, 3er. Curso. Grado en Ingeniería Informática. Área de Arquitectura y Tecnología de Computadores
 Departamento de Informática e Ingeniería de Sistemas
-Paso 8: Introducir los datos pulsación a pulsación puede resultar aburrido. Una forma
+
+Paso 8: Introducir los datos pulsación a pulsación puede resultar aburrido. Una forma
 mucho más interactiva es utilizar auto-repetición. Esto es: si el usuario mantiene pulsado
 el botón de incrementar el número más de un cierto tiempo, el número se irá auto-
 incrementando.

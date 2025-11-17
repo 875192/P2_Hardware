@@ -11,5 +11,8 @@
 /*--- Declaración de funciones visibles del módulo button.c/button.h ---*/
 
 void Eint4567_init(void);
+void reiniciar_cuenta(void);
+unsigned int obtener_cuenta(void);
+void establecer_cuenta(unsigned int valor);
 
 #endif /* _BUTTON_H_ */

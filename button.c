@@ -19,7 +19,8 @@
 /*--- variables globales del módulo ---*/
 /* int_count la utilizamos para sacar un número por el 8led.
   Cuando se pulsa un botón sumamos y con el otro restamos. ¡A veces hay rebotes! */
-static unsigned int int_count = 0;
+/* La variable int_count ahora es global y está definida en timer3.c */
+extern volatile int int_count;
 
 /* Callback para recibir la confirmación de pulsaciones filtradas por el timer3 */
 static void boton_confirmado(uint8_t boton_id)
@@ -98,4 +99,19 @@ void Eint4567_init(void)
         /* Por precaucion, se vuelven a borrar los bits de INTPND y EXTINTPND */
         rEXTINTPND = 0xf;                               // borra los bits en EXTINTPND
         rI_ISPC   |= BIT_EINT4567;              // borra el bit pendiente en INTPND
+}
+
+void reiniciar_cuenta(void)
+{
+        int_count = 0;
+}
+
+unsigned int obtener_cuenta(void)
+{
+        return (unsigned int)int_count;
+}
+
+void establecer_cuenta(unsigned int valor)
+{
+        int_count = (int)valor;
 }

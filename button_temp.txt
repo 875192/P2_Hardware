@@ -1,0 +1,15 @@
+
+void reiniciar_cuenta(void)
+{
+	int_count = 0;
+}
+
+unsigned int obtener_cuenta(void)
+{
+	return int_count;
+}
+
+void establecer_cuenta(unsigned int valor)
+{
+	int_count = valor;
+}

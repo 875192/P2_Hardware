@@ -25,4 +25,11 @@ int timer3_start_antirrebote(uint8_t boton_id);
 /* Indica si la máquina de antirrebote está procesando una pulsación */
 int timer3_esta_ocupado(void);
 
+/* Variables globales del Sudoku accesibles desde main.c */
+extern volatile EstadoSudoku estado_sudoku;
+extern volatile int int_count;
+extern volatile int fila;
+extern volatile int columna;
+extern volatile int valor;
+
 #endif /* _TIMER3_H_ */

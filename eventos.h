@@ -23,4 +23,15 @@ typedef enum {
     REBOTE_DEPRESION
 } EstadoPulsador;
 
+/*--- Estados del Juego Sudoku ---*/
+typedef enum {
+    ESPERANDO_INICIO,
+    INICIO,
+    INTRODUCIR_FILA,
+    INTRODUCIR_COLUMNA,
+    VERIFICAR_VALOR,
+    BORRAR_VALOR,
+    INTRODUCIR_VALOR,
+} EstadoSudoku;
+
 #endif /* _EVENTOS_H_ */

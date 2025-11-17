@@ -11,905 +11,9 @@
   11              		.file	"button.c"
   21              	.Ltext0:
   22              		.file 1 "../button.c"
- 2841              		.align	5
- 2844              	cuadricula_C_C:
- 2845 0000 1500     		.short	21
- 2846 0002 0000     		.short	0
- 2847 0004 0000     		.short	0
- 2848 0006 1300     		.short	19
- 2849 0008 0000     		.short	0
- 2850 000a 0000     		.short	0
- 2851 000c 0000     		.short	0
- 2852 000e 0000     		.short	0
- 2853 0010 0000     		.short	0
- 2854 0012 0000     		.short	0
- 2855 0014 0000     		.short	0
- 2856 0016 0000     		.short	0
- 2857 0018 0000     		.short	0
- 2858 001a 0000     		.short	0
- 2859 001c 0000     		.short	0
- 2860 001e 0000     		.short	0
- 2861 0020 0000     		.short	0
- 2862 0022 0000     		.short	0
- 2863 0024 0000     		.short	0
- 2864 0026 0000     		.short	0
- 2865 0028 1900     		.short	25
- 2866 002a 0000     		.short	0
- 2867 002c 0000     		.short	0
- 2868 002e 0000     		.short	0
- 2869 0030 1500     		.short	21
- 2870 0032 0000     		.short	0
- 2871 0034 0000     		.short	0
- 2872 0036 0000     		.short	0
- 2873 0038 0000     		.short	0
- 2874 003a 0000     		.short	0
- 2875 003c 0000     		.short	0
- 2876 003e 0000     		.short	0
- 2877 0040 0000     		.short	0
- 2878 0042 1900     		.short	25
- 2879 0044 1600     		.short	22
- 2880 0046 1700     		.short	23
- 2881 0048 0000     		.short	0
- 2882 004a 1500     		.short	21
- 2883 004c 0000     		.short	0
- 2884 004e 1300     		.short	19
- 2885 0050 0000     		.short	0
- 2886 0052 0000     		.short	0
- 2887 0054 0000     		.short	0
- 2888 0056 0000     		.short	0
- 2889 0058 0000     		.short	0
- 2890 005a 0000     		.short	0
- 2891 005c 0000     		.short	0
- 2892 005e 0000     		.short	0
- 2893 0060 0000     		.short	0
- 2894 0062 1800     		.short	24
- 2895 0064 0000     		.short	0
- 2896 0066 1900     		.short	25
- 2897 0068 0000     		.short	0
- 2898 006a 0000     		.short	0
- 2899 006c 1600     		.short	22
- 2900 006e 0000     		.short	0
- 2901 0070 0000     		.short	0
- 2902 0072 0000     		.short	0
- 2903 0074 0000     		.short	0
- 2904 0076 0000     		.short	0
- 2905 0078 0000     		.short	0
- 2906 007a 0000     		.short	0
- 2907 007c 0000     		.short	0
- 2908 007e 0000     		.short	0
- 2909 0080 0000     		.short	0
- 2910 0082 0000     		.short	0
- 2911 0084 1500     		.short	21
- 2912 0086 1800     		.short	24
- 2913 0088 1600     		.short	22
- 2914 008a 1100     		.short	17
- 2915 008c 1400     		.short	20
- 2916 008e 0000     		.short	0
- 2917 0090 0000     		.short	0
- 2918 0092 0000     		.short	0
- 2919 0094 0000     		.short	0
- 2920 0096 0000     		.short	0
- 2921 0098 0000     		.short	0
- 2922 009a 0000     		.short	0
- 2923 009c 0000     		.short	0
- 2924 009e 0000     		.short	0
- 2925 00a0 0000     		.short	0
- 2926 00a2 0000     		.short	0
- 2927 00a4 1400     		.short	20
- 2928 00a6 1200     		.short	18
- 2929 00a8 0000     		.short	0
- 2930 00aa 1300     		.short	19
- 2931 00ac 0000     		.short	0
- 2932 00ae 1700     		.short	23
- 2933 00b0 0000     		.short	0
- 2934 00b2 0000     		.short	0
- 2935 00b4 0000     		.short	0
- 2936 00b6 0000     		.short	0
- 2937 00b8 0000     		.short	0
- 2938 00ba 0000     		.short	0
- 2939 00bc 0000     		.short	0
- 2940 00be 0000     		.short	0
- 2941 00c0 0000     		.short	0
- 2942 00c2 1700     		.short	23
- 2943 00c4 0000     		.short	0
- 2944 00c6 1500     		.short	21
- 2945 00c8 0000     		.short	0
- 2946 00ca 1900     		.short	25
- 2947 00cc 1200     		.short	18
- 2948 00ce 1600     		.short	22
- 2949 00d0 0000     		.short	0
- 2950 00d2 0000     		.short	0
- 2951 00d4 0000     		.short	0
- 2952 00d6 0000     		.short	0
- 2953 00d8 0000     		.short	0
- 2954 00da 0000     		.short	0
- 2955 00dc 0000     		.short	0
- 2956 00de 0000     		.short	0
- 2957 00e0 1600     		.short	22
- 2958 00e2 0000     		.short	0
- 2959 00e4 0000     		.short	0
- 2960 00e6 0000     		.short	0
- 2961 00e8 1800     		.short	24
- 2962 00ea 0000     		.short	0
- 2963 00ec 0000     		.short	0
- 2964 00ee 0000     		.short	0
- 2965 00f0 0000     		.short	0
- 2966 00f2 0000     		.short	0
- 2967 00f4 0000     		.short	0
- 2968 00f6 0000     		.short	0
- 2969 00f8 0000     		.short	0
- 2970 00fa 0000     		.short	0
- 2971 00fc 0000     		.short	0
- 2972 00fe 0000     		.short	0
- 2973 0100 0000     		.short	0
- 2974 0102 0000     		.short	0
- 2975 0104 0000     		.short	0
- 2976 0106 0000     		.short	0
- 2977 0108 0000     		.short	0
- 2978 010a 1200     		.short	18
- 2979 010c 0000     		.short	0
- 2980 010e 0000     		.short	0
- 2981 0110 1100     		.short	17
- 2982 0112 0000     		.short	0
- 2983 0114 0000     		.short	0
- 2984 0116 0000     		.short	0
- 2985 0118 0000     		.short	0
- 2986 011a 0000     		.short	0
- 2987 011c 0000     		.short	0
- 2988 011e 0000     		.short	0
- 2989              		.align	5
- 2992              	cuadricula_C_ARM:
- 2993 0120 1500     		.short	21
- 2994 0122 0000     		.short	0
- 2995 0124 0000     		.short	0
- 2996 0126 1300     		.short	19
- 2997 0128 0000     		.short	0
- 2998 012a 0000     		.short	0
- 2999 012c 0000     		.short	0
- 3000 012e 0000     		.short	0
- 3001 0130 0000     		.short	0
- 3002 0132 0000     		.short	0
- 3003 0134 0000     		.short	0
- 3004 0136 0000     		.short	0
- 3005 0138 0000     		.short	0
- 3006 013a 0000     		.short	0
- 3007 013c 0000     		.short	0
- 3008 013e 0000     		.short	0
- 3009 0140 0000     		.short	0
- 3010 0142 0000     		.short	0
- 3011 0144 0000     		.short	0
- 3012 0146 0000     		.short	0
- 3013 0148 1900     		.short	25
- 3014 014a 0000     		.short	0
- 3015 014c 0000     		.short	0
- 3016 014e 0000     		.short	0
- 3017 0150 1500     		.short	21
- 3018 0152 0000     		.short	0
- 3019 0154 0000     		.short	0
- 3020 0156 0000     		.short	0
- 3021 0158 0000     		.short	0
- 3022 015a 0000     		.short	0
- 3023 015c 0000     		.short	0
- 3024 015e 0000     		.short	0
- 3025 0160 0000     		.short	0
- 3026 0162 1900     		.short	25
- 3027 0164 1600     		.short	22
- 3028 0166 1700     		.short	23
- 3029 0168 0000     		.short	0
- 3030 016a 1500     		.short	21
- 3031 016c 0000     		.short	0
- 3032 016e 1300     		.short	19
- 3033 0170 0000     		.short	0
- 3034 0172 0000     		.short	0
- 3035 0174 0000     		.short	0
- 3036 0176 0000     		.short	0
- 3037 0178 0000     		.short	0
- 3038 017a 0000     		.short	0
- 3039 017c 0000     		.short	0
- 3040 017e 0000     		.short	0
- 3041 0180 0000     		.short	0
- 3042 0182 1800     		.short	24
- 3043 0184 0000     		.short	0
- 3044 0186 1900     		.short	25
- 3045 0188 0000     		.short	0
- 3046 018a 0000     		.short	0
- 3047 018c 1600     		.short	22
- 3048 018e 0000     		.short	0
- 3049 0190 0000     		.short	0
- 3050 0192 0000     		.short	0
- 3051 0194 0000     		.short	0
- 3052 0196 0000     		.short	0
- 3053 0198 0000     		.short	0
- 3054 019a 0000     		.short	0
- 3055 019c 0000     		.short	0
- 3056 019e 0000     		.short	0
- 3057 01a0 0000     		.short	0
- 3058 01a2 0000     		.short	0
- 3059 01a4 1500     		.short	21
- 3060 01a6 1800     		.short	24
- 3061 01a8 1600     		.short	22
- 3062 01aa 1100     		.short	17
- 3063 01ac 1400     		.short	20
- 3064 01ae 0000     		.short	0
- 3065 01b0 0000     		.short	0
- 3066 01b2 0000     		.short	0
- 3067 01b4 0000     		.short	0
- 3068 01b6 0000     		.short	0
- 3069 01b8 0000     		.short	0
- 3070 01ba 0000     		.short	0
- 3071 01bc 0000     		.short	0
- 3072 01be 0000     		.short	0
- 3073 01c0 0000     		.short	0
- 3074 01c2 0000     		.short	0
- 3075 01c4 1400     		.short	20
- 3076 01c6 1200     		.short	18
- 3077 01c8 0000     		.short	0
- 3078 01ca 1300     		.short	19
- 3079 01cc 0000     		.short	0
- 3080 01ce 1700     		.short	23
- 3081 01d0 0000     		.short	0
- 3082 01d2 0000     		.short	0
- 3083 01d4 0000     		.short	0
- 3084 01d6 0000     		.short	0
- 3085 01d8 0000     		.short	0
- 3086 01da 0000     		.short	0
- 3087 01dc 0000     		.short	0
- 3088 01de 0000     		.short	0
- 3089 01e0 0000     		.short	0
- 3090 01e2 1700     		.short	23
- 3091 01e4 0000     		.short	0
- 3092 01e6 1500     		.short	21
- 3093 01e8 0000     		.short	0
- 3094 01ea 1900     		.short	25
- 3095 01ec 1200     		.short	18
- 3096 01ee 1600     		.short	22
- 3097 01f0 0000     		.short	0
- 3098 01f2 0000     		.short	0
- 3099 01f4 0000     		.short	0
- 3100 01f6 0000     		.short	0
- 3101 01f8 0000     		.short	0
- 3102 01fa 0000     		.short	0
- 3103 01fc 0000     		.short	0
- 3104 01fe 0000     		.short	0
- 3105 0200 1600     		.short	22
- 3106 0202 0000     		.short	0
- 3107 0204 0000     		.short	0
- 3108 0206 0000     		.short	0
- 3109 0208 1800     		.short	24
- 3110 020a 0000     		.short	0
- 3111 020c 0000     		.short	0
- 3112 020e 0000     		.short	0
- 3113 0210 0000     		.short	0
- 3114 0212 0000     		.short	0
- 3115 0214 0000     		.short	0
- 3116 0216 0000     		.short	0
- 3117 0218 0000     		.short	0
- 3118 021a 0000     		.short	0
- 3119 021c 0000     		.short	0
- 3120 021e 0000     		.short	0
- 3121 0220 0000     		.short	0
- 3122 0222 0000     		.short	0
- 3123 0224 0000     		.short	0
- 3124 0226 0000     		.short	0
- 3125 0228 0000     		.short	0
- 3126 022a 1200     		.short	18
- 3127 022c 0000     		.short	0
- 3128 022e 0000     		.short	0
- 3129 0230 1100     		.short	17
- 3130 0232 0000     		.short	0
- 3131 0234 0000     		.short	0
- 3132 0236 0000     		.short	0
- 3133 0238 0000     		.short	0
- 3134 023a 0000     		.short	0
- 3135 023c 0000     		.short	0
- 3136 023e 0000     		.short	0
- 3137              		.align	5
- 3140              	cuadricula_ARM_C:
- 3141 0240 1500     		.short	21
- 3142 0242 0000     		.short	0
- 3143 0244 0000     		.short	0
- 3144 0246 1300     		.short	19
- 3145 0248 0000     		.short	0
- 3146 024a 0000     		.short	0
- 3147 024c 0000     		.short	0
- 3148 024e 0000     		.short	0
- 3149 0250 0000     		.short	0
- 3150 0252 0000     		.short	0
- 3151 0254 0000     		.short	0
- 3152 0256 0000     		.short	0
- 3153 0258 0000     		.short	0
- 3154 025a 0000     		.short	0
- 3155 025c 0000     		.short	0
- 3156 025e 0000     		.short	0
- 3157 0260 0000     		.short	0
- 3158 0262 0000     		.short	0
- 3159 0264 0000     		.short	0
- 3160 0266 0000     		.short	0
- 3161 0268 1900     		.short	25
- 3162 026a 0000     		.short	0
- 3163 026c 0000     		.short	0
- 3164 026e 0000     		.short	0
- 3165 0270 1500     		.short	21
- 3166 0272 0000     		.short	0
- 3167 0274 0000     		.short	0
- 3168 0276 0000     		.short	0
- 3169 0278 0000     		.short	0
- 3170 027a 0000     		.short	0
- 3171 027c 0000     		.short	0
- 3172 027e 0000     		.short	0
- 3173 0280 0000     		.short	0
- 3174 0282 1900     		.short	25
- 3175 0284 1600     		.short	22
- 3176 0286 1700     		.short	23
- 3177 0288 0000     		.short	0
- 3178 028a 1500     		.short	21
- 3179 028c 0000     		.short	0
- 3180 028e 1300     		.short	19
- 3181 0290 0000     		.short	0
- 3182 0292 0000     		.short	0
- 3183 0294 0000     		.short	0
- 3184 0296 0000     		.short	0
- 3185 0298 0000     		.short	0
- 3186 029a 0000     		.short	0
- 3187 029c 0000     		.short	0
- 3188 029e 0000     		.short	0
- 3189 02a0 0000     		.short	0
- 3190 02a2 1800     		.short	24
- 3191 02a4 0000     		.short	0
- 3192 02a6 1900     		.short	25
- 3193 02a8 0000     		.short	0
- 3194 02aa 0000     		.short	0
- 3195 02ac 1600     		.short	22
- 3196 02ae 0000     		.short	0
- 3197 02b0 0000     		.short	0
- 3198 02b2 0000     		.short	0
- 3199 02b4 0000     		.short	0
- 3200 02b6 0000     		.short	0
- 3201 02b8 0000     		.short	0
- 3202 02ba 0000     		.short	0
- 3203 02bc 0000     		.short	0
- 3204 02be 0000     		.short	0
- 3205 02c0 0000     		.short	0
- 3206 02c2 0000     		.short	0
- 3207 02c4 1500     		.short	21
- 3208 02c6 1800     		.short	24
- 3209 02c8 1600     		.short	22
- 3210 02ca 1100     		.short	17
- 3211 02cc 1400     		.short	20
- 3212 02ce 0000     		.short	0
- 3213 02d0 0000     		.short	0
- 3214 02d2 0000     		.short	0
- 3215 02d4 0000     		.short	0
- 3216 02d6 0000     		.short	0
- 3217 02d8 0000     		.short	0
- 3218 02da 0000     		.short	0
- 3219 02dc 0000     		.short	0
- 3220 02de 0000     		.short	0
- 3221 02e0 0000     		.short	0
- 3222 02e2 0000     		.short	0
- 3223 02e4 1400     		.short	20
- 3224 02e6 1200     		.short	18
- 3225 02e8 0000     		.short	0
- 3226 02ea 1300     		.short	19
- 3227 02ec 0000     		.short	0
- 3228 02ee 1700     		.short	23
- 3229 02f0 0000     		.short	0
- 3230 02f2 0000     		.short	0
- 3231 02f4 0000     		.short	0
- 3232 02f6 0000     		.short	0
- 3233 02f8 0000     		.short	0
- 3234 02fa 0000     		.short	0
- 3235 02fc 0000     		.short	0
- 3236 02fe 0000     		.short	0
- 3237 0300 0000     		.short	0
- 3238 0302 1700     		.short	23
- 3239 0304 0000     		.short	0
- 3240 0306 1500     		.short	21
- 3241 0308 0000     		.short	0
- 3242 030a 1900     		.short	25
- 3243 030c 1200     		.short	18
- 3244 030e 1600     		.short	22
- 3245 0310 0000     		.short	0
- 3246 0312 0000     		.short	0
- 3247 0314 0000     		.short	0
- 3248 0316 0000     		.short	0
- 3249 0318 0000     		.short	0
- 3250 031a 0000     		.short	0
- 3251 031c 0000     		.short	0
- 3252 031e 0000     		.short	0
- 3253 0320 1600     		.short	22
- 3254 0322 0000     		.short	0
- 3255 0324 0000     		.short	0
- 3256 0326 0000     		.short	0
- 3257 0328 1800     		.short	24
- 3258 032a 0000     		.short	0
- 3259 032c 0000     		.short	0
- 3260 032e 0000     		.short	0
- 3261 0330 0000     		.short	0
- 3262 0332 0000     		.short	0
- 3263 0334 0000     		.short	0
- 3264 0336 0000     		.short	0
- 3265 0338 0000     		.short	0
- 3266 033a 0000     		.short	0
- 3267 033c 0000     		.short	0
- 3268 033e 0000     		.short	0
- 3269 0340 0000     		.short	0
- 3270 0342 0000     		.short	0
- 3271 0344 0000     		.short	0
- 3272 0346 0000     		.short	0
- 3273 0348 0000     		.short	0
- 3274 034a 1200     		.short	18
- 3275 034c 0000     		.short	0
- 3276 034e 0000     		.short	0
- 3277 0350 1100     		.short	17
- 3278 0352 0000     		.short	0
- 3279 0354 0000     		.short	0
- 3280 0356 0000     		.short	0
- 3281 0358 0000     		.short	0
- 3282 035a 0000     		.short	0
- 3283 035c 0000     		.short	0
- 3284 035e 0000     		.short	0
- 3285              		.align	5
- 3288              	cuadricula_ARM_ARM:
- 3289 0360 1500     		.short	21
- 3290 0362 0000     		.short	0
- 3291 0364 0000     		.short	0
- 3292 0366 1300     		.short	19
- 3293 0368 0000     		.short	0
- 3294 036a 0000     		.short	0
- 3295 036c 0000     		.short	0
- 3296 036e 0000     		.short	0
- 3297 0370 0000     		.short	0
- 3298 0372 0000     		.short	0
- 3299 0374 0000     		.short	0
- 3300 0376 0000     		.short	0
- 3301 0378 0000     		.short	0
- 3302 037a 0000     		.short	0
- 3303 037c 0000     		.short	0
- 3304 037e 0000     		.short	0
- 3305 0380 0000     		.short	0
- 3306 0382 0000     		.short	0
- 3307 0384 0000     		.short	0
- 3308 0386 0000     		.short	0
- 3309 0388 1900     		.short	25
- 3310 038a 0000     		.short	0
- 3311 038c 0000     		.short	0
- 3312 038e 0000     		.short	0
- 3313 0390 1500     		.short	21
- 3314 0392 0000     		.short	0
- 3315 0394 0000     		.short	0
- 3316 0396 0000     		.short	0
- 3317 0398 0000     		.short	0
- 3318 039a 0000     		.short	0
- 3319 039c 0000     		.short	0
- 3320 039e 0000     		.short	0
- 3321 03a0 0000     		.short	0
- 3322 03a2 1900     		.short	25
- 3323 03a4 1600     		.short	22
- 3324 03a6 1700     		.short	23
- 3325 03a8 0000     		.short	0
- 3326 03aa 1500     		.short	21
- 3327 03ac 0000     		.short	0
- 3328 03ae 1300     		.short	19
- 3329 03b0 0000     		.short	0
- 3330 03b2 0000     		.short	0
- 3331 03b4 0000     		.short	0
- 3332 03b6 0000     		.short	0
- 3333 03b8 0000     		.short	0
- 3334 03ba 0000     		.short	0
- 3335 03bc 0000     		.short	0
- 3336 03be 0000     		.short	0
- 3337 03c0 0000     		.short	0
- 3338 03c2 1800     		.short	24
- 3339 03c4 0000     		.short	0
- 3340 03c6 1900     		.short	25
- 3341 03c8 0000     		.short	0
- 3342 03ca 0000     		.short	0
- 3343 03cc 1600     		.short	22
- 3344 03ce 0000     		.short	0
- 3345 03d0 0000     		.short	0
- 3346 03d2 0000     		.short	0
- 3347 03d4 0000     		.short	0
- 3348 03d6 0000     		.short	0
- 3349 03d8 0000     		.short	0
- 3350 03da 0000     		.short	0
- 3351 03dc 0000     		.short	0
- 3352 03de 0000     		.short	0
- 3353 03e0 0000     		.short	0
- 3354 03e2 0000     		.short	0
- 3355 03e4 1500     		.short	21
- 3356 03e6 1800     		.short	24
- 3357 03e8 1600     		.short	22
- 3358 03ea 1100     		.short	17
- 3359 03ec 1400     		.short	20
- 3360 03ee 0000     		.short	0
- 3361 03f0 0000     		.short	0
- 3362 03f2 0000     		.short	0
- 3363 03f4 0000     		.short	0
- 3364 03f6 0000     		.short	0
- 3365 03f8 0000     		.short	0
- 3366 03fa 0000     		.short	0
- 3367 03fc 0000     		.short	0
- 3368 03fe 0000     		.short	0
- 3369 0400 0000     		.short	0
- 3370 0402 0000     		.short	0
- 3371 0404 1400     		.short	20
- 3372 0406 1200     		.short	18
- 3373 0408 0000     		.short	0
- 3374 040a 1300     		.short	19
- 3375 040c 0000     		.short	0
- 3376 040e 1700     		.short	23
- 3377 0410 0000     		.short	0
- 3378 0412 0000     		.short	0
- 3379 0414 0000     		.short	0
- 3380 0416 0000     		.short	0
- 3381 0418 0000     		.short	0
- 3382 041a 0000     		.short	0
- 3383 041c 0000     		.short	0
- 3384 041e 0000     		.short	0
- 3385 0420 0000     		.short	0
- 3386 0422 1700     		.short	23
- 3387 0424 0000     		.short	0
- 3388 0426 1500     		.short	21
- 3389 0428 0000     		.short	0
- 3390 042a 1900     		.short	25
- 3391 042c 1200     		.short	18
- 3392 042e 1600     		.short	22
- 3393 0430 0000     		.short	0
- 3394 0432 0000     		.short	0
- 3395 0434 0000     		.short	0
- 3396 0436 0000     		.short	0
- 3397 0438 0000     		.short	0
- 3398 043a 0000     		.short	0
- 3399 043c 0000     		.short	0
- 3400 043e 0000     		.short	0
- 3401 0440 1600     		.short	22
- 3402 0442 0000     		.short	0
- 3403 0444 0000     		.short	0
- 3404 0446 0000     		.short	0
- 3405 0448 1800     		.short	24
- 3406 044a 0000     		.short	0
- 3407 044c 0000     		.short	0
- 3408 044e 0000     		.short	0
- 3409 0450 0000     		.short	0
- 3410 0452 0000     		.short	0
- 3411 0454 0000     		.short	0
- 3412 0456 0000     		.short	0
- 3413 0458 0000     		.short	0
- 3414 045a 0000     		.short	0
- 3415 045c 0000     		.short	0
- 3416 045e 0000     		.short	0
- 3417 0460 0000     		.short	0
- 3418 0462 0000     		.short	0
- 3419 0464 0000     		.short	0
- 3420 0466 0000     		.short	0
- 3421 0468 0000     		.short	0
- 3422 046a 1200     		.short	18
- 3423 046c 0000     		.short	0
- 3424 046e 0000     		.short	0
- 3425 0470 1100     		.short	17
- 3426 0472 0000     		.short	0
- 3427 0474 0000     		.short	0
- 3428 0476 0000     		.short	0
- 3429 0478 0000     		.short	0
- 3430 047a 0000     		.short	0
- 3431 047c 0000     		.short	0
- 3432 047e 0000     		.short	0
- 3433              		.align	5
- 3436              	cuadricula_ARM_ARM_ALL:
- 3437 0480 1500     		.short	21
- 3438 0482 0000     		.short	0
- 3439 0484 0000     		.short	0
- 3440 0486 1300     		.short	19
- 3441 0488 0000     		.short	0
- 3442 048a 0000     		.short	0
- 3443 048c 0000     		.short	0
- 3444 048e 0000     		.short	0
- 3445 0490 0000     		.short	0
- 3446 0492 0000     		.short	0
- 3447 0494 0000     		.short	0
- 3448 0496 0000     		.short	0
- 3449 0498 0000     		.short	0
- 3450 049a 0000     		.short	0
- 3451 049c 0000     		.short	0
- 3452 049e 0000     		.short	0
- 3453 04a0 0000     		.short	0
- 3454 04a2 0000     		.short	0
- 3455 04a4 0000     		.short	0
- 3456 04a6 0000     		.short	0
- 3457 04a8 1900     		.short	25
- 3458 04aa 0000     		.short	0
- 3459 04ac 0000     		.short	0
- 3460 04ae 0000     		.short	0
- 3461 04b0 1500     		.short	21
- 3462 04b2 0000     		.short	0
- 3463 04b4 0000     		.short	0
- 3464 04b6 0000     		.short	0
- 3465 04b8 0000     		.short	0
- 3466 04ba 0000     		.short	0
- 3467 04bc 0000     		.short	0
- 3468 04be 0000     		.short	0
- 3469 04c0 0000     		.short	0
- 3470 04c2 1900     		.short	25
- 3471 04c4 1600     		.short	22
- 3472 04c6 1700     		.short	23
- 3473 04c8 0000     		.short	0
- 3474 04ca 1500     		.short	21
- 3475 04cc 0000     		.short	0
- 3476 04ce 1300     		.short	19
- 3477 04d0 0000     		.short	0
- 3478 04d2 0000     		.short	0
- 3479 04d4 0000     		.short	0
- 3480 04d6 0000     		.short	0
- 3481 04d8 0000     		.short	0
- 3482 04da 0000     		.short	0
- 3483 04dc 0000     		.short	0
- 3484 04de 0000     		.short	0
- 3485 04e0 0000     		.short	0
- 3486 04e2 1800     		.short	24
- 3487 04e4 0000     		.short	0
- 3488 04e6 1900     		.short	25
- 3489 04e8 0000     		.short	0
- 3490 04ea 0000     		.short	0
- 3491 04ec 1600     		.short	22
- 3492 04ee 0000     		.short	0
- 3493 04f0 0000     		.short	0
- 3494 04f2 0000     		.short	0
- 3495 04f4 0000     		.short	0
- 3496 04f6 0000     		.short	0
- 3497 04f8 0000     		.short	0
- 3498 04fa 0000     		.short	0
- 3499 04fc 0000     		.short	0
- 3500 04fe 0000     		.short	0
- 3501 0500 0000     		.short	0
- 3502 0502 0000     		.short	0
- 3503 0504 1500     		.short	21
- 3504 0506 1800     		.short	24
- 3505 0508 1600     		.short	22
- 3506 050a 1100     		.short	17
- 3507 050c 1400     		.short	20
- 3508 050e 0000     		.short	0
- 3509 0510 0000     		.short	0
- 3510 0512 0000     		.short	0
- 3511 0514 0000     		.short	0
- 3512 0516 0000     		.short	0
- 3513 0518 0000     		.short	0
- 3514 051a 0000     		.short	0
- 3515 051c 0000     		.short	0
- 3516 051e 0000     		.short	0
- 3517 0520 0000     		.short	0
- 3518 0522 0000     		.short	0
- 3519 0524 1400     		.short	20
- 3520 0526 1200     		.short	18
- 3521 0528 0000     		.short	0
- 3522 052a 1300     		.short	19
- 3523 052c 0000     		.short	0
- 3524 052e 1700     		.short	23
- 3525 0530 0000     		.short	0
- 3526 0532 0000     		.short	0
- 3527 0534 0000     		.short	0
- 3528 0536 0000     		.short	0
- 3529 0538 0000     		.short	0
- 3530 053a 0000     		.short	0
- 3531 053c 0000     		.short	0
- 3532 053e 0000     		.short	0
- 3533 0540 0000     		.short	0
- 3534 0542 1700     		.short	23
- 3535 0544 0000     		.short	0
- 3536 0546 1500     		.short	21
- 3537 0548 0000     		.short	0
- 3538 054a 1900     		.short	25
- 3539 054c 1200     		.short	18
- 3540 054e 1600     		.short	22
- 3541 0550 0000     		.short	0
- 3542 0552 0000     		.short	0
- 3543 0554 0000     		.short	0
- 3544 0556 0000     		.short	0
- 3545 0558 0000     		.short	0
- 3546 055a 0000     		.short	0
- 3547 055c 0000     		.short	0
- 3548 055e 0000     		.short	0
- 3549 0560 1600     		.short	22
- 3550 0562 0000     		.short	0
- 3551 0564 0000     		.short	0
- 3552 0566 0000     		.short	0
- 3553 0568 1800     		.short	24
- 3554 056a 0000     		.short	0
- 3555 056c 0000     		.short	0
- 3556 056e 0000     		.short	0
- 3557 0570 0000     		.short	0
- 3558 0572 0000     		.short	0
- 3559 0574 0000     		.short	0
- 3560 0576 0000     		.short	0
- 3561 0578 0000     		.short	0
- 3562 057a 0000     		.short	0
- 3563 057c 0000     		.short	0
- 3564 057e 0000     		.short	0
- 3565 0580 0000     		.short	0
- 3566 0582 0000     		.short	0
- 3567 0584 0000     		.short	0
- 3568 0586 0000     		.short	0
- 3569 0588 0000     		.short	0
- 3570 058a 1200     		.short	18
- 3571 058c 0000     		.short	0
- 3572 058e 0000     		.short	0
- 3573 0590 1100     		.short	17
- 3574 0592 0000     		.short	0
- 3575 0594 0000     		.short	0
- 3576 0596 0000     		.short	0
- 3577 0598 0000     		.short	0
- 3578 059a 0000     		.short	0
- 3579 059c 0000     		.short	0
- 3580 059e 0000     		.short	0
- 3581              		.align	5
- 3584              	solucion:
- 3585 05a0 159A     		.short	-26091
- 3586 05a2 00FA     		.short	-1536
- 3587 05a4 009E     		.short	-25088
- 3588 05a6 13EB     		.short	-5357
- 3589 05a8 00FA     		.short	-1536
- 3590 05aa 80AB     		.short	-21632
- 3591 05ac 001F     		.short	7936
- 3592 05ae 003A     		.short	14848
- 3593 05b0 800A     		.short	2688
- 3594 05b2 0000     		.short	0
- 3595 05b4 0000     		.short	0
- 3596 05b6 0000     		.short	0
- 3597 05b8 0000     		.short	0
- 3598 05ba 0000     		.short	0
- 3599 05bc 0000     		.short	0
- 3600 05be 0000     		.short	0
- 3601 05c0 0098     		.short	-26624
- 3602 05c2 00F8     		.short	-2048
- 3603 05c4 009C     		.short	-25600
- 3604 05c6 00EB     		.short	-5376
- 3605 05c8 19FA     		.short	-1511
- 3606 05ca 80AB     		.short	-21632
- 3607 05cc 009F     		.short	-24832
- 3608 05ce 00BA     		.short	-17920
- 3609 05d0 958A     		.short	-30059
- 3610 05d2 0000     		.short	0
- 3611 05d4 0000     		.short	0
- 3612 05d6 0000     		.short	0
- 3613 05d8 0000     		.short	0
- 3614 05da 0000     		.short	0
- 3615 05dc 0000     		.short	0
- 3616 05de 0000     		.short	0
- 3617 05e0 00BA     		.short	-17920
- 3618 05e2 19FA     		.short	-1511
- 3619 05e4 16BE     		.short	-16874
- 3620 05e6 17FB     		.short	-1257
- 3621 05e8 00FA     		.short	-1536
- 3622 05ea 95BB     		.short	-17515
- 3623 05ec 00BF     		.short	-16640
- 3624 05ee 13BA     		.short	-17901
- 3625 05f0 80BA     		.short	-17792
- 3626 05f2 0000     		.short	0
- 3627 05f4 0000     		.short	0
- 3628 05f6 0000     		.short	0
- 3629 05f8 0000     		.short	0
- 3630 05fa 0000     		.short	0
- 3631 05fc 0000     		.short	0
- 3632 05fe 0000     		.short	0
- 3633 0600 00DC     		.short	-9216
- 3634 0602 18FC     		.short	-1000
- 3635 0604 00DC     		.short	-9216
- 3636 0606 99FB     		.short	-1127
- 3637 0608 80D3     		.short	-11392
- 3638 060a 80DB     		.short	-9344
- 3639 060c 16F5     		.short	-2794
- 3640 060e 00F6     		.short	-2560
- 3641 0610 80FC     		.short	-896
- 3642 0612 0000     		.short	0
- 3643 0614 0000     		.short	0
- 3644 0616 0000     		.short	0
- 3645 0618 0000     		.short	0
- 3646 061a 0000     		.short	0
- 3647 061c 0000     		.short	0
- 3648 061e 0000     		.short	0
- 3649 0620 805C     		.short	23680
- 3650 0622 80FC     		.short	-896
- 3651 0624 955C     		.short	23701
- 3652 0626 98FF     		.short	-104
- 3653 0628 96DF     		.short	-8298
- 3654 062a 91DF     		.short	-8303
- 3655 062c 947D     		.short	32148
- 3656 062e 807E     		.short	32384
- 3657 0630 807C     		.short	31872
- 3658 0632 0000     		.short	0
- 3659 0634 0000     		.short	0
- 3660 0636 0000     		.short	0
- 3661 0638 0000     		.short	0
- 3662 063a 0000     		.short	0
- 3663 063c 0000     		.short	0
- 3664 063e 0000     		.short	0
- 3665 0640 007F     		.short	32512
- 3666 0642 00EF     		.short	-4352
- 3667 0644 147F     		.short	32532
- 3668 0646 92FF     		.short	-110
- 3669 0648 80F7     		.short	-2176
- 3670 064a 93FF     		.short	-109
- 3671 064c 0037     		.short	14080
- 3672 064e 1737     		.short	14103
- 3673 0650 803F     		.short	16256
- 3674 0652 0000     		.short	0
- 3675 0654 0000     		.short	0
- 3676 0656 0000     		.short	0
- 3677 0658 0000     		.short	0
- 3678 065a 0000     		.short	0
- 3679 065c 0000     		.short	0
- 3680 065e 0000     		.short	0
- 3681 0660 00B9     		.short	-18176
- 3682 0662 17F9     		.short	-1769
- 3683 0664 00BD     		.short	-17152
- 3684 0666 15FB     		.short	-1259
- 3685 0668 00F9     		.short	-1792
- 3686 066a 99FB     		.short	-1127
- 3687 066c 92BD     		.short	-17006
- 3688 066e 96BB     		.short	-17514
- 3689 0670 80B9     		.short	-18048
- 3690 0672 0000     		.short	0
- 3691 0674 0000     		.short	0
- 3692 0676 0000     		.short	0
- 3693 0678 0000     		.short	0
- 3694 067a 0000     		.short	0
- 3695 067c 0000     		.short	0
- 3696 067e 0000     		.short	0
- 3697 0680 1678     		.short	30742
- 3698 0682 00F0     		.short	-4096
- 3699 0684 007C     		.short	31744
- 3700 0686 00FB     		.short	-1280
- 3701 0688 18D9     		.short	-9960
- 3702 068a 80DB     		.short	-9344
- 3703 068c 8055     		.short	21888
- 3704 068e 8073     		.short	29568
- 3705 0690 8059     		.short	22912
- 3706 0692 0000     		.short	0
- 3707 0694 0000     		.short	0
- 3708 0696 0000     		.short	0
- 3709 0698 0000     		.short	0
- 3710 069a 0000     		.short	0
- 3711 069c 0000     		.short	0
- 3712 069e 0000     		.short	0
- 3713 06a0 8039     		.short	14720
- 3714 06a2 80F1     		.short	-3712
- 3715 06a4 803D     		.short	15744
- 3716 06a6 80EB     		.short	-5248
- 3717 06a8 80D9     		.short	-9856
- 3718 06aa 92CB     		.short	-13422
- 3719 06ac 8015     		.short	5504
- 3720 06ae 8033     		.short	13184
- 3721 06b0 9119     		.short	6545
- 3722 06b2 0000     		.short	0
- 3723 06b4 0000     		.short	0
- 3724 06b6 0000     		.short	0
- 3725 06b8 0000     		.short	0
- 3726 06ba 0000     		.short	0
- 3727 06bc 0000     		.short	0
- 3728 06be 0000     		.short	0
- 3729              		.bss
- 3730              		.align	2
- 3731              	int_count:
- 3732 0000 00000000 		.space	4
- 3733              		.global	estado_sudoku
- 3736              	estado_sudoku:
- 3737 0004 00       		.space	1
- 3738              		.global	fila
- 3739 0005 000000   		.align	2
- 3742              	fila:
- 3743 0008 00000000 		.space	4
- 3744              		.global	columna
- 3745              		.align	2
- 3748              	columna:
- 3749 000c 00000000 		.space	4
- 3750              		.global	valor
- 3751              		.align	2
- 3754              	valor:
- 3755 0010 00000000 		.space	4
- 3756              		.text
- 3757              		.align	2
- 3759              	gestionar_sudoku:
- 3760              	.LFB3:
+ 2246              		.align	2
+ 2248              	boton_confirmado:
+ 2249              	.LFB0:
    1:../button.c   **** /*********************************************************************************************
    2:../button.c   **** * Fichero:      button.c
    3:../button.c   **** * Autor:
@@ -924,698 +28,499 @@
   12:../button.c   **** #include "eventos.h"
   13:../button.c   **** #include "timer2.h"
   14:../button.c   **** #include "timer3.h"
-  15:../button.c   **** #include "sudoku_2025.h"
-  16:../button.c   **** #include "tableros.h"
-  17:../button.c   **** #include "44blib.h"
-  18:../button.c   **** #include "44b.h"
-  19:../button.c   **** #include "def.h"
-  20:../button.c   **** 
-  21:../button.c   **** /*--- variables globales del módulo ---*/
-  22:../button.c   **** /* int_count la utilizamos para sacar un número por el 8led.
-  23:../button.c   ****   Cuando se pulsa un botón sumamos y con el otro restamos. ¡A veces hay rebotes! */
-  24:../button.c   **** static volatile unsigned int int_count = 0;
-  25:../button.c   **** 
-  26:../button.c   **** /* Variables para el Sudoku */
-  27:../button.c   **** volatile EstadoSudoku estado_sudoku = ESPERANDO_INICIO;
-  28:../button.c   **** volatile int fila = 0;
-  29:../button.c   **** volatile int columna = 0;
-  30:../button.c   **** volatile int valor = 0;
-  31:../button.c   **** 
-  32:../button.c   **** /* Referencia a la cuadrícula del Sudoku (se inicializará desde main) */
-  33:../button.c   **** extern CELDA cuadricula_C_C[NUM_FILAS][NUM_COLUMNAS];
-  34:../button.c   **** 
-  35:../button.c   **** /**
-  36:../button.c   ****  * Gestiona la entrada de datos para el Sudoku según el estado actual.
-  37:../button.c   ****  * Esta función se llama cuando el timer3 confirma una pulsación válida (sin rebotes).
-  38:../button.c   ****  */
-  39:../button.c   **** static void gestionar_sudoku(uint8_t boton_id)
-  40:../button.c   **** {
- 3761              		.loc 1 40 0
- 3762              		.cfi_startproc
- 3763              		@ Function supports interworking.
- 3764              		@ args = 0, pretend = 0, frame = 8
- 3765              		@ frame_needed = 1, uses_anonymous_args = 0
- 3766 0000 0DC0A0E1 		mov	ip, sp
- 3767              	.LCFI0:
- 3768              		.cfi_def_cfa_register 12
- 3769 0004 00D82DE9 		stmfd	sp!, {fp, ip, lr, pc}
- 3770 0008 04B04CE2 		sub	fp, ip, #4
- 3771              		.cfi_offset 14, -8
- 3772              		.cfi_offset 13, -12
- 3773              		.cfi_offset 11, -16
- 3774              	.LCFI1:
- 3775              		.cfi_def_cfa 11, 4
- 3776 000c 08D04DE2 		sub	sp, sp, #8
- 3777 0010 0030A0E1 		mov	r3, r0
- 3778 0014 0D304BE5 		strb	r3, [fp, #-13]
-  41:../button.c   ****         switch (estado_sudoku)
- 3779              		.loc 1 41 0
- 3780 0018 50329FE5 		ldr	r3, .L24
- 3781 001c 0030D3E5 		ldrb	r3, [r3, #0]
- 3782 0020 FF3003E2 		and	r3, r3, #255
- 3783 0024 040053E3 		cmp	r3, #4
- 3784 0028 03F19F97 		ldrls	pc, [pc, r3, asl #2]
- 3785 002c 850000EA 		b	.L20
- 3786              	.L7:
- 3787 0030 44000000 		.word	.L3
- 3788 0034 48020000 		.word	.L20
- 3789 0038 68000000 		.word	.L4
- 3790 003c FC000000 		.word	.L5
- 3791 0040 90010000 		.word	.L6
- 3792              	.L3:
-  42:../button.c   ****         {
-  43:../button.c   ****         case ESPERANDO_INICIO:
-  44:../button.c   ****                 /* Cualquier botón inicia el juego */
-  45:../button.c   ****                 estado_sudoku = INICIO;
- 3793              		.loc 1 45 0
- 3794 0044 24329FE5 		ldr	r3, .L24
- 3795 0048 0120A0E3 		mov	r2, #1
- 3796 004c 0020C3E5 		strb	r2, [r3, #0]
-  46:../button.c   ****                 D8Led_symbol(15);  /* Mostrar F de "Fila" */
- 3797              		.loc 1 46 0
- 3798 0050 0F00A0E3 		mov	r0, #15
- 3799 0054 FEFFFFEB 		bl	D8Led_symbol
-  47:../button.c   ****                 int_count = 0;
- 3800              		.loc 1 47 0
- 3801 0058 14329FE5 		ldr	r3, .L24+4
- 3802 005c 0020A0E3 		mov	r2, #0
- 3803 0060 002083E5 		str	r2, [r3, #0]
-  48:../button.c   ****                 break;
- 3804              		.loc 1 48 0
- 3805 0064 7E0000EA 		b	.L1
- 3806              	.L4:
+  15:../button.c   **** #include "44blib.h"
+  16:../button.c   **** #include "44b.h"
+  17:../button.c   **** #include "def.h"
+  18:../button.c   **** 
+  19:../button.c   **** /*--- variables globales del módulo ---*/
+  20:../button.c   **** /* int_count la utilizamos para sacar un número por el 8led.
+  21:../button.c   ****   Cuando se pulsa un botón sumamos y con el otro restamos. ¡A veces hay rebotes! */
+  22:../button.c   **** /* La variable int_count ahora es global y está definida en timer3.c */
+  23:../button.c   **** extern volatile int int_count;
+  24:../button.c   **** 
+  25:../button.c   **** /* Callback para recibir la confirmación de pulsaciones filtradas por el timer3 */
+  26:../button.c   **** static void boton_confirmado(uint8_t boton_id)
+  27:../button.c   **** {
+ 2250              		.loc 1 27 0
+ 2251              		.cfi_startproc
+ 2252              		@ Function supports interworking.
+ 2253              		@ args = 0, pretend = 0, frame = 8
+ 2254              		@ frame_needed = 1, uses_anonymous_args = 0
+ 2255 0000 0DC0A0E1 		mov	ip, sp
+ 2256              	.LCFI0:
+ 2257              		.cfi_def_cfa_register 12
+ 2258 0004 00D82DE9 		stmfd	sp!, {fp, ip, lr, pc}
+ 2259 0008 04B04CE2 		sub	fp, ip, #4
+ 2260              		.cfi_offset 14, -8
+ 2261              		.cfi_offset 13, -12
+ 2262              		.cfi_offset 11, -16
+ 2263              	.LCFI1:
+ 2264              		.cfi_def_cfa 11, 4
+ 2265 000c 08D04DE2 		sub	sp, sp, #8
+ 2266 0010 0030A0E1 		mov	r3, r0
+ 2267 0014 0D304BE5 		strb	r3, [fp, #-13]
+  28:../button.c   ****         switch (boton_id)
+ 2268              		.loc 1 28 0
+ 2269 0018 0D305BE5 		ldrb	r3, [fp, #-13]	@ zero_extendqisi2
+ 2270 001c 040053E3 		cmp	r3, #4
+ 2271 0020 0200000A 		beq	.L3
+ 2272 0024 080053E3 		cmp	r3, #8
+ 2273 0028 0E00000A 		beq	.L4
+  29:../button.c   ****         {
+  30:../button.c   ****                 case EVENTO_BOTON_IZQUIERDO:
+  31:../button.c   ****                         int_count--;
+  32:../button.c   ****                         cola_depuracion(timer2_count(), EVENTO_BOTON_IZQUIERDO, int_count);
+  33:../button.c   ****                         break;
+  34:../button.c   ****                 case EVENTO_BOTON_DERECHO:
+  35:../button.c   ****                         int_count++;
+  36:../button.c   ****                         cola_depuracion(timer2_count(), EVENTO_BOTON_DERECHO, int_count);
+  37:../button.c   ****                         break;
+  38:../button.c   ****                 default:
+  39:../button.c   ****                         // No guardar eventos descartados
+  40:../button.c   ****                         break;
+ 2274              		.loc 1 40 0
+ 2275 002c 1B0000EA 		b	.L5
+ 2276              	.L3:
+  31:../button.c   ****                         int_count--;
+ 2277              		.loc 1 31 0
+ 2278 0030 88309FE5 		ldr	r3, .L6
+ 2279 0034 003093E5 		ldr	r3, [r3, #0]
+ 2280 0038 012043E2 		sub	r2, r3, #1
+ 2281 003c 7C309FE5 		ldr	r3, .L6
+ 2282 0040 002083E5 		str	r2, [r3, #0]
+  32:../button.c   ****                         cola_depuracion(timer2_count(), EVENTO_BOTON_IZQUIERDO, int_count);
+ 2283              		.loc 1 32 0
+ 2284 0044 FEFFFFEB 		bl	timer2_count
+ 2285 0048 0020A0E1 		mov	r2, r0
+ 2286 004c 6C309FE5 		ldr	r3, .L6
+ 2287 0050 003093E5 		ldr	r3, [r3, #0]
+ 2288 0054 0200A0E1 		mov	r0, r2
+ 2289 0058 0410A0E3 		mov	r1, #4
+ 2290 005c 0320A0E1 		mov	r2, r3
+ 2291 0060 FEFFFFEB 		bl	cola_depuracion
+  33:../button.c   ****                         break;
+ 2292              		.loc 1 33 0
+ 2293 0064 0D0000EA 		b	.L5
+ 2294              	.L4:
+  35:../button.c   ****                         int_count++;
+ 2295              		.loc 1 35 0
+ 2296 0068 50309FE5 		ldr	r3, .L6
+ 2297 006c 003093E5 		ldr	r3, [r3, #0]
+ 2298 0070 012083E2 		add	r2, r3, #1
+ 2299 0074 44309FE5 		ldr	r3, .L6
+ 2300 0078 002083E5 		str	r2, [r3, #0]
+  36:../button.c   ****                         cola_depuracion(timer2_count(), EVENTO_BOTON_DERECHO, int_count);
+ 2301              		.loc 1 36 0
+ 2302 007c FEFFFFEB 		bl	timer2_count
+ 2303 0080 0020A0E1 		mov	r2, r0
+ 2304 0084 34309FE5 		ldr	r3, .L6
+ 2305 0088 003093E5 		ldr	r3, [r3, #0]
+ 2306 008c 0200A0E1 		mov	r0, r2
+ 2307 0090 0810A0E3 		mov	r1, #8
+ 2308 0094 0320A0E1 		mov	r2, r3
+ 2309 0098 FEFFFFEB 		bl	cola_depuracion
+  37:../button.c   ****                         break;
+ 2310              		.loc 1 37 0
+ 2311 009c 0000A0E1 		mov	r0, r0	@ nop
+ 2312              	.L5:
+  41:../button.c   ****         }
+  42:../button.c   **** 
+  43:../button.c   ****         D8Led_symbol(int_count & 0x000f);
+ 2313              		.loc 1 43 0
+ 2314 00a0 18309FE5 		ldr	r3, .L6
+ 2315 00a4 003093E5 		ldr	r3, [r3, #0]
+ 2316 00a8 0F3003E2 		and	r3, r3, #15
+ 2317 00ac 0300A0E1 		mov	r0, r3
+ 2318 00b0 FEFFFFEB 		bl	D8Led_symbol
+  44:../button.c   **** }
+ 2319              		.loc 1 44 0
+ 2320 00b4 0CD04BE2 		sub	sp, fp, #12
+ 2321 00b8 00689DE8 		ldmfd	sp, {fp, sp, lr}
+ 2322 00bc 1EFF2FE1 		bx	lr
+ 2323              	.L7:
+ 2324              		.align	2
+ 2325              	.L6:
+ 2326 00c0 00000000 		.word	int_count
+ 2327              		.cfi_endproc
+ 2328              	.LFE0:
+ 2330              		.align	2
+ 2331              		.global	Eint4567_ISR
+ 2333              	Eint4567_ISR:
+ 2334              	.LFB1:
+  45:../button.c   **** 
+  46:../button.c   **** /* declaración de función que es rutina de servicio de interrupción
+  47:../button.c   ****  * https://gcc.gnu.org/onlinedocs/gcc/ARM-Function-Attributes.html */
+  48:../button.c   **** void Eint4567_ISR(void) __attribute__((interrupt("IRQ")));
   49:../button.c   **** 
-  50:../button.c   ****         case INTRODUCIR_FILA:
-  51:../button.c   ****                 if (boton_id == EVENTO_BOTON_DERECHO)  /* Botón derecho: incrementar */
- 3807              		.loc 1 51 0
- 3808 0068 0D305BE5 		ldrb	r3, [fp, #-13]	@ zero_extendqisi2
- 3809 006c 080053E3 		cmp	r3, #8
- 3810 0070 1000001A 		bne	.L9
-  52:../button.c   ****                 {
-  53:../button.c   ****                         int_count++;
- 3811              		.loc 1 53 0
- 3812 0074 F8319FE5 		ldr	r3, .L24+4
- 3813 0078 003093E5 		ldr	r3, [r3, #0]
- 3814 007c 012083E2 		add	r2, r3, #1
- 3815 0080 EC319FE5 		ldr	r3, .L24+4
- 3816 0084 002083E5 		str	r2, [r3, #0]
-  54:../button.c   ****                         if (int_count > 9)  /* Reiniciar contador */
- 3817              		.loc 1 54 0
- 3818 0088 E4319FE5 		ldr	r3, .L24+4
- 3819 008c 003093E5 		ldr	r3, [r3, #0]
- 3820 0090 090053E3 		cmp	r3, #9
- 3821 0094 0200009A 		bls	.L10
-  55:../button.c   ****                         {
-  56:../button.c   ****                                 int_count = 1;
- 3822              		.loc 1 56 0
- 3823 0098 D4319FE5 		ldr	r3, .L24+4
- 3824 009c 0120A0E3 		mov	r2, #1
- 3825 00a0 002083E5 		str	r2, [r3, #0]
- 3826              	.L10:
-  57:../button.c   ****                         }
-  58:../button.c   ****                         D8Led_symbol(int_count);
- 3827              		.loc 1 58 0
- 3828 00a4 C8319FE5 		ldr	r3, .L24+4
- 3829 00a8 003093E5 		ldr	r3, [r3, #0]
- 3830 00ac 0300A0E1 		mov	r0, r3
- 3831 00b0 FEFFFFEB 		bl	D8Led_symbol
-  59:../button.c   ****                 }
-  60:../button.c   ****                 else if (boton_id == EVENTO_BOTON_IZQUIERDO)  /* Botón izquierdo: confirmar */
-  61:../button.c   ****                 {
-  62:../button.c   ****                         fila = int_count;
-  63:../button.c   ****                         int_count = 0;
-  64:../button.c   ****                         estado_sudoku = INTRODUCIR_COLUMNA;
-  65:../button.c   ****                         D8Led_symbol(12);  /* Mostrar C de "Columna" */
-  66:../button.c   ****                 }
-  67:../button.c   ****                 break;
- 3832              		.loc 1 67 0
- 3833 00b4 6A0000EA 		b	.L1
- 3834              	.L9:
-  60:../button.c   ****                 else if (boton_id == EVENTO_BOTON_IZQUIERDO)  /* Botón izquierdo: confirmar */
- 3835              		.loc 1 60 0
- 3836 00b8 0D305BE5 		ldrb	r3, [fp, #-13]	@ zero_extendqisi2
- 3837 00bc 040053E3 		cmp	r3, #4
- 3838 00c0 6200001A 		bne	.L21
-  62:../button.c   ****                         fila = int_count;
- 3839              		.loc 1 62 0
- 3840 00c4 A8319FE5 		ldr	r3, .L24+4
- 3841 00c8 003093E5 		ldr	r3, [r3, #0]
- 3842 00cc 0320A0E1 		mov	r2, r3
- 3843 00d0 A0319FE5 		ldr	r3, .L24+8
- 3844 00d4 002083E5 		str	r2, [r3, #0]
-  63:../button.c   ****                         int_count = 0;
- 3845              		.loc 1 63 0
- 3846 00d8 94319FE5 		ldr	r3, .L24+4
- 3847 00dc 0020A0E3 		mov	r2, #0
- 3848 00e0 002083E5 		str	r2, [r3, #0]
-  64:../button.c   ****                         estado_sudoku = INTRODUCIR_COLUMNA;
- 3849              		.loc 1 64 0
- 3850 00e4 84319FE5 		ldr	r3, .L24
- 3851 00e8 0320A0E3 		mov	r2, #3
- 3852 00ec 0020C3E5 		strb	r2, [r3, #0]
-  65:../button.c   ****                         D8Led_symbol(12);  /* Mostrar C de "Columna" */
- 3853              		.loc 1 65 0
- 3854 00f0 0C00A0E3 		mov	r0, #12
- 3855 00f4 FEFFFFEB 		bl	D8Led_symbol
- 3856              		.loc 1 67 0
- 3857 00f8 590000EA 		b	.L1
- 3858              	.L5:
-  68:../button.c   **** 
-  69:../button.c   ****         case INTRODUCIR_COLUMNA:
-  70:../button.c   ****                 if (boton_id == EVENTO_BOTON_DERECHO)  /* Botón derecho: incrementar */
- 3859              		.loc 1 70 0
- 3860 00fc 0D305BE5 		ldrb	r3, [fp, #-13]	@ zero_extendqisi2
- 3861 0100 080053E3 		cmp	r3, #8
- 3862 0104 1000001A 		bne	.L12
-  71:../button.c   ****                 {
-  72:../button.c   ****                         int_count++;
- 3863              		.loc 1 72 0
- 3864 0108 64319FE5 		ldr	r3, .L24+4
- 3865 010c 003093E5 		ldr	r3, [r3, #0]
- 3866 0110 012083E2 		add	r2, r3, #1
- 3867 0114 58319FE5 		ldr	r3, .L24+4
- 3868 0118 002083E5 		str	r2, [r3, #0]
-  73:../button.c   ****                         if (int_count > 9)  /* Reiniciar contador */
- 3869              		.loc 1 73 0
- 3870 011c 50319FE5 		ldr	r3, .L24+4
- 3871 0120 003093E5 		ldr	r3, [r3, #0]
- 3872 0124 090053E3 		cmp	r3, #9
- 3873 0128 0200009A 		bls	.L13
-  74:../button.c   ****                         {
-  75:../button.c   ****                                 int_count = 1;
- 3874              		.loc 1 75 0
- 3875 012c 40319FE5 		ldr	r3, .L24+4
- 3876 0130 0120A0E3 		mov	r2, #1
- 3877 0134 002083E5 		str	r2, [r3, #0]
- 3878              	.L13:
-  76:../button.c   ****                         }
-  77:../button.c   ****                         D8Led_symbol(int_count);
- 3879              		.loc 1 77 0
- 3880 0138 34319FE5 		ldr	r3, .L24+4
- 3881 013c 003093E5 		ldr	r3, [r3, #0]
- 3882 0140 0300A0E1 		mov	r0, r3
- 3883 0144 FEFFFFEB 		bl	D8Led_symbol
-  78:../button.c   ****                 }
-  79:../button.c   ****                 else if (boton_id == EVENTO_BOTON_IZQUIERDO)  /* Botón izquierdo: confirmar */
-  80:../button.c   ****                 {
-  81:../button.c   ****                         columna = int_count;
-  82:../button.c   ****                         int_count = 0;
-  83:../button.c   ****                         estado_sudoku = VERIFICAR_VALOR;
-  84:../button.c   ****                         D8Led_symbol(0);  /* Mostrar 0 inicial */
-  85:../button.c   ****                 }
-  86:../button.c   ****                 break;
- 3884              		.loc 1 86 0
- 3885 0148 450000EA 		b	.L1
- 3886              	.L12:
-  79:../button.c   ****                 else if (boton_id == EVENTO_BOTON_IZQUIERDO)  /* Botón izquierdo: confirmar */
- 3887              		.loc 1 79 0
- 3888 014c 0D305BE5 		ldrb	r3, [fp, #-13]	@ zero_extendqisi2
- 3889 0150 040053E3 		cmp	r3, #4
- 3890 0154 3F00001A 		bne	.L22
-  81:../button.c   ****                         columna = int_count;
- 3891              		.loc 1 81 0
- 3892 0158 14319FE5 		ldr	r3, .L24+4
- 3893 015c 003093E5 		ldr	r3, [r3, #0]
- 3894 0160 0320A0E1 		mov	r2, r3
- 3895 0164 10319FE5 		ldr	r3, .L24+12
- 3896 0168 002083E5 		str	r2, [r3, #0]
-  82:../button.c   ****                         int_count = 0;
- 3897              		.loc 1 82 0
- 3898 016c 00319FE5 		ldr	r3, .L24+4
- 3899 0170 0020A0E3 		mov	r2, #0
- 3900 0174 002083E5 		str	r2, [r3, #0]
-  83:../button.c   ****                         estado_sudoku = VERIFICAR_VALOR;
- 3901              		.loc 1 83 0
- 3902 0178 F0309FE5 		ldr	r3, .L24
- 3903 017c 0420A0E3 		mov	r2, #4
- 3904 0180 0020C3E5 		strb	r2, [r3, #0]
-  84:../button.c   ****                         D8Led_symbol(0);  /* Mostrar 0 inicial */
- 3905              		.loc 1 84 0
- 3906 0184 0000A0E3 		mov	r0, #0
- 3907 0188 FEFFFFEB 		bl	D8Led_symbol
- 3908              		.loc 1 86 0
- 3909 018c 340000EA 		b	.L1
- 3910              	.L6:
-  87:../button.c   **** 
-  88:../button.c   ****         case VERIFICAR_VALOR:
-  89:../button.c   ****                 if (boton_id == EVENTO_BOTON_DERECHO)  /* Botón derecho: incrementar */
- 3911              		.loc 1 89 0
- 3912 0190 0D305BE5 		ldrb	r3, [fp, #-13]	@ zero_extendqisi2
- 3913 0194 080053E3 		cmp	r3, #8
- 3914 0198 1000001A 		bne	.L15
-  90:../button.c   ****                 {
-  91:../button.c   ****                         int_count++;
- 3915              		.loc 1 91 0
- 3916 019c D0309FE5 		ldr	r3, .L24+4
- 3917 01a0 003093E5 		ldr	r3, [r3, #0]
- 3918 01a4 012083E2 		add	r2, r3, #1
- 3919 01a8 C4309FE5 		ldr	r3, .L24+4
- 3920 01ac 002083E5 		str	r2, [r3, #0]
-  92:../button.c   ****                         if (int_count > 9)  /* Reiniciar contador (0-9) */
- 3921              		.loc 1 92 0
- 3922 01b0 BC309FE5 		ldr	r3, .L24+4
- 3923 01b4 003093E5 		ldr	r3, [r3, #0]
- 3924 01b8 090053E3 		cmp	r3, #9
- 3925 01bc 0200009A 		bls	.L16
-  93:../button.c   ****                         {
-  94:../button.c   ****                                 int_count = 0;
- 3926              		.loc 1 94 0
- 3927 01c0 AC309FE5 		ldr	r3, .L24+4
- 3928 01c4 0020A0E3 		mov	r2, #0
- 3929 01c8 002083E5 		str	r2, [r3, #0]
- 3930              	.L16:
-  95:../button.c   ****                         }
-  96:../button.c   ****                         D8Led_symbol(int_count);
- 3931              		.loc 1 96 0
- 3932 01cc A0309FE5 		ldr	r3, .L24+4
- 3933 01d0 003093E5 		ldr	r3, [r3, #0]
- 3934 01d4 0300A0E1 		mov	r0, r3
- 3935 01d8 FEFFFFEB 		bl	D8Led_symbol
-  97:../button.c   ****                 }
-  98:../button.c   ****                 else if (boton_id == EVENTO_BOTON_IZQUIERDO)  /* Botón izquierdo: confirmar */
-  99:../button.c   ****                 {
- 100:../button.c   ****                         if (int_count == 0)  /* Borrar valor */
- 101:../button.c   ****                         {
- 102:../button.c   ****                                 valor = 0;
- 103:../button.c   ****                                 estado_sudoku = BORRAR_VALOR;
- 104:../button.c   ****                         }
- 105:../button.c   ****                         else  /* Introducir valor */
- 106:../button.c   ****                         {
- 107:../button.c   ****                                 valor = int_count;
- 108:../button.c   ****                                 estado_sudoku = INTRODUCIR_VALOR;
- 109:../button.c   ****                         }
- 110:../button.c   ****                         int_count = 0;
- 111:../button.c   ****                 }
- 112:../button.c   ****                 break;
- 3936              		.loc 1 112 0
- 3937 01dc 200000EA 		b	.L1
- 3938              	.L15:
-  98:../button.c   ****                 else if (boton_id == EVENTO_BOTON_IZQUIERDO)  /* Botón izquierdo: confirmar */
- 3939              		.loc 1 98 0
- 3940 01e0 0D305BE5 		ldrb	r3, [fp, #-13]	@ zero_extendqisi2
- 3941 01e4 040053E3 		cmp	r3, #4
- 3942 01e8 1C00001A 		bne	.L23
- 100:../button.c   ****                         if (int_count == 0)  /* Borrar valor */
- 3943              		.loc 1 100 0
- 3944 01ec 80309FE5 		ldr	r3, .L24+4
- 3945 01f0 003093E5 		ldr	r3, [r3, #0]
- 3946 01f4 000053E3 		cmp	r3, #0
- 3947 01f8 0600001A 		bne	.L18
- 102:../button.c   ****                                 valor = 0;
- 3948              		.loc 1 102 0
- 3949 01fc 7C309FE5 		ldr	r3, .L24+16
- 3950 0200 0020A0E3 		mov	r2, #0
- 3951 0204 002083E5 		str	r2, [r3, #0]
- 103:../button.c   ****                                 estado_sudoku = BORRAR_VALOR;
- 3952              		.loc 1 103 0
- 3953 0208 60309FE5 		ldr	r3, .L24
- 3954 020c 0520A0E3 		mov	r2, #5
- 3955 0210 0020C3E5 		strb	r2, [r3, #0]
- 3956 0214 070000EA 		b	.L19
- 3957              	.L18:
- 107:../button.c   ****                                 valor = int_count;
- 3958              		.loc 1 107 0
- 3959 0218 54309FE5 		ldr	r3, .L24+4
- 3960 021c 003093E5 		ldr	r3, [r3, #0]
- 3961 0220 0320A0E1 		mov	r2, r3
- 3962 0224 54309FE5 		ldr	r3, .L24+16
- 3963 0228 002083E5 		str	r2, [r3, #0]
- 108:../button.c   ****                                 estado_sudoku = INTRODUCIR_VALOR;
- 3964              		.loc 1 108 0
- 3965 022c 3C309FE5 		ldr	r3, .L24
- 3966 0230 0620A0E3 		mov	r2, #6
- 3967 0234 0020C3E5 		strb	r2, [r3, #0]
- 3968              	.L19:
- 110:../button.c   ****                         int_count = 0;
- 3969              		.loc 1 110 0
- 3970 0238 34309FE5 		ldr	r3, .L24+4
- 3971 023c 0020A0E3 		mov	r2, #0
- 3972 0240 002083E5 		str	r2, [r3, #0]
- 3973              		.loc 1 112 0
- 3974 0244 060000EA 		b	.L1
- 3975              	.L20:
+  50:../button.c   **** /*--- código de funciones ---*/
+  51:../button.c   **** void Eint4567_ISR(void)
+  52:../button.c   **** {
+ 2335              		.loc 1 52 0
+ 2336              		.cfi_startproc
+ 2337              		@ Interrupt Service Routine.
+ 2338              		@ args = 0, pretend = 0, frame = 8
+ 2339              		@ frame_needed = 1, uses_anonymous_args = 0
+ 2340 00c4 04C02DE5 		str	ip, [sp, #-4]!
+ 2341 00c8 0DC0A0E1 		mov	ip, sp
+ 2342              	.LCFI2:
+ 2343              		.cfi_def_cfa_register 12
+ 2344 00cc 0FD82DE9 		stmfd	sp!, {r0, r1, r2, r3, fp, ip, lr, pc}
+ 2345 00d0 04B04CE2 		sub	fp, ip, #4
+ 2346              		.cfi_offset 14, -8
+ 2347              		.cfi_offset 13, -12
+ 2348              		.cfi_offset 11, -16
+ 2349              		.cfi_offset 3, -20
+ 2350              		.cfi_offset 2, -24
+ 2351              		.cfi_offset 1, -28
+ 2352              		.cfi_offset 0, -32
+ 2353              	.LCFI3:
+ 2354              		.cfi_def_cfa 11, 4
+ 2355 00d4 08D04DE2 		sub	sp, sp, #8
+  53:../button.c   ****         /* Identificar la interrupción (hay dos pulsadores) */
+  54:../button.c   ****         unsigned int pending = rEXTINTPND & 0xF;
+ 2356              		.loc 1 54 0
+ 2357 00d8 8C309FE5 		ldr	r3, .L12
+ 2358 00dc 003093E5 		ldr	r3, [r3, #0]
+ 2359 00e0 0F3003E2 		and	r3, r3, #15
+ 2360 00e4 24300BE5 		str	r3, [fp, #-36]
+  55:../button.c   ****         uint8_t boton_id = 0;
+ 2361              		.loc 1 55 0
+ 2362 00e8 0030A0E3 		mov	r3, #0
+ 2363 00ec 1D304BE5 		strb	r3, [fp, #-29]
+  56:../button.c   **** 
+  57:../button.c   ****         if (pending & 0x4)
+ 2364              		.loc 1 57 0
+ 2365 00f0 24301BE5 		ldr	r3, [fp, #-36]
+ 2366 00f4 043003E2 		and	r3, r3, #4
+ 2367 00f8 000053E3 		cmp	r3, #0
+ 2368 00fc 0200000A 		beq	.L9
+  58:../button.c   ****         {
+  59:../button.c   ****                 boton_id = EVENTO_BOTON_IZQUIERDO;
+ 2369              		.loc 1 59 0
+ 2370 0100 0430A0E3 		mov	r3, #4
+ 2371 0104 1D304BE5 		strb	r3, [fp, #-29]
+ 2372 0108 050000EA 		b	.L10
+ 2373              	.L9:
+  60:../button.c   ****         }
+  61:../button.c   ****         else if (pending & 0x8)
+ 2374              		.loc 1 61 0
+ 2375 010c 24301BE5 		ldr	r3, [fp, #-36]
+ 2376 0110 083003E2 		and	r3, r3, #8
+ 2377 0114 000053E3 		cmp	r3, #0
+ 2378 0118 0100000A 		beq	.L10
+  62:../button.c   ****         {
+  63:../button.c   ****                 boton_id = EVENTO_BOTON_DERECHO;
+ 2379              		.loc 1 63 0
+ 2380 011c 0830A0E3 		mov	r3, #8
+ 2381 0120 1D304BE5 		strb	r3, [fp, #-29]
+ 2382              	.L10:
+  64:../button.c   ****         }
+  65:../button.c   **** 
+  66:../button.c   ****         if (boton_id != 0U)
+ 2383              		.loc 1 66 0
+ 2384 0124 1D305BE5 		ldrb	r3, [fp, #-29]	@ zero_extendqisi2
+ 2385 0128 000053E3 		cmp	r3, #0
+ 2386 012c 0200000A 		beq	.L11
+  67:../button.c   ****         {
+  68:../button.c   ****                 /* No registrar la pulsación inicial, solo las confirmadas */
+  69:../button.c   **** 
+  70:../button.c   ****                 /* Iniciar la máquina de antirrebotes. Si está ocupada, no hacer nada */
+  71:../button.c   ****                 timer3_start_antirrebote(boton_id);
+ 2387              		.loc 1 71 0
+ 2388 0130 1D305BE5 		ldrb	r3, [fp, #-29]	@ zero_extendqisi2
+ 2389 0134 0300A0E1 		mov	r0, r3
+ 2390 0138 FEFFFFEB 		bl	timer3_start_antirrebote
+ 2391              	.L11:
+  72:../button.c   ****         }
+  73:../button.c   **** 
+  74:../button.c   ****         /* Finalizar ISR */
+  75:../button.c   ****         rEXTINTPND = 0xf;                               // borra los bits en EXTINTPND
+ 2392              		.loc 1 75 0
+ 2393 013c 28309FE5 		ldr	r3, .L12
+ 2394 0140 0F20A0E3 		mov	r2, #15
+ 2395 0144 002083E5 		str	r2, [r3, #0]
+  76:../button.c   ****         rI_ISPC   |= BIT_EINT4567;              // borra el bit pendiente en INTPND
+ 2396              		.loc 1 76 0
+ 2397 0148 20309FE5 		ldr	r3, .L12+4
+ 2398 014c 1C209FE5 		ldr	r2, .L12+4
+ 2399 0150 002092E5 		ldr	r2, [r2, #0]
+ 2400 0154 022682E3 		orr	r2, r2, #2097152
+ 2401 0158 002083E5 		str	r2, [r3, #0]
+  77:../button.c   **** }
+ 2402              		.loc 1 77 0
+ 2403 015c 1CD04BE2 		sub	sp, fp, #28
+ 2404 0160 0F689DE8 		ldmfd	sp, {r0, r1, r2, r3, fp, sp, lr}
+ 2405 0164 04C09DE4 		ldmfd	sp!, {ip}
+ 2406 0168 04F05EE2 		subs	pc, lr, #4
+ 2407              	.L13:
+ 2408              		.align	2
+ 2409              	.L12:
+ 2410 016c 5400D201 		.word	30539860
+ 2411 0170 2400E001 		.word	31457316
+ 2412              		.cfi_endproc
+ 2413              	.LFE1:
+ 2415              		.align	2
+ 2416              		.global	Eint4567_init
+ 2418              	Eint4567_init:
+ 2419              	.LFB2:
+  78:../button.c   **** 
+  79:../button.c   **** void Eint4567_init(void)
+  80:../button.c   **** {
+ 2420              		.loc 1 80 0
+ 2421              		.cfi_startproc
+ 2422              		@ Function supports interworking.
+ 2423              		@ args = 0, pretend = 0, frame = 0
+ 2424              		@ frame_needed = 1, uses_anonymous_args = 0
+ 2425 0174 0DC0A0E1 		mov	ip, sp
+ 2426              	.LCFI4:
+ 2427              		.cfi_def_cfa_register 12
+ 2428 0178 00D82DE9 		stmfd	sp!, {fp, ip, lr, pc}
+ 2429 017c 04B04CE2 		sub	fp, ip, #4
+ 2430              		.cfi_offset 14, -8
+ 2431              		.cfi_offset 13, -12
+ 2432              		.cfi_offset 11, -16
+ 2433              	.LCFI5:
+ 2434              		.cfi_def_cfa 11, 4
+  81:../button.c   ****         /* Inicializar el temporizador dedicado a la eliminación de rebotes */
+  82:../button.c   ****         timer3_init(boton_confirmado);
+ 2435              		.loc 1 82 0
+ 2436 0180 AC009FE5 		ldr	r0, .L15
+ 2437 0184 FEFFFFEB 		bl	timer3_init
+  83:../button.c   **** 
+  84:../button.c   ****         /* Configuracion del controlador de interrupciones. Estos registros están definidos en 44b
+  85:../button.c   ****         rI_ISPC    = 0x3ffffff;         // Borra INTPND escribiendo 1s en I_ISPC
+ 2438              		.loc 1 85 0
+ 2439 0188 A8309FE5 		ldr	r3, .L15+4
+ 2440 018c 3F23E0E3 		mvn	r2, #-67108864
+ 2441 0190 002083E5 		str	r2, [r3, #0]
+  86:../button.c   ****         rEXTINTPND = 0xf;               // Borra EXTINTPND escribiendo 1s en el propio registro
+ 2442              		.loc 1 86 0
+ 2443 0194 A0309FE5 		ldr	r3, .L15+8
+ 2444 0198 0F20A0E3 		mov	r2, #15
+ 2445 019c 002083E5 		str	r2, [r3, #0]
+  87:../button.c   ****         rINTMOD    = 0x0;               // Configura las lineas como de tipo IRQ
+ 2446              		.loc 1 87 0
+ 2447 01a0 98309FE5 		ldr	r3, .L15+12
+ 2448 01a4 0020A0E3 		mov	r2, #0
+ 2449 01a8 002083E5 		str	r2, [r3, #0]
+  88:../button.c   ****         rINTCON    = 0x1;               // Habilita int. vectorizadas y la linea IRQ (FIQ no)
+ 2450              		.loc 1 88 0
+ 2451 01ac 1E36A0E3 		mov	r3, #31457280
+ 2452 01b0 0120A0E3 		mov	r2, #1
+ 2453 01b4 002083E5 		str	r2, [r3, #0]
+  89:../button.c   ****         rINTMSK    &= ~(BIT_EINT4567);  // habilitamos interrupcion linea eint4567 en vector de mas
+ 2454              		.loc 1 89 0
+ 2455 01b8 84309FE5 		ldr	r3, .L15+16
+ 2456 01bc 80209FE5 		ldr	r2, .L15+16
+ 2457 01c0 002092E5 		ldr	r2, [r2, #0]
+ 2458 01c4 0226C2E3 		bic	r2, r2, #2097152
+ 2459 01c8 002083E5 		str	r2, [r3, #0]
+  90:../button.c   **** 
+  91:../button.c   ****         /* Establece la rutina de servicio para Eint4567 */
+  92:../button.c   ****         pISR_EINT4567 = (int) Eint4567_ISR;
+ 2460              		.loc 1 92 0
+ 2461 01cc 74309FE5 		ldr	r3, .L15+20
+ 2462 01d0 74209FE5 		ldr	r2, .L15+24
+ 2463 01d4 002083E5 		str	r2, [r3, #0]
+  93:../button.c   **** 
+  94:../button.c   ****         /* Configuracion del puerto G */
+  95:../button.c   ****         rPCONG  = 0xffff;                       // Establece la funcion de los pines (EINT0-7)
+ 2464              		.loc 1 95 0
+ 2465 01d8 70309FE5 		ldr	r3, .L15+28
+ 2466 01dc 70209FE5 		ldr	r2, .L15+32
+ 2467 01e0 002083E5 		str	r2, [r3, #0]
+  96:../button.c   ****         rPUPG   = 0x0;                  // Habilita el "pull up" del puerto
+ 2468              		.loc 1 96 0
+ 2469 01e4 6C309FE5 		ldr	r3, .L15+36
+ 2470 01e8 0020A0E3 		mov	r2, #0
+ 2471 01ec 002083E5 		str	r2, [r3, #0]
+  97:../button.c   ****         rEXTINT = rEXTINT | 0x22222222;   // Configura las lineas de int. como de flanco de bajada
+ 2472              		.loc 1 97 0
+ 2473 01f0 64209FE5 		ldr	r2, .L15+40
+ 2474 01f4 60309FE5 		ldr	r3, .L15+40
+ 2475 01f8 001093E5 		ldr	r1, [r3, #0]
+ 2476 01fc 5C309FE5 		ldr	r3, .L15+44
+ 2477 0200 033081E1 		orr	r3, r1, r3
+ 2478 0204 003082E5 		str	r3, [r2, #0]
+  98:../button.c   **** 
+  99:../button.c   ****         /* Por precaucion, se vuelven a borrar los bits de INTPND y EXTINTPND */
+ 100:../button.c   ****         rEXTINTPND = 0xf;                               // borra los bits en EXTINTPND
+ 2479              		.loc 1 100 0
+ 2480 0208 2C309FE5 		ldr	r3, .L15+8
+ 2481 020c 0F20A0E3 		mov	r2, #15
+ 2482 0210 002083E5 		str	r2, [r3, #0]
+ 101:../button.c   ****         rI_ISPC   |= BIT_EINT4567;              // borra el bit pendiente en INTPND
+ 2483              		.loc 1 101 0
+ 2484 0214 1C309FE5 		ldr	r3, .L15+4
+ 2485 0218 18209FE5 		ldr	r2, .L15+4
+ 2486 021c 002092E5 		ldr	r2, [r2, #0]
+ 2487 0220 022682E3 		orr	r2, r2, #2097152
+ 2488 0224 002083E5 		str	r2, [r3, #0]
+ 102:../button.c   **** }
+ 2489              		.loc 1 102 0
+ 2490 0228 0CD04BE2 		sub	sp, fp, #12
+ 2491 022c 00689DE8 		ldmfd	sp, {fp, sp, lr}
+ 2492 0230 1EFF2FE1 		bx	lr
+ 2493              	.L16:
+ 2494              		.align	2
+ 2495              	.L15:
+ 2496 0234 00000000 		.word	boton_confirmado
+ 2497 0238 2400E001 		.word	31457316
+ 2498 023c 5400D201 		.word	30539860
+ 2499 0240 0800E001 		.word	31457288
+ 2500 0244 0C00E001 		.word	31457292
+ 2501 0248 74FF7F0C 		.word	209715060
+ 2502 024c 00000000 		.word	Eint4567_ISR
+ 2503 0250 4000D201 		.word	30539840
+ 2504 0254 FFFF0000 		.word	65535
+ 2505 0258 4800D201 		.word	30539848
+ 2506 025c 5000D201 		.word	30539856
+ 2507 0260 22222222 		.word	572662306
+ 2508              		.cfi_endproc
+ 2509              	.LFE2:
+ 2511              		.align	2
+ 2512              		.global	reiniciar_cuenta
+ 2514              	reiniciar_cuenta:
+ 2515              	.LFB3:
+ 103:../button.c   **** 
+ 104:../button.c   **** void reiniciar_cuenta(void)
+ 105:../button.c   **** {
+ 2516              		.loc 1 105 0
+ 2517              		.cfi_startproc
+ 2518              		@ Function supports interworking.
+ 2519              		@ args = 0, pretend = 0, frame = 0
+ 2520              		@ frame_needed = 1, uses_anonymous_args = 0
+ 2521 0264 0DC0A0E1 		mov	ip, sp
+ 2522              	.LCFI6:
+ 2523              		.cfi_def_cfa_register 12
+ 2524 0268 00D82DE9 		stmfd	sp!, {fp, ip, lr, pc}
+ 2525 026c 04B04CE2 		sub	fp, ip, #4
+ 2526              		.cfi_offset 14, -8
+ 2527              		.cfi_offset 13, -12
+ 2528              		.cfi_offset 11, -16
+ 2529              	.LCFI7:
+ 2530              		.cfi_def_cfa 11, 4
+ 106:../button.c   ****         int_count = 0;
+ 2531              		.loc 1 106 0
+ 2532 0270 10309FE5 		ldr	r3, .L18
+ 2533 0274 0020A0E3 		mov	r2, #0
+ 2534 0278 002083E5 		str	r2, [r3, #0]
+ 107:../button.c   **** }
+ 2535              		.loc 1 107 0
+ 2536 027c 0CD04BE2 		sub	sp, fp, #12
+ 2537 0280 00689DE8 		ldmfd	sp, {fp, sp, lr}
+ 2538 0284 1EFF2FE1 		bx	lr
+ 2539              	.L19:
+ 2540              		.align	2
+ 2541              	.L18:
+ 2542 0288 00000000 		.word	int_count
+ 2543              		.cfi_endproc
+ 2544              	.LFE3:
+ 2546              		.align	2
+ 2547              		.global	obtener_cuenta
+ 2549              	obtener_cuenta:
+ 2550              	.LFB4:
+ 108:../button.c   **** 
+ 109:../button.c   **** unsigned int obtener_cuenta(void)
+ 110:../button.c   **** {
+ 2551              		.loc 1 110 0
+ 2552              		.cfi_startproc
+ 2553              		@ Function supports interworking.
+ 2554              		@ args = 0, pretend = 0, frame = 0
+ 2555              		@ frame_needed = 1, uses_anonymous_args = 0
+ 2556 028c 0DC0A0E1 		mov	ip, sp
+ 2557              	.LCFI8:
+ 2558              		.cfi_def_cfa_register 12
+ 2559 0290 00D82DE9 		stmfd	sp!, {fp, ip, lr, pc}
+ 2560 0294 04B04CE2 		sub	fp, ip, #4
+ 2561              		.cfi_offset 14, -8
+ 2562              		.cfi_offset 13, -12
+ 2563              		.cfi_offset 11, -16
+ 2564              	.LCFI9:
+ 2565              		.cfi_def_cfa 11, 4
+ 111:../button.c   ****         return (unsigned int)int_count;
+ 2566              		.loc 1 111 0
+ 2567 0298 10309FE5 		ldr	r3, .L21
+ 2568 029c 003093E5 		ldr	r3, [r3, #0]
+ 112:../button.c   **** }
+ 2569              		.loc 1 112 0
+ 2570 02a0 0300A0E1 		mov	r0, r3
+ 2571 02a4 0CD04BE2 		sub	sp, fp, #12
+ 2572 02a8 00689DE8 		ldmfd	sp, {fp, sp, lr}
+ 2573 02ac 1EFF2FE1 		bx	lr
+ 2574              	.L22:
+ 2575              		.align	2
+ 2576              	.L21:
+ 2577 02b0 00000000 		.word	int_count
+ 2578              		.cfi_endproc
+ 2579              	.LFE4:
+ 2581              		.align	2
+ 2582              		.global	establecer_cuenta
+ 2584              	establecer_cuenta:
+ 2585              	.LFB5:
  113:../button.c   **** 
- 114:../button.c   ****         default:
- 115:../button.c   ****                 break;
- 3976              		.loc 1 115 0
- 3977 0248 0000A0E1 		mov	r0, r0	@ nop
- 3978 024c 040000EA 		b	.L1
- 3979              	.L21:
-  67:../button.c   ****                 break;
- 3980              		.loc 1 67 0
- 3981 0250 0000A0E1 		mov	r0, r0	@ nop
- 3982 0254 020000EA 		b	.L1
- 3983              	.L22:
-  86:../button.c   ****                 break;
- 3984              		.loc 1 86 0
- 3985 0258 0000A0E1 		mov	r0, r0	@ nop
- 3986 025c 000000EA 		b	.L1
- 3987              	.L23:
- 112:../button.c   ****                 break;
- 3988              		.loc 1 112 0
- 3989 0260 0000A0E1 		mov	r0, r0	@ nop
- 3990              	.L1:
- 116:../button.c   ****         }
+ 114:../button.c   **** void establecer_cuenta(unsigned int valor)
+ 115:../button.c   **** {
+ 2586              		.loc 1 115 0
+ 2587              		.cfi_startproc
+ 2588              		@ Function supports interworking.
+ 2589              		@ args = 0, pretend = 0, frame = 8
+ 2590              		@ frame_needed = 1, uses_anonymous_args = 0
+ 2591 02b4 0DC0A0E1 		mov	ip, sp
+ 2592              	.LCFI10:
+ 2593              		.cfi_def_cfa_register 12
+ 2594 02b8 00D82DE9 		stmfd	sp!, {fp, ip, lr, pc}
+ 2595 02bc 04B04CE2 		sub	fp, ip, #4
+ 2596              		.cfi_offset 14, -8
+ 2597              		.cfi_offset 13, -12
+ 2598              		.cfi_offset 11, -16
+ 2599              	.LCFI11:
+ 2600              		.cfi_def_cfa 11, 4
+ 2601 02c0 08D04DE2 		sub	sp, sp, #8
+ 2602 02c4 10000BE5 		str	r0, [fp, #-16]
+ 116:../button.c   ****         int_count = (int)valor;
+ 2603              		.loc 1 116 0
+ 2604 02c8 10201BE5 		ldr	r2, [fp, #-16]
+ 2605 02cc 0C309FE5 		ldr	r3, .L24
+ 2606 02d0 002083E5 		str	r2, [r3, #0]
  117:../button.c   **** }
- 3991              		.loc 1 117 0
- 3992 0264 0CD04BE2 		sub	sp, fp, #12
- 3993 0268 00689DE8 		ldmfd	sp, {fp, sp, lr}
- 3994 026c 1EFF2FE1 		bx	lr
- 3995              	.L25:
- 3996              		.align	2
- 3997              	.L24:
- 3998 0270 00000000 		.word	estado_sudoku
- 3999 0274 00000000 		.word	int_count
- 4000 0278 00000000 		.word	fila
- 4001 027c 00000000 		.word	columna
- 4002 0280 00000000 		.word	valor
- 4003              		.cfi_endproc
- 4004              	.LFE3:
- 4006              		.align	2
- 4008              	boton_confirmado:
- 4009              	.LFB4:
- 118:../button.c   **** 
- 119:../button.c   **** /* Callback para recibir la confirmación de pulsaciones filtradas por el timer3 */
- 120:../button.c   **** static void boton_confirmado(uint8_t boton_id)
- 121:../button.c   **** {
- 4010              		.loc 1 121 0
- 4011              		.cfi_startproc
- 4012              		@ Function supports interworking.
- 4013              		@ args = 0, pretend = 0, frame = 8
- 4014              		@ frame_needed = 1, uses_anonymous_args = 0
- 4015 0284 0DC0A0E1 		mov	ip, sp
- 4016              	.LCFI2:
- 4017              		.cfi_def_cfa_register 12
- 4018 0288 00D82DE9 		stmfd	sp!, {fp, ip, lr, pc}
- 4019 028c 04B04CE2 		sub	fp, ip, #4
- 4020              		.cfi_offset 14, -8
- 4021              		.cfi_offset 13, -12
- 4022              		.cfi_offset 11, -16
- 4023              	.LCFI3:
- 4024              		.cfi_def_cfa 11, 4
- 4025 0290 08D04DE2 		sub	sp, sp, #8
- 4026 0294 0030A0E1 		mov	r3, r0
- 4027 0298 0D304BE5 		strb	r3, [fp, #-13]
- 122:../button.c   ****         /* Registrar el evento en la cola de depuración */
- 123:../button.c   ****         cola_depuracion(timer2_count(), boton_id, int_count);
- 4028              		.loc 1 123 0
- 4029 029c FEFFFFEB 		bl	timer2_count
- 4030 02a0 0010A0E1 		mov	r1, r0
- 4031 02a4 2C309FE5 		ldr	r3, .L27
- 4032 02a8 003093E5 		ldr	r3, [r3, #0]
- 4033 02ac 0D205BE5 		ldrb	r2, [fp, #-13]	@ zero_extendqisi2
- 4034 02b0 0100A0E1 		mov	r0, r1
- 4035 02b4 0210A0E1 		mov	r1, r2
- 4036 02b8 0320A0E1 		mov	r2, r3
- 4037 02bc FEFFFFEB 		bl	cola_depuracion
- 124:../button.c   **** 
- 125:../button.c   ****         /* Gestionar lógica del Sudoku */
- 126:../button.c   ****         gestionar_sudoku(boton_id);
- 4038              		.loc 1 126 0
- 4039 02c0 0D305BE5 		ldrb	r3, [fp, #-13]	@ zero_extendqisi2
- 4040 02c4 0300A0E1 		mov	r0, r3
- 4041 02c8 4CFFFFEB 		bl	gestionar_sudoku
- 127:../button.c   **** }
- 4042              		.loc 1 127 0
- 4043 02cc 0CD04BE2 		sub	sp, fp, #12
- 4044 02d0 00689DE8 		ldmfd	sp, {fp, sp, lr}
- 4045 02d4 1EFF2FE1 		bx	lr
- 4046              	.L28:
- 4047              		.align	2
- 4048              	.L27:
- 4049 02d8 00000000 		.word	int_count
- 4050              		.cfi_endproc
- 4051              	.LFE4:
- 4053              		.align	2
- 4054              		.global	Eint4567_ISR
- 4056              	Eint4567_ISR:
- 4057              	.LFB5:
- 128:../button.c   **** 
- 129:../button.c   **** /* declaración de función que es rutina de servicio de interrupción
- 130:../button.c   ****  * https://gcc.gnu.org/onlinedocs/gcc/ARM-Function-Attributes.html */
- 131:../button.c   **** void Eint4567_ISR(void) __attribute__((interrupt("IRQ")));
- 132:../button.c   **** 
- 133:../button.c   **** /*--- código de funciones ---*/
- 134:../button.c   **** void Eint4567_ISR(void)
- 135:../button.c   **** {
- 4058              		.loc 1 135 0
- 4059              		.cfi_startproc
- 4060              		@ Interrupt Service Routine.
- 4061              		@ args = 0, pretend = 0, frame = 8
- 4062              		@ frame_needed = 1, uses_anonymous_args = 0
- 4063 02dc 04C02DE5 		str	ip, [sp, #-4]!
- 4064 02e0 0DC0A0E1 		mov	ip, sp
- 4065              	.LCFI4:
- 4066              		.cfi_def_cfa_register 12
- 4067 02e4 0FD82DE9 		stmfd	sp!, {r0, r1, r2, r3, fp, ip, lr, pc}
- 4068 02e8 04B04CE2 		sub	fp, ip, #4
- 4069              		.cfi_offset 14, -8
- 4070              		.cfi_offset 13, -12
- 4071              		.cfi_offset 11, -16
- 4072              		.cfi_offset 3, -20
- 4073              		.cfi_offset 2, -24
- 4074              		.cfi_offset 1, -28
- 4075              		.cfi_offset 0, -32
- 4076              	.LCFI5:
- 4077              		.cfi_def_cfa 11, 4
- 4078 02ec 08D04DE2 		sub	sp, sp, #8
- 136:../button.c   ****         /* Identificar la interrupción (hay dos pulsadores) */
- 137:../button.c   ****         unsigned int pending = rEXTINTPND & 0xF;
- 4079              		.loc 1 137 0
- 4080 02f0 8C309FE5 		ldr	r3, .L33
- 4081 02f4 003093E5 		ldr	r3, [r3, #0]
- 4082 02f8 0F3003E2 		and	r3, r3, #15
- 4083 02fc 24300BE5 		str	r3, [fp, #-36]
- 138:../button.c   ****         uint8_t boton_id = 0;
- 4084              		.loc 1 138 0
- 4085 0300 0030A0E3 		mov	r3, #0
- 4086 0304 1D304BE5 		strb	r3, [fp, #-29]
- 139:../button.c   **** 
- 140:../button.c   ****         if (pending & 0x4)
- 4087              		.loc 1 140 0
- 4088 0308 24301BE5 		ldr	r3, [fp, #-36]
- 4089 030c 043003E2 		and	r3, r3, #4
- 4090 0310 000053E3 		cmp	r3, #0
- 4091 0314 0200000A 		beq	.L30
- 141:../button.c   ****         {
- 142:../button.c   ****                 boton_id = EVENTO_BOTON_IZQUIERDO;
- 4092              		.loc 1 142 0
- 4093 0318 0430A0E3 		mov	r3, #4
- 4094 031c 1D304BE5 		strb	r3, [fp, #-29]
- 4095 0320 050000EA 		b	.L31
- 4096              	.L30:
- 143:../button.c   ****         }
- 144:../button.c   ****         else if (pending & 0x8)
- 4097              		.loc 1 144 0
- 4098 0324 24301BE5 		ldr	r3, [fp, #-36]
- 4099 0328 083003E2 		and	r3, r3, #8
- 4100 032c 000053E3 		cmp	r3, #0
- 4101 0330 0100000A 		beq	.L31
- 145:../button.c   ****         {
- 146:../button.c   ****                 boton_id = EVENTO_BOTON_DERECHO;
- 4102              		.loc 1 146 0
- 4103 0334 0830A0E3 		mov	r3, #8
- 4104 0338 1D304BE5 		strb	r3, [fp, #-29]
- 4105              	.L31:
- 147:../button.c   ****         }
- 148:../button.c   **** 
- 149:../button.c   ****         if (boton_id != 0U)
- 4106              		.loc 1 149 0
- 4107 033c 1D305BE5 		ldrb	r3, [fp, #-29]	@ zero_extendqisi2
- 4108 0340 000053E3 		cmp	r3, #0
- 4109 0344 0200000A 		beq	.L32
- 150:../button.c   ****         {
- 151:../button.c   ****                 /* No registrar la pulsación inicial, solo las confirmadas */
- 152:../button.c   **** 
- 153:../button.c   ****                 /* Iniciar la máquina de antirrebotes. Si está ocupada, no hacer nada */
- 154:../button.c   ****                 timer3_start_antirrebote(boton_id);
- 4110              		.loc 1 154 0
- 4111 0348 1D305BE5 		ldrb	r3, [fp, #-29]	@ zero_extendqisi2
- 4112 034c 0300A0E1 		mov	r0, r3
- 4113 0350 FEFFFFEB 		bl	timer3_start_antirrebote
- 4114              	.L32:
- 155:../button.c   ****         }
- 156:../button.c   **** 
- 157:../button.c   ****         /* Finalizar ISR */
- 158:../button.c   ****         rEXTINTPND = 0xf;                               // borra los bits en EXTINTPND
- 4115              		.loc 1 158 0
- 4116 0354 28309FE5 		ldr	r3, .L33
- 4117 0358 0F20A0E3 		mov	r2, #15
- 4118 035c 002083E5 		str	r2, [r3, #0]
- 159:../button.c   ****         rI_ISPC   |= BIT_EINT4567;              // borra el bit pendiente en INTPND
- 4119              		.loc 1 159 0
- 4120 0360 20309FE5 		ldr	r3, .L33+4
- 4121 0364 1C209FE5 		ldr	r2, .L33+4
- 4122 0368 002092E5 		ldr	r2, [r2, #0]
- 4123 036c 022682E3 		orr	r2, r2, #2097152
- 4124 0370 002083E5 		str	r2, [r3, #0]
- 160:../button.c   **** }
- 4125              		.loc 1 160 0
- 4126 0374 1CD04BE2 		sub	sp, fp, #28
- 4127 0378 0F689DE8 		ldmfd	sp, {r0, r1, r2, r3, fp, sp, lr}
- 4128 037c 04C09DE4 		ldmfd	sp!, {ip}
- 4129 0380 04F05EE2 		subs	pc, lr, #4
- 4130              	.L34:
- 4131              		.align	2
- 4132              	.L33:
- 4133 0384 5400D201 		.word	30539860
- 4134 0388 2400E001 		.word	31457316
- 4135              		.cfi_endproc
- 4136              	.LFE5:
- 4138              		.align	2
- 4139              		.global	Eint4567_init
- 4141              	Eint4567_init:
- 4142              	.LFB6:
- 161:../button.c   **** 
- 162:../button.c   **** void Eint4567_init(void)
- 163:../button.c   **** {
- 4143              		.loc 1 163 0
- 4144              		.cfi_startproc
- 4145              		@ Function supports interworking.
- 4146              		@ args = 0, pretend = 0, frame = 0
- 4147              		@ frame_needed = 1, uses_anonymous_args = 0
- 4148 038c 0DC0A0E1 		mov	ip, sp
- 4149              	.LCFI6:
- 4150              		.cfi_def_cfa_register 12
- 4151 0390 00D82DE9 		stmfd	sp!, {fp, ip, lr, pc}
- 4152 0394 04B04CE2 		sub	fp, ip, #4
- 4153              		.cfi_offset 14, -8
- 4154              		.cfi_offset 13, -12
- 4155              		.cfi_offset 11, -16
- 4156              	.LCFI7:
- 4157              		.cfi_def_cfa 11, 4
- 164:../button.c   ****         /* Inicializar el temporizador dedicado a la eliminación de rebotes */
- 165:../button.c   ****         timer3_init(boton_confirmado);
- 4158              		.loc 1 165 0
- 4159 0398 AC009FE5 		ldr	r0, .L36
- 4160 039c FEFFFFEB 		bl	timer3_init
- 166:../button.c   **** 
- 167:../button.c   ****         /* Configuracion del controlador de interrupciones. Estos registros están definidos en 44b
- 168:../button.c   ****         rI_ISPC    = 0x3ffffff;         // Borra INTPND escribiendo 1s en I_ISPC
- 4161              		.loc 1 168 0
- 4162 03a0 A8309FE5 		ldr	r3, .L36+4
- 4163 03a4 3F23E0E3 		mvn	r2, #-67108864
- 4164 03a8 002083E5 		str	r2, [r3, #0]
- 169:../button.c   ****         rEXTINTPND = 0xf;               // Borra EXTINTPND escribiendo 1s en el propio registro
- 4165              		.loc 1 169 0
- 4166 03ac A0309FE5 		ldr	r3, .L36+8
- 4167 03b0 0F20A0E3 		mov	r2, #15
- 4168 03b4 002083E5 		str	r2, [r3, #0]
- 170:../button.c   ****         rINTMOD    = 0x0;               // Configura las lineas como de tipo IRQ
- 4169              		.loc 1 170 0
- 4170 03b8 98309FE5 		ldr	r3, .L36+12
- 4171 03bc 0020A0E3 		mov	r2, #0
- 4172 03c0 002083E5 		str	r2, [r3, #0]
- 171:../button.c   ****         rINTCON    = 0x1;               // Habilita int. vectorizadas y la linea IRQ (FIQ no)
- 4173              		.loc 1 171 0
- 4174 03c4 1E36A0E3 		mov	r3, #31457280
- 4175 03c8 0120A0E3 		mov	r2, #1
- 4176 03cc 002083E5 		str	r2, [r3, #0]
- 172:../button.c   ****         rINTMSK    &= ~(BIT_EINT4567);  // habilitamos interrupcion linea eint4567 en vector de mas
- 4177              		.loc 1 172 0
- 4178 03d0 84309FE5 		ldr	r3, .L36+16
- 4179 03d4 80209FE5 		ldr	r2, .L36+16
- 4180 03d8 002092E5 		ldr	r2, [r2, #0]
- 4181 03dc 0226C2E3 		bic	r2, r2, #2097152
- 4182 03e0 002083E5 		str	r2, [r3, #0]
- 173:../button.c   **** 
- 174:../button.c   ****         /* Establece la rutina de servicio para Eint4567 */
- 175:../button.c   ****         pISR_EINT4567 = (int) Eint4567_ISR;
- 4183              		.loc 1 175 0
- 4184 03e4 74309FE5 		ldr	r3, .L36+20
- 4185 03e8 74209FE5 		ldr	r2, .L36+24
- 4186 03ec 002083E5 		str	r2, [r3, #0]
- 176:../button.c   **** 
- 177:../button.c   ****         /* Configuracion del puerto G */
- 178:../button.c   ****         rPCONG  = 0xffff;                       // Establece la funcion de los pines (EINT0-7)
- 4187              		.loc 1 178 0
- 4188 03f0 70309FE5 		ldr	r3, .L36+28
- 4189 03f4 70209FE5 		ldr	r2, .L36+32
- 4190 03f8 002083E5 		str	r2, [r3, #0]
- 179:../button.c   ****         rPUPG   = 0x0;                  // Habilita el "pull up" del puerto
- 4191              		.loc 1 179 0
- 4192 03fc 6C309FE5 		ldr	r3, .L36+36
- 4193 0400 0020A0E3 		mov	r2, #0
- 4194 0404 002083E5 		str	r2, [r3, #0]
- 180:../button.c   ****         rEXTINT = rEXTINT | 0x22222222;   // Configura las lineas de int. como de flanco de bajada
- 4195              		.loc 1 180 0
- 4196 0408 64209FE5 		ldr	r2, .L36+40
- 4197 040c 60309FE5 		ldr	r3, .L36+40
- 4198 0410 001093E5 		ldr	r1, [r3, #0]
- 4199 0414 5C309FE5 		ldr	r3, .L36+44
- 4200 0418 033081E1 		orr	r3, r1, r3
- 4201 041c 003082E5 		str	r3, [r2, #0]
- 181:../button.c   **** 
- 182:../button.c   ****         /* Por precaucion, se vuelven a borrar los bits de INTPND y EXTINTPND */
- 183:../button.c   ****         rEXTINTPND = 0xf;                               // borra los bits en EXTINTPND
- 4202              		.loc 1 183 0
- 4203 0420 2C309FE5 		ldr	r3, .L36+8
- 4204 0424 0F20A0E3 		mov	r2, #15
- 4205 0428 002083E5 		str	r2, [r3, #0]
- 184:../button.c   ****         rI_ISPC   |= BIT_EINT4567;              // borra el bit pendiente en INTPND
- 4206              		.loc 1 184 0
- 4207 042c 1C309FE5 		ldr	r3, .L36+4
- 4208 0430 18209FE5 		ldr	r2, .L36+4
- 4209 0434 002092E5 		ldr	r2, [r2, #0]
- 4210 0438 022682E3 		orr	r2, r2, #2097152
- 4211 043c 002083E5 		str	r2, [r3, #0]
- 185:../button.c   **** }
- 4212              		.loc 1 185 0
- 4213 0440 0CD04BE2 		sub	sp, fp, #12
- 4214 0444 00689DE8 		ldmfd	sp, {fp, sp, lr}
- 4215 0448 1EFF2FE1 		bx	lr
- 4216              	.L37:
- 4217              		.align	2
- 4218              	.L36:
- 4219 044c 00000000 		.word	boton_confirmado
- 4220 0450 2400E001 		.word	31457316
- 4221 0454 5400D201 		.word	30539860
- 4222 0458 0800E001 		.word	31457288
- 4223 045c 0C00E001 		.word	31457292
- 4224 0460 74FF7F0C 		.word	209715060
- 4225 0464 00000000 		.word	Eint4567_ISR
- 4226 0468 4000D201 		.word	30539840
- 4227 046c FFFF0000 		.word	65535
- 4228 0470 4800D201 		.word	30539848
- 4229 0474 5000D201 		.word	30539856
- 4230 0478 22222222 		.word	572662306
- 4231              		.cfi_endproc
- 4232              	.LFE6:
- 4234              	.Letext0:
+ 2607              		.loc 1 117 0
+ 2608 02d4 0CD04BE2 		sub	sp, fp, #12
+ 2609 02d8 00689DE8 		ldmfd	sp, {fp, sp, lr}
+ 2610 02dc 1EFF2FE1 		bx	lr
+ 2611              	.L25:
+ 2612              		.align	2
+ 2613              	.L24:
+ 2614 02e0 00000000 		.word	int_count
+ 2615              		.cfi_endproc
+ 2616              	.LFE5:
+ 2618              	.Letext0:
 DEFINED SYMBOLS
                             *ABS*:00000000 button.c
-C:\Users\jaime\AppData\Local\Temp\cc8ogGQl.s:2841   .data:00000000 $d
-C:\Users\jaime\AppData\Local\Temp\cc8ogGQl.s:2844   .data:00000000 cuadricula_C_C
-C:\Users\jaime\AppData\Local\Temp\cc8ogGQl.s:2992   .data:00000120 cuadricula_C_ARM
-C:\Users\jaime\AppData\Local\Temp\cc8ogGQl.s:3140   .data:00000240 cuadricula_ARM_C
-C:\Users\jaime\AppData\Local\Temp\cc8ogGQl.s:3288   .data:00000360 cuadricula_ARM_ARM
-C:\Users\jaime\AppData\Local\Temp\cc8ogGQl.s:3436   .data:00000480 cuadricula_ARM_ARM_ALL
-C:\Users\jaime\AppData\Local\Temp\cc8ogGQl.s:3584   .data:000005a0 solucion
-C:\Users\jaime\AppData\Local\Temp\cc8ogGQl.s:3730   .bss:00000000 $d
-C:\Users\jaime\AppData\Local\Temp\cc8ogGQl.s:3731   .bss:00000000 int_count
-C:\Users\jaime\AppData\Local\Temp\cc8ogGQl.s:3736   .bss:00000004 estado_sudoku
-C:\Users\jaime\AppData\Local\Temp\cc8ogGQl.s:3742   .bss:00000008 fila
-C:\Users\jaime\AppData\Local\Temp\cc8ogGQl.s:3748   .bss:0000000c columna
-C:\Users\jaime\AppData\Local\Temp\cc8ogGQl.s:3754   .bss:00000010 valor
-C:\Users\jaime\AppData\Local\Temp\cc8ogGQl.s:3757   .text:00000000 $a
-C:\Users\jaime\AppData\Local\Temp\cc8ogGQl.s:3759   .text:00000000 gestionar_sudoku
-C:\Users\jaime\AppData\Local\Temp\cc8ogGQl.s:3787   .text:00000030 $d
-C:\Users\jaime\AppData\Local\Temp\cc8ogGQl.s:3794   .text:00000044 $a
-C:\Users\jaime\AppData\Local\Temp\cc8ogGQl.s:3998   .text:00000270 $d
-C:\Users\jaime\AppData\Local\Temp\cc8ogGQl.s:4006   .text:00000284 $a
-C:\Users\jaime\AppData\Local\Temp\cc8ogGQl.s:4008   .text:00000284 boton_confirmado
-C:\Users\jaime\AppData\Local\Temp\cc8ogGQl.s:4049   .text:000002d8 $d
-C:\Users\jaime\AppData\Local\Temp\cc8ogGQl.s:4053   .text:000002dc $a
-C:\Users\jaime\AppData\Local\Temp\cc8ogGQl.s:4056   .text:000002dc Eint4567_ISR
-C:\Users\jaime\AppData\Local\Temp\cc8ogGQl.s:4133   .text:00000384 $d
-C:\Users\jaime\AppData\Local\Temp\cc8ogGQl.s:4138   .text:0000038c $a
-C:\Users\jaime\AppData\Local\Temp\cc8ogGQl.s:4141   .text:0000038c Eint4567_init
-C:\Users\jaime\AppData\Local\Temp\cc8ogGQl.s:4219   .text:0000044c $d
+C:\Users\jaime\AppData\Local\Temp\cc851Dfn.s:2246   .text:00000000 $a
+C:\Users\jaime\AppData\Local\Temp\cc851Dfn.s:2248   .text:00000000 boton_confirmado
+C:\Users\jaime\AppData\Local\Temp\cc851Dfn.s:2326   .text:000000c0 $d
+C:\Users\jaime\AppData\Local\Temp\cc851Dfn.s:2330   .text:000000c4 $a
+C:\Users\jaime\AppData\Local\Temp\cc851Dfn.s:2333   .text:000000c4 Eint4567_ISR
+C:\Users\jaime\AppData\Local\Temp\cc851Dfn.s:2410   .text:0000016c $d
+C:\Users\jaime\AppData\Local\Temp\cc851Dfn.s:2415   .text:00000174 $a
+C:\Users\jaime\AppData\Local\Temp\cc851Dfn.s:2418   .text:00000174 Eint4567_init
+C:\Users\jaime\AppData\Local\Temp\cc851Dfn.s:2496   .text:00000234 $d
+C:\Users\jaime\AppData\Local\Temp\cc851Dfn.s:2511   .text:00000264 $a
+C:\Users\jaime\AppData\Local\Temp\cc851Dfn.s:2514   .text:00000264 reiniciar_cuenta
+C:\Users\jaime\AppData\Local\Temp\cc851Dfn.s:2542   .text:00000288 $d
+C:\Users\jaime\AppData\Local\Temp\cc851Dfn.s:2546   .text:0000028c $a
+C:\Users\jaime\AppData\Local\Temp\cc851Dfn.s:2549   .text:0000028c obtener_cuenta
+C:\Users\jaime\AppData\Local\Temp\cc851Dfn.s:2577   .text:000002b0 $d
+C:\Users\jaime\AppData\Local\Temp\cc851Dfn.s:2581   .text:000002b4 $a
+C:\Users\jaime\AppData\Local\Temp\cc851Dfn.s:2584   .text:000002b4 establecer_cuenta
+C:\Users\jaime\AppData\Local\Temp\cc851Dfn.s:2614   .text:000002e0 $d
                      .debug_frame:00000010 $d
 
 UNDEFINED SYMBOLS
-D8Led_symbol
 timer2_count
 cola_depuracion
+D8Led_symbol
+int_count
 timer3_start_antirrebote
 timer3_init
