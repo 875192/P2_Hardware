@@ -13,7 +13,7 @@
 	 * bits [3,0]: valor de la celda
 	 */
 	
-	enum { BIT_CANDIDATOS = 7 };
+enum { BIT_CANDIDATOS = 7, BIT_NO_USADO = 6, BIT_ERROR = 5, BIT_PISTA = 4 };
 	
 	typedef uint16_t CELDA;
 	
@@ -35,9 +35,39 @@
 	
 	/* *****************************************************************************
 	 * extrae el valor almacenado en los 16 bits de una celda */
-	__inline static uint8_t
-	celda_leer_valor(CELDA celda)
-	{
-		return (celda & 0x000F);
-	}
-	#endif // CELDA_H
+        __inline static uint8_t
+        celda_leer_valor(CELDA celda)
+        {
+                return (celda & 0x000F);
+        }
+
+        /* *****************************************************************************
+         * comprueba si el valor es candidato en la celda indicada */
+        __inline static int
+        celda_es_candidato(CELDA celda, uint8_t valor)
+        {
+                return (celda & (0x0001 << (BIT_CANDIDATOS + valor - 1))) == 0;
+        }
+
+        /* *****************************************************************************
+         * comprueba si la celda es una pista */
+        __inline static int
+        celda_es_pista(CELDA celda)
+        {
+                return (celda & (1 << BIT_PISTA)) != 0;
+        }
+
+        /* *****************************************************************************
+         * marca o limpia el bit de error de la celda */
+        __inline static void
+        celda_marcar_error(CELDA *celdaptr)
+        {
+                *celdaptr |= (1 << BIT_ERROR);
+        }
+
+        __inline static void
+        celda_limpiar_error(CELDA *celdaptr)
+        {
+                *celdaptr &= ~(1 << BIT_ERROR);
+        }
+        #endif // CELDA_H

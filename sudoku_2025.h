@@ -26,11 +26,13 @@ enum {FALSE = 0, TRUE = 1};
 /* declaraciÃ³n de funciones visibles en el exterior */
 
 int sudoku9x9(CELDA cuadricula_C_C[NUM_FILAS][NUM_COLUMNAS],
-	CELDA cuadricula_C_ARM[NUM_FILAS][NUM_COLUMNAS],
-	CELDA cuadricula_ARM_ARM[NUM_FILAS][NUM_COLUMNAS],
-	CELDA cuadricula_ARM_ARM_ALL[NUM_FILAS][NUM_COLUMNAS],
-	CELDA cuadricula_ARM_C[NUM_FILAS][NUM_COLUMNAS],
-	CELDA solucion[NUM_FILAS][NUM_COLUMNAS]);
+        CELDA cuadricula_C_ARM[NUM_FILAS][NUM_COLUMNAS],
+        CELDA cuadricula_ARM_ARM[NUM_FILAS][NUM_COLUMNAS],
+        CELDA cuadricula_ARM_ARM_ALL[NUM_FILAS][NUM_COLUMNAS],
+        CELDA cuadricula_ARM_C[NUM_FILAS][NUM_COLUMNAS],
+        CELDA solucion[NUM_FILAS][NUM_COLUMNAS]);
+
+int candidatos_actualizar_c(CELDA cuadricula[NUM_FILAS][NUM_COLUMNAS]);
 
 
 
