@@ -46,7 +46,7 @@ void candidatos_propagar_c(CELDA cuadricula[NUM_FILAS][NUM_COLUMNAS],
  * retorna el numero de celdas vac�as
  */
 
-static int candidatos_actualizar_c(CELDA cuadricula[NUM_FILAS][NUM_COLUMNAS])
+int candidatos_actualizar_c(CELDA cuadricula[NUM_FILAS][NUM_COLUMNAS])
 {
     int celdas_vacias = 0;
     uint8_t i, j;
