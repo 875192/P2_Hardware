@@ -15,31 +15,131 @@
 #include "44blib.h"
 #include "44b.h"
 #include "def.h"
+#include "sudoku_2025.h"
 
 /*--- variables globales del módulo ---*/
 /* int_count la utilizamos para sacar un número por el 8led.
   Cuando se pulsa un botón sumamos y con el otro restamos. ¡A veces hay rebotes! */
 
+/*--- Variables del juego Sudoku ---*/
+static volatile EstadoSudoku estado_juego = ESPERANDO_INICIO;
+
+/* Declaración externa de la cuadrícula del juego */
+extern CELDA (*cuadricula)[NUM_COLUMNAS];
+extern int celdas_vacias;
 
 /* Callback para recibir la confirmación de pulsaciones filtradas por el timer3 */
 static void boton_confirmado(uint8_t boton_id)
 {
-        switch (boton_id)
+        cola_depuracion(timer2_count(), boton_id, estado_juego);
+        
+        switch (estado_juego)
         {
-                case EVENTO_BOTON_IZQUIERDO:
-                        int_count--;
-                        cola_depuracion(timer2_count(), EVENTO_BOTON_IZQUIERDO, int_count);
+                case ESPERANDO_INICIO:
+                        /* Cualquier botón inicia el juego */
+                        /* Calcular candidatos por primera vez */
+                        celdas_vacias = candidatos_actualizar_c(cuadricula);
+                        /* Pasar a introducir fila */
+                        estado_juego = INTRODUCIR_FILA;
+                        int_count = 0;
+                        D8Led_symbol(15);  /* Mostrar 'F' de Fila (índice 15 en el array Symbol) */
                         break;
-                case EVENTO_BOTON_DERECHO:
-                        int_count++;
-                        cola_depuracion(timer2_count(), EVENTO_BOTON_DERECHO, int_count);
+                
+                case INTRODUCIR_FILA:
+                        if (boton_id == EVENTO_BOTON_DERECHO)
+                        {
+                                /* Incrementar fila */
+                                int_count++;
+                                if (int_count > 9)
+                                {
+                                        int_count = 1;
+                                }
+                                D8Led_symbol(int_count & 0x000f);
+                        }
+                        else if (boton_id == EVENTO_BOTON_IZQUIERDO)
+                        {
+                                /* Confirmar fila y pasar a introducir columna */
+                                fila = int_count - 1;  /* Convertir a índice 0-8 */
+                                estado_juego = INTRODUCIR_COLUMNA;
+                                int_count = 0;
+                                D8Led_symbol(12);  /* Mostrar 'C' de Columna (índice 12 en el array Symbol) */
+                        }
                         break;
+                
+                case INTRODUCIR_COLUMNA:
+                        if (boton_id == EVENTO_BOTON_DERECHO)
+                        {
+                                /* Incrementar columna */
+                                int_count++;
+                                if (int_count > 9)
+                                {
+                                        int_count = 1;
+                                }
+                                D8Led_symbol(int_count & 0x000f);
+                        }
+                        else if (boton_id == EVENTO_BOTON_IZQUIERDO)
+                        {
+                                /* Confirmar columna y pasar a introducir valor */
+                                columna = int_count - 1;  /* Convertir a índice 0-8 */
+                                estado_juego = INTRODUCIR_VALOR;
+                                int_count = 0;
+                                D8Led_symbol(int_count & 0x000f);
+                        }
+                        break;
+                
+                case VERIFICAR_CELDA:
+                        /* Primero se verifica si la celda[fila][columna] no es una pista */
+                        if (celda_es_pista(cuadricula[fila][columna]) == TRUE)
+                        {
+                                // Se vuelve al estado INTRODUCIR_FILA
+                                estado_juego = INTRODUCIR_FILA;
+                                int_count = 0;
+                                D8Led_symbol(15);  /* Mostrar 'F' de Fila (índice 15 en el array Symbol) */
+                        } 
+                        else
+                        {
+                                // Si no es pista, se pasa a INTRODUCIR_VALOR
+                                estado_juego = INTRODUCIR_VALOR;
+                                int_count = 0;
+
+                        }
+                        break;
+                
+                case INTRODUCIR_VALOR:
+                        if (boton_id == EVENTO_BOTON_DERECHO)
+                        {
+                                /* Incrementar valor */
+                                int_count++;
+                                if (int_count > 9)
+                                {
+                                        int_count = 0;
+                                }
+                                D8Led_symbol(int_count & 0x000f);
+                        }
+                        else if (boton_id == EVENTO_BOTON_IZQUIERDO)
+                        {
+                                /* Confirmar valor e intentar escribir en la celda */
+                                valor = int_count;  /* Valor a escribir (0-9) */
+                                
+                                estado_juego = VERIFICAR_VALOR;
+                                int_count = 0;
+                        }
+                        break;
+
                 default:
-                        // No guardar eventos descartados
+                        /* Comportamiento por defecto (modo debug) */
+                        switch (boton_id)
+                        {
+                                case EVENTO_BOTON_IZQUIERDO:
+                                        int_count--;
+                                        break;
+                                case EVENTO_BOTON_DERECHO:
+                                        int_count++;
+                                        break;
+                        }
+                        D8Led_symbol(int_count & 0x000f);
                         break;
         }
-
-        D8Led_symbol(int_count & 0x000f);
 }
 
 /* declaración de función que es rutina de servicio de interrupción

@@ -1005,19 +1005,19 @@
  3731              	.Letext0:
 DEFINED SYMBOLS
                             *ABS*:00000000 main.c
-C:\Users\jaime\AppData\Local\Temp\cc54WQzp.s:2780   .data:00000000 $d
-C:\Users\jaime\AppData\Local\Temp\cc54WQzp.s:2783   .data:00000000 cuadricula_C_C
-C:\Users\jaime\AppData\Local\Temp\cc54WQzp.s:2931   .data:00000120 cuadricula_C_ARM
-C:\Users\jaime\AppData\Local\Temp\cc54WQzp.s:3079   .data:00000240 cuadricula_ARM_C
-C:\Users\jaime\AppData\Local\Temp\cc54WQzp.s:3227   .data:00000360 cuadricula_ARM_ARM
-C:\Users\jaime\AppData\Local\Temp\cc54WQzp.s:3375   .data:00000480 cuadricula_ARM_ARM_ALL
-C:\Users\jaime\AppData\Local\Temp\cc54WQzp.s:3523   .data:000005a0 solucion
-C:\Users\jaime\AppData\Local\Temp\cc54WQzp.s:3672   .data:000006c0 cuadricula
-C:\Users\jaime\AppData\Local\Temp\cc54WQzp.s:3679   .bss:00000000 celdas_vacias
-C:\Users\jaime\AppData\Local\Temp\cc54WQzp.s:3676   .bss:00000000 $d
-C:\Users\jaime\AppData\Local\Temp\cc54WQzp.s:3682   .text:00000000 $a
-C:\Users\jaime\AppData\Local\Temp\cc54WQzp.s:3685   .text:00000000 Main
-C:\Users\jaime\AppData\Local\Temp\cc54WQzp.s:3727   .text:0000003c $d
+C:\Users\jaime\AppData\Local\Temp\ccJHWIPT.s:2780   .data:00000000 $d
+C:\Users\jaime\AppData\Local\Temp\ccJHWIPT.s:2783   .data:00000000 cuadricula_C_C
+C:\Users\jaime\AppData\Local\Temp\ccJHWIPT.s:2931   .data:00000120 cuadricula_C_ARM
+C:\Users\jaime\AppData\Local\Temp\ccJHWIPT.s:3079   .data:00000240 cuadricula_ARM_C
+C:\Users\jaime\AppData\Local\Temp\ccJHWIPT.s:3227   .data:00000360 cuadricula_ARM_ARM
+C:\Users\jaime\AppData\Local\Temp\ccJHWIPT.s:3375   .data:00000480 cuadricula_ARM_ARM_ALL
+C:\Users\jaime\AppData\Local\Temp\ccJHWIPT.s:3523   .data:000005a0 solucion
+C:\Users\jaime\AppData\Local\Temp\ccJHWIPT.s:3672   .data:000006c0 cuadricula
+C:\Users\jaime\AppData\Local\Temp\ccJHWIPT.s:3679   .bss:00000000 celdas_vacias
+C:\Users\jaime\AppData\Local\Temp\ccJHWIPT.s:3676   .bss:00000000 $d
+C:\Users\jaime\AppData\Local\Temp\ccJHWIPT.s:3682   .text:00000000 $a
+C:\Users\jaime\AppData\Local\Temp\ccJHWIPT.s:3685   .text:00000000 Main
+C:\Users\jaime\AppData\Local\Temp\ccJHWIPT.s:3727   .text:0000003c $d
                      .debug_frame:00000010 $d
 
 UNDEFINED SYMBOLS
