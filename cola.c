@@ -27,11 +27,11 @@ ColaDebug* cola_global = (ColaDebug*)COLA_ADDRESS;
 void cola_init(void)
 {
 	int i;
-	
+
 	/* Inicializar los índices de control */
 	cola_global->indice_escritura = 0;
 	cola_global->num_eventos = 0;
-	
+
 	/* Limpiar todos los eventos de la cola */
 	for (i = 0; i < COLA_SIZE; i++)
 	{
@@ -58,14 +58,14 @@ void cola_depuracion(uint32_t instant, uint8_t ID_evento, uint32_t auxData)
 	cola_global->eventos[cola_global->indice_escritura].instante = instant;
 	cola_global->eventos[cola_global->indice_escritura].ID_evento = ID_evento;
 	cola_global->eventos[cola_global->indice_escritura].auxData = auxData;
-	
+
 	/* Incrementar el índice de escritura de forma circular */
 	cola_global->indice_escritura++;
 	if (cola_global->indice_escritura >= COLA_SIZE)
 	{
 		cola_global->indice_escritura = 0;  // Volver al inicio (circular)
 	}
-	
+
 	/* Incrementar el contador total de eventos (para estadísticas) */
 	cola_global->num_eventos++;
 }

@@ -926,7 +926,7 @@
  3689              		.text
  3690              		.align	2
  3692              	boton_sigue_pulsado:
- 3693              	.LFB3:
+ 3693              	.LFB7:
    1:../timer3.c   **** /*********************************************************************************************
    2:../timer3.c   **** * Fichero:              timer3.c
    3:../timer3.c   **** * Autor:
@@ -1019,10 +1019,10 @@
  3731 004c 4400D201 		.word	30539844
  3732 0050 10000000 		.word	mascara_boton
  3733              		.cfi_endproc
- 3734              	.LFE3:
+ 3734              	.LFE7:
  3736              		.align	2
  3738              	timer3_detener:
- 3739              	.LFB4:
+ 3739              	.LFB8:
   53:../timer3.c   **** 
   54:../timer3.c   **** static void timer3_detener(void)
   55:../timer3.c   **** {
@@ -1067,10 +1067,10 @@
  3774 0094 0800D501 		.word	30736392
  3775 0098 0C00E001 		.word	31457292
  3776              		.cfi_endproc
- 3777              	.LFE4:
+ 3777              	.LFE8:
  3779              		.align	2
  3781              	timer3_preparar_tick:
- 3782              	.LFB5:
+ 3782              	.LFB9:
   60:../timer3.c   **** 
   61:../timer3.c   **** static void timer3_preparar_tick(void)
   62:../timer3.c   **** {
@@ -1131,10 +1131,10 @@
  3828 0100 3400D501 		.word	30736436
  3829 0104 0800D501 		.word	30736392
  3830              		.cfi_endproc
- 3831              	.LFE5:
+ 3831              	.LFE9:
  3833              		.align	2
  3835              	finalizar_antirrebote:
- 3836              	.LFB6:
+ 3836              	.LFB10:
   72:../timer3.c   **** 
   73:../timer3.c   **** static void finalizar_antirrebote(void)
   74:../timer3.c   **** {
@@ -1217,11 +1217,11 @@
  3901 01a8 0C000000 		.word	boton_en_proceso
  3902 01ac 10000000 		.word	mascara_boton
  3903              		.cfi_endproc
- 3904              	.LFE6:
+ 3904              	.LFE10:
  3906              		.align	2
  3907              		.global	timer3_init
  3909              	timer3_init:
- 3910              	.LFB7:
+ 3910              	.LFB11:
   87:../timer3.c   **** 
   88:../timer3.c   **** /*--- Código de las funciones públicas ---*/
   89:../timer3.c   **** void timer3_init(timer3_callback_t callback)
@@ -1357,11 +1357,11 @@
  4014 02d4 0800D501 		.word	30736392
  4015 02d8 2400E001 		.word	31457316
  4016              		.cfi_endproc
- 4017              	.LFE7:
+ 4017              	.LFE11:
  4019              		.align	2
  4020              		.global	timer3_start_antirrebote
  4022              	timer3_start_antirrebote:
- 4023              	.LFB8:
+ 4023              	.LFB12:
  116:../timer3.c   **** 
  117:../timer3.c   **** int timer3_start_antirrebote(uint8_t boton_id)
  118:../timer3.c   **** {
@@ -1501,11 +1501,11 @@
  4123 03d0 08000000 		.word	monitor_ms
  4124 03d4 0C00E001 		.word	31457292
  4125              		.cfi_endproc
- 4126              	.LFE8:
+ 4126              	.LFE12:
  4128              		.align	2
  4129              		.global	timer3_esta_ocupado
  4131              	timer3_esta_ocupado:
- 4132              	.LFB9:
+ 4132              	.LFB13:
  153:../timer3.c   **** 
  154:../timer3.c   **** int timer3_esta_ocupado(void)
  155:../timer3.c   **** {
@@ -1543,11 +1543,11 @@
  4162              	.L27:
  4163 040c 00000000 		.word	estado_actual
  4164              		.cfi_endproc
- 4165              	.LFE9:
+ 4165              	.LFE13:
  4167              		.align	2
  4168              		.global	timer3_ISR
  4170              	timer3_ISR:
- 4171              	.LFB10:
+ 4171              	.LFB14:
  158:../timer3.c   **** 
  159:../timer3.c   **** /*--- Código de la ISR ---*/
  160:../timer3.c   **** void timer3_ISR(void)
@@ -1792,53 +1792,53 @@
  4343 05c4 08000000 		.word	monitor_ms
  4344 05c8 2400E001 		.word	31457316
  4345              		.cfi_endproc
- 4346              	.LFE10:
+ 4346              	.LFE14:
  4348              	.Letext0:
 DEFINED SYMBOLS
                             *ABS*:00000000 timer3.c
-C:\Users\jaime\AppData\Local\Temp\ccHbKW8R.s:2755   .data:00000000 $d
-C:\Users\jaime\AppData\Local\Temp\ccHbKW8R.s:2758   .data:00000000 cuadricula_C_C
-C:\Users\jaime\AppData\Local\Temp\ccHbKW8R.s:2906   .data:00000120 cuadricula_C_ARM
-C:\Users\jaime\AppData\Local\Temp\ccHbKW8R.s:3054   .data:00000240 cuadricula_ARM_C
-C:\Users\jaime\AppData\Local\Temp\ccHbKW8R.s:3202   .data:00000360 cuadricula_ARM_ARM
-C:\Users\jaime\AppData\Local\Temp\ccHbKW8R.s:3350   .data:00000480 cuadricula_ARM_ARM_ALL
-C:\Users\jaime\AppData\Local\Temp\ccHbKW8R.s:3498   .data:000005a0 solucion
-C:\Users\jaime\AppData\Local\Temp\ccHbKW8R.s:3644   .bss:00000000 estado_actual
-C:\Users\jaime\AppData\Local\Temp\ccHbKW8R.s:3645   .bss:00000000 $d
-C:\Users\jaime\AppData\Local\Temp\ccHbKW8R.s:3647   .bss:00000004 contador_ms
-C:\Users\jaime\AppData\Local\Temp\ccHbKW8R.s:3650   .bss:00000008 monitor_ms
-C:\Users\jaime\AppData\Local\Temp\ccHbKW8R.s:3652   .bss:0000000c boton_en_proceso
-C:\Users\jaime\AppData\Local\Temp\ccHbKW8R.s:3655   .bss:00000010 mascara_boton
-C:\Users\jaime\AppData\Local\Temp\ccHbKW8R.s:3658   .bss:00000014 callback_validacion
-C:\Users\jaime\AppData\Local\Temp\ccHbKW8R.s:3663   .bss:00000018 estado_sudoku
-C:\Users\jaime\AppData\Local\Temp\ccHbKW8R.s:3669   .bss:0000001c int_count
-C:\Users\jaime\AppData\Local\Temp\ccHbKW8R.s:3675   .bss:00000020 fila
-C:\Users\jaime\AppData\Local\Temp\ccHbKW8R.s:3681   .bss:00000024 columna
-C:\Users\jaime\AppData\Local\Temp\ccHbKW8R.s:3687   .bss:00000028 valor
-C:\Users\jaime\AppData\Local\Temp\ccHbKW8R.s:3690   .text:00000000 $a
-C:\Users\jaime\AppData\Local\Temp\ccHbKW8R.s:3692   .text:00000000 boton_sigue_pulsado
-C:\Users\jaime\AppData\Local\Temp\ccHbKW8R.s:3731   .text:0000004c $d
-C:\Users\jaime\AppData\Local\Temp\ccHbKW8R.s:3736   .text:00000054 $a
-C:\Users\jaime\AppData\Local\Temp\ccHbKW8R.s:3738   .text:00000054 timer3_detener
-C:\Users\jaime\AppData\Local\Temp\ccHbKW8R.s:3774   .text:00000094 $d
-C:\Users\jaime\AppData\Local\Temp\ccHbKW8R.s:3779   .text:0000009c $a
-C:\Users\jaime\AppData\Local\Temp\ccHbKW8R.s:3781   .text:0000009c timer3_preparar_tick
-C:\Users\jaime\AppData\Local\Temp\ccHbKW8R.s:3827   .text:000000fc $d
-C:\Users\jaime\AppData\Local\Temp\ccHbKW8R.s:3833   .text:00000108 $a
-C:\Users\jaime\AppData\Local\Temp\ccHbKW8R.s:3835   .text:00000108 finalizar_antirrebote
-C:\Users\jaime\AppData\Local\Temp\ccHbKW8R.s:3895   .text:00000190 $d
-C:\Users\jaime\AppData\Local\Temp\ccHbKW8R.s:3906   .text:000001b0 $a
-C:\Users\jaime\AppData\Local\Temp\ccHbKW8R.s:3909   .text:000001b0 timer3_init
-C:\Users\jaime\AppData\Local\Temp\ccHbKW8R.s:4002   .text:000002a4 $d
-C:\Users\jaime\AppData\Local\Temp\ccHbKW8R.s:4170   .text:00000410 timer3_ISR
-C:\Users\jaime\AppData\Local\Temp\ccHbKW8R.s:4019   .text:000002dc $a
-C:\Users\jaime\AppData\Local\Temp\ccHbKW8R.s:4022   .text:000002dc timer3_start_antirrebote
-C:\Users\jaime\AppData\Local\Temp\ccHbKW8R.s:4119   .text:000003c0 $d
-C:\Users\jaime\AppData\Local\Temp\ccHbKW8R.s:4128   .text:000003d8 $a
-C:\Users\jaime\AppData\Local\Temp\ccHbKW8R.s:4131   .text:000003d8 timer3_esta_ocupado
-C:\Users\jaime\AppData\Local\Temp\ccHbKW8R.s:4163   .text:0000040c $d
-C:\Users\jaime\AppData\Local\Temp\ccHbKW8R.s:4167   .text:00000410 $a
-C:\Users\jaime\AppData\Local\Temp\ccHbKW8R.s:4339   .text:000005b4 $d
+C:\Users\jaime\AppData\Local\Temp\ccabIe6V.s:2755   .data:00000000 $d
+C:\Users\jaime\AppData\Local\Temp\ccabIe6V.s:2758   .data:00000000 cuadricula_C_C
+C:\Users\jaime\AppData\Local\Temp\ccabIe6V.s:2906   .data:00000120 cuadricula_C_ARM
+C:\Users\jaime\AppData\Local\Temp\ccabIe6V.s:3054   .data:00000240 cuadricula_ARM_C
+C:\Users\jaime\AppData\Local\Temp\ccabIe6V.s:3202   .data:00000360 cuadricula_ARM_ARM
+C:\Users\jaime\AppData\Local\Temp\ccabIe6V.s:3350   .data:00000480 cuadricula_ARM_ARM_ALL
+C:\Users\jaime\AppData\Local\Temp\ccabIe6V.s:3498   .data:000005a0 solucion
+C:\Users\jaime\AppData\Local\Temp\ccabIe6V.s:3644   .bss:00000000 estado_actual
+C:\Users\jaime\AppData\Local\Temp\ccabIe6V.s:3645   .bss:00000000 $d
+C:\Users\jaime\AppData\Local\Temp\ccabIe6V.s:3647   .bss:00000004 contador_ms
+C:\Users\jaime\AppData\Local\Temp\ccabIe6V.s:3650   .bss:00000008 monitor_ms
+C:\Users\jaime\AppData\Local\Temp\ccabIe6V.s:3652   .bss:0000000c boton_en_proceso
+C:\Users\jaime\AppData\Local\Temp\ccabIe6V.s:3655   .bss:00000010 mascara_boton
+C:\Users\jaime\AppData\Local\Temp\ccabIe6V.s:3658   .bss:00000014 callback_validacion
+C:\Users\jaime\AppData\Local\Temp\ccabIe6V.s:3663   .bss:00000018 estado_sudoku
+C:\Users\jaime\AppData\Local\Temp\ccabIe6V.s:3669   .bss:0000001c int_count
+C:\Users\jaime\AppData\Local\Temp\ccabIe6V.s:3675   .bss:00000020 fila
+C:\Users\jaime\AppData\Local\Temp\ccabIe6V.s:3681   .bss:00000024 columna
+C:\Users\jaime\AppData\Local\Temp\ccabIe6V.s:3687   .bss:00000028 valor
+C:\Users\jaime\AppData\Local\Temp\ccabIe6V.s:3690   .text:00000000 $a
+C:\Users\jaime\AppData\Local\Temp\ccabIe6V.s:3692   .text:00000000 boton_sigue_pulsado
+C:\Users\jaime\AppData\Local\Temp\ccabIe6V.s:3731   .text:0000004c $d
+C:\Users\jaime\AppData\Local\Temp\ccabIe6V.s:3736   .text:00000054 $a
+C:\Users\jaime\AppData\Local\Temp\ccabIe6V.s:3738   .text:00000054 timer3_detener
+C:\Users\jaime\AppData\Local\Temp\ccabIe6V.s:3774   .text:00000094 $d
+C:\Users\jaime\AppData\Local\Temp\ccabIe6V.s:3779   .text:0000009c $a
+C:\Users\jaime\AppData\Local\Temp\ccabIe6V.s:3781   .text:0000009c timer3_preparar_tick
+C:\Users\jaime\AppData\Local\Temp\ccabIe6V.s:3827   .text:000000fc $d
+C:\Users\jaime\AppData\Local\Temp\ccabIe6V.s:3833   .text:00000108 $a
+C:\Users\jaime\AppData\Local\Temp\ccabIe6V.s:3835   .text:00000108 finalizar_antirrebote
+C:\Users\jaime\AppData\Local\Temp\ccabIe6V.s:3895   .text:00000190 $d
+C:\Users\jaime\AppData\Local\Temp\ccabIe6V.s:3906   .text:000001b0 $a
+C:\Users\jaime\AppData\Local\Temp\ccabIe6V.s:3909   .text:000001b0 timer3_init
+C:\Users\jaime\AppData\Local\Temp\ccabIe6V.s:4002   .text:000002a4 $d
+C:\Users\jaime\AppData\Local\Temp\ccabIe6V.s:4170   .text:00000410 timer3_ISR
+C:\Users\jaime\AppData\Local\Temp\ccabIe6V.s:4019   .text:000002dc $a
+C:\Users\jaime\AppData\Local\Temp\ccabIe6V.s:4022   .text:000002dc timer3_start_antirrebote
+C:\Users\jaime\AppData\Local\Temp\ccabIe6V.s:4119   .text:000003c0 $d
+C:\Users\jaime\AppData\Local\Temp\ccabIe6V.s:4128   .text:000003d8 $a
+C:\Users\jaime\AppData\Local\Temp\ccabIe6V.s:4131   .text:000003d8 timer3_esta_ocupado
+C:\Users\jaime\AppData\Local\Temp\ccabIe6V.s:4163   .text:0000040c $d
+C:\Users\jaime\AppData\Local\Temp\ccabIe6V.s:4167   .text:00000410 $a
+C:\Users\jaime\AppData\Local\Temp\ccabIe6V.s:4339   .text:000005b4 $d
                      .debug_frame:00000010 $d
 
 NO UNDEFINED SYMBOLS

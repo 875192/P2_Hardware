@@ -12,7 +12,7 @@ enum {NUM_FILAS = 9,
       NUM_COLUMNAS = NUM_FILAS + PADDING};
 
 /* Definiciones para valores muy utilizados */
-enum {FALSE = 0, TRUE = 1};
+/* FALSE y TRUE ya están definidos en def.h */
 
 /* La informaciÃ³n de cada celda esta codificada en 16 bits
  * con el siguiente formato, empezando en el bit mas significativo (MSB):

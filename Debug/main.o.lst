@@ -904,7 +904,7 @@
  3682              		.align	2
  3683              		.global	Main
  3685              	Main:
- 3686              	.LFB3:
+ 3686              	.LFB7:
    1:../main.c     **** /*********************************************************************************************
    2:../main.c     **** * Fichero:	main.c
    3:../main.c     **** * Autor:    
@@ -1001,23 +1001,23 @@
  3726              	.L3:
  3727 003c 00000000 		.word	cola_global
  3728              		.cfi_endproc
- 3729              	.LFE3:
+ 3729              	.LFE7:
  3731              	.Letext0:
 DEFINED SYMBOLS
                             *ABS*:00000000 main.c
-C:\Users\jaime\AppData\Local\Temp\cccM9TOq.s:2780   .data:00000000 $d
-C:\Users\jaime\AppData\Local\Temp\cccM9TOq.s:2783   .data:00000000 cuadricula_C_C
-C:\Users\jaime\AppData\Local\Temp\cccM9TOq.s:2931   .data:00000120 cuadricula_C_ARM
-C:\Users\jaime\AppData\Local\Temp\cccM9TOq.s:3079   .data:00000240 cuadricula_ARM_C
-C:\Users\jaime\AppData\Local\Temp\cccM9TOq.s:3227   .data:00000360 cuadricula_ARM_ARM
-C:\Users\jaime\AppData\Local\Temp\cccM9TOq.s:3375   .data:00000480 cuadricula_ARM_ARM_ALL
-C:\Users\jaime\AppData\Local\Temp\cccM9TOq.s:3523   .data:000005a0 solucion
-C:\Users\jaime\AppData\Local\Temp\cccM9TOq.s:3672   .data:000006c0 cuadricula
-C:\Users\jaime\AppData\Local\Temp\cccM9TOq.s:3679   .bss:00000000 celdas_vacias
-C:\Users\jaime\AppData\Local\Temp\cccM9TOq.s:3676   .bss:00000000 $d
-C:\Users\jaime\AppData\Local\Temp\cccM9TOq.s:3682   .text:00000000 $a
-C:\Users\jaime\AppData\Local\Temp\cccM9TOq.s:3685   .text:00000000 Main
-C:\Users\jaime\AppData\Local\Temp\cccM9TOq.s:3727   .text:0000003c $d
+C:\Users\jaime\AppData\Local\Temp\cc54WQzp.s:2780   .data:00000000 $d
+C:\Users\jaime\AppData\Local\Temp\cc54WQzp.s:2783   .data:00000000 cuadricula_C_C
+C:\Users\jaime\AppData\Local\Temp\cc54WQzp.s:2931   .data:00000120 cuadricula_C_ARM
+C:\Users\jaime\AppData\Local\Temp\cc54WQzp.s:3079   .data:00000240 cuadricula_ARM_C
+C:\Users\jaime\AppData\Local\Temp\cc54WQzp.s:3227   .data:00000360 cuadricula_ARM_ARM
+C:\Users\jaime\AppData\Local\Temp\cc54WQzp.s:3375   .data:00000480 cuadricula_ARM_ARM_ALL
+C:\Users\jaime\AppData\Local\Temp\cc54WQzp.s:3523   .data:000005a0 solucion
+C:\Users\jaime\AppData\Local\Temp\cc54WQzp.s:3672   .data:000006c0 cuadricula
+C:\Users\jaime\AppData\Local\Temp\cc54WQzp.s:3679   .bss:00000000 celdas_vacias
+C:\Users\jaime\AppData\Local\Temp\cc54WQzp.s:3676   .bss:00000000 $d
+C:\Users\jaime\AppData\Local\Temp\cc54WQzp.s:3682   .text:00000000 $a
+C:\Users\jaime\AppData\Local\Temp\cc54WQzp.s:3685   .text:00000000 Main
+C:\Users\jaime\AppData\Local\Temp\cc54WQzp.s:3727   .text:0000003c $d
                      .debug_frame:00000010 $d
 
 UNDEFINED SYMBOLS

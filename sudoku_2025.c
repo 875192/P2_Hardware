@@ -1,6 +1,7 @@
 #include <stddef.h>
 #include "sudoku_2025.h"
 #include "tableros.h"
+#include "../common/def.h"
 
 /* *****************************************************************************
  * propaga el valor de una determinada celda
